@@ -1,0 +1,376 @@
+[
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getNodeAddr",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getCompactedValidators",
+    "outputs": [
+      {
+        "name": "ValidatorsCompacted",
+        "type": "bytes32[]"
+      },
+      {
+        "name": "ValidatorsPubKeys",
+        "type": "bytes32[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      }
+    ],
+    "name": "addDeposit",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      },
+      {
+        "name": "nodeAddr",
+        "type": "address"
+      },
+      {
+        "name": "receiver",
+        "type": "address"
+      }
+    ],
+    "name": "addInitialDeposit",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      }
+    ],
+    "name": "isPaused",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      },
+      {
+        "name": "vFrom",
+        "type": "bytes32"
+      },
+      {
+        "name": "cause",
+        "type": "uint8"
+      },
+      {
+        "name": "punishValue",
+        "type": "uint96"
+      }
+    ],
+    "name": "pauseValidation",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getActiveCount",
+    "outputs": [
+      {
+        "name": "count",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      }
+    ],
+    "name": "withdraw",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      }
+    ],
+    "name": "hasDeposit",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      }
+    ],
+    "name": "resumeValidation",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getNodeReceiver",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "getActiveCompactedValidators",
+    "outputs": [
+      {
+        "name": "ValidatorsCompacted",
+        "type": "bytes32[]"
+      },
+      {
+        "name": "ValidatorsPubKeys",
+        "type": "bytes32[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "vPub",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getValidator",
+    "outputs": [
+      {
+        "name": "nodeAddr",
+        "type": "address"
+      },
+      {
+        "name": "deposit",
+        "type": "uint96"
+      },
+      {
+        "name": "pauseBlockNumber",
+        "type": "uint48"
+      },
+      {
+        "name": "pauseCause",
+        "type": "uint8"
+      },
+      {
+        "name": "punishValue",
+        "type": "uint96"
+      },
+      {
+        "name": "receiver",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "all",
+        "type": "bool"
+      }
+    ],
+    "name": "enablePunishers",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "fallback"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "vPub",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "deposit",
+        "type": "uint96"
+      }
+    ],
+    "name": "ValidatorUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "name": "vPub",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "name": "cause",
+        "type": "uint8"
+      }
+    ],
+    "name": "ValidatorRemoved",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipRenounced",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  }
+]

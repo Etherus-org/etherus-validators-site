@@ -1,0 +1,51 @@
+@import '~styles/index.scss';
+
+:global html {
+  box-sizing: border-box;
+}
+
+:global body {
+  background: var(--background-light);
+  color: var(--color-blue-gray-900);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  letter-spacing: .5px;
+  line-height: 28px;
+  margin: 0;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 0;
+  text-transform: none !important;
+}
+
+:global * {
+  box-shadow: none;
+  box-sizing: inherit;
+  transition: all .2s;
+
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  font-family: inherit;
+  text-align: inherit;
+}
+
+.Root {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.Wrapper {
+  max-width: 960px;
+  padding: 120px 0;
+  width: 100%;
+}

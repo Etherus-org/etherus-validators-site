@@ -1,0 +1,47 @@
+.Root {
+  background: var(--color-white);
+  border-radius: 4px;
+  box-shadow: var(--shadow-down-z2);
+  padding: 24px;
+
+  &Is {
+    &Connected {
+      .Status {
+        &:before {
+          background: var(--gradient-green);
+        }
+      }
+    }
+  }
+}
+
+.Header {
+  display: flex;
+  height: 64px;
+  justify-content: space-between;
+}
+
+.List {
+  margin: 0 -24px;
+}
+
+.Progress {
+  height: 200px;
+}
+
+.Status {
+  align-items: center;
+  color: var(--color-gray-600);
+  display: flex;
+  margin: 4px 0 0;
+
+  &:before {
+    background: var(--gradient-red);
+    border-radius: 100%;
+    content: '';
+    display: block;
+    height: 8px;
+    margin: 0 8px 0 0;
+    width: 8px;
+  }
+}

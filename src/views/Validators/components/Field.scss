@@ -1,0 +1,54 @@
+.Root {
+  align-items: center;
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+
+  &Color {
+    &Error {
+      .Text {
+        color: var(--color-danger);
+      }
+    }
+
+    &Success {
+      .Text {
+        color: var(--color-success);
+      }
+    }
+  }
+
+  &Is {
+    &Disabled {
+      color: var(--color-gray-600);
+
+      .Text {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &Variant {
+    &Hash {
+      .Text {
+        max-width: calc(100% - 44px);
+      }
+    }
+  }
+}
+
+.Copy {
+  margin: 0 8px 0 0;
+}
+
+.Icon {
+  color: var(--color-primary);
+}
+
+.Text {
+  flex: 1 1 auto;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

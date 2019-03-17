@@ -1,0 +1,40 @@
+.Root {
+  display: flex;
+
+  & > *:not(:first-child) {
+    margin: 0 0 0 8px;
+  }
+}
+
+.Button {
+  &Variant {
+    &Deposit {
+      &:hover {
+        .Icon {
+          color: var(--color-success);
+        }
+      }
+    }
+
+    &Pause {
+      &:hover {
+        .Icon {
+          color: var(--color-danger);
+        }
+      }
+    }
+
+    &Play {
+      &:hover {
+        .Icon {
+          color: var(--color-primary);
+        }
+      }
+    }
+  }
+}
+
+.Icon {
+  color: var(--color-gray-400);
+  font-size: 20px;
+}

@@ -1,0 +1,24 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.file_ext=.js
+module.file_ext=.json
+module.file_ext=.jsx
+module.file_ext=.css
+module.file_ext=.scss
+
+module.name_mapper='^assets' ->'<PROJECT_ROOT>/src/assets'
+module.name_mapper='^components' ->'<PROJECT_ROOT>/src/components'
+module.name_mapper='^entities' ->'<PROJECT_ROOT>/src/entities'
+module.name_mapper='^services' ->'<PROJECT_ROOT>/src/services'
+module.name_mapper='^styles' ->'<PROJECT_ROOT>/src/styles'
+module.name_mapper='^views' ->'<PROJECT_ROOT>/src/views'
+module.name_mapper='^utils' ->'<PROJECT_ROOT>/src/utils'
+
+[strict]
