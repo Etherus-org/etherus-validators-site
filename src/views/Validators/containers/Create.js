@@ -7,6 +7,7 @@ import { reduxForm } from 'redux-form';
 // Components
 import Button from 'components/Button';
 import Form, { Input } from 'components/Form';
+import Metamask from 'components/Metamask';
 import Modal from 'components/Modal';
 
 // Ducks
@@ -33,11 +34,14 @@ const ValidatorsCreate = ({
   error,
   handleCancel,
   handleSubmit,
+  submitting,
 }) => (
   <Form
     error={error}
     onSubmit={handleSubmit}
   >
+    {submitting && <Metamask />}
+
     <Input label="Депозит" name="deposit" placeholder="Ether"/>
     <Input label="vPub" name="hash" placeholder="32 Bytes"/>
     <Input label="Node Addr" name="node" placeholder="Address"/>

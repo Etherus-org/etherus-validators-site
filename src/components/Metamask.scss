@@ -1,0 +1,38 @@
+.Root {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.Cover {
+  background: rgba(255, 255, 255, .9);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.Container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+.Logo {
+  height: 160px;
+  width: 160px;
+}
+
+.Title {
+  margin: 20px 0 0;
+}

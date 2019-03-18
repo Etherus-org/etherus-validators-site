@@ -1,3 +1,4 @@
+// @flow
 import { get } from 'lodash';
 import { normalize } from 'normalizr';
 import { SubmissionError } from 'redux-form';
@@ -41,6 +42,7 @@ import {
 import {
   VALIDATOR_CREATE_MODAL_ID,
   VALIDATOR_DEPOSIT_MODAL_ID,
+  VALIDATOR_PAUSE_MODAL_ID,
 } from 'views/Validators';
 
 // Utils
@@ -123,14 +125,16 @@ export const fetchValidators = (): Function =>
         dispatch({ type: FETCH_VALIDATORS_FAILURE, error: get(error, 'message')}));
   }
 
-export const pauseValidator: Function = (hash: string): Promise =>
+export const pauseValidator: Function = ({ address, hash }): Promise =>
   (dispatch: Function, getState: Function, { account, web3 }): void => {
     dispatch({ type: PAUSE_VALIDATOR_REQUEST, hash });
 
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
-        .pauseValidation(hash, null, PAUSE_CAUSE_VOLUNTARILY, null)
+        .pauseValidation(hash, address, PAUSE_CAUSE_VOLUNTARILY, 0)
         .send({ from: window.ethereum.selectedAddress })
+          .on('transactionHash', (): void =>
+            dispatch(closeModal(VALIDATOR_PAUSE_MODAL_ID)))
           .on('confirmation', () =>
             dispatch({ type: PAUSE_VALIDATOR_SUCCESS, hash }))
           .on('error', reject)

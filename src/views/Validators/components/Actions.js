@@ -9,12 +9,14 @@ import Progress from 'components/Progress';
 import Tooltip from 'components/Tooltip';
 
 // Ducks
-import { VALIDATOR_DEPOSIT_MODAL_ID } from '../ducks';
+import {
+  VALIDATOR_DEPOSIT_MODAL_ID,
+  VALIDATOR_PAUSE_MODAL_ID,
+} from '../ducks';
 
 // Entities
 import {
   PAUSE_NOT_PAUSED,
-  pauseValidator,
   startValidator,
 } from 'entities/validators';
 
@@ -97,16 +99,15 @@ const mapStateToProps: Function = (state: Object, { address }): Object => ({
 export default compose(
   connect(mapStateToProps, {
     openModal,
-    pauseValidator,
     startValidator,
   }),
   withHandlers({
     handleDeposit: ({ hash, openModal }): Function =>
       (event: Object): void =>
         openModal(VALIDATOR_DEPOSIT_MODAL_ID, { hash }),
-    handlePause: ({ hash, pauseValidator }): Function =>
+    handlePause: ({ hash, openModal }): Function =>
       (event: Object): void =>
-        pauseValidator(hash),
+        openModal(VALIDATOR_PAUSE_MODAL_ID, { hash }),
     handleStart: ({ hash, startValidator }): Function =>
       (event: Object): void =>
         startValidator(hash),

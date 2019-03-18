@@ -6,38 +6,39 @@ import { reduxForm } from 'redux-form';
 
 // Components
 import Button from 'components/Button';
-import Form, { Input } from 'components/Form';
+import Form from 'components/Form';
 import Metamask from 'components/Metamask';
 import Modal from 'components/Modal';
 
+import From from '../components/From';
+
 // Ducks
 import {
-  VALIDATOR_DEPOSIT_FORM_ID,
-  VALIDATOR_DEPOSIT_MODAL_ID,
+  VALIDATOR_PAUSE_FORM_ID,
+  VALIDATOR_PAUSE_MODAL_ID,
 } from '../ducks';
 
 // Entities
-import { depositValidator } from 'entities/validators';
+import { pauseValidator } from 'entities/validators';
 
 // Services
 import { closeModal } from 'services/modals';
 
 // Utils
-import validate, { isNumber, required } from 'utils/validate';
+import validate, { isHash, required } from 'utils/validate';
 
 // Styles
 import { COLOR } from 'styles';
 import styles from './Common.scss';
 
-const ValidatorsDeposit: React.Element<Form> = ({
+const ValidatorsPause: React.Element<Form> = ({
   handleCancel,
   handleSubmit,
   submitting,
 }) => (
   <Form onSubmit={handleSubmit}>
     {submitting && <Metamask />}
-
-    <Input label="Депозит" name="deposit" placeholder="Ether" />
+    <From label="vFrom" name="address" />
 
     <div className={styles.Actions}>
       <Button
@@ -48,42 +49,42 @@ const ValidatorsDeposit: React.Element<Form> = ({
       </Button>
 
       <Button
-        color={COLOR.PRIMARY}
+        color={COLOR.DANGER}
         type="submit"
       >
-        Пополнить
+        Остановить
       </Button>
     </div>
   </Form>
 );
 
-const ComposedValidatorsDeposit = compose(
+const ComposedValidatorsPause = compose(
   connect(null, { closeModal }),
   reduxForm({
-    form: VALIDATOR_DEPOSIT_FORM_ID,
+    form: VALIDATOR_PAUSE_FORM_ID,
     validate: validate({
-      amount: [required(), isNumber()],
+      address: [required(), isHash()],
     }),
   }),
   withHandlers({
     handleCancel: ({ closeModal }): Function =>
       (event: Object): void =>
-        closeModal(VALIDATOR_DEPOSIT_MODAL_ID),
+        closeModal(VALIDATOR_PAUSE_MODAL_ID),
   }),
-)(ValidatorsDeposit)
+)(ValidatorsPause)
 
-const ValidatorsDepositModal: React.Element<Modal> = ({
+const ValidatorsPauseModal: React.Element<Modal> = ({
   handleSubmit,
 }) => (
   <Modal
     classNames={{
       container: styles.Container,
     }}
-    id={VALIDATOR_DEPOSIT_MODAL_ID}
-    title="Пополнить"
+    id={VALIDATOR_PAUSE_MODAL_ID}
+    title="Остановить"
   >
     {({ hash }) => (
-      <ComposedValidatorsDeposit
+      <ComposedValidatorsPause
         initialValues={{ hash }}
         onSubmit={handleSubmit}
       />
@@ -92,10 +93,10 @@ const ValidatorsDepositModal: React.Element<Modal> = ({
 );
 
 export default compose(
-  connect(null, { depositValidator }),
+  connect(null, { pauseValidator }),
   withHandlers({
-    handleSubmit: ({ depositValidator }): Function =>
+    handleSubmit: ({ pauseValidator }): Function =>
       (values: Object): void =>
-        depositValidator(values),
+        pauseValidator(values),
   })
-)(ValidatorsDepositModal);
+)(ValidatorsPauseModal);

@@ -12,6 +12,7 @@ import Table from './components/Table';
 // Containers
 import Create from './containers/Create';
 import Deposit from './containers/Deposit';
+import Pause from './containers/Pause';
 
 // Ducks
 import {
@@ -111,6 +112,7 @@ const Validators: React.Element<'div'> = ({
         <Fragment>
           <Create />
           <Deposit />
+          <Pause />
         </Fragment>
       )}
     </div>

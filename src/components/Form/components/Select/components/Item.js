@@ -16,7 +16,7 @@ const FormSelectItem = ({
     onClick={handleClick}
     type="button"
   >
-    <Typography variant={Typography.VARIANT.BODY2}>
+    <Typography noWrap variant={Typography.VARIANT.BODY2}>
       {label}
     </Typography>
   </button>
