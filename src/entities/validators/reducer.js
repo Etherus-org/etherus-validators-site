@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+import { get, omit } from 'lodash';
 
 // Constants
 import {
@@ -24,6 +24,10 @@ import {
   START_VALIDATOR_FAILURE,
   // Update
   UPDATE_VALIDATOR,
+  // Withdraw
+  WITHDRAW_VALIDATOR_REQUEST,
+  WITHDRAW_VALIDATOR_SUCCESS,
+  WITHDRAW_VALIDATOR_FAILURE,
 } from './types';
 
 export default (state: Object = {}, action: Object): Object => {
@@ -41,6 +45,7 @@ export default (state: Object = {}, action: Object): Object => {
     case DEPOSIT_VALIDATOR_REQUEST:
     case PAUSE_VALIDATOR_REQUEST:
     case START_VALIDATOR_REQUEST:
+    case WITHDRAW_VALIDATOR_REQUEST:
       return {
         ...state,
         [hash]: {
@@ -51,6 +56,7 @@ export default (state: Object = {}, action: Object): Object => {
     case DEPOSIT_VALIDATOR_FAILURE:
     case PAUSE_VALIDATOR_FAILURE:
     case START_VALIDATOR_FAILURE:
+    case WITHDRAW_VALIDATOR_FAILURE:
       return {
         ...state,
         [hash]: {
@@ -93,7 +99,9 @@ export default (state: Object = {}, action: Object): Object => {
           ...validator,
           ...action.payload,
         },
-      }
+      };
+    case WITHDRAW_VALIDATOR_SUCCESS:
+      return omit(state, action.hash);
     default:
       return state;
   }

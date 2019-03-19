@@ -3,9 +3,6 @@ import { get } from 'lodash';
 import { normalize } from 'normalizr';
 import { SubmissionError } from 'redux-form';
 
-// Constants
-import { PAUSE_CAUSE_VOLUNTARILY } from './constants';
-
 // Entities
 import { UPDATE_ENTITIES } from 'entities/types';
 
@@ -36,6 +33,10 @@ import {
   START_VALIDATOR_FAILURE,
   // Update
   UPDATE_VALIDATOR,
+  // Withdraw
+  WITHDRAW_VALIDATOR_REQUEST,
+  WITHDRAW_VALIDATOR_SUCCESS,
+  WITHDRAW_VALIDATOR_FAILURE,
 } from './types';
 
 // Views
@@ -125,13 +126,13 @@ export const fetchValidators = (): Function =>
         dispatch({ type: FETCH_VALIDATORS_FAILURE, error: get(error, 'message')}));
   }
 
-export const pauseValidator: Function = ({ address, hash }): Promise =>
+export const pauseValidator: Function = ({ address, hash, pauseCause, punishValue }): Promise =>
   (dispatch: Function, getState: Function, { account, web3 }): void => {
     dispatch({ type: PAUSE_VALIDATOR_REQUEST, hash });
 
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
-        .pauseValidation(hash, address, PAUSE_CAUSE_VOLUNTARILY, 0)
+        .pauseValidation(hash, address, pauseCause, punishValue)
         .send({ from: window.ethereum.selectedAddress })
           .on('transactionHash', (): void =>
             dispatch(closeModal(VALIDATOR_PAUSE_MODAL_ID)))
@@ -161,3 +162,19 @@ export const startValidator: Function = (hash: string): Promise =>
 
 export const updateValidator: Function = (hash: string, payload: Object): Object =>
   ({ type: UPDATE_VALIDATOR, hash, payload });
+
+export const withdrawValidator: Function = (hash: string): Function =>
+  (dispatch: Function, getState: Function, { account, web3 }): void => {
+    dispatch({ type: WITHDRAW_VALIDATOR_REQUEST, hash });
+
+    return new Promise((resolve: Function, reject: Function) => {
+      account.methods
+        .withdraw(hash)
+        .send({ from: window.ethereum.selectedAddress })
+          .on('confirmation', () =>
+            dispatch({ type: WITHDRAW_VALIDATOR_SUCCESS, hash }))
+          .on('error', reject)
+    })
+      .catch((error: Object) =>
+        dispatch({ type: WITHDRAW_VALIDATOR_FAILURE, hash, error: get(error, 'message')}))
+  }

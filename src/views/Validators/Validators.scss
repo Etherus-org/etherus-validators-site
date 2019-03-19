@@ -12,6 +12,14 @@
         }
       }
     }
+
+    &Owner {
+      .Status {
+        &:before {
+          background: var(--gradient-purple);
+        }
+      }
+    }
   }
 }
 

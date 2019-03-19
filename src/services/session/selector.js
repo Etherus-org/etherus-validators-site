@@ -12,5 +12,8 @@ export const isConnected: Function = (state: Object): Function =>
 export const isConnecting: Function = (state: Object): Function =>
   get(state, 'services.session.isConnecting');
 
-export const isOwner: Function = (state: Object, hash: string): Function =>
+export const isOwner: Function = (state: Object): Function =>
+  get(state, 'services.session.isOwner');
+
+export const isValidatorOwner: Function = (state: Object, hash: string): Function =>
   getAddress(state) === hash;

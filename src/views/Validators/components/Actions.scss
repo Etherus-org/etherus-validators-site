@@ -31,6 +31,14 @@
         }
       }
     }
+
+    &Withdraw {
+      &:hover {
+        .Icon {
+          color: var(--color-primary);
+        }
+      }
+    }
   }
 }
 

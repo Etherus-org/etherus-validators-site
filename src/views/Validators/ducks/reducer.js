@@ -15,7 +15,7 @@ export default (state: Object = initialState, action: Object): Object => {
       return { ...state, isFetching: true };
     case FETCH_VALIDATORS_SUCCESS:
     case FETCH_VALIDATORS_FAILURE:
-      return { ...state, isFetching: false };
+      return { ...state, error: action.error, isFetching: false };
     default:
       return state;
   }

@@ -1,12 +1,13 @@
 // @flow
-import React from 'react';
+import { get } from 'lodash';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
 import { reduxForm } from 'redux-form';
 
 // Components
 import Button from 'components/Button';
-import Form from 'components/Form';
+import Form, { Input, Item, Select } from 'components/Form';
 import Metamask from 'components/Metamask';
 import Modal from 'components/Modal';
 
@@ -19,13 +20,22 @@ import {
 } from '../ducks';
 
 // Entities
-import { pauseValidator } from 'entities/validators';
+import {
+  PAUSE_CAUSE_VOLUNTARILY,
+  PAUSE_CAUSE_UNTIL_BLOCK,
+  PAUSE_CAUSE_UNTIL_FINE,
+  PAUSE_CAUSE_PUNISHMENT,
+  pauseValidator,
+} from 'entities/validators';
 
 // Services
 import { closeModal } from 'services/modals';
+import { isOwner } from 'services/session';
 
 // Utils
-import validate, { isHash, required } from 'utils/validate';
+
+import { parsePause } from 'utils/parse';
+import validate, { isHash, isNumber, isUint, required } from 'utils/validate';
 
 // Styles
 import { COLOR } from 'styles';
@@ -35,10 +45,38 @@ const ValidatorsPause: React.Element<Form> = ({
   handleCancel,
   handleSubmit,
   submitting,
+  // State
+  isOwner,
 }) => (
   <Form onSubmit={handleSubmit}>
     {submitting && <Metamask />}
     <From label="vFrom" name="address" />
+
+    {isOwner && (
+      <Fragment>
+        <Select
+          format={(id: number): Object => ({ label: parsePause(id), value: id })}
+          label="Тип паузы"
+          name="pauseCause"
+          parse={(item: Object): number => get(item, 'value')}
+        >
+          {[
+            PAUSE_CAUSE_VOLUNTARILY,
+            PAUSE_CAUSE_UNTIL_BLOCK,
+            PAUSE_CAUSE_UNTIL_FINE,
+            PAUSE_CAUSE_PUNISHMENT,
+          ].map((id: number): React.Element<Item> => (
+            <Item
+              key={id}
+              label={parsePause(id)}
+              value={id}
+            />
+          ))}
+        </Select>
+
+        <Input label="PUNISH VALUE" name="punishValue" />
+      </Fragment>
+    )}
 
     <div className={styles.Actions}>
       <Button
@@ -58,12 +96,18 @@ const ValidatorsPause: React.Element<Form> = ({
   </Form>
 );
 
+const mapStateToProps: Function = (state: Object): Object => ({
+  isOwner: isOwner(state),
+});
+
 const ComposedValidatorsPause = compose(
-  connect(null, { closeModal }),
+  connect(mapStateToProps, { closeModal }),
   reduxForm({
     form: VALIDATOR_PAUSE_FORM_ID,
     validate: validate({
       address: [required(), isHash()],
+      pauseCause: [required(), isNumber(), isUint(8)],
+      punishValue: [required(), isNumber(), isUint(96)]
     }),
   }),
   withHandlers({
@@ -85,7 +129,11 @@ const ValidatorsPauseModal: React.Element<Modal> = ({
   >
     {({ hash }) => (
       <ComposedValidatorsPause
-        initialValues={{ hash }}
+        initialValues={{
+          hash,
+          pauseCause: PAUSE_CAUSE_VOLUNTARILY,
+          punishValue: 0,
+        }}
         onSubmit={handleSubmit}
       />
     )}

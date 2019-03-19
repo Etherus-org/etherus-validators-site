@@ -5,6 +5,9 @@ import {
   CONNECT_REQUEST,
   CONNECT_SUCCESS,
   CONNECT_FAILURE,
+    // IS OWNER
+  IS_OWNER_REQUEST,
+  IS_OWNER_SUCCESS,
 } from './types';
 
 const initialState = {
@@ -12,6 +15,7 @@ const initialState = {
   error: false,
   isConnected: false,
   isConnecting: false,
+  isOwner: false,
 };
 
 export default (state: Object = initialState, action: Object): Object => {
@@ -30,6 +34,14 @@ export default (state: Object = initialState, action: Object): Object => {
         ...state,
         isConnected: false,
         isConnecting: false,
+      };
+
+    case IS_OWNER_REQUEST:
+      return { ...state, isConnecting: true };
+    case IS_OWNER_SUCCESS:
+      return {
+        ...state,
+        isOwner: action.isOwner,
       };
     default:
       return state;

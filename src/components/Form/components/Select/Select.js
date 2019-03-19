@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { get, isEmpty } from 'lodash';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Children, cloneElement } from 'react';
 import { compose, withHandlers, withState } from 'recompose';
 
 // Components
@@ -71,7 +71,7 @@ const FormSelect = ({
           ))}
 
           <input
-            autoComplete="off"
+            autoComplete="new-password"
             className={styles.Input}
             id={id}
             name={name}
@@ -94,11 +94,16 @@ const FormSelect = ({
       {children && isFocused && (
         <div className={styles.Dropdown}>
           <div className={styles.List}>
-            {children({
-              value,
-              inputValue: inputValue.toLowerCase(),
-              onClick: handleCreate,
-            })}
+            {typeof children === 'function'
+              ? children({
+                  value,
+                  inputValue: inputValue.toLowerCase(),
+                  onClick: handleCreate,
+                })
+              : Children.map(children, (child: Object) => child && cloneElement(child, {
+                  onClick: handleCreate,
+                }))
+            }
           </div>
         </div>
       )}
@@ -107,7 +112,9 @@ const FormSelect = ({
 };
 
 FormSelect.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(),
+  ]),
   id: PropTypes.string,
   isMultiple: PropTypes.bool,
   name: PropTypes.string,

@@ -73,7 +73,7 @@ const COLUMNS = [
     ),
     Header: 'Пауза',
     sortable: false,
-    width: 160,
+    width: 120,
   },
   {
     accessor: 'actions',
@@ -84,7 +84,7 @@ const COLUMNS = [
     ),
     Header: 'Действия',
     sortable: false,
-    width: 120,
+    width: 160,
   }
 ];
 

@@ -39,8 +39,11 @@ import styles from './Validators.scss';
 
 type ValidatorsType = {
   address: string,
+  handleConnect: Function,
+  handleCreate: Function,
   isConnected: bool,
   isFetching: bool,
+  isOwner: bool,
   validators: Array<Object>,
 };
 
@@ -48,6 +51,7 @@ const Validators: React.Element<'div'> = ({
   address,
   isConnected,
   isFetching,
+  isOwner,
   validators,
   // Handlers
   handleConnect,
@@ -55,6 +59,7 @@ const Validators: React.Element<'div'> = ({
 }: ValidatorsType) => {
   const rootClassNames: string = classNames(styles.Root, {
     [styles.RootIsConnected]: isConnected,
+    [styles.RootIsOwner]: isOwner,
   });
 
   return (
@@ -72,7 +77,9 @@ const Validators: React.Element<'div'> = ({
             variant={Typography.VARIANT.CAPTION}
           >
             {isConnected
-              ? `Подключено: ${address.substr(0, 16)}...`
+              ? isOwner
+                ? `OWNER`
+                : `Подключено: ${address.substr(0, 16)}...`
               : 'Для редактирования нужна авторизация'}
           </Typography>
         </div>

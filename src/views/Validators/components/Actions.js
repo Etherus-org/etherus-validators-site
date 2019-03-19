@@ -16,8 +16,10 @@ import {
 
 // Entities
 import {
+  PAUSE_CAUSE_VOLUNTARILY,
   PAUSE_NOT_PAUSED,
   startValidator,
+  withdrawValidator,
 } from 'entities/validators';
 
 // Services
@@ -25,6 +27,7 @@ import { openModal } from 'services/modals';
 import {
   isConnected,
   isOwner,
+  isValidatorOwner,
 } from 'services/session';
 
 // Styles
@@ -43,12 +46,14 @@ const ValidatorsActions: React.Element<'div'> = ({
   handleDeposit,
   handlePause,
   handleStart,
+  handleWithdraw,
   // State
   isConnected,
   isFetching,
   isDisabled,
   isOwner,
-}: ValidatorsActionsType) => isConnected && isOwner && !isDisabled && (
+  isValidatorOwner,
+}: ValidatorsActionsType) => isConnected && (isOwner || isValidatorOwner) && !isDisabled && (
   <Fragment>
     {isFetching ? <Progress size={20} /> : (
       <div className={styles.Root}>
@@ -86,6 +91,19 @@ const ValidatorsActions: React.Element<'div'> = ({
             onClick={handleDeposit}
           />
         </Tooltip>
+
+        {pauseCause === PAUSE_CAUSE_VOLUNTARILY && (
+          <Tooltip title="Забрать деньги">
+            <Button
+              classNames={{
+                root: classNames(styles.Button, styles.ButtonVariantWithdraw),
+                icon: styles.Icon,
+              }}
+              icon="fas fa-hand-holding-usd"
+              onClick={handleWithdraw}
+            />
+          </Tooltip>
+        )}
       </div>
     )}
   </Fragment>
@@ -93,13 +111,15 @@ const ValidatorsActions: React.Element<'div'> = ({
 
 const mapStateToProps: Function = (state: Object, { address }): Object => ({
   isConnected: isConnected(state),
-  isOwner: isOwner(state, address),
+  isOwner: isOwner(state),
+  isValidatorOwner: isValidatorOwner(state, address),
 });
 
 export default compose(
   connect(mapStateToProps, {
     openModal,
     startValidator,
+    withdrawValidator,
   }),
   withHandlers({
     handleDeposit: ({ hash, openModal }): Function =>
@@ -111,5 +131,8 @@ export default compose(
     handleStart: ({ hash, startValidator }): Function =>
       (event: Object): void =>
         startValidator(hash),
+    handleWithdraw: ({ hash, withdrawValidator }): Function =>
+      (event: Object): void =>
+        withdrawValidator(hash),
   }),
 )(ValidatorsActions);

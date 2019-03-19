@@ -12,6 +12,12 @@ export const isNumber = (message: string = 'Must be a number!'): Function =>
     isValid: /^[0-9.]*$/.test(value),
   });
 
+export const isUint = (bytes: number = 8, message: string = 'Must be like a uint'): Function =>
+  (value: string = ''): Object => ({
+    message: `${message}${bytes}`,
+    isValid: value.toString().length <= bytes / 4,
+  })
+
 export const isUrl = (message: string = 'Incorrect URL!') =>
   (value: string): Object => ({
     message,
@@ -27,17 +33,18 @@ export const matches = (regex: Object<RegExp>, message: string = 'Incorrect valu
   isValid: value && regex.test(value),
 });
 
-export const min = (min: number, message: string = 'Min value: %d!') => (value: any): Object => ({
-  message: message.replace('%d', min),
-  isValid: parseInt(value, 10) >= min,
-});
+export const min = (min: number, message: string = 'Min value: %d!') =>
+  (value: any): Object => ({
+    message: message.replace('%d', min),
+    isValid: parseInt(value, 10) >= min,
+  });
 
 /**
  * @param {string} message
  */
 export const required = (message: string = 'Field is required!') => (value: any): Object => ({
   message,
-  isValid: !isEmpty(value),
+  isValid: typeof value === 'number' || !isEmpty(value),
 });
 
 export default (fields: Object) => (values: Object, props :Object): Object => {
