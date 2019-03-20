@@ -19,6 +19,9 @@ import entities from './entities/reducer';
 import services from './services/reducer';
 import views from './views/reducer';
 
+// Services
+import { SET_CURRENT_BLOCK_NUMBER } from 'services/session';
+
 const reducer = combineReducers({
   entities,
   form,
@@ -36,7 +39,7 @@ export default (history: Object): Object => {
   const privateWeb3 = new Web3(window.ethereum);
   const web3 = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337'));
 
-  return createStore(reducer, composeEnhancers(
+  const store = createStore(reducer, composeEnhancers(
     applyMiddleware(
       thunkMiddleware.withExtraArgument({
         history, schema, web3,
@@ -52,5 +55,12 @@ export default (history: Object): Object => {
       }),
     ),
   ));
+
+  web3.eth.getBlockNumber()
+    .then((blockNumber: number): void => {
+      store.dispatch({ type: SET_CURRENT_BLOCK_NUMBER, blockNumber });
+    });
+
+  return store;
 }
 

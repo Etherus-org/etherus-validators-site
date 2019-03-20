@@ -20,6 +20,10 @@ import {
   DEPOSIT_VALIDATOR_SUCCESS,
   DEPOSIT_VALIDATOR_FAILURE,
   // Fetch
+  FETCH_VALIDATOR_REQUEST,
+  FETCH_VALIDATOR_SUCCESS,
+  FETCH_VALIDATOR_FAILURE,
+  // Fetch list
   FETCH_VALIDATORS_REQUEST,
   FETCH_VALIDATORS_SUCCESS,
   FETCH_VALIDATORS_FAILURE,
@@ -103,12 +107,30 @@ export const depositValidator = ({ hash, deposit }): Function =>
         dispatch({ type: DEPOSIT_VALIDATOR_FAILURE, hash, error: get(error, 'message')}));
   }
 
+export const fetchValidator = (hash: string): Function =>
+  (dispatch: Function, getState: Function, { contract }): void => {
+    dispatch({ type: FETCH_VALIDATOR_REQUEST, hash });
+
+    return contract.methods.getValidator(hash)
+      .call(null, (error: Object, res: Object): void => {
+        if (error) {
+          dispatch({ type: FETCH_VALIDATOR_FAILURE, hash, error: get(error, 'message') });
+        } else {
+          dispatch({ type: FETCH_VALIDATOR_SUCCESS, hash, payload: {
+            pauseBlockNumber: get(res, 'pauseBlockNumber'),
+          }});
+        }
+      });
+  }
+
 export const fetchValidators = (): Function =>
   (dispatch: Function, getState: Function, { contract, schema, web3 }): Promise => {
     dispatch({ type: FETCH_VALIDATORS_REQUEST });
 
-    return contract.methods.getCompactedValidators.call()
-      .then((res: Object) => {
+    return contract.methods.getCompactedValidators().call(null, (error: Object, res: Object): void => {
+      if (error) {
+        dispatch({ type: FETCH_VALIDATORS_FAILURE, error: get(error, 'message')})
+      } else {
         const data: Array<Object> = [];
         const validators: Array<string> = get(res, 'ValidatorsPubKeys', []);
 
@@ -121,9 +143,8 @@ export const fetchValidators = (): Function =>
 
         dispatch({ type: UPDATE_ENTITIES, data: normalizedData, force: true });
         dispatch({ type: FETCH_VALIDATORS_SUCCESS });
-      })
-      .catch((error: Object) =>
-        dispatch({ type: FETCH_VALIDATORS_FAILURE, error: get(error, 'message')}));
+      }
+    });
   }
 
 export const pauseValidator: Function = ({ address, hash, pauseCause, punishValue }): Promise =>
@@ -132,11 +153,11 @@ export const pauseValidator: Function = ({ address, hash, pauseCause, punishValu
 
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
-        .pauseValidation(hash, address, pauseCause, punishValue)
+        .pauseValidation(hash, address || hash, pauseCause || 1, punishValue || 0)
         .send({ from: window.ethereum.selectedAddress })
           .on('transactionHash', (): void =>
             dispatch(closeModal(VALIDATOR_PAUSE_MODAL_ID)))
-          .on('confirmation', () =>
+          .on('confirmation', (): void =>
             dispatch({ type: PAUSE_VALIDATOR_SUCCESS, hash }))
           .on('error', reject)
     })
@@ -164,7 +185,7 @@ export const updateValidator: Function = (hash: string, payload: Object): Object
   ({ type: UPDATE_VALIDATOR, hash, payload });
 
 export const withdrawValidator: Function = (hash: string): Function =>
-  (dispatch: Function, getState: Function, { account, web3 }): void => {
+  (dispatch: Function, getState: Function, { account, contract, web3 }): void => {
     dispatch({ type: WITHDRAW_VALIDATOR_REQUEST, hash });
 
     return new Promise((resolve: Function, reject: Function) => {
@@ -176,5 +197,6 @@ export const withdrawValidator: Function = (hash: string): Function =>
           .on('error', reject)
     })
       .catch((error: Object) =>
-        dispatch({ type: WITHDRAW_VALIDATOR_FAILURE, hash, error: get(error, 'message')}))
+        dispatch({ type: WITHDRAW_VALIDATOR_FAILURE, hash, error: get(error, 'message')}));
   }
+

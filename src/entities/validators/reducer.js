@@ -1,4 +1,4 @@
-import { get, omit } from 'lodash';
+import { get, has, omit } from 'lodash';
 
 // Constants
 import {
@@ -14,6 +14,10 @@ import {
   DEPOSIT_VALIDATOR_REQUEST,
   DEPOSIT_VALIDATOR_SUCCESS,
   DEPOSIT_VALIDATOR_FAILURE,
+  // Fetch
+  FETCH_VALIDATOR_REQUEST,
+  FETCH_VALIDATOR_SUCCESS,
+  FETCH_VALIDATOR_FAILURE,
   // Pause
   PAUSE_VALIDATOR_REQUEST,
   PAUSE_VALIDATOR_SUCCESS,
@@ -43,6 +47,7 @@ export default (state: Object = {}, action: Object): Object => {
       };
     // PAUSE && START
     case DEPOSIT_VALIDATOR_REQUEST:
+    case FETCH_VALIDATOR_REQUEST:
     case PAUSE_VALIDATOR_REQUEST:
     case START_VALIDATOR_REQUEST:
     case WITHDRAW_VALIDATOR_REQUEST:
@@ -54,16 +59,18 @@ export default (state: Object = {}, action: Object): Object => {
         },
       };
     case DEPOSIT_VALIDATOR_FAILURE:
+    case FETCH_VALIDATOR_FAILURE:
     case PAUSE_VALIDATOR_FAILURE:
     case START_VALIDATOR_FAILURE:
     case WITHDRAW_VALIDATOR_FAILURE:
-      return {
+      return has(state, hash) ? {
         ...state,
         [hash]: {
           ...validator,
+          error: action.error,
           isFetching: false,
         },
-      };
+      } : state;
     case DEPOSIT_VALIDATOR_SUCCESS:
       return {
         ...state,
@@ -72,6 +79,15 @@ export default (state: Object = {}, action: Object): Object => {
           deposit: get(validator, 'deposit', 0) + action.deposit,
           isFetching: false,
         }
+      };
+    case FETCH_VALIDATOR_SUCCESS:
+      return {
+        ...state,
+        [hash]: {
+          ...validator,
+          ...action.payload,
+          isFetching: false,
+        },
       };
     case PAUSE_VALIDATOR_SUCCESS:
       return {

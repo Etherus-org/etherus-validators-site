@@ -1,5 +1,11 @@
 import { get } from 'lodash';
 
+// Entities
+import {
+  fetchValidator,
+  getValidatorListByAddress,
+} from 'entities/validators';
+
 // Types
 import {
   CONNECT_REQUEST,
@@ -15,21 +21,28 @@ export const checkOwnership: Function = (address: string): Function =>
   (dispatch: Function, getState: Function, { contract }): Promise => {
     dispatch({ type: IS_OWNER_REQUEST });
 
-    return contract.methods.owner.call()
-      .then((ownerAddress: string) =>
-        dispatch({ type: IS_OWNER_SUCCESS, isOwner: address.toLowerCase() === ownerAddress.toLowerCase() }))
-      .catch((error: Object): void =>
-        dispatch({ type: IS_OWNER_FAILURE, error: get(error, 'message') }))
+    return contract.methods.owner().call(null, (error: Object, ownerAddress: string): void => {
+      error
+        ? dispatch({ type: IS_OWNER_FAILURE, error: get(error, 'message') })
+        : dispatch({ type: IS_OWNER_SUCCESS, isOwner: address.toLowerCase() === ownerAddress.toLowerCase() })
+    });
   }
 
 export const connectMetamask: Function = (): Function =>
-  (dispatch: Function): Object<Promise> => {
+  (dispatch: Function, getState: Function): Object<Promise> => {
+    const state = getState();
     dispatch({ type: CONNECT_REQUEST });
 
     return window.ethereum.enable()
       .then((data: Array<string>): void => {
+        getValidatorListByAddress(state, data[0])
+          .filter(({ address }): bool => address === data[0])
+          .forEach(({ address, hash }): void =>
+            dispatch(fetchValidator(hash)));
+
         dispatch({ type: CONNECT_SUCCESS, address: data[0] });
         dispatch(checkOwnership(data[0]));
+
       })
       .catch((error: Object): void =>
         dispatch({ type: CONNECT_FAILURE, error: get(error, 'message')}));

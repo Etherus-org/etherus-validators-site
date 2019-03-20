@@ -18,6 +18,7 @@ import {
 import {
   PAUSE_CAUSE_VOLUNTARILY,
   PAUSE_NOT_PAUSED,
+  pauseValidator,
   startValidator,
   withdrawValidator,
 } from 'entities/validators';
@@ -25,6 +26,7 @@ import {
 // Services
 import { openModal } from 'services/modals';
 import {
+  getBlockNumber,
   isConnected,
   isOwner,
   isValidatorOwner,
@@ -40,7 +42,9 @@ type ValidatorsActionsType = {
 };
 
 const ValidatorsActions: React.Element<'div'> = ({
+  blockNumber,
   hash,
+  pauseBlockNumber,
   pauseCause,
   // Handlers
   handleDeposit,
@@ -53,6 +57,7 @@ const ValidatorsActions: React.Element<'div'> = ({
   isDisabled,
   isOwner,
   isValidatorOwner,
+  ...props,
 }: ValidatorsActionsType) => isConnected && (isOwner || isValidatorOwner) && !isDisabled && (
   <Fragment>
     {isFetching ? <Progress size={20} /> : (
@@ -92,7 +97,7 @@ const ValidatorsActions: React.Element<'div'> = ({
           />
         </Tooltip>
 
-        {pauseCause === PAUSE_CAUSE_VOLUNTARILY && (
+        {pauseCause === PAUSE_CAUSE_VOLUNTARILY && (blockNumber - pauseBlockNumber > 6000) && (
           <Tooltip title="Забрать деньги">
             <Button
               classNames={{
@@ -110,6 +115,7 @@ const ValidatorsActions: React.Element<'div'> = ({
 );
 
 const mapStateToProps: Function = (state: Object, { address }): Object => ({
+  blockNumber: getBlockNumber(state),
   isConnected: isConnected(state),
   isOwner: isOwner(state),
   isValidatorOwner: isValidatorOwner(state, address),
@@ -118,6 +124,7 @@ const mapStateToProps: Function = (state: Object, { address }): Object => ({
 export default compose(
   connect(mapStateToProps, {
     openModal,
+    pauseValidator,
     startValidator,
     withdrawValidator,
   }),
@@ -125,9 +132,11 @@ export default compose(
     handleDeposit: ({ hash, openModal }): Function =>
       (event: Object): void =>
         openModal(VALIDATOR_DEPOSIT_MODAL_ID, { hash }),
-    handlePause: ({ hash, openModal }): Function =>
+    handlePause: ({ hash, isValidatorOwner, openModal, pauseValidator }): Function =>
       (event: Object): void =>
-        openModal(VALIDATOR_PAUSE_MODAL_ID, { hash }),
+        isValidatorOwner
+          ? pauseValidator({ hash })
+          : openModal(VALIDATOR_PAUSE_MODAL_ID, { hash }),
     handleStart: ({ hash, startValidator }): Function =>
       (event: Object): void =>
         startValidator(hash),

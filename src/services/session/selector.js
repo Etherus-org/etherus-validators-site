@@ -3,6 +3,9 @@ import { get } from 'lodash';
 export const getAddress: Function = (state: Object): Function =>
   get(state, 'services.session.address');
 
+export const getBlockNumber: Function = (state: Object): Function =>
+  get(state, 'services.session.blockNumber');
+
 export const getSession: Function = (state: Object): Function =>
   get(state, 'services.session');
 
