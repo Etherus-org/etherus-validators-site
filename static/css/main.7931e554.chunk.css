@@ -286,8 +286,6 @@
     display: flex;
     overflow: visible;
     padding: 0 16px; }
-    .Table_Root__1Dcze .ReactTable .rt-td:first-child {
-      border-right: 1px solid var(--background-dark) !important; }
   .Table_Root__1Dcze .ReactTable .rt-thead {
     border-bottom: 2px solid var(--background-dark) !important;
     box-shadow: none !important;
@@ -329,13 +327,13 @@
       .Table_Root__1Dcze .ReactTable .rt-thead .rt-th.-sort-asc, .Table_Root__1Dcze .ReactTable .rt-thead .rt-th.-sort-desc {
         box-shadow: none;
         color: var(--color-blue-gray); }
+  .Table_Root__1Dcze .ReactTable .rt-tr {
+    padding: 0 8px; }
   .Table_Root__1Dcze .ReactTable .rt-tr-group {
-    border-bottom: 1px solid var(--background-dark) !important;
     height: 48px;
     font-size: 14px;
     letter-spacing: .3px;
-    line-height: 20px;
-    padding: 0 8px; }
+    line-height: 20px; }
     .Table_Root__1Dcze .ReactTable .rt-tr-group:hover {
       background: var(--background-lighter); }
 
@@ -424,6 +422,20 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
+
+.Table_Root__1s8Ss {
+  border-bottom: 1px solid var(--background-dark) !important; }
+  .Table_Root__1s8Ss .rt-td:first-child {
+    border-right: 1px solid var(--background-dark) !important; }
+  .Table_RootIsDisabled__14x15 {
+    background: var(--background-lighter); }
+  .Table_RootIsFavorite__2WNWH {
+    background: #fff6ce;
+    border-bottom: 1px solid #ffed90 !important; }
+    .Table_RootIsFavorite__2WNWH:hover {
+      background: #fff6ce !important; }
+    .Table_RootIsFavorite__2WNWH .rt-td:first-child {
+      border-right: 1px solid #ffed90 !important; }
 
 .Form_Error__FAKdL {
   background: var(--color-red-200);
@@ -722,6 +734,17 @@
   -webkit-justify-content: space-between;
           justify-content: space-between; }
 
+.Validators_Hint__Hf5lS {
+  background: var(--gradient-orange);
+  border-radius: 8px;
+  box-shadow: var(--shadow-down-z1);
+  color: var(--color-white);
+  padding: 8px 16px;
+  text-align: right; }
+  .Validators_Hint__Hf5lS > a {
+    color: var(--color-primary);
+    text-decoration: none; }
+
 .Validators_List__b5LW9 {
   margin: 0 -24px; }
 
@@ -897,4 +920,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.fce366cc.chunk.css.map*/
+/*# sourceMappingURL=main.7931e554.chunk.css.map*/
