@@ -77,10 +77,10 @@ const ComposedValidatorsCreate = compose(
   reduxForm({
     form: VALIDATOR_CREATE_FORM_ID,
     validate: validate({
-      amount: [required(), isNumber()],
-      vpub: [required(), isHash()],
+      address: [required(), isHash()],
+      deposit: [required(), isNumber()],
+      hash: [required(), isHash()],
       node: [required(), isHash()],
-      receiver: [required(), isHash()],
     }),
   }),
   withHandlers({

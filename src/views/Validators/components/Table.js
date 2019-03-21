@@ -1,9 +1,18 @@
+import classNames from 'classnames';
+import { get } from 'lodash';
 import React from 'react';
+import { connect } from 'react-redux';
 
 // Components
 import Table from 'components/Table';
 import Actions from './Actions';
 import Field, { VARIANT } from './Field';
+
+// Services
+import { getAddress } from 'services/session';
+
+// Styles
+import styles from './Table.scss';
 
 type ValidatorsTableType = {
   data: Array<Object>,
@@ -13,10 +22,10 @@ const MAX_ROWS = 128;
 const COLUMNS = [
   {
     accessor: 'index',
-    Cell: ({ index }) => (
+    Cell: ({ index, original }) => (
       <Field
         isDisabled={index >= MAX_ROWS}
-        title={index + 1}
+        title={get(original, 'pauseCause') === 0 ? (index + 1) : ''}
       />
     ),
     Header: '#',
@@ -89,15 +98,26 @@ const COLUMNS = [
 ];
 
 const ValidatorsTable: React.Element<'div'> = ({
-  data
+  data,
+  ownerAddress,
 }: ValidatorsTableType) => (
   <Table
     columns={COLUMNS}
     data={data}
+    getTrGroupProps={(state: Object, { index, original }): Object => ({
+      className: classNames(styles.Root, {
+        [styles.RootIsFavorite]: get(original, 'address') === ownerAddress,
+        [styles.RootIsDisabled]: get(original, 'pauseCause') !== 0 || index > MAX_ROWS,
+      }),
+    })}
     minRows={0}
     resizable={false}
     showPagination={false}
   />
 );
 
-export default ValidatorsTable;
+const mapStateToProps: Function = (state: Object): Object => ({
+  ownerAddress: getAddress(state),
+});
+
+export default connect(mapStateToProps)(ValidatorsTable);

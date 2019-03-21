@@ -63,16 +63,18 @@ const ValidatorsActions: React.Element<'div'> = ({
     {isFetching ? <Progress size={20} /> : (
       <div className={styles.Root}>
         {pauseCause !== PAUSE_NOT_PAUSED ? (
-          <Tooltip title="Запустить">
-            <Button
-              classNames={{
-                root: classNames(styles.Button, styles.ButtonVariantPlay),
-                icon: styles.Icon,
-              }}
-              icon="fas fa-play"
-              onClick={handleStart}
-            />
-          </Tooltip>
+          isValidatorOwner && (
+            <Tooltip title="Запустить">
+              <Button
+                classNames={{
+                  root: classNames(styles.Button, styles.ButtonVariantPlay),
+                  icon: styles.Icon,
+                }}
+                icon="fas fa-play"
+                onClick={handleStart}
+              />
+            </Tooltip>
+          )
         ) : (
           <Tooltip title="Остановить">
             <Button
@@ -86,18 +88,24 @@ const ValidatorsActions: React.Element<'div'> = ({
           </Tooltip>
         )}
 
-        <Tooltip title="Пополнить">
-          <Button
-            classNames={{
-              root: classNames(styles.Button, styles.ButtonVariantDeposit),
-              icon: styles.Icon,
-            }}
-            icon="fas fa-usd-circle"
-            onClick={handleDeposit}
-          />
-        </Tooltip>
+        {isValidatorOwner && (
+          <Tooltip title="Пополнить">
+            <Button
+              classNames={{
+                root: classNames(styles.Button, styles.ButtonVariantDeposit),
+                icon: styles.Icon,
+              }}
+              icon="fas fa-usd-circle"
+              onClick={handleDeposit}
+            />
+          </Tooltip>
+        )}
 
-        {pauseCause === PAUSE_CAUSE_VOLUNTARILY && (blockNumber - pauseBlockNumber > 6000) && (
+        {
+          isValidatorOwner &&
+          pauseCause === PAUSE_CAUSE_VOLUNTARILY &&
+          (blockNumber - pauseBlockNumber > 6000) &&
+        (
           <Tooltip title="Забрать деньги">
             <Button
               classNames={{

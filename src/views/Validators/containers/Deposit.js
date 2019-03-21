@@ -62,7 +62,7 @@ const ComposedValidatorsDeposit = compose(
   reduxForm({
     form: VALIDATOR_DEPOSIT_FORM_ID,
     validate: validate({
-      amount: [required(), isNumber()],
+      deposit: [required(), isNumber()],
     }),
   }),
   withHandlers({

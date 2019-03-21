@@ -44,6 +44,8 @@ type ValidatorsType = {
   isConnected: bool,
   isFetching: bool,
   isOwner: bool,
+  isSupported: bool,
+  networkId: string,
   validators: Array<Object>,
 };
 
@@ -52,6 +54,8 @@ const Validators: React.Element<'div'> = ({
   isConnected,
   isFetching,
   isOwner,
+  isSupported,
+  networkId,
   validators,
   // Handlers
   handleConnect,
@@ -86,12 +90,33 @@ const Validators: React.Element<'div'> = ({
 
         <div className={styles.HeaderRight}>
           {!isConnected ? (
-            <Button
-              color={GRADIENT.GREEN}
-              onClick={handleConnect}
-            >
-              Подключить Metamask
-            </Button>
+            isSupported && networkId === '4' ? (
+              <Button
+                color={GRADIENT.GREEN}
+                onClick={handleConnect}
+              >
+                Подключить Metamask
+              </Button>
+            ) : (
+              <Typography
+                className={styles.Hint}
+                variant={Typography.VARIANT.CAPTION}
+              >
+                {!isSupported ? (
+                  <Fragment>
+                    Для работы установите расширение Metamask:<br />
+                    <a
+                      className={styles.Link}
+                      href="https://metamask.io/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      https://metamask.io/
+                    </a>
+                  </Fragment>
+                ) : 'Переключите Metamask на сеть RinkeBy'}
+              </Typography>
+            )
           ) : (
             <Button
               color={COLOR.PRIMARY}
@@ -129,7 +154,9 @@ const Validators: React.Element<'div'> = ({
 const mapStateToProps: Function = (state: Object): Object => ({
   ...getValidatorsView(state),
   ...getSession(state),
-  validators: getValidatorList(state),
+  validators: getValidatorList(state)
+    .sort(({ pauseCause }, { pauseCause: pauseCauseB }): number =>
+      pauseCause > pauseCauseB ? 1 : pauseCause < pauseCauseB ? -1 : 0),
 });
 
 export default compose(

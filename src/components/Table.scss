@@ -16,10 +16,6 @@
       display: flex;
       overflow: visible;
       padding: 0 16px;
-
-      &:first-child {
-        border-right: 1px solid var(--background-dark) !important;
-      }
     }
 
     .rt-thead {
@@ -75,13 +71,16 @@
       }
     }
 
+    .rt-tr {
+      padding: 0 8px;
+    }
+
     .rt-tr-group {
-      border-bottom: 1px solid var(--background-dark) !important;
       height: 48px;
       font-size: 14px;
       letter-spacing: .3px;
       line-height: 20px;
-      padding: 0 8px;
+      // padding: 0 8px;
 
       &:hover {
         background: var(--background-lighter);

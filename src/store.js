@@ -20,7 +20,10 @@ import services from './services/reducer';
 import views from './views/reducer';
 
 // Services
-import { SET_CURRENT_BLOCK_NUMBER } from 'services/session';
+import {
+  SET_CURRENT_BLOCK_NUMBER,
+  SET_SUPPORT,
+} from 'services/session';
 
 const reducer = combineReducers({
   entities,
@@ -36,14 +39,21 @@ const composeEnhancers =
     : compose;
 
 export default (history: Object): Object => {
-  const privateWeb3 = new Web3(window.ethereum);
+  let isSupported = false;
+  let privateWeb3;
+
   const web3 = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337'));
+
+  if (window.ethereum || window.web3) {
+    isSupported = true;
+    privateWeb3 = new Web3(window.ethereum)
+  }
 
   const store = createStore(reducer, composeEnhancers(
     applyMiddleware(
       thunkMiddleware.withExtraArgument({
         history, schema, web3,
-        account: new privateWeb3.eth.Contract(
+        account: privateWeb3 && new privateWeb3.eth.Contract(
           contractInterface,
           '0xD019247742150fD1B55CA20010659976fe2b6a2f',
           { from: window.ethereum.selectedAddress }
@@ -55,6 +65,10 @@ export default (history: Object): Object => {
       }),
     ),
   ));
+
+  if (isSupported) {
+    store.dispatch({ type: SET_SUPPORT, isSupported: true });
+  }
 
   web3.eth.getBlockNumber()
     .then((blockNumber: number): void => {

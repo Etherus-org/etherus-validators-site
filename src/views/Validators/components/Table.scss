@@ -1,0 +1,30 @@
+.Root {
+  border-bottom: 1px solid var(--background-dark) !important;
+
+  :global .rt-td {
+    &:first-child {
+      border-right: 1px solid var(--background-dark) !important;
+    }
+  }
+
+  &Is {
+    &Disabled {
+      background: var(--background-lighter);
+    }
+
+    &Favorite {
+      background: #fff6ce;
+      border-bottom: 1px solid #ffed90 !important;
+
+      &:hover {
+        background: #fff6ce !important;
+      }
+
+      :global .rt-td {
+        &:first-child {
+          border-right: 1px solid #ffed90 !important;
+        }
+      }
+    }
+  }
+}
