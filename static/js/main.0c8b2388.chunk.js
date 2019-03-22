@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0],{
 
-/***/ 103:
+/***/ 105:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -8,7 +8,7 @@ module.exports = {"Root":"Tooltip_Root__2mKQv","Tooltip":"Tooltip_Tooltip__3I5eR
 
 /***/ }),
 
-/***/ 104:
+/***/ 106:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -16,7 +16,7 @@ module.exports = {"Root":"Table_Root__1s8Ss","RootIsDisabled":"Table_RootIsDisab
 
 /***/ }),
 
-/***/ 141:
+/***/ 142:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -24,7 +24,7 @@ module.exports = {"Error":"Form_Error__FAKdL"};
 
 /***/ }),
 
-/***/ 146:
+/***/ 147:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -32,14 +32,14 @@ module.exports = {"Root":"App_Root__3UUPN","Wrapper":"App_Wrapper__VY8Wp"};
 
 /***/ }),
 
-/***/ 147:
+/***/ 149:
 /***/ (function(module) {
 
-module.exports = [{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"getNodeAddr","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCompactedValidators","outputs":[{"name":"ValidatorsCompacted","type":"bytes32[]"},{"name":"ValidatorsPubKeys","type":"bytes32[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"addDeposit","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"},{"name":"nodeAddr","type":"address"},{"name":"receiver","type":"address"}],"name":"addInitialDeposit","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"isPaused","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"},{"name":"vFrom","type":"bytes32"},{"name":"cause","type":"uint8"},{"name":"punishValue","type":"uint96"}],"name":"pauseValidation","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getActiveCount","outputs":[{"name":"count","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"renounceOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"hasDeposit","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"resumeValidation","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"getNodeReceiver","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getActiveCompactedValidators","outputs":[{"name":"ValidatorsCompacted","type":"bytes32[]"},{"name":"ValidatorsPubKeys","type":"bytes32[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"getValidator","outputs":[{"name":"nodeAddr","type":"address"},{"name":"deposit","type":"uint96"},{"name":"pauseBlockNumber","type":"uint48"},{"name":"pauseCause","type":"uint8"},{"name":"punishValue","type":"uint96"},{"name":"receiver","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"all","type":"bool"}],"name":"enablePunishers","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"vPub","type":"bytes32"},{"indexed":false,"name":"deposit","type":"uint96"}],"name":"ValidatorUpdated","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"vPub","type":"bytes32"},{"indexed":false,"name":"cause","type":"uint8"}],"name":"ValidatorRemoved","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"}],"name":"OwnershipRenounced","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"},{"indexed":true,"name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"}];
+module.exports = [{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"getNodeAddr","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"c_MIN_DEPOSIT_INCREMENT","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCompactedValidators","outputs":[{"name":"ValidatorsCompacted","type":"bytes32[]"},{"name":"ValidatorsPubKeys","type":"bytes32[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"addDeposit","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"},{"name":"nodeAddr","type":"address"},{"name":"receiver","type":"address"}],"name":"addInitialDeposit","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"isPaused","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"},{"name":"vFrom","type":"bytes32"},{"name":"cause","type":"uint8"},{"name":"punishValue","type":"uint96"}],"name":"pauseValidation","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getActiveCount","outputs":[{"name":"count","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"renounceOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"hasDeposit","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"resumeValidation","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"getNodeReceiver","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getActiveCompactedValidators","outputs":[{"name":"ValidatorsCompacted","type":"bytes32[]"},{"name":"ValidatorsPubKeys","type":"bytes32[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"c_MIN_DEPOSIT","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"getValidator","outputs":[{"name":"nodeAddr","type":"address"},{"name":"deposit","type":"uint96"},{"name":"pauseBlockNumber","type":"uint48"},{"name":"pauseCause","type":"uint8"},{"name":"punishValue","type":"uint96"},{"name":"receiver","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"min_dep","type":"uint256"},{"name":"min_dep_inc","type":"uint256"}],"name":"setDepositBounds","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"all","type":"bool"}],"name":"enablePunishers","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"vPub","type":"bytes32"},{"indexed":false,"name":"deposit","type":"uint96"}],"name":"ValidatorUpdated","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"vPub","type":"bytes32"},{"indexed":false,"name":"cause","type":"uint8"}],"name":"ValidatorRemoved","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"}],"name":"OwnershipRenounced","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"},{"indexed":true,"name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"}];
 
 /***/ }),
 
-/***/ 233:
+/***/ 235:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -47,7 +47,7 @@ module.exports = {"Root":"Table_Root__1Dcze"};
 
 /***/ }),
 
-/***/ 237:
+/***/ 239:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -63,10 +63,24 @@ module.exports = {"Root":"Button_Root__3UoPz","RootColorDanger":"Button_RootColo
 
 /***/ }),
 
-/***/ 247:
+/***/ 241:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(556);
+module.exports = __webpack_require__.p + "static/media/step-1.acd03576.png";
+
+/***/ }),
+
+/***/ 242:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/step-2.a577f9b5.png";
+
+/***/ }),
+
+/***/ 251:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(560);
 
 
 /***/ }),
@@ -87,15 +101,7 @@ module.exports = {"Root":"Select_Root__1wWeX","RootIsEmpty":"Select_RootIsEmpty_
 
 /***/ }),
 
-/***/ 30:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-module.exports = {"Root":"Validators_Root__1lOjo","RootIsConnected":"Validators_RootIsConnected__3c3eM","Status":"Validators_Status__3iCm1","RootIsOwner":"Validators_RootIsOwner__2jlQm","Header":"Validators_Header__1-yDr","Hint":"Validators_Hint__Hf5lS","List":"Validators_List__b5LW9","Progress":"Validators_Progress__HXOP_"};
-
-/***/ }),
-
-/***/ 35:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -103,7 +109,7 @@ module.exports = {"Root":"Typography_Root__1eH5O","RootColorAlert":"Typography_R
 
 /***/ }),
 
-/***/ 36:
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -111,14 +117,22 @@ module.exports = {"Root":"Progress_Root__1k5De","RootColorPrimary":"Progress_Roo
 
 /***/ }),
 
-/***/ 394:
+/***/ 39:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Root":"Validators_Root__1lOjo","RootIsConnected":"Validators_RootIsConnected__3c3eM","Status":"Validators_Status__3iCm1","RootIsOwner":"Validators_RootIsOwner__2jlQm","Header":"Validators_Header__1-yDr","Hint":"Validators_Hint__Hf5lS","List":"Validators_List__b5LW9","Progress":"Validators_Progress__HXOP_"};
+
+/***/ }),
+
+/***/ 398:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 396:
+/***/ 400:
 /***/ (function(module, exports) {
 
 /* (ignored) */
@@ -141,21 +155,21 @@ module.exports = {"Root":"Field_Root__3biek","RootColorError":"Field_RootColorEr
 
 /***/ }),
 
-/***/ 421:
+/***/ 425:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 464:
+/***/ 468:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 556:
+/***/ 560:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -180,7 +194,7 @@ __webpack_require__.r(schema_namespaceObject);
 __webpack_require__.d(schema_namespaceObject, "validator", function() { return schema_validator; });
 
 // EXTERNAL MODULE: ./node_modules/history/createBrowserHistory.js
-var createBrowserHistory = __webpack_require__(241);
+var createBrowserHistory = __webpack_require__(245);
 var createBrowserHistory_default = /*#__PURE__*/__webpack_require__.n(createBrowserHistory);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -195,44 +209,46 @@ var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 var es = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Router.js + 1 modules
-var Router = __webpack_require__(564);
+var Router = __webpack_require__(568);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Route.js + 1 modules
-var Route = __webpack_require__(563);
+var Route = __webpack_require__(567);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Switch.js + 1 modules
-var Switch = __webpack_require__(562);
+var Switch = __webpack_require__(566);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread.js
 var objectSpread = __webpack_require__(7);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__(6);
+var defineProperty = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(3);
+var classnames = __webpack_require__(4);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js
-var Recompose_esm = __webpack_require__(5);
-
-// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js + 1 modules
-var objectWithoutProperties = __webpack_require__(21);
+var Recompose_esm = __webpack_require__(6);
 
 // EXTERNAL MODULE: ./node_modules/lodash/lodash.js
-var lodash = __webpack_require__(4);
+var lodash = __webpack_require__(3);
+
+// CONCATENATED MODULE: ./src/api/config.js
+var config={'development':{CONTRACT_ADDRESS:'0xD019247742150fD1B55CA20010659976fe2b6a2f',MIN_DEPOSIT:0.25,MIN_DEPOSIT_INCREMENT:0.1,NETWORK_ID:'4',SYMBOL:'ETH',URL:'https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337'},'production':{CONTRACT_ADDRESS:'0x0000000000000000000000000000000000000fff',MIN_DEPOSIT:2500,MIN_DEPOSIT_INCREMENT:2500,NETWORK_ID:'32019',SYMBOL:'ETR',URL:'https://rpc.etherus.org'}};var config_getConfig=function getConfig(){return Object(lodash["get"])(config,"production");};var config_getContractAddress=function getContractAddress(){return Object(lodash["get"])(config,"".concat("production",".CONTRACT_ADDRESS"));};var config_getNetworkId=function getNetworkId(){return Object(lodash["get"])(config,"".concat("production",".NETWORK_ID"));};var config_getUrl=function getUrl(){return Object(lodash["get"])(config,"".concat("production",".URL"));};/* harmony default export */ var api_config = (config_getConfig());
+// EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js + 1 modules
+var objectWithoutProperties = __webpack_require__(21);
 
 // CONCATENATED MODULE: ./src/styles/color.js
 var ALERT='alert';var DANGER='danger';var PRIMARY='primary';var SECONDARY='secondary';var SUCCESS='success';var WHITE='white';
 // CONCATENATED MODULE: ./src/styles/gradient.js
 var BLUE='gradientBlue';var BLUE_PURPLE='gradientBluePurple';var GREEN='gradientGreen';var PURPLE='gradientPurple';var RED='gradientRed';
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/toConsumableArray.js + 3 modules
-var toConsumableArray = __webpack_require__(102);
+var toConsumableArray = __webpack_require__(104);
 
 // CONCATENATED MODULE: ./src/styles/components/Typography/utils/generateHeadlineVariants.js
 /* harmony default export */ var generateHeadlineVariants = (function(styles){var variants={};Object(toConsumableArray["a" /* default */])(new Array(6)).forEach(function(item,index){var variant=index+1;variants["H".concat(variant)]={className:styles["RootVariantH".concat(variant)],component:"h".concat(variant),toValue:function toValue(){return"h".concat(variant);}};});return variants;});
 // EXTERNAL MODULE: ./src/styles/components/Typography/Typography.scss
-var Typography_Typography = __webpack_require__(35);
+var Typography_Typography = __webpack_require__(34);
 var Typography_default = /*#__PURE__*/__webpack_require__.n(Typography_Typography);
 
 // CONCATENATED MODULE: ./src/styles/components/Typography/Typography.js
@@ -251,24 +267,24 @@ var Button_default = /*#__PURE__*/__webpack_require__.n(components_Button);
 // Styles
 var Button_Button=function Button(_ref){var _classNames,_classNames2;var children=_ref.children,className=_ref.className,_ref$classNames=_ref.classNames,rootClassName=_ref$classNames.root,contentClassName=_ref$classNames.content,iconClassName=_ref$classNames.icon,color=_ref.color,fullWidth=_ref.fullWidth,handleClick=_ref.handleClick,icon=_ref.icon,registerButton=_ref.registerButton,removeAutoBlur=_ref.removeAutoBlur,_ref$type=_ref.type,type=_ref$type===void 0?'button':_ref$type,props=Object(objectWithoutProperties["a" /* default */])(_ref,["children","className","classNames","color","fullWidth","handleClick","icon","registerButton","removeAutoBlur","type"]);var rootClassNames=classnames_default()(rootClassName||className,Button_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Button_default.a.RootColorAlert,color===color_namespaceObject.ALERT),Object(defineProperty["a" /* default */])(_classNames,Button_default.a.RootColorDanger,color===color_namespaceObject.DANGER),Object(defineProperty["a" /* default */])(_classNames,Button_default.a.RootColorPrimary,color===color_namespaceObject.PRIMARY),Object(defineProperty["a" /* default */])(_classNames,Button_default.a.RootColorSecondary,color===color_namespaceObject.SECONDARY),Object(defineProperty["a" /* default */])(_classNames,Button_default.a.RootColorSuccess,color===color_namespaceObject.SUCCESS),Object(defineProperty["a" /* default */])(_classNames,Button_default.a.RootGradientGreen,color===gradient_namespaceObject.GREEN),Object(defineProperty["a" /* default */])(_classNames,Button_default.a.RootGradientPurple,color===gradient_namespaceObject.PURPLE),_classNames),(_classNames2={},Object(defineProperty["a" /* default */])(_classNames2,Button_default.a.RootVariantFilled,!!children),Object(defineProperty["a" /* default */])(_classNames2,Button_default.a.RootVariantIcon,icon&&!children),Object(defineProperty["a" /* default */])(_classNames2,Button_default.a.RootVariantFull,icon&&children),Object(defineProperty["a" /* default */])(_classNames2,Button_default.a.RootVariantFullWidth,!!fullWidth),_classNames2));var contentClassNames=classnames_default()(contentClassName,Button_default.a.Content);var iconClassNames=classnames_default()(iconClassName,Button_default.a.Icon,icon);return react_default.a.createElement("button",Object.assign({},props,{className:rootClassNames,onClick:handleClick,ref:registerButton,type:type}),icon&&react_default.a.createElement("i",{className:iconClassNames}),children&&react_default.a.createElement(components_Typography_Typography,{className:contentClassNames,variant:components_Typography_Typography.VARIANT.BUTTON},children));};Button_Button.defaultProps={classNames:{}};var ComposedButton=Object(Recompose_esm["a" /* compose */])(Object(Recompose_esm["d" /* withProps */])(function(_ref2){var removeAutoBlur=_ref2.removeAutoBlur;return{removeAutoBlur:removeAutoBlur!==undefined?removeAutoBlur:true};}),Object(Recompose_esm["c" /* withHandlers */])(function(){var buttonRef;return{handleClick:function handleClick(_ref3){var onClick=_ref3.onClick,removeAutoBlur=_ref3.removeAutoBlur;return function(event){removeAutoBlur&&buttonRef.blur();onClick&&onClick(event);};},registerButton:function registerButton(){return function(node){buttonRef=node;};}};}))(Button_Button);ComposedButton.COLOR={GRADIENT:{}};/* harmony default export */ var src_components_Button = (ComposedButton);
 // EXTERNAL MODULE: ./src/components/Progress.scss
-var components_Progress = __webpack_require__(36);
+var components_Progress = __webpack_require__(35);
 var Progress_default = /*#__PURE__*/__webpack_require__.n(components_Progress);
 
 // CONCATENATED MODULE: ./src/components/Progress.js
 // Styles
 var Progress_VARIANT={CIRCLE:'circle',LINEAR:'linear'};var Progress_Progress=function Progress(_ref){var _classNames;var className=_ref.className,_ref$classNames=_ref.classNames;_ref$classNames=_ref$classNames===void 0?{}:_ref$classNames;var rootClassName=_ref$classNames.root,circleClassName=_ref$classNames.circle,lineClassName=_ref$classNames.line,progressClassName=_ref$classNames.progress,_ref$color=_ref.color,color=_ref$color===void 0?color_namespaceObject.PRIMARY:_ref$color,_ref$size=_ref.size,size=_ref$size===void 0?40:_ref$size,value=_ref.value,_ref$variant=_ref.variant,variant=_ref$variant===void 0?Progress_VARIANT.CIRCLE:_ref$variant;var rootClassNames=classnames_default()(className,rootClassName,Progress_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootColorPrimary,color===color_namespaceObject.PRIMARY),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootColorSuccess,color===color_namespaceObject.SUCCESS),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantCircle,variant===Progress_VARIANT.CIRCLE),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantLinear,variant===Progress_VARIANT.LINEAR),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantIndeterminate,!value),_classNames));var circleClassNames=classnames_default()(circleClassName,Progress_default.a.Circle);var lineClassNames=classnames_default()(lineClassName,Progress_default.a.Line);var progressClassNames=classnames_default()(progressClassName,Progress_default.a.Progress);var displaySize=size+size/10;return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:progressClassNames,style:variant===Progress_VARIANT.CIRCLE?{height:displaySize,width:displaySize}:null},variant===Progress_VARIANT.CIRCLE&&react_default.a.createElement("svg",{className:Progress_default.a.Svg,viewBox:"".concat(displaySize/2," ").concat(displaySize/2," ").concat(displaySize," ").concat(displaySize)},react_default.a.createElement("circle",{className:circleClassNames,cx:displaySize,cy:displaySize,fill:"none",r:size/2,strokeWidth:size/10})),variant===Progress_VARIANT.LINEAR&&react_default.a.createElement("div",{className:lineClassNames,style:{width:"".concat(Math.max(0,Math.min(100,value)),"%")}})));};Progress_Progress.VARIANT=Progress_VARIANT;/* harmony default export */ var src_components_Progress = (Progress_Progress);
 // EXTERNAL MODULE: ./node_modules/react-table/es/index.js + 6 modules
-var react_table_es = __webpack_require__(242);
+var react_table_es = __webpack_require__(246);
 
 // EXTERNAL MODULE: ./src/components/Table.scss
-var components_Table = __webpack_require__(233);
+var components_Table = __webpack_require__(235);
 var Table_default = /*#__PURE__*/__webpack_require__.n(components_Table);
 
 // CONCATENATED MODULE: ./src/components/Table.js
 // Styles
 var Table_Table=function Table(_ref){var className=_ref.className,props=Object(objectWithoutProperties["a" /* default */])(_ref,["className"]);var rootClassNames=classnames_default()(className,Table_default.a.Root);return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement(react_table_es["a" /* default */],props));};/* harmony default export */ var src_components_Table = (Table_Table);
 // EXTERNAL MODULE: ./src/components/Tooltip.scss
-var components_Tooltip = __webpack_require__(103);
+var components_Tooltip = __webpack_require__(105);
 var Tooltip_default = /*#__PURE__*/__webpack_require__.n(components_Tooltip);
 
 // CONCATENATED MODULE: ./src/components/Tooltip.js
@@ -286,10 +302,10 @@ case CREATE_VALIDATOR_SUCCESS:return Object(objectSpread["a" /* default */])({},
 case DEPOSIT_VALIDATOR_REQUEST:case FETCH_VALIDATOR_REQUEST:case PAUSE_VALIDATOR_REQUEST:case START_VALIDATOR_REQUEST:case WITHDRAW_VALIDATOR_REQUEST:return Object(objectSpread["a" /* default */])({},state,Object(defineProperty["a" /* default */])({},hash,Object(objectSpread["a" /* default */])({},validator,{isFetching:true})));case DEPOSIT_VALIDATOR_FAILURE:case FETCH_VALIDATOR_FAILURE:case PAUSE_VALIDATOR_FAILURE:case START_VALIDATOR_FAILURE:case WITHDRAW_VALIDATOR_FAILURE:return Object(lodash["has"])(state,hash)?Object(objectSpread["a" /* default */])({},state,Object(defineProperty["a" /* default */])({},hash,Object(objectSpread["a" /* default */])({},validator,{error:action.error,isFetching:false}))):state;case DEPOSIT_VALIDATOR_SUCCESS:return Object(objectSpread["a" /* default */])({},state,Object(defineProperty["a" /* default */])({},hash,Object(objectSpread["a" /* default */])({},validator,{deposit:Object(lodash["get"])(validator,'deposit',0)+action.deposit,isFetching:false})));case FETCH_VALIDATOR_SUCCESS:return Object(objectSpread["a" /* default */])({},state,Object(defineProperty["a" /* default */])({},hash,Object(objectSpread["a" /* default */])({},validator,action.payload,{isFetching:false})));case PAUSE_VALIDATOR_SUCCESS:return Object(objectSpread["a" /* default */])({},state,Object(defineProperty["a" /* default */])({},hash,Object(objectSpread["a" /* default */])({},validator,{isFetching:false,pauseCause:PAUSE_CAUSE_VOLUNTARILY})));case START_VALIDATOR_SUCCESS:return Object(objectSpread["a" /* default */])({},state,Object(defineProperty["a" /* default */])({},hash,Object(objectSpread["a" /* default */])({},validator,{isFetching:false,pauseCause:PAUSE_NOT_PAUSED})));// UPDATE
 case UPDATE_VALIDATOR:return Object(objectSpread["a" /* default */])({},state,Object(defineProperty["a" /* default */])({},hash,Object(objectSpread["a" /* default */])({},validator,action.payload)));case WITHDRAW_VALIDATOR_SUCCESS:return Object(lodash["omit"])(state,action.hash);default:return state;}});
 // EXTERNAL MODULE: ./node_modules/normalizr/dist/normalizr.es.js
-var normalizr_es = __webpack_require__(99);
+var normalizr_es = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/SubmissionError.js + 1 modules
-var SubmissionError = __webpack_require__(245);
+var SubmissionError = __webpack_require__(249);
 
 // CONCATENATED MODULE: ./src/entities/types.js
 var UPDATE_ENTITIES='ENTITIES/UPDATE_ENTITIES';
@@ -320,7 +336,7 @@ var selector_getValidatorList=function getValidatorList(state){return Object(lod
 // Entities
 var initialState={isFetching:false};/* harmony default export */ var ducks_reducer = (function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments.length>1?arguments[1]:undefined;switch(action.type){case FETCH_VALIDATORS_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isFetching:true});case FETCH_VALIDATORS_SUCCESS:case FETCH_VALIDATORS_FAILURE:return Object(objectSpread["a" /* default */])({},state,{error:action.error,isFetching:false});default:return state;}});
 // CONCATENATED MODULE: ./src/views/Validators/ducks/constants.js
-var VALIDATOR_CREATE_FORM_ID='validatorCreateForm';var VALIDATOR_CREATE_MODAL_ID='validatorCreateModal';var VALIDATOR_DEPOSIT_FORM_ID='validatorDepositForm';var VALIDATOR_DEPOSIT_MODAL_ID='validatorDepositModal';var VALIDATOR_PAUSE_FORM_ID='validatorPauseForm';var VALIDATOR_PAUSE_MODAL_ID='validatorPauseModal';
+var VALIDATOR_CREATE_FORM_ID='validatorCreateForm';var VALIDATOR_CREATE_MODAL_ID='validatorCreateModal';var VALIDATOR_DEPOSIT_FORM_ID='validatorDepositForm';var VALIDATOR_DEPOSIT_MODAL_ID='validatorDepositModal';var VALIDATOR_GUIDE_MODAL_ID='validatorCreateModal';var VALIDATOR_PAUSE_FORM_ID='validatorPauseForm';var VALIDATOR_PAUSE_MODAL_ID='validatorPauseModal';
 // CONCATENATED MODULE: ./src/views/Validators/ducks/selector.js
 var selector_getValidatorsView=function getValidatorsView(state){return Object(lodash["get"])(state,'views.validators');};
 // CONCATENATED MODULE: ./src/views/Validators/ducks/index.js
@@ -329,7 +345,7 @@ var selector_getValidatorsView=function getValidatorsView(state){return Object(l
 var CONNECT_REQUEST='SERVICES/SESSION/CONNECT_REQUEST';var CONNECT_SUCCESS='SERVICES/SESSION/CONNECT_SUCCESS';var CONNECT_FAILURE='SERVICES/SESSION/CONNECT_FAILURE';var IS_OWNER_REQUEST='SERVICES/SESSION/IS_OWNER_REQUEST';var IS_OWNER_SUCCESS='SERVICES/SESSION/IS_OWNER_SUCCESS';var IS_OWNER_FAILURE='SERVICES/SESSION/IS_OWNER_FAILURE';var SET_CURRENT_BLOCK_NUMBER='SERVICES/SESSION/SET_CURRENT_BLOCK_NUMBER';var SET_SUPPORT='SERVICES/SESSION/SET_SUPPORT';
 // CONCATENATED MODULE: ./src/services/session/reducer.js
 // Types
-var reducer_initialState={address:null,blockNumber:0,error:false,isConnected:false,isConnecting:false,isOwner:false,isSupported:false,networkId:Object(lodash["get"])(window,'ethereum.networkVersion')};/* harmony default export */ var session_reducer = (function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:reducer_initialState;var action=arguments.length>1?arguments[1]:undefined;switch(action.type){case CONNECT_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isConnecting:true});case CONNECT_SUCCESS:return Object(objectSpread["a" /* default */])({},state,{address:action.address,isConnected:true,isConnecting:false});case CONNECT_FAILURE:return Object(objectSpread["a" /* default */])({},state,{error:action.error,isConnected:false,isConnecting:false});case IS_OWNER_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isConnecting:true});case IS_OWNER_SUCCESS:return Object(objectSpread["a" /* default */])({},state,{isOwner:action.isOwner});case SET_CURRENT_BLOCK_NUMBER:return Object(objectSpread["a" /* default */])({},state,{blockNumber:action.blockNumber});case SET_SUPPORT:return Object(objectSpread["a" /* default */])({},state,{isSupported:action.isSupported});default:return state;}});
+var reducer_initialState={address:null,blockNumber:0,error:false,isConnected:false,isConnecting:false,isOwner:false,isSupported:false,hasAccount:!!Object(lodash["get"])(window,'ethereum.selectedAddress'),networkId:Object(lodash["get"])(window,'ethereum.networkVersion',0)};/* harmony default export */ var session_reducer = (function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:reducer_initialState;var action=arguments.length>1?arguments[1]:undefined;switch(action.type){case CONNECT_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isConnecting:true});case CONNECT_SUCCESS:return Object(objectSpread["a" /* default */])({},state,{address:action.address,isConnected:true,isConnecting:false});case CONNECT_FAILURE:return Object(objectSpread["a" /* default */])({},state,{error:action.error,isConnected:false,isConnecting:false});case IS_OWNER_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isConnecting:true});case IS_OWNER_SUCCESS:return Object(objectSpread["a" /* default */])({},state,{isOwner:action.isOwner});case SET_CURRENT_BLOCK_NUMBER:return Object(objectSpread["a" /* default */])({},state,{blockNumber:action.blockNumber});case SET_SUPPORT:return Object(objectSpread["a" /* default */])({},state,{isSupported:action.isSupported});default:return state;}});
 // CONCATENATED MODULE: ./src/services/session/actions.js
 // Entities
 // Types
@@ -354,13 +370,14 @@ var Field = __webpack_require__(42);
 var Field_default = /*#__PURE__*/__webpack_require__.n(Field);
 
 // CONCATENATED MODULE: ./src/views/Validators/components/Field.js
+// API
 // Components
 // Entities
 // Utils
 // Styles
-var Field_VARIANT={DEFAULT:'default',DEPOSIT:'deposit',HASH:'hash',PAUSE:'pause'};var Field_ValidatorsField=function ValidatorsField(_ref){var _ref2;var children=_ref.children,isDisabled=_ref.isDisabled,title=_ref.title,_ref$variant=_ref.variant,variant=_ref$variant===void 0?Field_VARIANT.DEFAULT:_ref$variant,handleCopy=_ref.handleCopy;var rootClassNames=classnames_default()(Field_default.a.Root,!isDisabled&&variant===Field_VARIANT.PAUSE&&(_ref2={},Object(defineProperty["a" /* default */])(_ref2,Field_default.a.RootColorError,!isDisabled&&title!==PAUSE_NOT_PAUSED),Object(defineProperty["a" /* default */])(_ref2,Field_default.a.RootColorSuccess,!isDisabled&&title===PAUSE_NOT_PAUSED),_ref2),Object(defineProperty["a" /* default */])({},Field_default.a.RootIsDisabled,isDisabled),Object(defineProperty["a" /* default */])({},Field_default.a.RootVariantHash,variant===Field_VARIANT.HASH));return react_default.a.createElement(components_Typography_Typography,{className:rootClassNames,variant:components_Typography_Typography.VARIANT.BODY2},!isDisabled&&variant===Field_VARIANT.HASH&&react_default.a.createElement(src_components_Tooltip,{title:"\u041A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C"},react_default.a.createElement(src_components_Button,{classNames:{root:Field_default.a.Copy,icon:Field_default.a.Icon},icon:"fal fa-copy",onClick:handleCopy})),react_default.a.createElement("div",{className:Field_default.a.Text},variant===Field_VARIANT.DEPOSIT&&"".concat(parseDeposit(title).toFixed(4)," ETH"),variant===Field_VARIANT.PAUSE&&parse_parsePause(title),variant===Field_VARIANT.HASH&&(title||children),variant===Field_VARIANT.DEFAULT&&(title||children)));};/* harmony default export */ var components_Field = (Object(Recompose_esm["a" /* compose */])(Object(Recompose_esm["c" /* withHandlers */])({handleCopy:function handleCopy(_ref3){var title=_ref3.title;return function(event){var $el=document.createElement('textarea');$el.value=title;document.body.appendChild($el);$el.select();document.execCommand('copy');document.body.removeChild($el);};}}))(Field_ValidatorsField));
+var Field_VARIANT={DEFAULT:'default',DEPOSIT:'deposit',HASH:'hash',PAUSE:'pause'};var Field_ValidatorsField=function ValidatorsField(_ref){var _ref2;var children=_ref.children,isDisabled=_ref.isDisabled,title=_ref.title,_ref$variant=_ref.variant,variant=_ref$variant===void 0?Field_VARIANT.DEFAULT:_ref$variant,handleCopy=_ref.handleCopy;var rootClassNames=classnames_default()(Field_default.a.Root,!isDisabled&&variant===Field_VARIANT.PAUSE&&(_ref2={},Object(defineProperty["a" /* default */])(_ref2,Field_default.a.RootColorError,!isDisabled&&title!==PAUSE_NOT_PAUSED),Object(defineProperty["a" /* default */])(_ref2,Field_default.a.RootColorSuccess,!isDisabled&&title===PAUSE_NOT_PAUSED),_ref2),Object(defineProperty["a" /* default */])({},Field_default.a.RootIsDisabled,isDisabled),Object(defineProperty["a" /* default */])({},Field_default.a.RootVariantHash,variant===Field_VARIANT.HASH));return react_default.a.createElement(components_Typography_Typography,{className:rootClassNames,variant:components_Typography_Typography.VARIANT.BODY2},variant===Field_VARIANT.HASH&&react_default.a.createElement(src_components_Tooltip,{title:"\u041A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u044C"},react_default.a.createElement(src_components_Button,{classNames:{root:Field_default.a.Copy,icon:Field_default.a.Icon},icon:"fal fa-copy",onClick:handleCopy})),react_default.a.createElement("div",{className:Field_default.a.Text},variant===Field_VARIANT.DEPOSIT&&"".concat(parseDeposit(title).toFixed(4)," ").concat(api_config.SYMBOL),variant===Field_VARIANT.PAUSE&&parse_parsePause(title),variant===Field_VARIANT.HASH&&(title||children),variant===Field_VARIANT.DEFAULT&&(title||children)));};/* harmony default export */ var components_Field = (Object(Recompose_esm["a" /* compose */])(Object(Recompose_esm["c" /* withHandlers */])({handleCopy:function handleCopy(_ref3){var title=_ref3.title;return function(event){var $el=document.createElement('textarea');$el.value=title;document.body.appendChild($el);$el.select();document.execCommand('copy');document.body.removeChild($el);};}}))(Field_ValidatorsField));
 // EXTERNAL MODULE: ./src/views/Validators/components/Table.scss
-var Validators_components_Table = __webpack_require__(104);
+var Validators_components_Table = __webpack_require__(106);
 var components_Table_default = /*#__PURE__*/__webpack_require__.n(Validators_components_Table);
 
 // CONCATENATED MODULE: ./src/views/Validators/components/Table.js
@@ -369,36 +386,36 @@ var components_Table_default = /*#__PURE__*/__webpack_require__.n(Validators_com
 // Styles
 var MAX_ROWS=128;var COLUMNS=[{accessor:'index',Cell:function Cell(_ref){var index=_ref.index,original=_ref.original;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:Object(lodash["get"])(original,'pauseCause')===0?index+1:''});},Header:'#',sortable:false,width:64},{accessor:'hash',Cell:function Cell(_ref2){var index=_ref2.index,value=_ref2.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.HASH});},Header:'vPub',sortable:false,width:220},{accessor:'address',Cell:function Cell(_ref3){var index=_ref3.index,value=_ref3.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.HASH});},Header:'Node Address',sortable:false,width:220},{accessor:'deposit',Cell:function Cell(_ref4){var index=_ref4.index,value=_ref4.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.DEPOSIT});},Header:'Депозит',sortable:false,width:160},{accessor:'pauseCause',Cell:function Cell(_ref5){var index=_ref5.index,value=_ref5.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.PAUSE});},Header:'Пауза',sortable:false,width:120},{accessor:'actions',Cell:function Cell(_ref6){var index=_ref6.index,original=_ref6.original;return react_default.a.createElement(components_Actions,Object.assign({},original,{isDisabled:index>=MAX_ROWS}));},Header:'Действия',sortable:false,width:160}];var Table_ValidatorsTable=function ValidatorsTable(_ref7){var data=_ref7.data,ownerAddress=_ref7.ownerAddress;return react_default.a.createElement(src_components_Table,{columns:COLUMNS,data:data,getTrGroupProps:function getTrGroupProps(state,_ref8){var _classNames;var index=_ref8.index,original=_ref8.original;return{className:classnames_default()(components_Table_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,components_Table_default.a.RootIsFavorite,Object(lodash["get"])(original,'address')===ownerAddress),Object(defineProperty["a" /* default */])(_classNames,components_Table_default.a.RootIsDisabled,Object(lodash["get"])(original,'pauseCause')!==0||index>MAX_ROWS),_classNames))};},minRows:0,resizable:false,showPagination:false});};var Table_mapStateToProps=function mapStateToProps(state){return{ownerAddress:selector_getAddress(state)};};/* harmony default export */ var views_Validators_components_Table = (Object(es["b" /* connect */])(Table_mapStateToProps)(Table_ValidatorsTable));
 // EXTERNAL MODULE: ./node_modules/redux-form/es/reduxForm.js + 14 modules
-var reduxForm = __webpack_require__(558);
+var reduxForm = __webpack_require__(562);
 
 // EXTERNAL MODULE: ./src/components/Form/Form.scss
-var Form_Form = __webpack_require__(141);
+var Form_Form = __webpack_require__(142);
 var Form_default = /*#__PURE__*/__webpack_require__.n(Form_Form);
 
 // CONCATENATED MODULE: ./src/components/Form/Form.js
 // Styles
 var Form_Form_Form=function Form(_ref){var children=_ref.children,className=_ref.className,error=_ref.error,onSubmit=_ref.onSubmit;return react_default.a.createElement("form",{className:className,onSubmit:onSubmit},error&&react_default.a.createElement(components_Typography_Typography,{className:Form_default.a.Error},error),react_default.a.createElement("div",{className:Form_default.a.Container},children));};/* harmony default export */ var components_Form_Form = (Form_Form_Form);
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-var classCallCheck = __webpack_require__(234);
+var classCallCheck = __webpack_require__(236);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js
-var createClass = __webpack_require__(235);
+var createClass = __webpack_require__(237);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js + 2 modules
-var possibleConstructorReturn = __webpack_require__(243);
+var possibleConstructorReturn = __webpack_require__(247);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
-var getPrototypeOf = __webpack_require__(236);
+var getPrototypeOf = __webpack_require__(238);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
-var inherits = __webpack_require__(244);
+var inherits = __webpack_require__(248);
 
 // EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
-var uniqueId = __webpack_require__(142);
+var uniqueId = __webpack_require__(143);
 var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/Field.js + 10 modules
-var es_Field = __webpack_require__(559);
+var es_Field = __webpack_require__(563);
 
 // CONCATENATED MODULE: ./src/components/Form/utils/reduxFieldAdapter.js
 /* harmony default export */ var reduxFieldAdapter = (function(_ref){var children=_ref.children,input=_ref.input,_ref$meta=_ref.meta,error=_ref$meta.error,touched=_ref$meta.touched,props=Object(objectWithoutProperties["a" /* default */])(_ref,["children","input","meta"]);return children(Object(objectSpread["a" /* default */])({},input,props,{error:touched&&error}));});
@@ -429,7 +446,7 @@ var Select_FormSelect=function FormSelect(_ref){var _classNames;var children=_re
 handleBlur:function handleBlur(_ref3){var setFocus=_ref3.setFocus,setInputValue=_ref3.setInputValue;return function(event){if(!$root.contains(event.relatedTarget)){$input.blur();setFocus(false);setInputValue('');}};},handleChange:function handleChange(_ref4){var setInputValue=_ref4.setInputValue;return function(event){return setInputValue(Object(lodash["get"])(event,'target.value',''));};},handleCreate:function handleCreate(_ref5){var isMultiple=_ref5.isMultiple,onChange=_ref5.onChange,setFocus=_ref5.setFocus,value=_ref5.value;return function(itemValue){if(!isMultiple){$input.blur();setFocus(false);}onChange&&onChange(isMultiple?[].concat(Object(toConsumableArray["a" /* default */])(value||[]),[itemValue]):itemValue);};},handleDelete:function handleDelete(_ref6){var onChange=_ref6.onChange,value=_ref6.value;return function(itemValue){return onChange&&onChange(value.filter(function(_ref7){var value=_ref7.value;return value!==itemValue;}));};},handleFocus:function handleFocus(_ref8){var setFocus=_ref8.setFocus;return function(){$input.focus();setFocus(true);};},// Registers
 registerRoot:function registerRoot(){return function(node){$root=node;};},registerInput:function registerInput(){return function(node){$input=node;};}};}))(Select_FormSelect);/* harmony default export */ var Select_Select = (function(_ref9){var children=_ref9.children,props=Object(objectWithoutProperties["a" /* default */])(_ref9,["children"]);return react_default.a.createElement(components_Form_components_Field,props,react_default.a.createElement(ComposedFormSelect,null,children));});
 // EXTERNAL MODULE: ./src/components/Form/components/Select/components/Item.scss
-var Item = __webpack_require__(237);
+var Item = __webpack_require__(239);
 var Item_default = /*#__PURE__*/__webpack_require__.n(Item);
 
 // CONCATENATED MODULE: ./src/components/Form/components/Select/components/Item.js
@@ -441,7 +458,7 @@ var Item_FormSelectItem=function FormSelectItem(_ref){var handleClick=_ref.handl
 // Components
 
 // EXTERNAL MODULE: ./node_modules/metamask-logo/index.js
-var metamask_logo = __webpack_require__(238);
+var metamask_logo = __webpack_require__(240);
 var metamask_logo_default = /*#__PURE__*/__webpack_require__.n(metamask_logo);
 
 // EXTERNAL MODULE: ./src/components/Metamask.scss
@@ -452,7 +469,7 @@ var Metamask_default = /*#__PURE__*/__webpack_require__.n(components_Metamask);
 // Styles
 var Metamask_Metamask=function Metamask(_ref){var registerLogo=_ref.registerLogo;return react_default.a.createElement("div",{className:Metamask_default.a.Root},react_default.a.createElement("div",{className:Metamask_default.a.Cover}),react_default.a.createElement("div",{className:Metamask_default.a.Container},react_default.a.createElement("div",{className:Metamask_default.a.Logo,ref:registerLogo}),react_default.a.createElement(components_Typography_Typography,{className:Metamask_default.a.Title,variant:components_Typography_Typography.VARIANT.H6},"\u041E\u0436\u0438\u0434\u0430\u043D\u0438\u0435 \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438...")));};/* harmony default export */ var src_components_Metamask = (Object(Recompose_esm["a" /* compose */])(Object(Recompose_esm["c" /* withHandlers */])(function(){var $logo=null;return{drawLogo:function drawLogo(){return function(){var viewer=metamask_logo_default()({followMouse:true,height:160,pxNotRatio:true,slowDrift:false,width:160});$logo.appendChild(viewer.container);};},registerLogo:function registerLogo(){return function(node){$logo=node;};}};}),Object(Recompose_esm["b" /* lifecycle */])({componentDidMount:function componentDidMount(){this.props.drawLogo();}}))(Metamask_Metamask));
 // EXTERNAL MODULE: ./node_modules/react-portal/es/PortalCompat.js + 3 modules
-var PortalCompat = __webpack_require__(560);
+var PortalCompat = __webpack_require__(564);
 
 // EXTERNAL MODULE: ./src/components/Modal.scss
 var components_Modal = __webpack_require__(63);
@@ -463,32 +480,53 @@ var Modal_default = /*#__PURE__*/__webpack_require__.n(components_Modal);
 // Styles
 var Modal_Modal=function Modal(_ref){var children=_ref.children,className=_ref.className,_ref$classNames=_ref.classNames;_ref$classNames=_ref$classNames===void 0?{}:_ref$classNames;var rootClassName=_ref$classNames.root,containerClassName=_ref$classNames.container,handleClose=_ref.handleClose,isOpened=_ref.isOpened,title=_ref.title,props=Object(objectWithoutProperties["a" /* default */])(_ref,["children","className","classNames","handleClose","isOpened","title"]);var rootClassNames=classnames_default()(className||rootClassName,Modal_default.a.Root);var containerClassNames=classnames_default()(containerClassName,Modal_default.a.Container);return isOpened&&react_default.a.createElement(PortalCompat["a" /* default */],null,react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:Modal_default.a.Backdrop,onClick:handleClose}),react_default.a.createElement("div",{className:containerClassNames},title&&react_default.a.createElement(components_Typography_Typography,{className:Modal_default.a.Title,variant:components_Typography_Typography.VARIANT.H6},title),react_default.a.createElement("div",{className:Modal_default.a.Content},typeof children==='function'?children(props):children))));};var Modal_mapStateToProps=function mapStateToProps(_ref2,_ref3){var services=_ref2.services;var id=_ref3.id,isOpened=_ref3.isOpened;var modal=Object(lodash["get"])(services,"modals.".concat(id));return Object(objectSpread["a" /* default */])({},modal,{isOpened:isOpened||!!modal});};/* harmony default export */ var src_components_Modal = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Modal_mapStateToProps,{closeModal:actions_closeModal}),Object(Recompose_esm["c" /* withHandlers */])({handleClose:function handleClose(_ref4){var closeModal=_ref4.closeModal,id=_ref4.id;return function(){return closeModal(id);};}}))(Modal_Modal));
 // CONCATENATED MODULE: ./src/utils/validate.js
-var isHash=function isHash(){var message=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'Must be like a hex (32 Bytes)';return function(){var value=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'';return{message:message,isValid:/^(0xX?)?[0-9a-fA-F]{32,64}$/.test(value)};};};var isNumber=function isNumber(){var message=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'Must be a number!';return function(){var value=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'';return{message:message,isValid:/^[0-9.]*$/.test(value)};};};var isUint=function isUint(){var bytes=arguments.length>0&&arguments[0]!==undefined?arguments[0]:8;var message=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'Must be like a uint';return function(){var value=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'';return{message:"".concat(message).concat(bytes),isValid:value.toString().length<=bytes/4};};};var isUrl=function isUrl(){var message=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'Incorrect URL!';return function(value){return{message:message,isValid:value&&/^http:\/\/\w+(\.\w+)*(:[0-9]+)?\/?(\/[.\w]*)*$/.test(value)};};};/**
- * @param  {Object.<RegExp>} regex
- * @param  {string} message
- */var matches=function matches(regex){var message=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'Incorrect value!';return function(value){return{message:message,isValid:value&&regex.test(value)};};};var min=function min(_min){var message=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'Min value: %d!';return function(value){return{message:message.replace('%d',_min),isValid:parseInt(value,10)>=_min};};};/**
- * @param {string} message
- */var validate_required=function required(){var message=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'Field is required!';return function(value){return{message:message,isValid:typeof value==='number'||!Object(lodash["isEmpty"])(value)};};};/* harmony default export */ var validate = (function(fields){return function(values,props){var errors={};Object.keys(fields).forEach(function(key){[].concat(fields[key]).forEach(function(validator){var res=validator(values[key],props);if(res&&!errors[key]&&!res.isValid){errors[key]=res.message||true;}});});return errors;};});
+var isHash=function isHash(){var message=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'Must be like a hex (32 Bytes)';return function(){var value=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'';return{message:message,isValid:/^(0xX?)?[0-9a-fA-F]{32,64}$/.test(value)};};};var isNumber=function isNumber(){var message=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'Must be a number!';return function(){var value=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'';return{message:message,isValid:/^[0-9.]*$/.test(value)};};};var isUint=function isUint(){var bytes=arguments.length>0&&arguments[0]!==undefined?arguments[0]:8;var message=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'Must be like a uint';return function(){var value=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'';return{message:"".concat(message).concat(bytes),isValid:value.toString().length<=bytes/4};};};var isUrl=function isUrl(){var message=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'Incorrect URL!';return function(value){return{message:message,isValid:value&&/^http:\/\/\w+(\.\w+)*(:[0-9]+)?\/?(\/[.\w]*)*$/.test(value)};};};var matches=function matches(regex){var message=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'Incorrect value!';return function(value){return{message:message,isValid:value&&regex.test(value)};};};var min=function min(_min){var message=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'Min value: %d!';return function(value){return{message:message.replace('%d',_min),isValid:parseFloat(value,10)>=_min};};};var validate_required=function required(){var message=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'Field is required!';return function(value){return{message:message,isValid:typeof value==='number'||!Object(lodash["isEmpty"])(value)};};};/* harmony default export */ var validate = (function(fields){return function(values,props){var errors={};Object.keys(fields).forEach(function(key){[].concat(fields[key]).forEach(function(validator){var res=validator(values[key],props);if(res&&!errors[key]&&!res.isValid){errors[key]=res.message||true;}});});return errors;};});
 // EXTERNAL MODULE: ./src/views/Validators/containers/Common.scss
 var Common = __webpack_require__(41);
 var Common_default = /*#__PURE__*/__webpack_require__.n(Common);
 
 // CONCATENATED MODULE: ./src/views/Validators/containers/Create.js
+// API
 // Components
 // Ducks
 // Entities
 // Services
 // Utils
 // Styles
-var Create_ValidatorsCreate=function ValidatorsCreate(_ref){var error=_ref.error,handleCancel=_ref.handleCancel,handleSubmit=_ref.handleSubmit,submitting=_ref.submitting;return react_default.a.createElement(components_Form_Form,{error:error,onSubmit:handleSubmit},submitting&&react_default.a.createElement(src_components_Metamask,null),react_default.a.createElement(components_Input,{label:"\u0414\u0435\u043F\u043E\u0437\u0438\u0442",name:"deposit",placeholder:"Ether"}),react_default.a.createElement(components_Input,{label:"vPub",name:"hash",placeholder:"32 Bytes"}),react_default.a.createElement(components_Input,{label:"Node Addr",name:"node",placeholder:"Address"}),react_default.a.createElement(components_Input,{label:"Receiver",name:"address",placeholder:"Address"}),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:handleCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,type:"submit"},"\u0421\u043E\u0437\u0434\u0430\u0442\u044C")));};var Create_mapStateToProps=function mapStateToProps(state){return{initialValues:{address:selector_getAddress(state),node:selector_getAddress(state)}};};var ComposedValidatorsCreate=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Create_mapStateToProps,{closeModal:actions_closeModal}),Object(reduxForm["a" /* default */])({form:VALIDATOR_CREATE_FORM_ID,validate:validate({address:[validate_required(),isHash()],deposit:[validate_required(),isNumber()],hash:[validate_required(),isHash()],node:[validate_required(),isHash()]})}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref2){var closeModal=_ref2.closeModal;return function(event){return closeModal(VALIDATOR_CREATE_MODAL_ID);};}}))(Create_ValidatorsCreate);var Create_ValidatorsCreateModal=function ValidatorsCreateModal(_ref3){var handleSubmit=_ref3.handleSubmit;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_CREATE_MODAL_ID,title:"\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440"},react_default.a.createElement(ComposedValidatorsCreate,{onSubmit:handleSubmit}));};/* harmony default export */ var Create = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{createValidator:actions_createValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleSubmit:function handleSubmit(_ref4){var createValidator=_ref4.createValidator;return function(values){return createValidator(values);};}}))(Create_ValidatorsCreateModal));
+var Create_ValidatorsCreate=function ValidatorsCreate(_ref){var error=_ref.error,handleCancel=_ref.handleCancel,handleSubmit=_ref.handleSubmit,submitting=_ref.submitting;return react_default.a.createElement(components_Form_Form,{error:error,onSubmit:handleSubmit},submitting&&react_default.a.createElement(src_components_Metamask,null),react_default.a.createElement(components_Input,{label:"\u0414\u0435\u043F\u043E\u0437\u0438\u0442",name:"deposit",placeholder:"Ether"}),react_default.a.createElement(components_Input,{label:"vPub",name:"hash",placeholder:"32 Bytes"}),react_default.a.createElement(components_Input,{label:"Node Addr",name:"node",placeholder:"Address"}),react_default.a.createElement(components_Input,{label:"Receiver",name:"address",placeholder:"Address"}),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:handleCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,type:"submit"},"\u0421\u043E\u0437\u0434\u0430\u0442\u044C")));};var Create_mapStateToProps=function mapStateToProps(state){return{initialValues:{address:selector_getAddress(state),node:selector_getAddress(state)}};};var ComposedValidatorsCreate=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Create_mapStateToProps,{closeModal:actions_closeModal}),Object(reduxForm["a" /* default */])({form:VALIDATOR_CREATE_FORM_ID,validate:validate({address:[validate_required(),isHash()],deposit:[validate_required(),isNumber(),min(api_config.MIN_DEPOSIT,"Must be more than ".concat(api_config.MIN_DEPOSIT," ").concat(api_config.SYMBOL))],hash:[validate_required(),isHash()],node:[validate_required(),isHash()]})}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref2){var closeModal=_ref2.closeModal;return function(event){return closeModal(VALIDATOR_CREATE_MODAL_ID);};}}))(Create_ValidatorsCreate);var Create_ValidatorsCreateModal=function ValidatorsCreateModal(_ref3){var handleSubmit=_ref3.handleSubmit;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_CREATE_MODAL_ID,title:"\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440"},react_default.a.createElement(ComposedValidatorsCreate,{onSubmit:handleSubmit}));};/* harmony default export */ var Create = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{createValidator:actions_createValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleSubmit:function handleSubmit(_ref4){var createValidator=_ref4.createValidator;return function(values){return createValidator(values);};}}))(Create_ValidatorsCreateModal));
 // CONCATENATED MODULE: ./src/views/Validators/containers/Deposit.js
+// API
 // Components
 // Ducks
 // Entities
 // Services
 // Utils
 // Styles
-var Deposit_ValidatorsDeposit=function ValidatorsDeposit(_ref){var handleCancel=_ref.handleCancel,handleSubmit=_ref.handleSubmit,submitting=_ref.submitting;return react_default.a.createElement(components_Form_Form,{onSubmit:handleSubmit},submitting&&react_default.a.createElement(src_components_Metamask,null),react_default.a.createElement(components_Input,{label:"\u0414\u0435\u043F\u043E\u0437\u0438\u0442",name:"deposit",placeholder:"Ether"}),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:handleCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,type:"submit"},"\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C")));};var ComposedValidatorsDeposit=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal}),Object(reduxForm["a" /* default */])({form:VALIDATOR_DEPOSIT_FORM_ID,validate:validate({deposit:[validate_required(),isNumber()]})}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref2){var closeModal=_ref2.closeModal;return function(event){return closeModal(VALIDATOR_DEPOSIT_MODAL_ID);};}}))(Deposit_ValidatorsDeposit);var Deposit_ValidatorsDepositModal=function ValidatorsDepositModal(_ref3){var handleSubmit=_ref3.handleSubmit;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_DEPOSIT_MODAL_ID,title:"\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C"},function(_ref4){var hash=_ref4.hash;return react_default.a.createElement(ComposedValidatorsDeposit,{initialValues:{hash:hash},onSubmit:handleSubmit});});};/* harmony default export */ var Deposit = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{depositValidator:actions_depositValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleSubmit:function handleSubmit(_ref5){var depositValidator=_ref5.depositValidator;return function(values){return depositValidator(values);};}}))(Deposit_ValidatorsDepositModal));
+var Deposit_ValidatorsDeposit=function ValidatorsDeposit(_ref){var handleCancel=_ref.handleCancel,handleSubmit=_ref.handleSubmit,submitting=_ref.submitting;return react_default.a.createElement(components_Form_Form,{onSubmit:handleSubmit},submitting&&react_default.a.createElement(src_components_Metamask,null),react_default.a.createElement(components_Input,{label:"\u0414\u0435\u043F\u043E\u0437\u0438\u0442",name:"deposit",placeholder:"Ether"}),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:handleCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,type:"submit"},"\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C")));};var ComposedValidatorsDeposit=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal}),Object(reduxForm["a" /* default */])({form:VALIDATOR_DEPOSIT_FORM_ID,validate:validate({deposit:[validate_required(),isNumber(),min(api_config.MIN_DEPOSIT_INCREMENT,"Must be more than ".concat(api_config.MIN_DEPOSIT_INCREMENT," ").concat(api_config.SYMBOL))]})}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref2){var closeModal=_ref2.closeModal;return function(event){return closeModal(VALIDATOR_DEPOSIT_MODAL_ID);};}}))(Deposit_ValidatorsDeposit);var Deposit_ValidatorsDepositModal=function ValidatorsDepositModal(_ref3){var handleSubmit=_ref3.handleSubmit;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_DEPOSIT_MODAL_ID,title:"\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C"},function(_ref4){var hash=_ref4.hash;return react_default.a.createElement(ComposedValidatorsDeposit,{initialValues:{hash:hash},onSubmit:handleSubmit});});};/* harmony default export */ var Deposit = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{depositValidator:actions_depositValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleSubmit:function handleSubmit(_ref5){var depositValidator=_ref5.depositValidator;return function(values){return depositValidator(values);};}}))(Deposit_ValidatorsDepositModal));
+// EXTERNAL MODULE: ./src/views/Validators/components/Determine.scss
+var Determine = __webpack_require__(80);
+var Determine_default = /*#__PURE__*/__webpack_require__.n(Determine);
+
+// CONCATENATED MODULE: ./src/views/Validators/components/Determine.js
+// Styles
+var Determine_ValidatorsDetermine=function ValidatorsDetermine(_ref){var children=_ref.children,isSelected=_ref.isSelected,title=_ref.title;var rootClassNames=classnames_default()(Determine_default.a.Root,Object(defineProperty["a" /* default */])({},Determine_default.a.RootIsSelected,!!isSelected));return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement(components_Typography_Typography,{className:Determine_default.a.Title,variant:components_Typography_Typography.VARIANT.H6},title),react_default.a.createElement(components_Typography_Typography,{className:Determine_default.a.Content,variant:components_Typography_Typography.VARIANT.BODY1},children));};/* harmony default export */ var components_Determine = (Determine_ValidatorsDetermine);
+// EXTERNAL MODULE: ./src/assets/guide/step-1.png
+var step_1 = __webpack_require__(241);
+var step_1_default = /*#__PURE__*/__webpack_require__.n(step_1);
+
+// EXTERNAL MODULE: ./src/assets/guide/step-2.png
+var step_2 = __webpack_require__(242);
+var step_2_default = /*#__PURE__*/__webpack_require__.n(step_2);
+
+// EXTERNAL MODULE: ./src/views/Validators/containers/Guide.scss
+var Guide = __webpack_require__(81);
+var Guide_default = /*#__PURE__*/__webpack_require__.n(Guide);
+
+// CONCATENATED MODULE: ./src/views/Validators/containers/Guide.js
+// Components
+// Ducks
+// Styles
+var Guide_ValidatorsGuide=function ValidatorsGuide(){return react_default.a.createElement(src_components_Modal,{classNames:{container:Guide_default.a.Container},id:VALIDATOR_GUIDE_MODAL_ID,title:"\u0418\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F \u043F\u043E \u0440\u0430\u0431\u043E\u0442\u0435 \u0441 Metamask"},function(_ref){var sectionId=_ref.sectionId;return react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(components_Determine,{isSelected:sectionId===1,title:"1. \u0423\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430 Metamask"},"\u0414\u043B\u044F \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438 \u0432 \u0441\u0435\u0442\u0438 Etherus \u0432\u0430\u043C \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C Metamask. \u042D\u0442\u043E \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u0435 \u0434\u043B\u044F \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430 \u0438 \u0441\u043A\u0430\u0447\u0430\u0442\u044C \u0435\u0433\u043E \u043C\u043E\u0436\u043D\u043E \u043F\u043E \u0430\u0434\u0440\u0435\u0441\u0443:\xA0",react_default.a.createElement("a",{className:Guide_default.a.Link,href:"https://metamask.io",rel:"noopener noreferrer",target:"_blank"},"https://metamask.io")),react_default.a.createElement(components_Determine,{isSelected:sectionId===2,title:"2. \u0421\u043E\u0437\u0434\u0430\u0439\u0442\u0435/\u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0432\u0430\u0448 \u043A\u043E\u0448\u0435\u043B\u0451\u043A"},"\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044F \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441 Metamask \u0441\u043E\u0437\u0434\u0430\u0439\u0442\u0435 \u043D\u043E\u0432\u044B\u0439 \u0438\u043B\u0438 \u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u043A\u043E\u0448\u0435\u043B\u0451\u043A. \u0411\u043E\u043B\u0435\u0435 \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0443\u044E \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C, \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0432 \u043E\u0431\u0443\u0447\u0430\u044E\u0449\u0438\u0439 \u0440\u043E\u043B\u0438\u043A:",react_default.a.createElement("div",{className:Guide_default.a.Frame},react_default.a.createElement("iframe",{allow:"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",allowFullScreen:true,frameBorder:"0",height:"340",src:"https://www.youtube.com/embed/ZIGUC9JAAw8",title:"Tutorial video",width:"632"}))),react_default.a.createElement(components_Determine,{isSelected:sectionId===3,title:"3. \u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u0435 Metamask \u043A \u0441\u0435\u0442\u0438 Etherus"},"\u041E\u0442\u043A\u0440\u044B\u0432 Metamask, \u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u0432\u043A\u043B\u0430\u0434\u043A\u0443 \u0441 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u043C\u0438 \u0441\u0435\u0442\u044F\u043C\u0438 \u0438 \u0432\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \xAB\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 RPC\xBB. \u041F\u043E\u0441\u043B\u0435 \u0447\u0435\u0433\u043E \u0432 \u0440\u0430\u0437\u0434\u0435\u043B\u0435 New Network \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0430\u043D\u043D\u044B\u0435 \u0434\u043B\u044F \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F:",react_default.a.createElement("div",{className:Guide_default.a.Steps},react_default.a.createElement("img",{alt:"\u0428\u0430\u0433 \u21161",src:step_1_default.a}),react_default.a.createElement("img",{alt:"\u0428\u0430\u0433 \u21162",src:step_2_default.a}))),react_default.a.createElement(components_Determine,{title:"\u0414\u0430\u043D\u043D\u044B\u0435 \u0434\u043B\u044F \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F"},react_default.a.createElement("strong",null,"RPC URL"),": https://rpc.etherus.org; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"ChainID"),": 32019; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"Symbol"),": ETR; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"Nickname"),": Etherus Mainnet."));});};/* harmony default export */ var containers_Guide = (Guide_ValidatorsGuide);
 // CONCATENATED MODULE: ./src/views/Validators/components/From.js
 // Components
 // Entities
@@ -503,29 +541,30 @@ var From_ValidatorsFrom=function ValidatorsFrom(_ref){var label=_ref.label,name=
 // Styles
 var Pause_ValidatorsPause=function ValidatorsPause(_ref){var handleCancel=_ref.handleCancel,handleSubmit=_ref.handleSubmit,submitting=_ref.submitting,isOwner=_ref.isOwner;return react_default.a.createElement(components_Form_Form,{onSubmit:handleSubmit},submitting&&react_default.a.createElement(src_components_Metamask,null),react_default.a.createElement(From,{label:"vFrom",name:"address"}),isOwner&&react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(Select_Select,{format:function format(id){return{label:parse_parsePause(id),value:id};},label:"\u0422\u0438\u043F \u043F\u0430\u0443\u0437\u044B",name:"pauseCause",parse:function parse(item){return Object(lodash["get"])(item,'value');}},[PAUSE_CAUSE_VOLUNTARILY,PAUSE_CAUSE_UNTIL_BLOCK,PAUSE_CAUSE_UNTIL_FINE,PAUSE_CAUSE_PUNISHMENT].map(function(id){return react_default.a.createElement(components_Item,{key:id,label:parse_parsePause(id),value:id});})),react_default.a.createElement(components_Input,{label:"PUNISH VALUE",name:"punishValue"})),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:handleCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,type:"submit"},"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C")));};var Pause_mapStateToProps=function mapStateToProps(state){return{isOwner:selector_isOwner(state)};};var ComposedValidatorsPause=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Pause_mapStateToProps,{closeModal:actions_closeModal}),Object(reduxForm["a" /* default */])({form:VALIDATOR_PAUSE_FORM_ID,validate:validate({address:[validate_required(),isHash()],pauseCause:[validate_required(),isNumber(),isUint(8)],punishValue:[validate_required(),isNumber(),isUint(96)]})}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref2){var closeModal=_ref2.closeModal;return function(event){return closeModal(VALIDATOR_PAUSE_MODAL_ID);};}}))(Pause_ValidatorsPause);var Pause_ValidatorsPauseModal=function ValidatorsPauseModal(_ref3){var handleSubmit=_ref3.handleSubmit;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_PAUSE_MODAL_ID,title:"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C"},function(_ref4){var hash=_ref4.hash;return react_default.a.createElement(ComposedValidatorsPause,{initialValues:{hash:hash,pauseCause:PAUSE_CAUSE_VOLUNTARILY,punishValue:0},onSubmit:handleSubmit});});};/* harmony default export */ var Pause = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{pauseValidator:actions_pauseValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleSubmit:function handleSubmit(_ref5){var pauseValidator=_ref5.pauseValidator;return function(values){return pauseValidator(values);};}}))(Pause_ValidatorsPauseModal));
 // EXTERNAL MODULE: ./src/views/Validators/Validators.scss
-var Validators_Validators = __webpack_require__(30);
+var Validators_Validators = __webpack_require__(39);
 var Validators_default = /*#__PURE__*/__webpack_require__.n(Validators_Validators);
 
 // CONCATENATED MODULE: ./src/views/Validators/Validators.js
+// API
 // Components
 // Containers
 // Ducks
 // Entities
 // Services
 // Styles
-var Validators_Validators_Validators=function Validators(_ref){var _classNames;var address=_ref.address,isConnected=_ref.isConnected,isFetching=_ref.isFetching,isOwner=_ref.isOwner,isSupported=_ref.isSupported,networkId=_ref.networkId,validators=_ref.validators,handleConnect=_ref.handleConnect,handleCreate=_ref.handleCreate;var rootClassNames=classnames_default()(Validators_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Validators_default.a.RootIsConnected,isConnected),Object(defineProperty["a" /* default */])(_classNames,Validators_default.a.RootIsOwner,isOwner),_classNames));return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:Validators_default.a.Header},react_default.a.createElement("div",{className:Validators_default.a.HeaderLeft},react_default.a.createElement(components_Typography_Typography,{variant:components_Typography_Typography.VARIANT.H6},"\u0412\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440\u044B"),react_default.a.createElement(components_Typography_Typography,{className:Validators_default.a.Status,variant:components_Typography_Typography.VARIANT.CAPTION},isConnected?isOwner?"OWNER":"\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043E: ".concat(address.substr(0,16),"..."):'Для редактирования нужна авторизация')),react_default.a.createElement("div",{className:Validators_default.a.HeaderRight},!isConnected?isSupported&&networkId==='4'?react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.GREEN,onClick:handleConnect},"\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u044C Metamask"):react_default.a.createElement(components_Typography_Typography,{className:Validators_default.a.Hint,variant:components_Typography_Typography.VARIANT.CAPTION},!isSupported?react_default.a.createElement(react["Fragment"],null,"\u0414\u043B\u044F \u0440\u0430\u0431\u043E\u0442\u044B \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u0435 Metamask:",react_default.a.createElement("br",null),react_default.a.createElement("a",{className:Validators_default.a.Link,href:"https://metamask.io/",rel:"noopener noreferrer",target:"_blank"},"https://metamask.io/")):'Переключите Metamask на сеть RinkeBy'):react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,onClick:handleCreate},"\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440"))),isFetching&&react_default.a.createElement("div",{className:Validators_default.a.Progress},react_default.a.createElement(src_components_Progress,null)),validators&&validators.length>0&&react_default.a.createElement("div",{className:Validators_default.a.List},react_default.a.createElement(views_Validators_components_Table,{data:validators})),isConnected&&react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(Create,null),react_default.a.createElement(Deposit,null),react_default.a.createElement(Pause,null)));};var Validators_mapStateToProps=function mapStateToProps(state){return Object(objectSpread["a" /* default */])({},selector_getValidatorsView(state),selector_getSession(state),{validators:selector_getValidatorList(state).sort(function(_ref2,_ref3){var pauseCause=_ref2.pauseCause;var pauseCauseB=_ref3.pauseCause;return pauseCause>pauseCauseB?1:pauseCause<pauseCauseB?-1:0;})});};/* harmony default export */ var views_Validators_Validators = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Validators_mapStateToProps,{connectMetamask:actions_connectMetamask,fetchValidators:actions_fetchValidators,openModal:actions_openModal}),Object(Recompose_esm["c" /* withHandlers */])({handleConnect:function handleConnect(_ref4){var connectMetamask=_ref4.connectMetamask;return function(event){return connectMetamask();};},handleCreate:function handleCreate(_ref5){var openModal=_ref5.openModal;return function(event){return openModal(VALIDATOR_CREATE_MODAL_ID);};}}),Object(Recompose_esm["b" /* lifecycle */])({componentDidMount:function componentDidMount(){this.props.fetchValidators();}}))(Validators_Validators_Validators));
+var Validators_Validators_Validators=function Validators(_ref){var _classNames;var address=_ref.address,networkId=_ref.networkId,validators=_ref.validators,handleConnect=_ref.handleConnect,handleCreate=_ref.handleCreate,handleGuide=_ref.handleGuide,isConnected=_ref.isConnected,isFetching=_ref.isFetching,isOwner=_ref.isOwner,isSupported=_ref.isSupported,hasAccount=_ref.hasAccount;var rootClassNames=classnames_default()(Validators_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Validators_default.a.RootIsConnected,isConnected),Object(defineProperty["a" /* default */])(_classNames,Validators_default.a.RootIsOwner,isOwner),_classNames));return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:Validators_default.a.Header},react_default.a.createElement("div",{className:Validators_default.a.HeaderLeft},react_default.a.createElement(components_Typography_Typography,{variant:components_Typography_Typography.VARIANT.H6},"\u0412\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440\u044B"),react_default.a.createElement(components_Typography_Typography,{className:Validators_default.a.Status,variant:components_Typography_Typography.VARIANT.CAPTION},isConnected?isOwner?"OWNER":"\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043E: ".concat(address.substr(0,16),"..."):'Для редактирования нужна авторизация')),react_default.a.createElement("div",{className:Validators_default.a.HeaderRight},!isConnected?isSupported&&networkId===api_config.NETWORK_ID&&hasAccount?react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.GREEN,onClick:handleConnect},"\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u044C Metamask"):react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,onClick:handleGuide},!isSupported&&'Как подключить Metamask?',isSupported&&!hasAccount&&'Как добавить аккаунт в Metamask?',isSupported&&hasAccount&&networkId!==api_config.NETWORK_ID&&'Как добавить сеть Etherus?'):react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,onClick:handleCreate},"\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440"))),isFetching&&react_default.a.createElement("div",{className:Validators_default.a.Progress},react_default.a.createElement(src_components_Progress,null)),validators&&validators.length>0&&react_default.a.createElement("div",{className:Validators_default.a.List},react_default.a.createElement(views_Validators_components_Table,{data:validators})),react_default.a.createElement(containers_Guide,null),isConnected&&react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(Create,null),react_default.a.createElement(Deposit,null),react_default.a.createElement(Pause,null)));};var Validators_mapStateToProps=function mapStateToProps(state){return Object(objectSpread["a" /* default */])({},selector_getValidatorsView(state),selector_getSession(state),{validators:selector_getValidatorList(state).sort(function(_ref2,_ref3){var pauseCause=_ref2.pauseCause;var pauseCauseB=_ref3.pauseCause;return pauseCause>pauseCauseB?1:pauseCause<pauseCauseB?-1:0;})});};/* harmony default export */ var views_Validators_Validators = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Validators_mapStateToProps,{connectMetamask:actions_connectMetamask,fetchValidators:actions_fetchValidators,openModal:actions_openModal}),Object(Recompose_esm["c" /* withHandlers */])({handleConnect:function handleConnect(_ref4){var connectMetamask=_ref4.connectMetamask;return function(event){return connectMetamask();};},handleCreate:function handleCreate(_ref5){var openModal=_ref5.openModal;return function(event){return openModal(VALIDATOR_CREATE_MODAL_ID);};},handleGuide:function handleGuide(_ref6){var hasAccount=_ref6.hasAccount,isSupported=_ref6.isSupported,networkId=_ref6.networkId,openModal=_ref6.openModal;return function(event){return openModal(VALIDATOR_GUIDE_MODAL_ID,{sectionId:!isSupported?1:isSupported&&!hasAccount?2:3});};}}),Object(Recompose_esm["b" /* lifecycle */])({componentDidMount:function componentDidMount(){this.props.fetchValidators();}}))(Validators_Validators_Validators));
 // CONCATENATED MODULE: ./src/views/Validators/index.js
 // Ducks
 
 // EXTERNAL MODULE: ./src/App.scss
-var src_App = __webpack_require__(146);
+var src_App = __webpack_require__(147);
 var App_default = /*#__PURE__*/__webpack_require__.n(src_App);
 
 // EXTERNAL MODULE: ./node_modules/react-table/react-table.css
-var react_table = __webpack_require__(360);
+var react_table = __webpack_require__(364);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/fontawesome-pro/css/all.min.css
-var all_min = __webpack_require__(361);
+var all_min = __webpack_require__(365);
 
 // CONCATENATED MODULE: ./src/App.js
 // Views
@@ -568,19 +607,19 @@ registerValidSW(swUrl,config);}}).catch(function(){console.log('No internet conn
 var redux = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./node_modules/web3/src/index.js
-var src = __webpack_require__(106);
+var src = __webpack_require__(148);
 var src_default = /*#__PURE__*/__webpack_require__.n(src);
 
 // CONCATENATED MODULE: ./src/api/schema.js
 var schema_validator=new normalizr_es["b" /* schema */].Entity('validators',{},{idAttribute:'hash'});
 // EXTERNAL MODULE: ./src/assets/contract.json
-var assets_contract = __webpack_require__(147);
+var assets_contract = __webpack_require__(149);
 
 // EXTERNAL MODULE: ./node_modules/redux-thunk/es/index.js
-var redux_thunk_es = __webpack_require__(240);
+var redux_thunk_es = __webpack_require__(244);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/reducer.js + 2 modules
-var es_reducer = __webpack_require__(561);
+var es_reducer = __webpack_require__(565);
 
 // CONCATENATED MODULE: ./src/entities/reducer.js
 // Models
@@ -598,7 +637,7 @@ var viewsReducer=Object(redux["c" /* combineReducers */])({validators:ducks_redu
 // Middleware
 // Reducers
 // Services
-var store_reducer=Object(redux["c" /* combineReducers */])({entities:entities_reducer,form:es_reducer["a" /* default */],services:services_reducer,views:views_reducer});var composeEnhancers=typeof window==='object'&&window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}):redux["d" /* compose */];/* harmony default export */ var src_store = (function(history){var isSupported=false;var privateWeb3;var web3=new src_default.a(new src_default.a.providers.HttpProvider('https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337'));if(window.ethereum||window.web3){isSupported=true;privateWeb3=new src_default.a(window.ethereum);}var store=Object(redux["e" /* createStore */])(store_reducer,composeEnhancers(Object(redux["a" /* applyMiddleware */])(redux_thunk_es["a" /* default */].withExtraArgument({history:history,schema:schema_namespaceObject,web3:web3,account:privateWeb3&&new privateWeb3.eth.Contract(assets_contract,'0xD019247742150fD1B55CA20010659976fe2b6a2f',{from:window.ethereum.selectedAddress}),contract:new web3.eth.Contract(assets_contract,'0xD019247742150fD1B55CA20010659976fe2b6a2f')}))));if(isSupported){store.dispatch({type:SET_SUPPORT,isSupported:true});}web3.eth.getBlockNumber().then(function(blockNumber){store.dispatch({type:SET_CURRENT_BLOCK_NUMBER,blockNumber:blockNumber});});return store;});
+var store_reducer=Object(redux["c" /* combineReducers */])({entities:entities_reducer,form:es_reducer["a" /* default */],services:services_reducer,views:views_reducer});var composeEnhancers=typeof window==='object'&&window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}):redux["d" /* compose */];/* harmony default export */ var src_store = (function(history){var isSupported=false;var privateWeb3;var web3=new src_default.a(api_config.URL);if(window.ethereum||window.web3){isSupported=true;privateWeb3=new src_default.a(window.ethereum);}var store=Object(redux["e" /* createStore */])(store_reducer,composeEnhancers(Object(redux["a" /* applyMiddleware */])(redux_thunk_es["a" /* default */].withExtraArgument({history:history,schema:schema_namespaceObject,web3:web3,account:privateWeb3&&new privateWeb3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS,{from:window.ethereum.selectedAddress}),contract:new web3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS)}))));if(isSupported){store.dispatch({type:SET_SUPPORT,isSupported:true});}web3.eth.getBlockNumber().then(function(blockNumber){store.dispatch({type:SET_CURRENT_BLOCK_NUMBER,blockNumber:blockNumber});});return store;});
 // CONCATENATED MODULE: ./src/index.js
 // App
 // Utils
@@ -639,7 +678,23 @@ module.exports = {"Root":"Modal_Root__3q3lT","Backdrop":"Modal_Backdrop__C2Mqp",
 // extracted by mini-css-extract-plugin
 module.exports = {"Root":"Input_Root__3VpEi","RootIsErred":"Input_RootIsErred__3eeWg","RootIsFocused":"Input_RootIsFocused__2RQe7","Input":"Input_Input__3rMjF"};
 
+/***/ }),
+
+/***/ 80:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Root":"Determine_Root__3B6cr","RootIsSelected":"Determine_RootIsSelected__2zSNW","Content":"Determine_Content__jXH7T"};
+
+/***/ }),
+
+/***/ 81:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Container":"Guide_Container__3FIps","Frame":"Guide_Frame__2_1V0","Link":"Guide_Link__1rgrz","Steps":"Guide_Steps__YblhS"};
+
 /***/ })
 
-},[[247,1,2]]]);
-//# sourceMappingURL=main.4ec5b0a1.chunk.js.map
+},[[251,1,2]]]);
+//# sourceMappingURL=main.0c8b2388.chunk.js.map
