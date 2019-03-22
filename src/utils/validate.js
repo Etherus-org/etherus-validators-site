@@ -24,10 +24,6 @@ export const isUrl = (message: string = 'Incorrect URL!') =>
     isValid: value && /^http:\/\/\w+(\.\w+)*(:[0-9]+)?\/?(\/[.\w]*)*$/.test(value),
   });
 
-/**
- * @param  {Object.<RegExp>} regex
- * @param  {string} message
- */
 export const matches = (regex: Object<RegExp>, message: string = 'Incorrect value!') => (value: string): Object => ({
   message,
   isValid: value && regex.test(value),
@@ -36,12 +32,9 @@ export const matches = (regex: Object<RegExp>, message: string = 'Incorrect valu
 export const min = (min: number, message: string = 'Min value: %d!') =>
   (value: any): Object => ({
     message: message.replace('%d', min),
-    isValid: parseInt(value, 10) >= min,
+    isValid: parseFloat(value, 10) >= min,
   });
 
-/**
- * @param {string} message
- */
 export const required = (message: string = 'Field is required!') => (value: any): Object => ({
   message,
   isValid: typeof value === 'number' || !isEmpty(value),

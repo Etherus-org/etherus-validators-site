@@ -4,6 +4,9 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { compose, lifecycle, withHandlers } from 'recompose';
 
+// API
+import config from 'api/config';
+
 // Components
 import Button from 'components/Button';
 import Progress from 'components/Progress';
@@ -12,12 +15,14 @@ import Table from './components/Table';
 // Containers
 import Create from './containers/Create';
 import Deposit from './containers/Deposit';
+import Guide from './containers/Guide';
 import Pause from './containers/Pause';
 
 // Ducks
 import {
   getValidatorsView,
   VALIDATOR_CREATE_MODAL_ID,
+  VALIDATOR_GUIDE_MODAL_ID,
 } from './ducks';
 
 // Entities
@@ -41,6 +46,7 @@ type ValidatorsType = {
   address: string,
   handleConnect: Function,
   handleCreate: Function,
+  handleGuide: Function,
   isConnected: bool,
   isFetching: bool,
   isOwner: bool,
@@ -51,15 +57,18 @@ type ValidatorsType = {
 
 const Validators: React.Element<'div'> = ({
   address,
-  isConnected,
-  isFetching,
-  isOwner,
-  isSupported,
   networkId,
   validators,
   // Handlers
   handleConnect,
   handleCreate,
+  handleGuide,
+  // State
+  isConnected,
+  isFetching,
+  isOwner,
+  isSupported,
+  hasAccount,
 }: ValidatorsType) => {
   const rootClassNames: string = classNames(styles.Root, {
     [styles.RootIsConnected]: isConnected,
@@ -90,7 +99,7 @@ const Validators: React.Element<'div'> = ({
 
         <div className={styles.HeaderRight}>
           {!isConnected ? (
-            isSupported && networkId === '4' ? (
+            isSupported && networkId === config.NETWORK_ID && hasAccount ? (
               <Button
                 color={GRADIENT.GREEN}
                 onClick={handleConnect}
@@ -98,24 +107,14 @@ const Validators: React.Element<'div'> = ({
                 Подключить Metamask
               </Button>
             ) : (
-              <Typography
-                className={styles.Hint}
-                variant={Typography.VARIANT.CAPTION}
+              <Button
+                color={GRADIENT.PURPLE}
+                onClick={handleGuide}
               >
-                {!isSupported ? (
-                  <Fragment>
-                    Для работы установите расширение Metamask:<br />
-                    <a
-                      className={styles.Link}
-                      href="https://metamask.io/"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      https://metamask.io/
-                    </a>
-                  </Fragment>
-                ) : 'Переключите Metamask на сеть RinkeBy'}
-              </Typography>
+                {!isSupported && 'Как подключить Metamask?'}
+                {isSupported && !hasAccount && 'Как добавить аккаунт в Metamask?'}
+                {isSupported && hasAccount && networkId !== config.NETWORK_ID && 'Как добавить сеть Etherus?'}
+              </Button>
             )
           ) : (
             <Button
@@ -139,6 +138,8 @@ const Validators: React.Element<'div'> = ({
           <Table data={validators} />
         </div>
       )}
+
+      <Guide />
 
       {isConnected && (
         <Fragment>
@@ -172,6 +173,20 @@ export default compose(
     handleCreate: ({ openModal }): Function =>
       (event: Object): void =>
         openModal(VALIDATOR_CREATE_MODAL_ID),
+    handleGuide: ({
+      hasAccount,
+      isSupported,
+      networkId,
+      openModal,
+    }): Function =>
+      (event: Object): void =>
+        openModal(VALIDATOR_GUIDE_MODAL_ID, {
+          sectionId: !isSupported
+            ? 1
+            : isSupported && !hasAccount
+              ? 2
+              : 3
+        }),
   }),
   lifecycle({
     componentDidMount() {

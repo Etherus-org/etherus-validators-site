@@ -4,6 +4,7 @@ import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import Web3 from 'web3';
 
 // API
+import config from 'api/config';
 import * as schema from 'api/schema';
 
 // Assets
@@ -42,7 +43,7 @@ export default (history: Object): Object => {
   let isSupported = false;
   let privateWeb3;
 
-  const web3 = new Web3(new Web3.providers.HttpProvider('https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337'));
+  const web3 = new Web3(config.URL);
 
   if (window.ethereum || window.web3) {
     isSupported = true;
@@ -55,12 +56,12 @@ export default (history: Object): Object => {
         history, schema, web3,
         account: privateWeb3 && new privateWeb3.eth.Contract(
           contractInterface,
-          '0xD019247742150fD1B55CA20010659976fe2b6a2f',
+          config.CONTRACT_ADDRESS,
           { from: window.ethereum.selectedAddress }
         ),
         contract: new web3.eth.Contract(
           contractInterface,
-          '0xD019247742150fD1B55CA20010659976fe2b6a2f'
+          config.CONTRACT_ADDRESS,
         ),
       }),
     ),

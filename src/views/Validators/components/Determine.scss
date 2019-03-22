@@ -1,0 +1,17 @@
+.Root {
+  margin: 12px -24px 0;
+  padding: 24px;
+
+  &Is {
+    &Selected {
+      background: #fff6ce;
+      border-bottom: 1px solid #ffed90;
+      border-top: 1px solid #ffed90;
+    }
+  }
+}
+
+.Content {
+  color: var(--color-gray);
+  margin: 16px 0 0;
+}

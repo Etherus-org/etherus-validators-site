@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
 import { reduxForm } from 'redux-form';
 
+// API
+import CONFIG from 'api/config';
+
 // Components
 import Button from 'components/Button';
 import Form, { Input } from 'components/Form';
@@ -23,7 +26,7 @@ import { depositValidator } from 'entities/validators';
 import { closeModal } from 'services/modals';
 
 // Utils
-import validate, { isNumber, required } from 'utils/validate';
+import validate, { isNumber, min, required } from 'utils/validate';
 
 // Styles
 import { COLOR } from 'styles';
@@ -62,7 +65,11 @@ const ComposedValidatorsDeposit = compose(
   reduxForm({
     form: VALIDATOR_DEPOSIT_FORM_ID,
     validate: validate({
-      deposit: [required(), isNumber()],
+      deposit: [
+        required(),
+        isNumber(),
+        min(CONFIG.MIN_DEPOSIT_INCREMENT, `Must be more than ${CONFIG.MIN_DEPOSIT_INCREMENT} ${CONFIG.SYMBOL}`),
+      ],
     }),
   }),
   withHandlers({

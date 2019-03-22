@@ -2,6 +2,9 @@ import classNames from 'classnames';
 import React from 'react';
 import { compose, withHandlers } from 'recompose';
 
+// API
+import CONFIG from 'api/config';
+
 // Components
 import Button from 'components/Button';
 import Tooltip from 'components/Tooltip';
@@ -56,7 +59,7 @@ const ValidatorsField: React.Element<'div'> = ({
       className={rootClassNames}
       variant={Typography.VARIANT.BODY2}
     >
-      {!isDisabled && variant === VARIANT.HASH && (
+      {variant === VARIANT.HASH && (
         <Tooltip title="Копировать">
           <Button
             classNames={{
@@ -70,7 +73,7 @@ const ValidatorsField: React.Element<'div'> = ({
       )}
 
       <div className={styles.Text}>
-        {variant === VARIANT.DEPOSIT && `${parseDeposit(title).toFixed(4)} ETH`}
+        {variant === VARIANT.DEPOSIT && `${parseDeposit(title).toFixed(4)} ${CONFIG.SYMBOL}`}
         {variant === VARIANT.PAUSE && parsePause(title)}
         {variant === VARIANT.HASH && (title || children)}
         {variant === VARIANT.DEFAULT && (title || children)}

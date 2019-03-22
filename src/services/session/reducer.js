@@ -22,7 +22,8 @@ const initialState = {
   isConnecting: false,
   isOwner: false,
   isSupported: false,
-  networkId: get(window, 'ethereum.networkVersion'),
+  hasAccount: !!get(window, 'ethereum.selectedAddress'),
+  networkId: get(window, 'ethereum.networkVersion', 0),
 };
 
 export default (state: Object = initialState, action: Object): Object => {

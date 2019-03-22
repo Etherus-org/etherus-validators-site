@@ -10,11 +10,13 @@
   &Is {
     &Disabled {
       background: var(--background-lighter);
+      color: var(--color-gray);
     }
 
     &Favorite {
       background: #fff6ce;
       border-bottom: 1px solid #ffed90 !important;
+      color: var(--color-alert);
 
       &:hover {
         background: #fff6ce !important;

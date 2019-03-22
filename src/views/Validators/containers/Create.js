@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
 import { reduxForm } from 'redux-form';
 
+// API
+import CONFIG from 'api/config';
+
 // Components
 import Button from 'components/Button';
 import Form, { Input } from 'components/Form';
@@ -24,7 +27,7 @@ import { closeModal } from 'services/modals';
 import { getAddress } from 'services/session';
 
 // Utils
-import validate, { isHash, isNumber, required } from 'utils/validate';
+import validate, { isHash, isNumber, min, required } from 'utils/validate';
 
 // Styles
 import { COLOR } from 'styles';
@@ -78,7 +81,11 @@ const ComposedValidatorsCreate = compose(
     form: VALIDATOR_CREATE_FORM_ID,
     validate: validate({
       address: [required(), isHash()],
-      deposit: [required(), isNumber()],
+      deposit: [
+        required(),
+        isNumber(),
+        min(CONFIG.MIN_DEPOSIT, `Must be more than ${CONFIG.MIN_DEPOSIT} ${CONFIG.SYMBOL}`),
+      ],
       hash: [required(), isHash()],
       node: [required(), isHash()],
     }),
