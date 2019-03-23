@@ -49,6 +49,7 @@ type ValidatorsType = {
   handleGuide: Function,
   hasAccount: bool,
   isConnected: bool,
+  isConnecting: bool,
   isFetching: bool,
   isOwner: bool,
   isSupported: bool,
@@ -66,6 +67,7 @@ const Validators: React.Element<'div'> = ({
   handleGuide,
   // State
   isConnected,
+  isConnecting,
   isFetching,
   isOwner,
   isSupported,
@@ -99,31 +101,37 @@ const Validators: React.Element<'div'> = ({
         </div>
 
         <div className={styles.HeaderRight}>
-          {!isConnected ? (
-            isSupported && networkId === config.NETWORK_ID && hasAccount ? (
-              <Button
-                color={GRADIENT.GREEN}
-                onClick={handleConnect}
-              >
-                Подключить Metamask
-              </Button>
+          {isConnecting ? (
+            <div className={styles.Connecting}>
+              <Progress size={20} />
+            </div>
+          ) : (
+            !isConnected ? (
+              isSupported && networkId === config.NETWORK_ID && hasAccount ? (
+                <Button
+                  color={GRADIENT.GREEN}
+                  onClick={handleConnect}
+                >
+                  Подключить Metamask
+                </Button>
+              ) : (
+                <Button
+                  color={GRADIENT.PURPLE}
+                  onClick={handleGuide}
+                >
+                  {!isSupported && 'Как подключить Metamask?'}
+                  {isSupported && !hasAccount && 'Как добавить аккаунт в Metamask?'}
+                  {isSupported && hasAccount && networkId !== config.NETWORK_ID && 'Как добавить сеть Etherus?'}
+                </Button>
+              )
             ) : (
               <Button
-                color={GRADIENT.PURPLE}
-                onClick={handleGuide}
+                color={COLOR.PRIMARY}
+                onClick={handleCreate}
               >
-                {!isSupported && 'Как подключить Metamask?'}
-                {isSupported && !hasAccount && 'Как добавить аккаунт в Metamask?'}
-                {isSupported && hasAccount && networkId !== config.NETWORK_ID && 'Как добавить сеть Etherus?'}
+                Создать валидатор
               </Button>
             )
-          ) : (
-            <Button
-              color={COLOR.PRIMARY}
-              onClick={handleCreate}
-            >
-              Создать валидатор
-            </Button>
           )}
         </div>
       </div>

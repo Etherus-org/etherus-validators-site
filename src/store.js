@@ -1,5 +1,6 @@
 /* eslint-disable */
 // @flow
+import { get, has } from 'lodash';
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import Web3 from 'web3';
 
@@ -23,6 +24,8 @@ import views from './views/reducer';
 // Services
 import {
   SET_CURRENT_BLOCK_NUMBER,
+  SET_HAS_ACCOUNT,
+  SET_NETWORK_ID,
   SET_SUPPORT,
 } from 'services/session';
 
@@ -49,7 +52,7 @@ export default (history: Object): Object => {
     isSupported = true;
     privateWeb3 = new Web3(window.ethereum)
   }
-
+  console.log(window.ethereum);
   const store = createStore(reducer, composeEnhancers(
     applyMiddleware(
       thunkMiddleware.withExtraArgument({
@@ -73,6 +76,15 @@ export default (history: Object): Object => {
 
   web3.eth.getBlockNumber()
     .then((blockNumber: number): void => {
+      has(window, 'ethereum.networkVersion') &&
+      store.dispatch({
+        type: SET_NETWORK_ID,
+        networkId: get(window, 'ethereum.networkVersion'),
+      });
+
+      has(window, 'ethereum.selectedAddress') &&
+      store.dispatch({ type: SET_HAS_ACCOUNT });
+
       store.dispatch({ type: SET_CURRENT_BLOCK_NUMBER, blockNumber });
     });
 

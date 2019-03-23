@@ -1,4 +1,4 @@
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory } from 'history';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -11,7 +11,7 @@ import App from './App';
 import * as serviceWorker from './utils/serviceWorker';
 import createStore from './store';
 
-const history = createHistory();
+const history = createBrowserHistory();
 const store = createStore(history);
 
 ReactDOM.render(

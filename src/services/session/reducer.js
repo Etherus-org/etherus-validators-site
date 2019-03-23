@@ -1,5 +1,4 @@
 // @flow
-import { get } from 'lodash';
 
 // Types
 import {
@@ -11,6 +10,8 @@ import {
   IS_OWNER_SUCCESS,
   // BLOCK NUMBER
   SET_CURRENT_BLOCK_NUMBER,
+  SET_HAS_ACCOUNT,
+  SET_NETWORK_ID,
   SET_SUPPORT,
 } from './types';
 
@@ -19,11 +20,11 @@ const initialState = {
   blockNumber: 0,
   error: false,
   isConnected: false,
-  isConnecting: false,
+  isConnecting: true,
   isOwner: false,
   isSupported: false,
-  hasAccount: !!get(window, 'ethereum.selectedAddress'),
-  networkId: get(window, 'ethereum.networkVersion', 0),
+  hasAccount: false,
+  networkId: 0,
 };
 
 export default (state: Object = initialState, action: Object): Object => {
@@ -56,6 +57,17 @@ export default (state: Object = initialState, action: Object): Object => {
       return {
         ...state,
         blockNumber: action.blockNumber,
+        isConnecting: false,
+      };
+    case SET_HAS_ACCOUNT:
+      return {
+        ...state,
+        hasAccount: true,
+      };
+    case SET_NETWORK_ID:
+      return {
+        ...state,
+        networkId: action.networkId,
       };
     case SET_SUPPORT:
       return {
