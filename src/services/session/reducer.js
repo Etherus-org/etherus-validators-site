@@ -51,6 +51,7 @@ export default (state: Object = initialState, action: Object): Object => {
     case IS_OWNER_SUCCESS:
       return {
         ...state,
+        isConnecting: false,
         isOwner: action.isOwner,
       };
     case SET_CURRENT_BLOCK_NUMBER:
