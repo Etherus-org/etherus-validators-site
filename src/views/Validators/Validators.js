@@ -47,6 +47,7 @@ type ValidatorsType = {
   handleConnect: Function,
   handleCreate: Function,
   handleGuide: Function,
+  hasAccount: bool,
   isConnected: bool,
   isFetching: bool,
   isOwner: bool,
