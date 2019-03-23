@@ -4,7 +4,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Tooltip_Root__2mKQv","Tooltip":"Tooltip_Tooltip__3I5eR"};
+module.exports = {"Root":"Tooltip_Root__293J7","Tooltip":"Tooltip_Tooltip__1mxq-"};
 
 /***/ }),
 
@@ -12,7 +12,7 @@ module.exports = {"Root":"Tooltip_Root__2mKQv","Tooltip":"Tooltip_Tooltip__3I5eR
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Table_Root__1s8Ss","RootIsDisabled":"Table_RootIsDisabled__14x15","RootIsFavorite":"Table_RootIsFavorite__2WNWH"};
+module.exports = {"Root":"Table_Root__2hh79","RootIsDisabled":"Table_RootIsDisabled__296ZQ","RootIsFavorite":"Table_RootIsFavorite__bGHwf"};
 
 /***/ }),
 
@@ -20,7 +20,7 @@ module.exports = {"Root":"Table_Root__1s8Ss","RootIsDisabled":"Table_RootIsDisab
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Error":"Form_Error__FAKdL"};
+module.exports = {"Error":"Form_Error__3ms-b"};
 
 /***/ }),
 
@@ -28,7 +28,7 @@ module.exports = {"Error":"Form_Error__FAKdL"};
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"App_Root__3UUPN","Wrapper":"App_Wrapper__VY8Wp"};
+module.exports = {"Root":"App_Root__3T8Bz","Wrapper":"App_Wrapper__217sn"};
 
 /***/ }),
 
@@ -43,7 +43,7 @@ module.exports = [{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Table_Root__1Dcze"};
+module.exports = {"Root":"Table_Root__3CqIU"};
 
 /***/ }),
 
@@ -51,7 +51,7 @@ module.exports = {"Root":"Table_Root__1Dcze"};
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Item_Root__3bpiM"};
+module.exports = {"Root":"Item_Root__1Vtiv"};
 
 /***/ }),
 
@@ -59,7 +59,7 @@ module.exports = {"Root":"Item_Root__3bpiM"};
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Button_Root__3UoPz","RootColorDanger":"Button_RootColorDanger__2CsmL","Content":"Button_Content__b0cux","RootColorPrimary":"Button_RootColorPrimary__N7WI4","RootColorSecondary":"Button_RootColorSecondary__21qxs","RootColorSuccess":"Button_RootColorSuccess__1-3FA","RootColorGradientGreen":"Button_RootColorGradientGreen__3tRVS","RootColorGradientPurple":"Button_RootColorGradientPurple__GLulx","RootGradientGreen":"Button_RootGradientGreen__2cMLf","Icon":"Button_Icon__1PUvK","RootGradientPurple":"Button_RootGradientPurple__2Oh2l","RootVariantFilled":"Button_RootVariantFilled__eYVK0","RootVariantFull":"Button_RootVariantFull__29XyY","RootVariantFullWidth":"Button_RootVariantFullWidth__3sPDP","RootVariantIcon":"Button_RootVariantIcon__1JnfL"};
+module.exports = {"Root":"Button_Root__125Uj","RootColorDanger":"Button_RootColorDanger__1K9U9","Content":"Button_Content__tGwup","RootColorPrimary":"Button_RootColorPrimary__2KBES","RootColorSecondary":"Button_RootColorSecondary__2J9Qy","RootColorSuccess":"Button_RootColorSuccess__3wc-r","RootColorGradientGreen":"Button_RootColorGradientGreen__Jr86j","RootColorGradientPurple":"Button_RootColorGradientPurple__lgYnt","RootGradientGreen":"Button_RootGradientGreen__3_MiC","Icon":"Button_Icon__i_Kng","RootGradientPurple":"Button_RootGradientPurple__W4LIl","RootVariantFilled":"Button_RootVariantFilled__3JGLK","RootVariantFull":"Button_RootVariantFull__1mjeU","RootVariantFullWidth":"Button_RootVariantFullWidth__-WeCb","RootVariantIcon":"Button_RootVariantIcon__30qib"};
 
 /***/ }),
 
@@ -80,7 +80,7 @@ module.exports = __webpack_require__.p + "static/media/step-2.a577f9b5.png";
 /***/ 251:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(560);
+module.exports = __webpack_require__(553);
 
 
 /***/ }),
@@ -89,7 +89,7 @@ module.exports = __webpack_require__(560);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Actions_Root__1JP0c","ButtonVariantDeposit":"Actions_ButtonVariantDeposit__mcHhb","Icon":"Actions_Icon__3JKX5","ButtonVariantPause":"Actions_ButtonVariantPause__185ha","ButtonVariantPlay":"Actions_ButtonVariantPlay__1Armj","ButtonVariantWithdraw":"Actions_ButtonVariantWithdraw__OZKsj"};
+module.exports = {"Root":"Actions_Root__1ncCJ","ButtonVariantDeposit":"Actions_ButtonVariantDeposit__2f69Y","Icon":"Actions_Icon__UjZlP","ButtonVariantPause":"Actions_ButtonVariantPause__1zt3X","ButtonVariantPlay":"Actions_ButtonVariantPlay__1KleK","ButtonVariantWithdraw":"Actions_ButtonVariantWithdraw__3u3T2"};
 
 /***/ }),
 
@@ -97,7 +97,7 @@ module.exports = {"Root":"Actions_Root__1JP0c","ButtonVariantDeposit":"Actions_B
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Select_Root__1wWeX","RootIsEmpty":"Select_RootIsEmpty__2_Dnc","Icon":"Select_Icon__2qACB","RootIsFocused":"Select_RootIsFocused__1Wotl","Container":"Select_Container__16YRY","RootIsMultiple":"Select_RootIsMultiple__2-6YR","Input":"Select_Input__1ld2F","Control":"Select_Control__2tUnw","Dropdown":"Select_Dropdown__3ADiy","List":"Select_List__3aZ5N","Option":"Select_Option__2qcmX","OptionDelete":"Select_OptionDelete__1tjHC","OptionIcon":"Select_OptionIcon__1bYAY"};
+module.exports = {"Root":"Select_Root__z3eM3","RootIsEmpty":"Select_RootIsEmpty__3vDGV","Icon":"Select_Icon__2GSfP","RootIsFocused":"Select_RootIsFocused__3LQDw","Container":"Select_Container__1EukS","RootIsMultiple":"Select_RootIsMultiple__2ZvAJ","Input":"Select_Input__1pvrG","Control":"Select_Control__1U3LJ","Dropdown":"Select_Dropdown__qjCrM","List":"Select_List__2-iCv","Option":"Select_Option__1nFSC","OptionDelete":"Select_OptionDelete__1cAIG","OptionIcon":"Select_OptionIcon__3FJ1Y"};
 
 /***/ }),
 
@@ -105,7 +105,7 @@ module.exports = {"Root":"Select_Root__1wWeX","RootIsEmpty":"Select_RootIsEmpty_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Typography_Root__1eH5O","RootColorAlert":"Typography_RootColorAlert__3hwLc","RootColorDanger":"Typography_RootColorDanger__1-dWT","RootColorDark":"Typography_RootColorDark__1k3L-","RootColorLight":"Typography_RootColorLight__1whT1","RootColorLighter":"Typography_RootColorLighter__1OKC1","RootColorMedium":"Typography_RootColorMedium__1tsxb","RootColorPrimary":"Typography_RootColorPrimary__3Al8c","RootColorSuccess":"Typography_RootColorSuccess__2hQZu","RootNowrap":"Typography_RootNowrap__1niL7","RootVariantH1":"Typography_RootVariantH1__3nKmJ","RootVariantH2":"Typography_RootVariantH2__3TTGW","RootVariantH3":"Typography_RootVariantH3__Ncurq","RootVariantH4":"Typography_RootVariantH4__a1vXQ","RootVariantH5":"Typography_RootVariantH5__5PMd5","RootVariantH6":"Typography_RootVariantH6__Afx3U","RootVariantBody1":"Typography_RootVariantBody1__2EEBU","RootVariantBody2":"Typography_RootVariantBody2__1LH3A","RootVariantButton":"Typography_RootVariantButton__2tMs_","RootVariantCaption":"Typography_RootVariantCaption__2SAZe","RootVariantOverline":"Typography_RootVariantOverline__1-kGP","RootVariantSubtitle1":"Typography_RootVariantSubtitle1__2WGE3","RootVariantSubtitle2":"Typography_RootVariantSubtitle2__3M96g"};
+module.exports = {"Root":"Typography_Root__3WVP0","RootColorAlert":"Typography_RootColorAlert__3q0zB","RootColorDanger":"Typography_RootColorDanger__253SG","RootColorDark":"Typography_RootColorDark__30iIE","RootColorLight":"Typography_RootColorLight__1AdZ0","RootColorLighter":"Typography_RootColorLighter__--f8x","RootColorMedium":"Typography_RootColorMedium__25wgh","RootColorPrimary":"Typography_RootColorPrimary__3KfYA","RootColorSuccess":"Typography_RootColorSuccess__3xP0Q","RootNowrap":"Typography_RootNowrap__555jF","RootVariantH1":"Typography_RootVariantH1__3xax0","RootVariantH2":"Typography_RootVariantH2__2jC4w","RootVariantH3":"Typography_RootVariantH3__1MHUz","RootVariantH4":"Typography_RootVariantH4__1DmD5","RootVariantH5":"Typography_RootVariantH5__2YZpc","RootVariantH6":"Typography_RootVariantH6__sttTv","RootVariantBody1":"Typography_RootVariantBody1__AEkhB","RootVariantBody2":"Typography_RootVariantBody2__1k7KZ","RootVariantButton":"Typography_RootVariantButton__2W1Qp","RootVariantCaption":"Typography_RootVariantCaption__2w6TK","RootVariantOverline":"Typography_RootVariantOverline__UPEam","RootVariantSubtitle1":"Typography_RootVariantSubtitle1__i0rsb","RootVariantSubtitle2":"Typography_RootVariantSubtitle2__1EkOH"};
 
 /***/ }),
 
@@ -113,15 +113,15 @@ module.exports = {"Root":"Typography_Root__1eH5O","RootColorAlert":"Typography_R
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Progress_Root__1k5De","RootColorPrimary":"Progress_RootColorPrimary__2SH6-","Circle":"Progress_Circle__jf9fY","Line":"Progress_Line__aESni","RootColorSuccess":"Progress_RootColorSuccess__3N0OK","RootVariantLinear":"Progress_RootVariantLinear__Wtix5","Progress":"Progress_Progress__3mzis","RootVariantIndeterminate":"Progress_RootVariantIndeterminate__1EpjN","progressCircularDash":"Progress_progressCircularDash__3kNHE","RootVariantCircle":"Progress_RootVariantCircle__3jb_0","progressCircularRotate":"Progress_progressCircularRotate__RT2rm","progressLinear":"Progress_progressLinear__2IBfa"};
+module.exports = {"Root":"Progress_Root__1Vj99","RootColorPrimary":"Progress_RootColorPrimary__1vXQl","Circle":"Progress_Circle__sxvZS","Line":"Progress_Line__2WZ1S","RootColorSuccess":"Progress_RootColorSuccess__3JGRv","RootVariantLinear":"Progress_RootVariantLinear__lmRs3","Progress":"Progress_Progress__3YEOf","RootVariantIndeterminate":"Progress_RootVariantIndeterminate__2HTGG","progressCircularDash":"Progress_progressCircularDash__3rbrN","RootVariantCircle":"Progress_RootVariantCircle__2qdt8","progressCircularRotate":"Progress_progressCircularRotate__2hFvr","progressLinear":"Progress_progressLinear__2PFGl"};
 
 /***/ }),
 
-/***/ 39:
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Validators_Root__1lOjo","RootIsConnected":"Validators_RootIsConnected__3c3eM","Status":"Validators_Status__3iCm1","RootIsOwner":"Validators_RootIsOwner__2jlQm","Header":"Validators_Header__1-yDr","Hint":"Validators_Hint__Hf5lS","List":"Validators_List__b5LW9","Progress":"Validators_Progress__HXOP_"};
+module.exports = {"Root":"Validators_Root__2fHeH","RootIsConnected":"Validators_RootIsConnected__3NUcg","Status":"Validators_Status__2__-l","RootIsOwner":"Validators_RootIsOwner__1YG2P","Connecting":"Validators_Connecting__2Z6T8","Header":"Validators_Header__6QWaq","Hint":"Validators_Hint__3v6Uz","List":"Validators_List__3Ofdk","Progress":"Validators_Progress__3kw-W"};
 
 /***/ }),
 
@@ -143,7 +143,7 @@ module.exports = {"Root":"Validators_Root__1lOjo","RootIsConnected":"Validators_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Actions":"Common_Actions__2KkrQ","Container":"Common_Container__qvWDW"};
+module.exports = {"Actions":"Common_Actions__mbWvk","Container":"Common_Container__2Q9lT"};
 
 /***/ }),
 
@@ -151,7 +151,7 @@ module.exports = {"Actions":"Common_Actions__2KkrQ","Container":"Common_Containe
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Field_Root__3biek","RootColorError":"Field_RootColorError__kzNqp","Text":"Field_Text__1LKbQ","RootColorSuccess":"Field_RootColorSuccess__2zARH","RootIsDisabled":"Field_RootIsDisabled__1_lJL","RootVariantHash":"Field_RootVariantHash__2j6A0","Copy":"Field_Copy__2P4So","Icon":"Field_Icon__3Bt6K"};
+module.exports = {"Root":"Field_Root__3Xpzp","RootColorError":"Field_RootColorError__1SyqK","Text":"Field_Text__3aBAD","RootColorSuccess":"Field_RootColorSuccess__iZhww","RootIsDisabled":"Field_RootIsDisabled__34qwr","RootVariantHash":"Field_RootVariantHash__3vHZT","Copy":"Field_Copy__1MVY8","Icon":"Field_Icon__3e_0q"};
 
 /***/ }),
 
@@ -169,7 +169,7 @@ module.exports = {"Root":"Field_Root__3biek","RootColorError":"Field_RootColorEr
 
 /***/ }),
 
-/***/ 560:
+/***/ 553:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -193,9 +193,8 @@ var schema_namespaceObject = {};
 __webpack_require__.r(schema_namespaceObject);
 __webpack_require__.d(schema_namespaceObject, "validator", function() { return schema_validator; });
 
-// EXTERNAL MODULE: ./node_modules/history/createBrowserHistory.js
-var createBrowserHistory = __webpack_require__(245);
-var createBrowserHistory_default = /*#__PURE__*/__webpack_require__.n(createBrowserHistory);
+// EXTERNAL MODULE: ./node_modules/history/esm/history.js + 3 modules
+var esm_history = __webpack_require__(246);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
@@ -206,16 +205,16 @@ var react_dom = __webpack_require__(40);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
 // EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 15 modules
-var es = __webpack_require__(14);
+var es = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Router.js + 1 modules
-var Router = __webpack_require__(568);
+var Router = __webpack_require__(562);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Route.js + 1 modules
-var Route = __webpack_require__(567);
+var Route = __webpack_require__(561);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Switch.js + 1 modules
-var Switch = __webpack_require__(566);
+var Switch = __webpack_require__(560);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread.js
 var objectSpread = __webpack_require__(7);
@@ -274,7 +273,7 @@ var Progress_default = /*#__PURE__*/__webpack_require__.n(components_Progress);
 // Styles
 var Progress_VARIANT={CIRCLE:'circle',LINEAR:'linear'};var Progress_Progress=function Progress(_ref){var _classNames;var className=_ref.className,_ref$classNames=_ref.classNames;_ref$classNames=_ref$classNames===void 0?{}:_ref$classNames;var rootClassName=_ref$classNames.root,circleClassName=_ref$classNames.circle,lineClassName=_ref$classNames.line,progressClassName=_ref$classNames.progress,_ref$color=_ref.color,color=_ref$color===void 0?color_namespaceObject.PRIMARY:_ref$color,_ref$size=_ref.size,size=_ref$size===void 0?40:_ref$size,value=_ref.value,_ref$variant=_ref.variant,variant=_ref$variant===void 0?Progress_VARIANT.CIRCLE:_ref$variant;var rootClassNames=classnames_default()(className,rootClassName,Progress_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootColorPrimary,color===color_namespaceObject.PRIMARY),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootColorSuccess,color===color_namespaceObject.SUCCESS),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantCircle,variant===Progress_VARIANT.CIRCLE),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantLinear,variant===Progress_VARIANT.LINEAR),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantIndeterminate,!value),_classNames));var circleClassNames=classnames_default()(circleClassName,Progress_default.a.Circle);var lineClassNames=classnames_default()(lineClassName,Progress_default.a.Line);var progressClassNames=classnames_default()(progressClassName,Progress_default.a.Progress);var displaySize=size+size/10;return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:progressClassNames,style:variant===Progress_VARIANT.CIRCLE?{height:displaySize,width:displaySize}:null},variant===Progress_VARIANT.CIRCLE&&react_default.a.createElement("svg",{className:Progress_default.a.Svg,viewBox:"".concat(displaySize/2," ").concat(displaySize/2," ").concat(displaySize," ").concat(displaySize)},react_default.a.createElement("circle",{className:circleClassNames,cx:displaySize,cy:displaySize,fill:"none",r:size/2,strokeWidth:size/10})),variant===Progress_VARIANT.LINEAR&&react_default.a.createElement("div",{className:lineClassNames,style:{width:"".concat(Math.max(0,Math.min(100,value)),"%")}})));};Progress_Progress.VARIANT=Progress_VARIANT;/* harmony default export */ var src_components_Progress = (Progress_Progress);
 // EXTERNAL MODULE: ./node_modules/react-table/es/index.js + 6 modules
-var react_table_es = __webpack_require__(246);
+var react_table_es = __webpack_require__(245);
 
 // EXTERNAL MODULE: ./src/components/Table.scss
 var components_Table = __webpack_require__(235);
@@ -305,7 +304,7 @@ case UPDATE_VALIDATOR:return Object(objectSpread["a" /* default */])({},state,Ob
 var normalizr_es = __webpack_require__(101);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/SubmissionError.js + 1 modules
-var SubmissionError = __webpack_require__(249);
+var SubmissionError = __webpack_require__(248);
 
 // CONCATENATED MODULE: ./src/entities/types.js
 var UPDATE_ENTITIES='ENTITIES/UPDATE_ENTITIES';
@@ -342,10 +341,10 @@ var selector_getValidatorsView=function getValidatorsView(state){return Object(l
 // CONCATENATED MODULE: ./src/views/Validators/ducks/index.js
 
 // CONCATENATED MODULE: ./src/services/session/types.js
-var CONNECT_REQUEST='SERVICES/SESSION/CONNECT_REQUEST';var CONNECT_SUCCESS='SERVICES/SESSION/CONNECT_SUCCESS';var CONNECT_FAILURE='SERVICES/SESSION/CONNECT_FAILURE';var IS_OWNER_REQUEST='SERVICES/SESSION/IS_OWNER_REQUEST';var IS_OWNER_SUCCESS='SERVICES/SESSION/IS_OWNER_SUCCESS';var IS_OWNER_FAILURE='SERVICES/SESSION/IS_OWNER_FAILURE';var SET_CURRENT_BLOCK_NUMBER='SERVICES/SESSION/SET_CURRENT_BLOCK_NUMBER';var SET_SUPPORT='SERVICES/SESSION/SET_SUPPORT';
+var CONNECT_REQUEST='SERVICES/SESSION/CONNECT_REQUEST';var CONNECT_SUCCESS='SERVICES/SESSION/CONNECT_SUCCESS';var CONNECT_FAILURE='SERVICES/SESSION/CONNECT_FAILURE';var IS_OWNER_REQUEST='SERVICES/SESSION/IS_OWNER_REQUEST';var IS_OWNER_SUCCESS='SERVICES/SESSION/IS_OWNER_SUCCESS';var IS_OWNER_FAILURE='SERVICES/SESSION/IS_OWNER_FAILURE';var SET_CURRENT_BLOCK_NUMBER='SERVICES/SESSION/SET_CURRENT_BLOCK_NUMBER';var SET_HAS_ACCOUNT='SERVICES/SESSION/SET_HAS_ACCOUNT';var SET_NETWORK_ID='SERVICES/SESSION/SET_NETWORK_ID';var SET_SUPPORT='SERVICES/SESSION/SET_SUPPORT';
 // CONCATENATED MODULE: ./src/services/session/reducer.js
 // Types
-var reducer_initialState={address:null,blockNumber:0,error:false,isConnected:false,isConnecting:false,isOwner:false,isSupported:false,hasAccount:!!Object(lodash["get"])(window,'ethereum.selectedAddress'),networkId:Object(lodash["get"])(window,'ethereum.networkVersion',0)};/* harmony default export */ var session_reducer = (function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:reducer_initialState;var action=arguments.length>1?arguments[1]:undefined;switch(action.type){case CONNECT_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isConnecting:true});case CONNECT_SUCCESS:return Object(objectSpread["a" /* default */])({},state,{address:action.address,isConnected:true,isConnecting:false});case CONNECT_FAILURE:return Object(objectSpread["a" /* default */])({},state,{error:action.error,isConnected:false,isConnecting:false});case IS_OWNER_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isConnecting:true});case IS_OWNER_SUCCESS:return Object(objectSpread["a" /* default */])({},state,{isOwner:action.isOwner});case SET_CURRENT_BLOCK_NUMBER:return Object(objectSpread["a" /* default */])({},state,{blockNumber:action.blockNumber});case SET_SUPPORT:return Object(objectSpread["a" /* default */])({},state,{isSupported:action.isSupported});default:return state;}});
+var reducer_initialState={address:null,blockNumber:0,error:false,isConnected:false,isConnecting:true,isOwner:false,isSupported:false,hasAccount:false,networkId:0};/* harmony default export */ var session_reducer = (function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:reducer_initialState;var action=arguments.length>1?arguments[1]:undefined;switch(action.type){case CONNECT_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isConnecting:true});case CONNECT_SUCCESS:return Object(objectSpread["a" /* default */])({},state,{address:action.address,isConnected:true,isConnecting:false});case CONNECT_FAILURE:return Object(objectSpread["a" /* default */])({},state,{error:action.error,isConnected:false,isConnecting:false});case IS_OWNER_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isConnecting:true});case IS_OWNER_SUCCESS:return Object(objectSpread["a" /* default */])({},state,{isOwner:action.isOwner});case SET_CURRENT_BLOCK_NUMBER:return Object(objectSpread["a" /* default */])({},state,{blockNumber:action.blockNumber,isConnecting:false});case SET_HAS_ACCOUNT:return Object(objectSpread["a" /* default */])({},state,{hasAccount:true});case SET_NETWORK_ID:return Object(objectSpread["a" /* default */])({},state,{networkId:action.networkId});case SET_SUPPORT:return Object(objectSpread["a" /* default */])({},state,{isSupported:action.isSupported});default:return state;}});
 // CONCATENATED MODULE: ./src/services/session/actions.js
 // Entities
 // Types
@@ -386,7 +385,7 @@ var components_Table_default = /*#__PURE__*/__webpack_require__.n(Validators_com
 // Styles
 var MAX_ROWS=128;var COLUMNS=[{accessor:'index',Cell:function Cell(_ref){var index=_ref.index,original=_ref.original;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:Object(lodash["get"])(original,'pauseCause')===0?index+1:''});},Header:'#',sortable:false,width:64},{accessor:'hash',Cell:function Cell(_ref2){var index=_ref2.index,value=_ref2.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.HASH});},Header:'vPub',sortable:false,width:220},{accessor:'address',Cell:function Cell(_ref3){var index=_ref3.index,value=_ref3.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.HASH});},Header:'Node Address',sortable:false,width:220},{accessor:'deposit',Cell:function Cell(_ref4){var index=_ref4.index,value=_ref4.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.DEPOSIT});},Header:'Депозит',sortable:false,width:160},{accessor:'pauseCause',Cell:function Cell(_ref5){var index=_ref5.index,value=_ref5.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.PAUSE});},Header:'Пауза',sortable:false,width:120},{accessor:'actions',Cell:function Cell(_ref6){var index=_ref6.index,original=_ref6.original;return react_default.a.createElement(components_Actions,Object.assign({},original,{isDisabled:index>=MAX_ROWS}));},Header:'Действия',sortable:false,width:160}];var Table_ValidatorsTable=function ValidatorsTable(_ref7){var data=_ref7.data,ownerAddress=_ref7.ownerAddress;return react_default.a.createElement(src_components_Table,{columns:COLUMNS,data:data,getTrGroupProps:function getTrGroupProps(state,_ref8){var _classNames;var index=_ref8.index,original=_ref8.original;return{className:classnames_default()(components_Table_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,components_Table_default.a.RootIsFavorite,Object(lodash["get"])(original,'address')===ownerAddress),Object(defineProperty["a" /* default */])(_classNames,components_Table_default.a.RootIsDisabled,Object(lodash["get"])(original,'pauseCause')!==0||index>MAX_ROWS),_classNames))};},minRows:0,resizable:false,showPagination:false});};var Table_mapStateToProps=function mapStateToProps(state){return{ownerAddress:selector_getAddress(state)};};/* harmony default export */ var views_Validators_components_Table = (Object(es["b" /* connect */])(Table_mapStateToProps)(Table_ValidatorsTable));
 // EXTERNAL MODULE: ./node_modules/redux-form/es/reduxForm.js + 14 modules
-var reduxForm = __webpack_require__(562);
+var reduxForm = __webpack_require__(556);
 
 // EXTERNAL MODULE: ./src/components/Form/Form.scss
 var Form_Form = __webpack_require__(142);
@@ -408,14 +407,14 @@ var possibleConstructorReturn = __webpack_require__(247);
 var getPrototypeOf = __webpack_require__(238);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
-var inherits = __webpack_require__(248);
+var inherits = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
 var uniqueId = __webpack_require__(143);
 var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/Field.js + 10 modules
-var es_Field = __webpack_require__(563);
+var es_Field = __webpack_require__(557);
 
 // CONCATENATED MODULE: ./src/components/Form/utils/reduxFieldAdapter.js
 /* harmony default export */ var reduxFieldAdapter = (function(_ref){var children=_ref.children,input=_ref.input,_ref$meta=_ref.meta,error=_ref$meta.error,touched=_ref$meta.touched,props=Object(objectWithoutProperties["a" /* default */])(_ref,["children","input","meta"]);return children(Object(objectSpread["a" /* default */])({},input,props,{error:touched&&error}));});
@@ -469,7 +468,7 @@ var Metamask_default = /*#__PURE__*/__webpack_require__.n(components_Metamask);
 // Styles
 var Metamask_Metamask=function Metamask(_ref){var registerLogo=_ref.registerLogo;return react_default.a.createElement("div",{className:Metamask_default.a.Root},react_default.a.createElement("div",{className:Metamask_default.a.Cover}),react_default.a.createElement("div",{className:Metamask_default.a.Container},react_default.a.createElement("div",{className:Metamask_default.a.Logo,ref:registerLogo}),react_default.a.createElement(components_Typography_Typography,{className:Metamask_default.a.Title,variant:components_Typography_Typography.VARIANT.H6},"\u041E\u0436\u0438\u0434\u0430\u043D\u0438\u0435 \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438...")));};/* harmony default export */ var src_components_Metamask = (Object(Recompose_esm["a" /* compose */])(Object(Recompose_esm["c" /* withHandlers */])(function(){var $logo=null;return{drawLogo:function drawLogo(){return function(){var viewer=metamask_logo_default()({followMouse:true,height:160,pxNotRatio:true,slowDrift:false,width:160});$logo.appendChild(viewer.container);};},registerLogo:function registerLogo(){return function(node){$logo=node;};}};}),Object(Recompose_esm["b" /* lifecycle */])({componentDidMount:function componentDidMount(){this.props.drawLogo();}}))(Metamask_Metamask));
 // EXTERNAL MODULE: ./node_modules/react-portal/es/PortalCompat.js + 3 modules
-var PortalCompat = __webpack_require__(564);
+var PortalCompat = __webpack_require__(558);
 
 // EXTERNAL MODULE: ./src/components/Modal.scss
 var components_Modal = __webpack_require__(63);
@@ -541,7 +540,7 @@ var From_ValidatorsFrom=function ValidatorsFrom(_ref){var label=_ref.label,name=
 // Styles
 var Pause_ValidatorsPause=function ValidatorsPause(_ref){var handleCancel=_ref.handleCancel,handleSubmit=_ref.handleSubmit,submitting=_ref.submitting,isOwner=_ref.isOwner;return react_default.a.createElement(components_Form_Form,{onSubmit:handleSubmit},submitting&&react_default.a.createElement(src_components_Metamask,null),react_default.a.createElement(From,{label:"vFrom",name:"address"}),isOwner&&react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(Select_Select,{format:function format(id){return{label:parse_parsePause(id),value:id};},label:"\u0422\u0438\u043F \u043F\u0430\u0443\u0437\u044B",name:"pauseCause",parse:function parse(item){return Object(lodash["get"])(item,'value');}},[PAUSE_CAUSE_VOLUNTARILY,PAUSE_CAUSE_UNTIL_BLOCK,PAUSE_CAUSE_UNTIL_FINE,PAUSE_CAUSE_PUNISHMENT].map(function(id){return react_default.a.createElement(components_Item,{key:id,label:parse_parsePause(id),value:id});})),react_default.a.createElement(components_Input,{label:"PUNISH VALUE",name:"punishValue"})),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:handleCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,type:"submit"},"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C")));};var Pause_mapStateToProps=function mapStateToProps(state){return{isOwner:selector_isOwner(state)};};var ComposedValidatorsPause=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Pause_mapStateToProps,{closeModal:actions_closeModal}),Object(reduxForm["a" /* default */])({form:VALIDATOR_PAUSE_FORM_ID,validate:validate({address:[validate_required(),isHash()],pauseCause:[validate_required(),isNumber(),isUint(8)],punishValue:[validate_required(),isNumber(),isUint(96)]})}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref2){var closeModal=_ref2.closeModal;return function(event){return closeModal(VALIDATOR_PAUSE_MODAL_ID);};}}))(Pause_ValidatorsPause);var Pause_ValidatorsPauseModal=function ValidatorsPauseModal(_ref3){var handleSubmit=_ref3.handleSubmit;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_PAUSE_MODAL_ID,title:"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C"},function(_ref4){var hash=_ref4.hash;return react_default.a.createElement(ComposedValidatorsPause,{initialValues:{hash:hash,pauseCause:PAUSE_CAUSE_VOLUNTARILY,punishValue:0},onSubmit:handleSubmit});});};/* harmony default export */ var Pause = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{pauseValidator:actions_pauseValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleSubmit:function handleSubmit(_ref5){var pauseValidator=_ref5.pauseValidator;return function(values){return pauseValidator(values);};}}))(Pause_ValidatorsPauseModal));
 // EXTERNAL MODULE: ./src/views/Validators/Validators.scss
-var Validators_Validators = __webpack_require__(39);
+var Validators_Validators = __webpack_require__(36);
 var Validators_default = /*#__PURE__*/__webpack_require__.n(Validators_Validators);
 
 // CONCATENATED MODULE: ./src/views/Validators/Validators.js
@@ -552,7 +551,7 @@ var Validators_default = /*#__PURE__*/__webpack_require__.n(Validators_Validator
 // Entities
 // Services
 // Styles
-var Validators_Validators_Validators=function Validators(_ref){var _classNames;var address=_ref.address,networkId=_ref.networkId,validators=_ref.validators,handleConnect=_ref.handleConnect,handleCreate=_ref.handleCreate,handleGuide=_ref.handleGuide,isConnected=_ref.isConnected,isFetching=_ref.isFetching,isOwner=_ref.isOwner,isSupported=_ref.isSupported,hasAccount=_ref.hasAccount;var rootClassNames=classnames_default()(Validators_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Validators_default.a.RootIsConnected,isConnected),Object(defineProperty["a" /* default */])(_classNames,Validators_default.a.RootIsOwner,isOwner),_classNames));return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:Validators_default.a.Header},react_default.a.createElement("div",{className:Validators_default.a.HeaderLeft},react_default.a.createElement(components_Typography_Typography,{variant:components_Typography_Typography.VARIANT.H6},"\u0412\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440\u044B"),react_default.a.createElement(components_Typography_Typography,{className:Validators_default.a.Status,variant:components_Typography_Typography.VARIANT.CAPTION},isConnected?isOwner?"OWNER":"\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043E: ".concat(address.substr(0,16),"..."):'Для редактирования нужна авторизация')),react_default.a.createElement("div",{className:Validators_default.a.HeaderRight},!isConnected?isSupported&&networkId===api_config.NETWORK_ID&&hasAccount?react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.GREEN,onClick:handleConnect},"\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u044C Metamask"):react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,onClick:handleGuide},!isSupported&&'Как подключить Metamask?',isSupported&&!hasAccount&&'Как добавить аккаунт в Metamask?',isSupported&&hasAccount&&networkId!==api_config.NETWORK_ID&&'Как добавить сеть Etherus?'):react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,onClick:handleCreate},"\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440"))),isFetching&&react_default.a.createElement("div",{className:Validators_default.a.Progress},react_default.a.createElement(src_components_Progress,null)),validators&&validators.length>0&&react_default.a.createElement("div",{className:Validators_default.a.List},react_default.a.createElement(views_Validators_components_Table,{data:validators})),react_default.a.createElement(containers_Guide,null),isConnected&&react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(Create,null),react_default.a.createElement(Deposit,null),react_default.a.createElement(Pause,null)));};var Validators_mapStateToProps=function mapStateToProps(state){return Object(objectSpread["a" /* default */])({},selector_getValidatorsView(state),selector_getSession(state),{validators:selector_getValidatorList(state).sort(function(_ref2,_ref3){var pauseCause=_ref2.pauseCause;var pauseCauseB=_ref3.pauseCause;return pauseCause>pauseCauseB?1:pauseCause<pauseCauseB?-1:0;})});};/* harmony default export */ var views_Validators_Validators = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Validators_mapStateToProps,{connectMetamask:actions_connectMetamask,fetchValidators:actions_fetchValidators,openModal:actions_openModal}),Object(Recompose_esm["c" /* withHandlers */])({handleConnect:function handleConnect(_ref4){var connectMetamask=_ref4.connectMetamask;return function(event){return connectMetamask();};},handleCreate:function handleCreate(_ref5){var openModal=_ref5.openModal;return function(event){return openModal(VALIDATOR_CREATE_MODAL_ID);};},handleGuide:function handleGuide(_ref6){var hasAccount=_ref6.hasAccount,isSupported=_ref6.isSupported,networkId=_ref6.networkId,openModal=_ref6.openModal;return function(event){return openModal(VALIDATOR_GUIDE_MODAL_ID,{sectionId:!isSupported?1:isSupported&&!hasAccount?2:3});};}}),Object(Recompose_esm["b" /* lifecycle */])({componentDidMount:function componentDidMount(){this.props.fetchValidators();}}))(Validators_Validators_Validators));
+var Validators_Validators_Validators=function Validators(_ref){var _classNames;var address=_ref.address,networkId=_ref.networkId,validators=_ref.validators,handleConnect=_ref.handleConnect,handleCreate=_ref.handleCreate,handleGuide=_ref.handleGuide,isConnected=_ref.isConnected,isConnecting=_ref.isConnecting,isFetching=_ref.isFetching,isOwner=_ref.isOwner,isSupported=_ref.isSupported,hasAccount=_ref.hasAccount;var rootClassNames=classnames_default()(Validators_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Validators_default.a.RootIsConnected,isConnected),Object(defineProperty["a" /* default */])(_classNames,Validators_default.a.RootIsOwner,isOwner),_classNames));return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:Validators_default.a.Header},react_default.a.createElement("div",{className:Validators_default.a.HeaderLeft},react_default.a.createElement(components_Typography_Typography,{variant:components_Typography_Typography.VARIANT.H6},"\u0412\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440\u044B"),react_default.a.createElement(components_Typography_Typography,{className:Validators_default.a.Status,variant:components_Typography_Typography.VARIANT.CAPTION},isConnected?isOwner?"OWNER":"\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043E: ".concat(address.substr(0,16),"..."):'Для редактирования нужна авторизация')),react_default.a.createElement("div",{className:Validators_default.a.HeaderRight},isConnecting?react_default.a.createElement("div",{className:Validators_default.a.Connecting},react_default.a.createElement(src_components_Progress,{size:20})):!isConnected?isSupported&&networkId===api_config.NETWORK_ID&&hasAccount?react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.GREEN,onClick:handleConnect},"\u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u044C Metamask"):react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,onClick:handleGuide},!isSupported&&'Как подключить Metamask?',isSupported&&!hasAccount&&'Как добавить аккаунт в Metamask?',isSupported&&hasAccount&&networkId!==api_config.NETWORK_ID&&'Как добавить сеть Etherus?'):react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,onClick:handleCreate},"\u0421\u043E\u0437\u0434\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440"))),isFetching&&react_default.a.createElement("div",{className:Validators_default.a.Progress},react_default.a.createElement(src_components_Progress,null)),validators&&validators.length>0&&react_default.a.createElement("div",{className:Validators_default.a.List},react_default.a.createElement(views_Validators_components_Table,{data:validators})),react_default.a.createElement(containers_Guide,null),isConnected&&react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(Create,null),react_default.a.createElement(Deposit,null),react_default.a.createElement(Pause,null)));};var Validators_mapStateToProps=function mapStateToProps(state){return Object(objectSpread["a" /* default */])({},selector_getValidatorsView(state),selector_getSession(state),{validators:selector_getValidatorList(state).sort(function(_ref2,_ref3){var pauseCause=_ref2.pauseCause;var pauseCauseB=_ref3.pauseCause;return pauseCause>pauseCauseB?1:pauseCause<pauseCauseB?-1:0;})});};/* harmony default export */ var views_Validators_Validators = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Validators_mapStateToProps,{connectMetamask:actions_connectMetamask,fetchValidators:actions_fetchValidators,openModal:actions_openModal}),Object(Recompose_esm["c" /* withHandlers */])({handleConnect:function handleConnect(_ref4){var connectMetamask=_ref4.connectMetamask;return function(event){return connectMetamask();};},handleCreate:function handleCreate(_ref5){var openModal=_ref5.openModal;return function(event){return openModal(VALIDATOR_CREATE_MODAL_ID);};},handleGuide:function handleGuide(_ref6){var hasAccount=_ref6.hasAccount,isSupported=_ref6.isSupported,networkId=_ref6.networkId,openModal=_ref6.openModal;return function(event){return openModal(VALIDATOR_GUIDE_MODAL_ID,{sectionId:!isSupported?1:isSupported&&!hasAccount?2:3});};}}),Object(Recompose_esm["b" /* lifecycle */])({componentDidMount:function componentDidMount(){this.props.fetchValidators();}}))(Validators_Validators_Validators));
 // CONCATENATED MODULE: ./src/views/Validators/index.js
 // Ducks
 
@@ -619,7 +618,7 @@ var assets_contract = __webpack_require__(149);
 var redux_thunk_es = __webpack_require__(244);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/reducer.js + 2 modules
-var es_reducer = __webpack_require__(565);
+var es_reducer = __webpack_require__(559);
 
 // CONCATENATED MODULE: ./src/entities/reducer.js
 // Models
@@ -637,11 +636,11 @@ var viewsReducer=Object(redux["c" /* combineReducers */])({validators:ducks_redu
 // Middleware
 // Reducers
 // Services
-var store_reducer=Object(redux["c" /* combineReducers */])({entities:entities_reducer,form:es_reducer["a" /* default */],services:services_reducer,views:views_reducer});var composeEnhancers=typeof window==='object'&&window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}):redux["d" /* compose */];/* harmony default export */ var src_store = (function(history){var isSupported=false;var privateWeb3;var web3=new src_default.a(api_config.URL);if(window.ethereum||window.web3){isSupported=true;privateWeb3=new src_default.a(window.ethereum);}var store=Object(redux["e" /* createStore */])(store_reducer,composeEnhancers(Object(redux["a" /* applyMiddleware */])(redux_thunk_es["a" /* default */].withExtraArgument({history:history,schema:schema_namespaceObject,web3:web3,account:privateWeb3&&new privateWeb3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS,{from:window.ethereum.selectedAddress}),contract:new web3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS)}))));if(isSupported){store.dispatch({type:SET_SUPPORT,isSupported:true});}web3.eth.getBlockNumber().then(function(blockNumber){store.dispatch({type:SET_CURRENT_BLOCK_NUMBER,blockNumber:blockNumber});});return store;});
+var store_reducer=Object(redux["c" /* combineReducers */])({entities:entities_reducer,form:es_reducer["a" /* default */],services:services_reducer,views:views_reducer});var composeEnhancers=typeof window==='object'&&window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}):redux["d" /* compose */];/* harmony default export */ var src_store = (function(history){var isSupported=false;var privateWeb3;var web3=new src_default.a(api_config.URL);if(window.ethereum||window.web3){isSupported=true;privateWeb3=new src_default.a(window.ethereum);}console.log(window.ethereum);var store=Object(redux["e" /* createStore */])(store_reducer,composeEnhancers(Object(redux["a" /* applyMiddleware */])(redux_thunk_es["a" /* default */].withExtraArgument({history:history,schema:schema_namespaceObject,web3:web3,account:privateWeb3&&new privateWeb3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS,{from:window.ethereum.selectedAddress}),contract:new web3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS)}))));if(isSupported){store.dispatch({type:SET_SUPPORT,isSupported:true});}web3.eth.getBlockNumber().then(function(blockNumber){Object(lodash["has"])(window,'ethereum.networkVersion')&&store.dispatch({type:SET_NETWORK_ID,networkId:Object(lodash["get"])(window,'ethereum.networkVersion')});Object(lodash["has"])(window,'ethereum.selectedAddress')&&store.dispatch({type:SET_HAS_ACCOUNT});store.dispatch({type:SET_CURRENT_BLOCK_NUMBER,blockNumber:blockNumber});});return store;});
 // CONCATENATED MODULE: ./src/index.js
 // App
 // Utils
-var src_history=createBrowserHistory_default()();var src_store_0=src_store(src_history);react_dom_default.a.render(react_default.a.createElement(es["a" /* Provider */],{store:src_store_0},react_default.a.createElement(Router["a" /* default */],{history:src_history},react_default.a.createElement(Route["a" /* default */],{path:"/",component:src_App_0}))),document.getElementById('root'));// If you want your app to work offline and load faster, you can change
+var src_history=Object(esm_history["a" /* createBrowserHistory */])();var src_store_0=src_store(src_history);react_dom_default.a.render(react_default.a.createElement(es["a" /* Provider */],{store:src_store_0},react_default.a.createElement(Router["a" /* default */],{history:src_history},react_default.a.createElement(Route["a" /* default */],{path:"/",component:src_App_0}))),document.getElementById('root'));// If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 unregister();
@@ -652,7 +651,7 @@ unregister();
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Field_Root__3MB3-","Error":"Field_Error__3CFo8","Header":"Field_Header__3Hfs5","Label":"Field_Label__1iFfw"};
+module.exports = {"Root":"Field_Root__2jPRN","Error":"Field_Error__2NOFW","Header":"Field_Header__3pVFO","Label":"Field_Label__3j_p7"};
 
 /***/ }),
 
@@ -660,7 +659,7 @@ module.exports = {"Root":"Field_Root__3MB3-","Error":"Field_Error__3CFo8","Heade
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Metamask_Root__zrno2","Cover":"Metamask_Cover__I9E_H","Container":"Metamask_Container__1FZOa","Logo":"Metamask_Logo__Ray6S","Title":"Metamask_Title__2HArS"};
+module.exports = {"Root":"Metamask_Root__1xx5U","Cover":"Metamask_Cover__AkjQf","Container":"Metamask_Container__2bX8q","Logo":"Metamask_Logo__Rd9Y9","Title":"Metamask_Title__3UAnc"};
 
 /***/ }),
 
@@ -668,7 +667,7 @@ module.exports = {"Root":"Metamask_Root__zrno2","Cover":"Metamask_Cover__I9E_H",
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Modal_Root__3q3lT","Backdrop":"Modal_Backdrop__C2Mqp","Container":"Modal_Container__3Q55l","modalInit":"Modal_modalInit__3LUxY","Title":"Modal_Title__XbkfL"};
+module.exports = {"Root":"Modal_Root__6ttBO","Backdrop":"Modal_Backdrop__2_J7F","Container":"Modal_Container__LAyOq","modalInit":"Modal_modalInit__396Dd","Title":"Modal_Title__qjfKC"};
 
 /***/ }),
 
@@ -676,7 +675,7 @@ module.exports = {"Root":"Modal_Root__3q3lT","Backdrop":"Modal_Backdrop__C2Mqp",
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Input_Root__3VpEi","RootIsErred":"Input_RootIsErred__3eeWg","RootIsFocused":"Input_RootIsFocused__2RQe7","Input":"Input_Input__3rMjF"};
+module.exports = {"Root":"Input_Root__3wawD","RootIsErred":"Input_RootIsErred__3j1UL","RootIsFocused":"Input_RootIsFocused__3qU5g","Input":"Input_Input__1VsLQ"};
 
 /***/ }),
 
@@ -684,7 +683,7 @@ module.exports = {"Root":"Input_Root__3VpEi","RootIsErred":"Input_RootIsErred__3
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Determine_Root__3B6cr","RootIsSelected":"Determine_RootIsSelected__2zSNW","Content":"Determine_Content__jXH7T"};
+module.exports = {"Root":"Determine_Root__1ChsM","RootIsSelected":"Determine_RootIsSelected__3AFO_","Content":"Determine_Content__Sczc8"};
 
 /***/ }),
 
@@ -692,9 +691,9 @@ module.exports = {"Root":"Determine_Root__3B6cr","RootIsSelected":"Determine_Roo
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Container":"Guide_Container__3FIps","Frame":"Guide_Frame__2_1V0","Link":"Guide_Link__1rgrz","Steps":"Guide_Steps__YblhS"};
+module.exports = {"Container":"Guide_Container__2W6P8","Frame":"Guide_Frame__2p6WL","Link":"Guide_Link__1iVuC","Steps":"Guide_Steps__1NQEI"};
 
 /***/ })
 
 },[[251,1,2]]]);
-//# sourceMappingURL=main.0c8b2388.chunk.js.map
+//# sourceMappingURL=main.fe37f9b1.chunk.js.map
