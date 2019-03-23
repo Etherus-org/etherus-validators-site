@@ -95,7 +95,7 @@ const Validators: React.Element<'div'> = ({
             {isConnected
               ? isOwner
                 ? `OWNER`
-                : `Подключено: ${address.substr(0, 16)}...`
+                : `Подключено: ${address}`
               : 'Для редактирования нужна авторизация'}
           </Typography>
         </div>

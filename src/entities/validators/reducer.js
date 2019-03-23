@@ -76,7 +76,7 @@ export default (state: Object = {}, action: Object): Object => {
         ...state,
         [hash]: {
           ...validator,
-          deposit: get(validator, 'deposit', 0) + action.deposit,
+          deposit: action.deposit,
           isFetching: false,
         }
       };

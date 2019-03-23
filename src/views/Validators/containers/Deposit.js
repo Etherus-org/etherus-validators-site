@@ -40,7 +40,7 @@ const ValidatorsDeposit: React.Element<Form> = ({
   <Form onSubmit={handleSubmit}>
     {submitting && <Metamask />}
 
-    <Input label="Депозит" name="deposit" placeholder="Ether" />
+    <Input label="Депозит" name="deposit" placeholder="ETR" />
 
     <div className={styles.Actions}>
       <Button

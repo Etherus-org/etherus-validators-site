@@ -9,6 +9,9 @@ import { UPDATE_ENTITIES } from 'entities/types';
 // Services
 import { closeModal } from 'services/modals';
 
+// Selector
+import { getValidatorDeposit } from './selector';
+
 // Types
 import {
   // Create
@@ -64,7 +67,7 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
           from: window.ethereum.selectedAddress,
           value: web3.utils.toWei(deposit, 'ether'),
         })
-          .on('confirmation', () =>
+          .on('receipt', () =>
             dispatch(updateValidator(hash, { isFetching: false })))
           .on('error', reject)
           .on('transactionHash', (): void => {
@@ -88,7 +91,11 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
 export const depositValidator = ({ hash, deposit }): Function =>
   (dispatch: Function, getState: Function, { account, web3 }): Promise => {
     dispatch({ type: DEPOSIT_VALIDATOR_REQUEST, hash });
+    const state = getState();
     const value = web3.utils.toWei(deposit, 'ether');
+
+    const currentDeposit = getValidatorDeposit(state, hash);
+    const newDeposit = value / Math.pow(2, 32);
 
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
@@ -97,10 +104,13 @@ export const depositValidator = ({ hash, deposit }): Function =>
           value,
           from: window.ethereum.selectedAddress,
         })
+          .on('receipt', () =>
+            dispatch({
+              type: DEPOSIT_VALIDATOR_SUCCESS, hash,
+              deposit: currentDeposit + newDeposit,
+            }))
           .on('transactionHash', (): void =>
             dispatch(closeModal(VALIDATOR_DEPOSIT_MODAL_ID)))
-          .on('confirmation', () =>
-            dispatch({ type: DEPOSIT_VALIDATOR_SUCCESS, hash, deposit: value / Math.pow(2, 32) }))
           .on('error', reject)
     })
      .catch((error: Object) =>
@@ -155,10 +165,10 @@ export const pauseValidator: Function = ({ address, hash, pauseCause, punishValu
       account.methods
         .pauseValidation(hash, address || hash, pauseCause || 1, punishValue || 0)
         .send({ from: window.ethereum.selectedAddress })
+          .on('receipt', (): void =>
+            dispatch({ type: PAUSE_VALIDATOR_SUCCESS, hash }))
           .on('transactionHash', (): void =>
             dispatch(closeModal(VALIDATOR_PAUSE_MODAL_ID)))
-          .on('confirmation', (): void =>
-            dispatch({ type: PAUSE_VALIDATOR_SUCCESS, hash }))
           .on('error', reject)
     })
       .catch((error: Object) =>
@@ -173,7 +183,7 @@ export const startValidator: Function = (hash: string): Promise =>
       account.methods
         .resumeValidation(hash)
         .send({ from: window.ethereum.selectedAddress })
-          .on('confirmation', () =>
+          .on('receipt', () =>
             dispatch({ type: START_VALIDATOR_SUCCESS, hash }))
           .on('error', reject)
     })
@@ -192,7 +202,7 @@ export const withdrawValidator: Function = (hash: string): Function =>
       account.methods
         .withdraw(hash)
         .send({ from: window.ethereum.selectedAddress })
-          .on('confirmation', () =>
+          .on('receipt', () =>
             dispatch({ type: WITHDRAW_VALIDATOR_SUCCESS, hash }))
           .on('error', reject)
     })

@@ -45,7 +45,7 @@ const ValidatorsCreate = ({
   >
     {submitting && <Metamask />}
 
-    <Input label="Депозит" name="deposit" placeholder="Ether"/>
+    <Input label="Депозит" name="deposit" placeholder="ETR"/>
     <Input label="vPub" name="hash" placeholder="32 Bytes"/>
     <Input label="Node Addr" name="node" placeholder="Address"/>
     <Input label="Receiver" name="address" placeholder="Address"/>
