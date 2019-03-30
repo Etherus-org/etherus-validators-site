@@ -550,6 +550,11 @@
   .Input_RootIsFocused__2RQe7 {
     border-color: var(--color-blue);
     box-shadow: 0 0 0 1px var(--color-blue); }
+  .Input_RootIsReadOnly__1Myl8 {
+    cursor: not-allowed; }
+    .Input_RootIsReadOnly__1Myl8 .Input_Input__3rMjF {
+      background: var(--background-lighter);
+      pointer-events: none; }
 
 .Input_Input__3rMjF {
   background: var(--color-white);
@@ -966,4 +971,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.647e9013.chunk.css.map*/
+/*# sourceMappingURL=main.d347e2cb.chunk.css.map*/
