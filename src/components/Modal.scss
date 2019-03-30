@@ -31,7 +31,8 @@
   box-shadow: var(--shadow-down-z5);
   max-height: calc(100% - 160px);
   max-width: 960px;
-  overflow: scroll;
+  overflow-x: visible;
+  overflow-y: scroll;
   padding: 24px;
   position: relative;
   z-index: 2;

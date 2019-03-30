@@ -45,10 +45,10 @@ const ValidatorsCreate = ({
   >
     {submitting && <Metamask />}
 
-    <Input label="Депозит" name="deposit" placeholder="ETR"/>
-    <Input label="vPub" name="hash" placeholder="32 Bytes"/>
-    <Input label="Node Addr" name="node" placeholder="Address"/>
-    <Input label="Receiver" name="address" placeholder="Address"/>
+    <Input label="Депозит" name="deposit" placeholder="ETR" />
+    <Input label="vPub" name="hash" placeholder="32 Bytes" />
+    <Input label="Node Addr" name="node" placeholder="Address" readOnly />
+    <Input label="Receiver" name="address" placeholder="Address" />
 
     <div className={styles.Actions}>
       <Button
@@ -80,14 +80,14 @@ const ComposedValidatorsCreate = compose(
   reduxForm({
     form: VALIDATOR_CREATE_FORM_ID,
     validate: validate({
-      address: [required(), isHash()],
+      address: [required(), isHash(40)],
       deposit: [
         required(),
         isNumber(),
-        min(CONFIG.MIN_DEPOSIT, `Must be more than ${CONFIG.MIN_DEPOSIT} ${CONFIG.SYMBOL}`),
+        min(CONFIG.MIN_DEPOSIT_INCREMENT, `Must be more than ${CONFIG.MIN_DEPOSIT_INCREMENT} ${CONFIG.SYMBOL}`),
       ],
-      hash: [required(), isHash()],
-      node: [required(), isHash()],
+      hash: [required(), isHash(64)],
+      node: [required(), isHash(40)],
     }),
   }),
   withHandlers({

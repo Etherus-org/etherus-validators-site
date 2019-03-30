@@ -1,9 +1,9 @@
 import { isEmpty } from 'lodash';
 
-export const isHash = (message: string = 'Must be like a hex (32 Bytes)'): Function =>
+export const isHash = (length: number = 40, message: string = 'Must be like a hex (32 Bytes)'): Function =>
   (value: string = ''): Object => ({
     message,
-    isValid: /^(0xX?)?[0-9a-fA-F]{32,64}$/.test(value),
+    isValid: new RegExp(`^0x[a-f\\d]{${length}}$`).test(value),
   });
 
 export const isNumber = (message: string = 'Must be a number!'): Function =>

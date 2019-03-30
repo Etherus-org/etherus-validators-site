@@ -13,7 +13,7 @@ const config = {
   'production': {
     CONTRACT_ADDRESS: '0x0000000000000000000000000000000000000fff',
     MIN_DEPOSIT: 2500,
-    MIN_DEPOSIT_INCREMENT: 2500,
+    MIN_DEPOSIT_INCREMENT: 10,
     NETWORK_ID: '32019',
     SYMBOL: 'ETR',
     URL: 'https://rpc.etherus.org',

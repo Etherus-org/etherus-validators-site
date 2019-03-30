@@ -15,6 +15,7 @@ const FormInput = ({
   name,
   onChange,
   placeholder,
+  readOnly,
   type = 'text',
   value,
 
@@ -29,6 +30,7 @@ const FormInput = ({
   const rootClassNames = classNames(styles.Root, {
     [styles.RootIsErred]: isErred,
     [styles.RootIsFocused]: isFocused,
+    [styles.RootIsReadOnly]: !!readOnly,
   });
 
   return (
@@ -42,6 +44,7 @@ const FormInput = ({
         onChange={onChange}
         onFocus={handleFocus}
         placeholder={placeholder}
+        readOnly={readOnly}
         type={type}
         value={value}
       />
@@ -55,6 +58,7 @@ FormInput.propTypes = {
   name: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
+  readOnly: PropTypes.bool,
   type: PropTypes.string,
   value: PropTypes.oneOfType([
     PropTypes.bool,

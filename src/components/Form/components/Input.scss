@@ -14,6 +14,15 @@
       border-color: var(--color-blue);
       box-shadow: 0 0 0 1px var(--color-blue);
     }
+
+    &ReadOnly {
+      cursor: not-allowed;
+
+      .Input {
+        background: var(--background-lighter);
+        pointer-events: none;
+      }
+    }
   }
 }
 

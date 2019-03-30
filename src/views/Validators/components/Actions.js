@@ -3,6 +3,9 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
 
+// API
+import CONFIG from 'api/config';
+
 // Components
 import Button from 'components/Button';
 import Progress from 'components/Progress';
@@ -10,6 +13,7 @@ import Tooltip from 'components/Tooltip';
 
 // Ducks
 import {
+  VALIDATOR_CONFIRM_MODAL_ID,
   VALIDATOR_DEPOSIT_MODAL_ID,
   VALIDATOR_PAUSE_MODAL_ID,
 } from '../ducks';
@@ -19,7 +23,6 @@ import {
   PAUSE_CAUSE_VOLUNTARILY,
   PAUSE_NOT_PAUSED,
   pauseValidator,
-  startValidator,
   withdrawValidator,
 } from 'entities/validators';
 
@@ -32,6 +35,9 @@ import {
   isValidatorOwner,
 } from 'services/session';
 
+// Utils
+import { parseDeposit } from 'utils/parse';
+
 // Styles
 import styles from './Actions.scss';
 
@@ -43,6 +49,7 @@ type ValidatorsActionsType = {
 
 const ValidatorsActions: React.Element<'div'> = ({
   blockNumber,
+  deposit,
   hash,
   pauseBlockNumber,
   pauseCause,
@@ -63,7 +70,7 @@ const ValidatorsActions: React.Element<'div'> = ({
     {isFetching ? <Progress size={20} /> : (
       <div className={styles.Root}>
         {pauseCause !== PAUSE_NOT_PAUSED ? (
-          isValidatorOwner && (
+          isValidatorOwner && parseDeposit(deposit) > CONFIG.MIN_DEPOSIT && (
             <Tooltip title="Запустить">
               <Button
                 classNames={{
@@ -133,7 +140,6 @@ export default compose(
   connect(mapStateToProps, {
     openModal,
     pauseValidator,
-    startValidator,
     withdrawValidator,
   }),
   withHandlers({
@@ -145,9 +151,9 @@ export default compose(
         isValidatorOwner
           ? pauseValidator({ hash })
           : openModal(VALIDATOR_PAUSE_MODAL_ID, { hash }),
-    handleStart: ({ hash, startValidator }): Function =>
+    handleStart: ({ hash, openModal }): Function =>
       (event: Object): void =>
-        startValidator(hash),
+        openModal(VALIDATOR_CONFIRM_MODAL_ID, { hash }),
     handleWithdraw: ({ hash, withdrawValidator }): Function =>
       (event: Object): void =>
         withdrawValidator(hash),

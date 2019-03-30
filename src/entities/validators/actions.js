@@ -54,6 +54,7 @@ import {
 } from 'views/Validators';
 
 // Utils
+import { convertDeposit } from 'utils/convert';
 import { parseCompactedValidator } from 'utils/parse';
 
 export const createValidator: Function = ({ address, deposit, hash, node }): Function =>
@@ -61,11 +62,13 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
     dispatch({ type: CREATE_VALIDATOR_REQUEST });
 
     return new Promise((resolve: Function, reject: Function) => {
+      const value = web3.utils.toWei(deposit, 'ether');
+
       account.methods
         .addInitialDeposit(hash, node, address)
         .send({
+          value,
           from: window.ethereum.selectedAddress,
-          value: web3.utils.toWei(deposit, 'ether'),
         })
           .on('receipt', () =>
             dispatch(updateValidator(hash, { isFetching: false })))
@@ -73,7 +76,8 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
           .on('transactionHash', (): void => {
             resolve();
             dispatch({ type: CREATE_VALIDATOR_SUCCESS, hash, payload: {
-              address, deposit, hash, node,
+              address, hash, node,
+              deposit: convertDeposit(deposit),
               isFetching: true,
               pauseCause: 1,
             }});

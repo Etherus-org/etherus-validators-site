@@ -13,6 +13,7 @@ import Progress from 'components/Progress';
 import Table from './components/Table';
 
 // Containers
+import Confirm from './containers/Confirm';
 import Create from './containers/Create';
 import Deposit from './containers/Deposit';
 import Guide from './containers/Guide';
@@ -152,6 +153,7 @@ const Validators: React.Element<'div'> = ({
 
       {isConnected && (
         <Fragment>
+          <Confirm />
           <Create />
           <Deposit />
           <Pause />
@@ -165,8 +167,16 @@ const mapStateToProps: Function = (state: Object): Object => ({
   ...getValidatorsView(state),
   ...getSession(state),
   validators: getValidatorList(state)
-    .sort(({ pauseCause }, { pauseCause: pauseCauseB }): number =>
-      pauseCause > pauseCauseB ? 1 : pauseCause < pauseCauseB ? -1 : 0),
+    .sort(({ deposit, pauseCause }, { deposit: depositB, pauseCause: pauseCauseB }): number =>
+      pauseCause > pauseCauseB
+        ? 1
+        : pauseCause < pauseCauseB
+          ? -1
+          : deposit < depositB
+            ? 1
+            : deposit > depositB
+              ? -1
+              : 0),
 });
 
 export default compose(
