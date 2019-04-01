@@ -43,6 +43,10 @@ export const connectMetamask: Function = (): Function =>
         dispatch({ type: CONNECT_SUCCESS, address: data[0] });
         dispatch(checkOwnership(data[0]));
 
+        window.ethereum.on('accountsChanged', (data: Array<string>) => {
+          dispatch({ type: CONNECT_SUCCESS, address: data[0] });
+          dispatch(checkOwnership(data[0]));
+        });
       })
       .catch((error: Object): void =>
         dispatch({ type: CONNECT_FAILURE, error: get(error, 'message')}));
