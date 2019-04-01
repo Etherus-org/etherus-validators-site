@@ -65,7 +65,11 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
       const value = web3.utils.toWei(deposit, 'ether');
 
       account.methods
-        .addInitialDeposit(hash, node, address)
+        .addInitialDeposit(
+          `0x${hash.replace(/^(0[xX]{1})?/, '')}`,
+          `0x${node.replace(/^(0[xX]{1})?/, '')}`,
+          `0x${address.replace(/^(0[xX]{1})?/, '')}`,
+        )
         .send({
           value,
           from: window.ethereum.selectedAddress,
@@ -82,6 +86,9 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
               pauseCause: 1,
             }});
             dispatch(closeModal(VALIDATOR_CREATE_MODAL_ID));
+            document
+              .getElementById('0xac85685277fba446c42272538fa64f3b28bd42a5a8b6f2295b7f2a22ee10bf35')
+              .scrollIntoView();
           })
     })
       .catch((error: Object) => {

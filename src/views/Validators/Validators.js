@@ -130,7 +130,7 @@ const Validators: React.Element<'div'> = ({
                 color={COLOR.PRIMARY}
                 onClick={handleCreate}
               >
-                Создать валидатор
+                Зарегистрировать валидатор
               </Button>
             )
           )}

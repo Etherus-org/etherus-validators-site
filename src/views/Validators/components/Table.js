@@ -109,6 +109,7 @@ const ValidatorsTable: React.Element<'div'> = ({
         [styles.RootIsFavorite]: get(original, 'address') === ownerAddress,
         [styles.RootIsDisabled]: get(original, 'pauseCause') !== 0 || index > MAX_ROWS,
       }),
+      id: get(original, 'hash'),
     })}
     minRows={0}
     resizable={false}
