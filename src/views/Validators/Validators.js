@@ -17,6 +17,7 @@ import Confirm from './containers/Confirm';
 import Create from './containers/Create';
 import Deposit from './containers/Deposit';
 import Guide from './containers/Guide';
+import Node from './containers/Node';
 import Pause from './containers/Pause';
 
 // Ducks
@@ -24,6 +25,7 @@ import {
   getValidatorsView,
   VALIDATOR_CREATE_MODAL_ID,
   VALIDATOR_GUIDE_MODAL_ID,
+  VALIDATOR_NODE_MODAL_ID,
 } from './ducks';
 
 // Entities
@@ -66,6 +68,7 @@ const Validators: React.Element<'div'> = ({
   handleConnect,
   handleCreate,
   handleGuide,
+  handleInstall,
   // State
   isConnected,
   isConnecting,
@@ -102,6 +105,13 @@ const Validators: React.Element<'div'> = ({
         </div>
 
         <div className={styles.HeaderRight}>
+          <Button
+            color={GRADIENT.PURPLE}
+            onClick={handleInstall}
+          >
+            Развернуть узел
+          </Button>
+
           {isConnecting ? (
             <div className={styles.Connecting}>
               <Progress size={20} />
@@ -117,7 +127,7 @@ const Validators: React.Element<'div'> = ({
                 </Button>
               ) : (
                 <Button
-                  color={GRADIENT.PURPLE}
+                  color={GRADIENT.ORANGE}
                   onClick={handleGuide}
                 >
                   {!isSupported && 'Как подключить Metamask?'}
@@ -150,6 +160,7 @@ const Validators: React.Element<'div'> = ({
       )}
 
       <Guide />
+      <Node />
 
       {isConnected && (
         <Fragment>
@@ -206,6 +217,9 @@ export default compose(
               ? 2
               : 3
         }),
+    handleInstall: ({ openModal }): Function =>
+      (event: Object): void =>
+        openModal(VALIDATOR_NODE_MODAL_ID),
   }),
   lifecycle({
     componentDidMount() {

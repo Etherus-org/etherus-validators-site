@@ -72,6 +72,15 @@
       }
     }
 
+    &Orange {
+      background: var(--gradient-orange);
+
+      .Content,
+      .Icon {
+        color: var(--color-white);
+      }
+    }
+
     &Purple {
       background: var(--gradient-purple);
 

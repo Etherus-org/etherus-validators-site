@@ -21,7 +21,7 @@ const config = {
 };
 
 export const getConfig: Function = (): Object =>
-  get(config, process.env.NODE_ENV);
+  get(config, 'production'); // process.env.NODE_ENV);
 
 export const getContractAddress: Function = (): string =>
   get(config, `${process.env.NODE_ENV}.CONTRACT_ADDRESS`);

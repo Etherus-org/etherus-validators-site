@@ -37,6 +37,7 @@ const Button = ({
       [styles.RootColorSuccess]: color === COLOR.SUCCESS,
 
       [styles.RootGradientGreen]: color === GRADIENT.GREEN,
+      [styles.RootGradientOrange]: color === GRADIENT.ORANGE,
       [styles.RootGradientPurple]: color === GRADIENT.PURPLE,
     },
     // Variants

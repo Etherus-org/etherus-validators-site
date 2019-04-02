@@ -104,6 +104,7 @@ const ValidatorsTable: React.Element<'div'> = ({
   <Table
     columns={COLUMNS}
     data={data}
+    defaultPageSize={100000}
     getTrGroupProps={(state: Object, { index, original }): Object => ({
       className: classNames(styles.Root, {
         [styles.RootIsFavorite]: get(original, 'address') === ownerAddress,

@@ -8,5 +8,8 @@ export const VALIDATOR_DEPOSIT_MODAL_ID = 'validatorDepositModal';
 
 export const VALIDATOR_GUIDE_MODAL_ID = 'validatorGuideModal';
 
+export const VALIDATOR_NODE_FORM_ID = 'validatorNodeForm';
+export const VALIDATOR_NODE_MODAL_ID = 'validatorNodeModal';
+
 export const VALIDATOR_PAUSE_FORM_ID = 'validatorPauseForm';
 export const VALIDATOR_PAUSE_MODAL_ID = 'validatorPauseModal';

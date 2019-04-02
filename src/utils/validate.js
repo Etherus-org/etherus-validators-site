@@ -6,6 +6,15 @@ export const isHash = (length: number = 40, message: string = 'Must be like a he
     isValid: new RegExp(`^(0[xX]{1})?[a-fA-F\\d]{${length}}$`).test(value),
   });
 
+export const isHost = (message: string = 'Incorrect value! Must be like host or IP!'): Function =>
+  (value: string = ''): Object => ({
+    message,
+    isValid: !value || (
+      new RegExp('^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$').test(value) ||
+      new RegExp('^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$').test(value)
+    ),
+  });
+
 export const isNumber = (message: string = 'Must be a number!'): Function =>
   (value: string = ''): Object => ({
     message,
@@ -29,10 +38,17 @@ export const matches = (regex: Object<RegExp>, message: string = 'Incorrect valu
   isValid: value && regex.test(value),
 });
 
+
+export const max = (max: number, message: string = 'Max value: %d!') =>
+  (value: any): Object => ({
+    message: message.replace('%d', max),
+    isValid: !value || parseFloat(value, 10) <= max,
+  });
+
 export const min = (min: number, message: string = 'Min value: %d!') =>
   (value: any): Object => ({
     message: message.replace('%d', min),
-    isValid: parseFloat(value, 10) >= min,
+    isValid: !value || parseFloat(value, 10) >= min,
   });
 
 export const required = (message: string = 'Field is required!') => (value: any): Object => ({

@@ -64,11 +64,15 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
     return new Promise((resolve: Function, reject: Function) => {
       const value = web3.utils.toWei(deposit, 'ether');
 
+      const formattedHash = `0x${hash.replace(/^(0[xX]{1})?/, '')}`;
+      const formattedNode = `0x${node.replace(/^(0[xX]{1})?/, '')}`;
+      const formattedAddress = `0x${address.replace(/^(0[xX]{1})?/, '')}`;
+
       account.methods
         .addInitialDeposit(
-          `0x${hash.replace(/^(0[xX]{1})?/, '')}`,
-          `0x${node.replace(/^(0[xX]{1})?/, '')}`,
-          `0x${address.replace(/^(0[xX]{1})?/, '')}`,
+          formattedHash,
+          formattedNode,
+          formattedAddress,
         )
         .send({
           value,
@@ -80,9 +84,11 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
           .on('transactionHash', (): void => {
             resolve();
             dispatch({ type: CREATE_VALIDATOR_SUCCESS, hash, payload: {
-              address, hash, node,
+              address: formattedAddress,
               deposit: convertDeposit(deposit),
+              hash: formattedHash,
               isFetching: true,
+              node: formattedNode,
               pauseCause: 1,
             }});
             dispatch(closeModal(VALIDATOR_CREATE_MODAL_ID));
