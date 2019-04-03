@@ -513,9 +513,21 @@
   -webkit-justify-content: space-between;
           justify-content: space-between;
   margin: 40px 0 0; }
+  .Common_ActionsConsole__1GIL4 {
+    margin: 24px 0 0; }
+
+.Common_Console__OJFTq {
+  background: var(--color-blue-gray-900);
+  margin: 0 -24px;
+  font-family: monospace, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 24px; }
 
 .Common_Container__qvWDW {
   max-width: 480px; }
+  .Common_ContainerConsole__283Nd {
+    max-width: 720px; }
 
 .Common_Loading__1S17p {
   -webkit-align-items: center;
@@ -533,11 +545,22 @@
   top: 0;
   width: 100%; }
 
-.Common_Message__1KtI1 {
-  color: var(--color-gray);
-  margin: 32px 0 0;
-  padding: 0 40px;
-  text-align: center; }
+.Common_Message__1KtI1:not(:first-child) {
+  margin: 8px 0 0; }
+
+.Common_MessageDate__3DVVg {
+  color: var(--color-gray); }
+
+.Common_MessagePub__2JLbi {
+  color: var(--color-success);
+  margin: 16px 0 0; }
+
+.Common_MessageText__3Ls9V {
+  color: var(--color-white); }
+  .Common_MessageTextIsFailure__1W_5Y {
+    color: var(--color-danger); }
+  .Common_MessageTextIsSuccess__1vnpD {
+    color: var(--color-success); }
 
 .Form_Error__FAKdL {
   background: var(--color-red-200);
@@ -1001,4 +1024,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.4b567be1.chunk.css.map*/
+/*# sourceMappingURL=main.2e559997.chunk.css.map*/
