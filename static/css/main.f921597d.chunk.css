@@ -549,9 +549,6 @@
   top: 0;
   width: 100%; }
 
-.Common_Message__1KtI1:not(:first-child) {
-  margin: 8px 0 0; }
-
 .Common_MessageDate__3DVVg {
   color: var(--color-gray); }
 
@@ -567,16 +564,11 @@
     color: var(--color-success); }
 
 .Common_Progress__2a3PJ {
-  height: 20px;
-  position: relative;
-  width: 100%; }
-  .Common_ProgressBar__1FS_w {
-    background: var(--color-white);
-    height: 100%; }
+  color: var(--color-success);
+  margin: 0 8px 0 0; }
 
 .Common_Retry__1ERiA {
-  color: var(--color-danger);
-  margin: 0 8px 0 0; }
+  color: var(--color-danger); }
 
 .Form_Error__FAKdL {
   background: var(--color-red-200);
@@ -1040,4 +1032,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.05b55767.chunk.css.map*/
+/*# sourceMappingURL=main.f921597d.chunk.css.map*/
