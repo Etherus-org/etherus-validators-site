@@ -522,7 +522,7 @@
   font-family: monospace, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  height: 520px;
+  height: 408px;
   overflow-x: visible;
   overflow-y: scroll;
   padding: 24px; }
@@ -531,7 +531,10 @@
   max-width: 480px; }
   .Common_ContainerConsole__283Nd {
     max-width: 720px;
-    overflow: scroll; }
+    overflow: hidden; }
+
+.Common_Error__3qHWz {
+  color: var(--color-danger); }
 
 .Common_Loading__1S17p {
   -webkit-align-items: center;
@@ -1032,4 +1035,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.f921597d.chunk.css.map*/
+/*# sourceMappingURL=main.f6be38cc.chunk.css.map*/
