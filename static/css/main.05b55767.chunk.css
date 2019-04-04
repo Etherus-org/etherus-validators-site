@@ -522,12 +522,16 @@
   font-family: monospace, sans-serif;
   font-size: 14px;
   line-height: 20px;
+  height: 520px;
+  overflow-x: visible;
+  overflow-y: scroll;
   padding: 24px; }
 
 .Common_Container__qvWDW {
   max-width: 480px; }
   .Common_ContainerConsole__283Nd {
-    max-width: 720px; }
+    max-width: 720px;
+    overflow: scroll; }
 
 .Common_Loading__1S17p {
   -webkit-align-items: center;
@@ -561,6 +565,18 @@
     color: var(--color-danger); }
   .Common_MessageTextIsSuccess__1vnpD {
     color: var(--color-success); }
+
+.Common_Progress__2a3PJ {
+  height: 20px;
+  position: relative;
+  width: 100%; }
+  .Common_ProgressBar__1FS_w {
+    background: var(--color-white);
+    height: 100%; }
+
+.Common_Retry__1ERiA {
+  color: var(--color-danger);
+  margin: 0 8px 0 0; }
 
 .Form_Error__FAKdL {
   background: var(--color-red-200);
@@ -1024,4 +1040,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.2e559997.chunk.css.map*/
+/*# sourceMappingURL=main.05b55767.chunk.css.map*/

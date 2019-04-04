@@ -16,7 +16,7 @@ module.exports = {"Root":"Table_Root__1s8Ss","RootIsDisabled":"Table_RootIsDisab
 
 /***/ }),
 
-/***/ 142:
+/***/ 143:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -24,7 +24,7 @@ module.exports = {"Error":"Form_Error__FAKdL"};
 
 /***/ }),
 
-/***/ 147:
+/***/ 148:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -32,34 +32,26 @@ module.exports = {"Root":"App_Root__3UUPN","Wrapper":"App_Wrapper__VY8Wp"};
 
 /***/ }),
 
-/***/ 149:
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Actions":"Common_Actions__2KkrQ","ActionsConsole":"Common_ActionsConsole__1GIL4","Console":"Common_Console__OJFTq","Container":"Common_Container__qvWDW","ContainerConsole":"Common_ContainerConsole__283Nd","Loading":"Common_Loading__1S17p","Message":"Common_Message__1KtI1","MessageDate":"Common_MessageDate__3DVVg","MessagePub":"Common_MessagePub__2JLbi","MessageText":"Common_MessageText__3Ls9V","MessageTextIsFailure":"Common_MessageTextIsFailure__1W_5Y","MessageTextIsSuccess":"Common_MessageTextIsSuccess__1vnpD","Progress":"Common_Progress__2a3PJ","ProgressBar":"Common_ProgressBar__1FS_w","Retry":"Common_Retry__1ERiA"};
+
+/***/ }),
+
+/***/ 150:
 /***/ (function(module) {
 
 module.exports = [{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"getNodeAddr","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"c_MIN_DEPOSIT_INCREMENT","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getCompactedValidators","outputs":[{"name":"ValidatorsCompacted","type":"bytes32[]"},{"name":"ValidatorsPubKeys","type":"bytes32[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"addDeposit","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"},{"name":"nodeAddr","type":"address"},{"name":"receiver","type":"address"}],"name":"addInitialDeposit","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"isPaused","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"},{"name":"vFrom","type":"bytes32"},{"name":"cause","type":"uint8"},{"name":"punishValue","type":"uint96"}],"name":"pauseValidation","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getActiveCount","outputs":[{"name":"count","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"renounceOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"withdraw","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"hasDeposit","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"resumeValidation","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"getNodeReceiver","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getActiveCompactedValidators","outputs":[{"name":"ValidatorsCompacted","type":"bytes32[]"},{"name":"ValidatorsPubKeys","type":"bytes32[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"c_MIN_DEPOSIT","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"name":"getValidator","outputs":[{"name":"nodeAddr","type":"address"},{"name":"deposit","type":"uint96"},{"name":"pauseBlockNumber","type":"uint48"},{"name":"pauseCause","type":"uint8"},{"name":"punishValue","type":"uint96"},{"name":"receiver","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"min_dep","type":"uint256"},{"name":"min_dep_inc","type":"uint256"}],"name":"setDepositBounds","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"all","type":"bool"}],"name":"enablePunishers","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"vPub","type":"bytes32"},{"indexed":false,"name":"deposit","type":"uint96"}],"name":"ValidatorUpdated","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"vPub","type":"bytes32"},{"indexed":false,"name":"cause","type":"uint8"}],"name":"ValidatorRemoved","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"}],"name":"OwnershipRenounced","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"},{"indexed":true,"name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"}];
 
 /***/ }),
 
-/***/ 16:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-module.exports = {"Actions":"Common_Actions__2KkrQ","ActionsConsole":"Common_ActionsConsole__1GIL4","Console":"Common_Console__OJFTq","Container":"Common_Container__qvWDW","ContainerConsole":"Common_ContainerConsole__283Nd","Loading":"Common_Loading__1S17p","Message":"Common_Message__1KtI1","MessageDate":"Common_MessageDate__3DVVg","MessagePub":"Common_MessagePub__2JLbi","MessageText":"Common_MessageText__3Ls9V","MessageTextIsFailure":"Common_MessageTextIsFailure__1W_5Y","MessageTextIsSuccess":"Common_MessageTextIsSuccess__1vnpD"};
-
-/***/ }),
-
-/***/ 235:
+/***/ 236:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 module.exports = {"Root":"Table_Root__1Dcze"};
-
-/***/ }),
-
-/***/ 239:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-module.exports = {"Root":"Item_Root__3bpiM"};
 
 /***/ }),
 
@@ -71,14 +63,22 @@ module.exports = {"Root":"Button_Root__3UoPz","RootColorDanger":"Button_RootColo
 
 /***/ }),
 
-/***/ 241:
+/***/ 240:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"Root":"Item_Root__3bpiM"};
+
+/***/ }),
+
+/***/ 242:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/media/step-1.acd03576.png";
 
 /***/ }),
 
-/***/ 242:
+/***/ 243:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/media/step-2.a2a7d29d.png";
@@ -278,7 +278,7 @@ var Progress_VARIANT={CIRCLE:'circle',LINEAR:'linear'};var Progress_Progress=fun
 var react_table_es = __webpack_require__(246);
 
 // EXTERNAL MODULE: ./src/components/Table.scss
-var components_Table = __webpack_require__(235);
+var components_Table = __webpack_require__(236);
 var Table_default = /*#__PURE__*/__webpack_require__.n(components_Table);
 
 // CONCATENATED MODULE: ./src/components/Table.js
@@ -403,7 +403,7 @@ var Modal_default = /*#__PURE__*/__webpack_require__.n(components_Modal);
 // Styles
 var Modal_Modal=function Modal(_ref){var children=_ref.children,className=_ref.className,_ref$classNames=_ref.classNames;_ref$classNames=_ref$classNames===void 0?{}:_ref$classNames;var rootClassName=_ref$classNames.root,containerClassName=_ref$classNames.container,handleClose=_ref.handleClose,isOpened=_ref.isOpened,title=_ref.title,props=Object(objectWithoutProperties["a" /* default */])(_ref,["children","className","classNames","handleClose","isOpened","title"]);var rootClassNames=classnames_default()(className||rootClassName,Modal_default.a.Root);var containerClassNames=classnames_default()(containerClassName,Modal_default.a.Container);return isOpened&&react_default.a.createElement(PortalCompat["a" /* default */],null,react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:Modal_default.a.Backdrop,onClick:handleClose}),react_default.a.createElement("div",{className:containerClassNames},title&&react_default.a.createElement(components_Typography_Typography,{className:Modal_default.a.Title,variant:components_Typography_Typography.VARIANT.H6},title),react_default.a.createElement("div",{className:Modal_default.a.Content},typeof children==='function'?children(props):children))));};var Modal_mapStateToProps=function mapStateToProps(_ref2,_ref3){var services=_ref2.services;var id=_ref3.id,isOpened=_ref3.isOpened;var modal=Object(lodash["get"])(services,"modals.".concat(id));return Object(objectSpread["a" /* default */])({},modal,{isOpened:isOpened||!!modal});};/* harmony default export */ var src_components_Modal = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Modal_mapStateToProps,{closeModal:actions_closeModal}),Object(Recompose_esm["c" /* withHandlers */])({handleClose:function handleClose(_ref4){var closeModal=_ref4.closeModal,id=_ref4.id;return function(){return closeModal(id);};}}))(Modal_Modal));
 // EXTERNAL MODULE: ./src/views/Validators/containers/Common.scss
-var Common = __webpack_require__(16);
+var Common = __webpack_require__(15);
 var Common_default = /*#__PURE__*/__webpack_require__.n(Common);
 
 // CONCATENATED MODULE: ./src/views/Validators/containers/Confirm.js
@@ -417,29 +417,29 @@ var Confirm_ValidatorsConfirm=function ValidatorsConfirm(_ref){var handleCancel=
 var reduxForm = __webpack_require__(557);
 
 // EXTERNAL MODULE: ./src/components/Form/Form.scss
-var Form_Form = __webpack_require__(142);
+var Form_Form = __webpack_require__(143);
 var Form_default = /*#__PURE__*/__webpack_require__.n(Form_Form);
 
 // CONCATENATED MODULE: ./src/components/Form/Form.js
 // Styles
 var Form_Form_Form=function Form(_ref){var children=_ref.children,className=_ref.className,error=_ref.error,onSubmit=_ref.onSubmit;return react_default.a.createElement("form",{className:className,onSubmit:onSubmit},error&&react_default.a.createElement(components_Typography_Typography,{className:Form_default.a.Error},error),react_default.a.createElement("div",{className:Form_default.a.Container},children));};/* harmony default export */ var components_Form_Form = (Form_Form_Form);
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
-var classCallCheck = __webpack_require__(236);
+var classCallCheck = __webpack_require__(237);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js
-var createClass = __webpack_require__(237);
+var createClass = __webpack_require__(238);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js + 2 modules
 var possibleConstructorReturn = __webpack_require__(248);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
-var getPrototypeOf = __webpack_require__(238);
+var getPrototypeOf = __webpack_require__(239);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
 var inherits = __webpack_require__(250);
 
 // EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
-var uniqueId = __webpack_require__(143);
+var uniqueId = __webpack_require__(144);
 var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/Field.js + 10 modules
@@ -474,7 +474,7 @@ var Select_FormSelect=function FormSelect(_ref){var _classNames;var children=_re
 handleBlur:function handleBlur(_ref3){var setFocus=_ref3.setFocus,setInputValue=_ref3.setInputValue;return function(event){if(!$root.contains(event.relatedTarget)){$input.blur();setFocus(false);setInputValue('');}};},handleChange:function handleChange(_ref4){var setInputValue=_ref4.setInputValue;return function(event){return setInputValue(Object(lodash["get"])(event,'target.value',''));};},handleCreate:function handleCreate(_ref5){var isMultiple=_ref5.isMultiple,onChange=_ref5.onChange,setFocus=_ref5.setFocus,value=_ref5.value;return function(itemValue){if(!isMultiple){$input.blur();setFocus(false);}onChange&&onChange(isMultiple?[].concat(Object(toConsumableArray["a" /* default */])(value||[]),[itemValue]):itemValue);};},handleDelete:function handleDelete(_ref6){var onChange=_ref6.onChange,value=_ref6.value;return function(itemValue){return onChange&&onChange(value.filter(function(_ref7){var value=_ref7.value;return value!==itemValue;}));};},handleFocus:function handleFocus(_ref8){var setFocus=_ref8.setFocus;return function(){$input.focus();setFocus(true);};},// Registers
 registerRoot:function registerRoot(){return function(node){$root=node;};},registerInput:function registerInput(){return function(node){$input=node;};}};}))(Select_FormSelect);/* harmony default export */ var Select_Select = (function(_ref9){var children=_ref9.children,props=Object(objectWithoutProperties["a" /* default */])(_ref9,["children"]);return react_default.a.createElement(components_Form_components_Field,props,react_default.a.createElement(ComposedFormSelect,null,children));});
 // EXTERNAL MODULE: ./src/components/Form/components/Select/components/Item.scss
-var Item = __webpack_require__(239);
+var Item = __webpack_require__(240);
 var Item_default = /*#__PURE__*/__webpack_require__.n(Item);
 
 // CONCATENATED MODULE: ./src/components/Form/components/Select/components/Item.js
@@ -486,7 +486,7 @@ var Item_FormSelectItem=function FormSelectItem(_ref){var handleClick=_ref.handl
 // Components
 
 // EXTERNAL MODULE: ./node_modules/metamask-logo/index.js
-var metamask_logo = __webpack_require__(240);
+var metamask_logo = __webpack_require__(241);
 var metamask_logo_default = /*#__PURE__*/__webpack_require__.n(metamask_logo);
 
 // EXTERNAL MODULE: ./src/components/Metamask.scss
@@ -524,11 +524,11 @@ var Determine_default = /*#__PURE__*/__webpack_require__.n(Determine);
 // Styles
 var Determine_ValidatorsDetermine=function ValidatorsDetermine(_ref){var children=_ref.children,isSelected=_ref.isSelected,title=_ref.title;var rootClassNames=classnames_default()(Determine_default.a.Root,Object(defineProperty["a" /* default */])({},Determine_default.a.RootIsSelected,!!isSelected));return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement(components_Typography_Typography,{className:Determine_default.a.Title,variant:components_Typography_Typography.VARIANT.H6},title),react_default.a.createElement(components_Typography_Typography,{className:Determine_default.a.Content,variant:components_Typography_Typography.VARIANT.BODY1},children));};/* harmony default export */ var components_Determine = (Determine_ValidatorsDetermine);
 // EXTERNAL MODULE: ./src/assets/guide/step-1.png
-var step_1 = __webpack_require__(241);
+var step_1 = __webpack_require__(242);
 var step_1_default = /*#__PURE__*/__webpack_require__.n(step_1);
 
 // EXTERNAL MODULE: ./src/assets/guide/step-2.png
-var step_2 = __webpack_require__(242);
+var step_2 = __webpack_require__(243);
 var step_2_default = /*#__PURE__*/__webpack_require__.n(step_2);
 
 // EXTERNAL MODULE: ./src/views/Validators/containers/Guide.scss
@@ -541,7 +541,7 @@ var Guide_default = /*#__PURE__*/__webpack_require__.n(Guide);
 // Styles
 var Guide_ValidatorsGuide=function ValidatorsGuide(){return react_default.a.createElement(src_components_Modal,{classNames:{container:Guide_default.a.Container},id:VALIDATOR_GUIDE_MODAL_ID,title:"\u0418\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F \u043F\u043E \u0440\u0430\u0431\u043E\u0442\u0435 \u0441 Metamask"},function(_ref){var sectionId=_ref.sectionId;return react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(components_Determine,{isSelected:sectionId===1,title:"1. \u0423\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430 Metamask"},"\u0414\u043B\u044F \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438 \u0432 \u0441\u0435\u0442\u0438 Etherus \u0432\u0430\u043C \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C Metamask. \u042D\u0442\u043E \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u0435 \u0434\u043B\u044F \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430 \u0438 \u0441\u043A\u0430\u0447\u0430\u0442\u044C \u0435\u0433\u043E \u043C\u043E\u0436\u043D\u043E \u043F\u043E \u0430\u0434\u0440\u0435\u0441\u0443:\xA0",react_default.a.createElement("a",{className:Guide_default.a.Link,href:"https://metamask.io",rel:"noopener noreferrer",target:"_blank"},"https://metamask.io")),react_default.a.createElement(components_Determine,{isSelected:sectionId===2,title:"2. \u0421\u043E\u0437\u0434\u0430\u0439\u0442\u0435/\u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0432\u0430\u0448 \u043A\u043E\u0448\u0435\u043B\u0451\u043A"},"\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044F \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441 Metamask \u0441\u043E\u0437\u0434\u0430\u0439\u0442\u0435 \u043D\u043E\u0432\u044B\u0439 \u0438\u043B\u0438 \u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u043A\u043E\u0448\u0435\u043B\u0451\u043A. \u0411\u043E\u043B\u0435\u0435 \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0443\u044E \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C, \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0432 \u043E\u0431\u0443\u0447\u0430\u044E\u0449\u0438\u0439 \u0440\u043E\u043B\u0438\u043A:",react_default.a.createElement("div",{className:Guide_default.a.Frame},react_default.a.createElement("iframe",{allow:"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",allowFullScreen:true,frameBorder:"0",height:"340",src:"https://www.youtube.com/embed/ZIGUC9JAAw8",title:"Tutorial video",width:"632"}))),react_default.a.createElement(components_Determine,{isSelected:sectionId===3,title:"3. \u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u0435 Metamask \u043A \u0441\u0435\u0442\u0438 Etherus"},"\u041E\u0442\u043A\u0440\u044B\u0432 Metamask, \u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u0432\u043A\u043B\u0430\u0434\u043A\u0443 \u0441 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u043C\u0438 \u0441\u0435\u0442\u044F\u043C\u0438 \u0438 \u0432\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \xAB\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 RPC\xBB. \u041F\u043E\u0441\u043B\u0435 \u0447\u0435\u0433\u043E \u0432 \u0440\u0430\u0437\u0434\u0435\u043B\u0435 New Network \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0430\u043D\u043D\u044B\u0435 \u0434\u043B\u044F \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F:",react_default.a.createElement("div",{className:Guide_default.a.Steps},react_default.a.createElement("img",{alt:"\u0428\u0430\u0433 \u21161",src:step_1_default.a}),react_default.a.createElement("img",{alt:"\u0428\u0430\u0433 \u21162",src:step_2_default.a}))),react_default.a.createElement(components_Determine,{title:"\u0414\u0430\u043D\u043D\u044B\u0435 \u0434\u043B\u044F \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F"},react_default.a.createElement("strong",null,"RPC URL"),": https://rpc.etherus.org; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"ChainID"),": 32019; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"Symbol"),": ETR; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"Nickname"),": Etherus Mainnet."));});};/* harmony default export */ var containers_Guide = (Guide_ValidatorsGuide);
 // EXTERNAL MODULE: ./node_modules/luxon/build/cjs-browser/luxon.js
-var luxon = __webpack_require__(243);
+var luxon = __webpack_require__(108);
 
 // CONCATENATED MODULE: ./src/views/Validators/containers/Node.js
 // Components
@@ -549,7 +549,7 @@ var luxon = __webpack_require__(243);
 // Services
 // Styles
 // Utils
-var Node_ValidatorsNodeForm=function ValidatorsNodeForm(_ref){var error=_ref.error,handleSubmit=_ref.handleSubmit,onCancel=_ref.onCancel,submittin=_ref.submittin;return react_default.a.createElement(components_Form_Form,{error:error,onSubmit:handleSubmit},react_default.a.createElement(components_Input,{label:"\u0425\u043E\u0441\u0442",name:"host",placeholder:"localhost"}),react_default.a.createElement(components_Input,{label:"\u041F\u043E\u0440\u0442",name:"port",placeholder:"22"}),react_default.a.createElement(components_Input,{label:"\u0418\u043C\u044F \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C",name:"username",placeholder:"root"}),react_default.a.createElement(components_Input,{label:"\u041F\u0430\u0440\u043E\u043B\u044C",name:"password",type:"password"}),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:onCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,type:"submit"},"\u0420\u0430\u0437\u0432\u0435\u0440\u043D\u0443\u0442\u044C")));};var ComposedValidatorsNodeForm=Object(Recompose_esm["a" /* compose */])(Object(reduxForm["a" /* default */])({form:VALIDATOR_NODE_FORM_ID,validate:validate({host:[isHost()],port:[isNumber(),max(65535),min(0)],password:[validate_required()]})}))(Node_ValidatorsNodeForm);var Node_ValidatorsNode=function ValidatorsNode(_ref2){var messages=_ref2.messages,vPub=_ref2.vPub,handleCancel=_ref2.handleCancel,handleCreateValidator=_ref2.handleCreateValidator,handleReset=_ref2.handleReset,handleSubmit=_ref2.handleSubmit,isLoading=_ref2.isLoading,isProcessing=_ref2.isProcessing,isSuccess=_ref2.isSuccess;return react_default.a.createElement(src_components_Modal,{classNames:{container:classnames_default()(Common_default.a.Container,Object(defineProperty["a" /* default */])({},Common_default.a.ContainerConsole,isProcessing))},id:VALIDATOR_NODE_MODAL_ID,title:isSuccess?'Узел развёрнут!':isProcessing?'Узел разворачивается':'Развернуть узел'},isProcessing?react_default.a.createElement(react["Fragment"],null,react_default.a.createElement("div",{className:Common_default.a.Console},messages.map(function(_ref3,index){var _classNames2;var date=_ref3.date,msg=_ref3.msg,result=_ref3.result;return react_default.a.createElement("div",{className:Common_default.a.Message,key:index},react_default.a.createElement("span",{className:Common_default.a.MessageDate},"[",date.toLocaleString({month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'}),"]:\xA0"),react_default.a.createElement("span",{className:classnames_default()(Common_default.a.MessageText,(_classNames2={},Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsFailure,result==='failure'),Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsSuccess,result==='success'),_classNames2))},msg));}),vPub&&react_default.a.createElement("div",{className:Common_default.a.MessagePub},"############################## vPub READY! ###############################",react_default.a.createElement("br",null),"### ",vPub," ###",react_default.a.createElement("br",null),"##########################################################################")),!isLoading&&react_default.a.createElement("div",{className:classnames_default()(Common_default.a.Actions,Common_default.a.ActionsConsole)},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:handleCancel},"\u0417\u0430\u043A\u0440\u044B\u0442\u044C"),isSuccess?react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,onClick:handleCreateValidator},"\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440"):react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,onClick:handleReset},"\u041F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C \u0435\u0449\u0451 \u0440\u0430\u0437"))):react_default.a.createElement(ComposedValidatorsNodeForm,{onCancel:handleCancel,onSubmit:handleSubmit}));};/* harmony default export */ var Node = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal,openModal:actions_openModal}),Object(Recompose_esm["e" /* withState */])('isLoading','setLoad',false),Object(Recompose_esm["e" /* withState */])('isProcessing','setProcess',false),Object(Recompose_esm["e" /* withState */])('isSuccess','setSuccess',false),Object(Recompose_esm["e" /* withState */])('messages','setMessages',[]),Object(Recompose_esm["e" /* withState */])('vPub','setVPub',null),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref4){var closeModal=_ref4.closeModal;return function(event){return closeModal(VALIDATOR_NODE_MODAL_ID);};},handleCreateValidator:function handleCreateValidator(_ref5){var closeModal=_ref5.closeModal,openModal=_ref5.openModal,vPub=_ref5.vPub;return function(event){closeModal(VALIDATOR_NODE_MODAL_ID);openModal(VALIDATOR_CREATE_MODAL_ID,{vPub:vPub});};},handleReset:function handleReset(_ref6){var setLoad=_ref6.setLoad,setMessages=_ref6.setMessages,setProcess=_ref6.setProcess,setSuccess=_ref6.setSuccess,setVPub=_ref6.setVPub;return function(event){setLoad(false);setMessages([]);setProcess(false);setSuccess(false);setVPub(null);};},handleSubmit:function handleSubmit(_ref7){var setLoad=_ref7.setLoad,setMessages=_ref7.setMessages,setProcess=_ref7.setProcess,setSuccess=_ref7.setSuccess,setVPub=_ref7.setVPub;return function(values){return new Promise(function(resolve,reject){setProcess(true);var messages=[];var socket=new WebSocket('wss://api.etherus.org/nd');socket.onerror=function(error){reject(error);setLoad(false);socket.close();};socket.onmessage=function(event){try{var _JSON$parse=JSON.parse(Object(lodash["get"])(event,'data')),data=_JSON$parse.data,msg=_JSON$parse.msg,result=_JSON$parse.result;messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});setMessages(messages);if(result){setLoad(false);socket.close();if(result==='success'){resolve();setSuccess(true);setVPub(Object(lodash["get"])(data,'vPub'));}else{reject(msg);}}}catch(error){reject(error);setLoad(false);setProcess(false);socket.close();}};socket.onopen=function(){setLoad(true);socket.send(JSON.stringify({command:'install',data:{host:Object(lodash["get"])(values,'host','localhost'),port:Object(lodash["get"])(values,'port',22),username:Object(lodash["get"])(values,'username','root'),password:Object(lodash["get"])(values,'password')}}));};}).catch(function(error){throw new SubmissionError["a" /* default */]({_error:error});});};}}))(Node_ValidatorsNode));
+var Node_ValidatorsNodeForm=function ValidatorsNodeForm(_ref){var error=_ref.error,handleSubmit=_ref.handleSubmit,onCancel=_ref.onCancel,submittin=_ref.submittin;return react_default.a.createElement(components_Form_Form,{error:error,onSubmit:handleSubmit},react_default.a.createElement(components_Input,{label:"\u0425\u043E\u0441\u0442",name:"host",placeholder:"localhost"}),react_default.a.createElement(components_Input,{label:"\u041F\u043E\u0440\u0442",name:"port",placeholder:"22"}),react_default.a.createElement(components_Input,{label:"\u0418\u043C\u044F \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C",name:"username",placeholder:"root"}),react_default.a.createElement(components_Input,{label:"\u041F\u0430\u0440\u043E\u043B\u044C",name:"password",type:"password"}),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:onCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,type:"submit"},"\u0420\u0430\u0437\u0432\u0435\u0440\u043D\u0443\u0442\u044C")));};var ComposedValidatorsNodeForm=Object(Recompose_esm["a" /* compose */])(Object(reduxForm["a" /* default */])({form:VALIDATOR_NODE_FORM_ID,validate:validate({host:[isHost()],port:[isNumber(),max(65535),min(0)],password:[validate_required()]})}))(Node_ValidatorsNodeForm);var Node_ValidatorsNode=function ValidatorsNode(_ref2){var messages=_ref2.messages,progress=_ref2.progress,retry=_ref2.retry,vPub=_ref2.vPub,handleCancel=_ref2.handleCancel,handleCreateValidator=_ref2.handleCreateValidator,handleReset=_ref2.handleReset,handleSubmit=_ref2.handleSubmit,isLoading=_ref2.isLoading,isProcessing=_ref2.isProcessing,isSuccess=_ref2.isSuccess;return react_default.a.createElement(src_components_Modal,{classNames:{container:classnames_default()(Common_default.a.Container,Object(defineProperty["a" /* default */])({},Common_default.a.ContainerConsole,isProcessing))},id:VALIDATOR_NODE_MODAL_ID,title:isSuccess?'Узел развёрнут!':isProcessing?'Узел разворачивается':'Развернуть узел'},isProcessing?react_default.a.createElement(react["Fragment"],null,react_default.a.createElement("div",{className:Common_default.a.Console,id:"console"},react_default.a.createElement("div",{id:"wrapper"},messages.map(function(_ref3,index){var _classNames2;var date=_ref3.date,msg=_ref3.msg,result=_ref3.result;return react_default.a.createElement("div",{className:Common_default.a.Message,key:index},react_default.a.createElement("span",{className:Common_default.a.MessageDate},"[",date.toLocaleString({hour:'2-digit',minute:'2-digit',second:'2-digit'}),"]:\xA0"),index===messages.length-1&&retry?react_default.a.createElement("span",{className:Common_default.a.Retry},"[",retry,"]"):null,react_default.a.createElement("span",{className:classnames_default()(Common_default.a.MessageText,(_classNames2={},Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsFailure,result==='failure'),Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsSuccess,result==='success'),_classNames2))},msg));}),!isSuccess&&progress&&react_default.a.createElement("div",{className:Common_default.a.Progress},react_default.a.createElement("div",{className:Common_default.a.ProgressBar,style:{width:"".concat(progress,"%")}})),vPub&&react_default.a.createElement("div",{className:Common_default.a.MessagePub},"############################## vPub READY! ###############################",react_default.a.createElement("br",null),"### ",vPub," ###",react_default.a.createElement("br",null),"##########################################################################"))),!isLoading&&react_default.a.createElement("div",{className:classnames_default()(Common_default.a.Actions,Common_default.a.ActionsConsole)},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:handleCancel},"\u0417\u0430\u043A\u0440\u044B\u0442\u044C"),isSuccess?react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,onClick:handleCreateValidator},"\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440"):react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,onClick:handleReset},"\u041F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C \u0435\u0449\u0451 \u0440\u0430\u0437"))):react_default.a.createElement(ComposedValidatorsNodeForm,{onCancel:handleCancel,onSubmit:handleSubmit}));};/* harmony default export */ var Node = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal,openModal:actions_openModal}),Object(Recompose_esm["e" /* withState */])('isLoading','setLoad',false),Object(Recompose_esm["e" /* withState */])('isProcessing','setProcess',false),Object(Recompose_esm["e" /* withState */])('isSuccess','setSuccess',false),Object(Recompose_esm["e" /* withState */])('messages','setMessages',[]),Object(Recompose_esm["e" /* withState */])('progress','setProgress',null),Object(Recompose_esm["e" /* withState */])('retry','setRetry',null),Object(Recompose_esm["e" /* withState */])('vPub','setVPub',null),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref4){var closeModal=_ref4.closeModal;return function(event){return closeModal(VALIDATOR_NODE_MODAL_ID);};},handleCreateValidator:function handleCreateValidator(_ref5){var closeModal=_ref5.closeModal,openModal=_ref5.openModal,vPub=_ref5.vPub;return function(event){closeModal(VALIDATOR_NODE_MODAL_ID);openModal(VALIDATOR_CREATE_MODAL_ID,{vPub:vPub});};},handleReset:function handleReset(_ref6){var setLoad=_ref6.setLoad,setMessages=_ref6.setMessages,setProcess=_ref6.setProcess,setSuccess=_ref6.setSuccess,setVPub=_ref6.setVPub;return function(event){setLoad(false);setMessages([]);setProcess(false);setSuccess(false);setVPub(null);};},handleSubmit:function handleSubmit(_ref7){var setLoad=_ref7.setLoad,setMessages=_ref7.setMessages,setProcess=_ref7.setProcess,setProgress=_ref7.setProgress,setRetry=_ref7.setRetry,setSuccess=_ref7.setSuccess,setVPub=_ref7.setVPub;return function(values){return new Promise(function(resolve,reject){setProcess(true);var messages=[];var socket=new WebSocket('wss://api.etherus.org/nd');socket.onerror=function(error){reject(error);setLoad(false);socket.close();};socket.onmessage=function(event){try{var _JSON$parse=JSON.parse(Object(lodash["get"])(event,'data')),data=_JSON$parse.data,msg=_JSON$parse.msg,result=_JSON$parse.result;if(result){setLoad(false);socket.close();messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});if(result==='success'){resolve();setSuccess(true);setVPub(Object(lodash["get"])(data,'vPub'));}else{reject(msg);}}else{Object(lodash["has"])(data,'progress')?setProgress(Object(lodash["get"])(data,'progress.0')/Object(lodash["get"])(data,'progress.1')*100):setProgress(null);if(Object(lodash["has"])(data,'retry')){var retry=Object(lodash["get"])(data,'retry.1')-Object(lodash["get"])(data,'retry.0');setRetry(retry);retry===0&&messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});}else{messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});setRetry(null);}}setMessages(messages);}catch(error){reject(error);setLoad(false);setProcess(false);socket.close();}var $console=document.getElementById('console');var $wrapper=document.getElementById('wrapper');$console.scrollTop=$wrapper.clientHeight;};socket.onopen=function(){setLoad(true);socket.send(JSON.stringify({command:'install',data:{host:Object(lodash["get"])(values,'host','localhost'),port:Object(lodash["get"])(values,'port',22),username:Object(lodash["get"])(values,'username','root'),password:Object(lodash["get"])(values,'password')}}));};}).catch(function(error){throw new SubmissionError["a" /* default */]({_error:error});});};}}))(Node_ValidatorsNode));
 // CONCATENATED MODULE: ./src/views/Validators/components/From.js
 // Components
 // Entities
@@ -580,7 +580,7 @@ var Validators_Validators_Validators=function Validators(_ref){var _classNames;v
 // Ducks
 
 // EXTERNAL MODULE: ./src/App.scss
-var src_App = __webpack_require__(147);
+var src_App = __webpack_require__(148);
 var App_default = /*#__PURE__*/__webpack_require__.n(src_App);
 
 // EXTERNAL MODULE: ./node_modules/react-table/react-table.css
@@ -630,13 +630,13 @@ registerValidSW(swUrl,config);}}).catch(function(){console.log('No internet conn
 var redux = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./node_modules/web3/src/index.js
-var src = __webpack_require__(148);
+var src = __webpack_require__(149);
 var src_default = /*#__PURE__*/__webpack_require__.n(src);
 
 // CONCATENATED MODULE: ./src/api/schema.js
 var schema_validator=new normalizr_es["b" /* schema */].Entity('validators',{},{idAttribute:'hash'});
 // EXTERNAL MODULE: ./src/assets/contract.json
-var assets_contract = __webpack_require__(149);
+var assets_contract = __webpack_require__(150);
 
 // EXTERNAL MODULE: ./node_modules/redux-thunk/es/index.js
 var redux_thunk_es = __webpack_require__(245);
@@ -720,4 +720,4 @@ module.exports = {"Container":"Guide_Container__3FIps","Frame":"Guide_Frame__2_1
 /***/ })
 
 },[[252,1,2]]]);
-//# sourceMappingURL=main.460e5617.chunk.js.map
+//# sourceMappingURL=main.5d848ffa.chunk.js.map
