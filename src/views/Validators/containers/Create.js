@@ -68,9 +68,10 @@ const ValidatorsCreate = ({
   </Form>
 );
 
-const mapStateToProps = (state: Object): Object => ({
+const mapStateToProps = (state: Object, { vPub }): Object => ({
   initialValues: {
     address: getAddress(state),
+    hash: vPub,
     node: getAddress(state),
   },
 });
@@ -105,9 +106,12 @@ const ValidatorsCreateModal = ({
     id={VALIDATOR_CREATE_MODAL_ID}
     title="Создать валидатор"
   >
-    <ComposedValidatorsCreate
-      onSubmit={handleSubmit}
-    />
+    {({ vPub }) => (
+      <ComposedValidatorsCreate
+        onSubmit={handleSubmit}
+        vPub={vPub}
+      />
+    )}
   </Modal>
 );
 

@@ -8,7 +8,7 @@ const config = {
     MIN_DEPOSIT_INCREMENT: 0.1,
     NETWORK_ID: '4',
     SYMBOL: 'ETH',
-    URL: 'https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337',
+    URL: 'wss://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337',
   },
   'production': {
     CONTRACT_ADDRESS: '0x0000000000000000000000000000000000000fff',
@@ -16,7 +16,7 @@ const config = {
     MIN_DEPOSIT_INCREMENT: 10,
     NETWORK_ID: '32019',
     SYMBOL: 'ETR',
-    URL: 'https://rpc.etherus.org',
+    URL: 'wss://rpc.etherus.org',
   },
 };
 

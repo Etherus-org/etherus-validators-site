@@ -105,13 +105,6 @@ const Validators: React.Element<'div'> = ({
         </div>
 
         <div className={styles.HeaderRight}>
-          <Button
-            color={GRADIENT.PURPLE}
-            onClick={handleInstall}
-          >
-            Развернуть узел
-          </Button>
-
           {isConnecting ? (
             <div className={styles.Connecting}>
               <Progress size={20} />
@@ -136,12 +129,22 @@ const Validators: React.Element<'div'> = ({
                 </Button>
               )
             ) : (
-              <Button
-                color={COLOR.PRIMARY}
-                onClick={handleCreate}
-              >
-                Зарегистрировать валидатор
-              </Button>
+              <Fragment>
+                <Button
+                  color={GRADIENT.PURPLE}
+                  onClick={handleInstall}
+                >
+                  Развернуть узел
+                </Button>
+
+
+                <Button
+                  color={COLOR.PRIMARY}
+                  onClick={handleCreate}
+                >
+                  Зарегистрировать валидатор
+                </Button>
+              </Fragment>
             )
           )}
         </div>

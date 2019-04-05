@@ -70,7 +70,7 @@ const ValidatorsActions: React.Element<'div'> = ({
     {isFetching ? <Progress size={20} /> : (
       <div className={styles.Root}>
         {pauseCause !== PAUSE_NOT_PAUSED ? (
-          isValidatorOwner && parseDeposit(deposit) > CONFIG.MIN_DEPOSIT && (
+          isValidatorOwner && parseDeposit(deposit) >= (CONFIG.MIN_DEPOSIT - 2) && (
             <Tooltip title="Запустить">
               <Button
                 classNames={{

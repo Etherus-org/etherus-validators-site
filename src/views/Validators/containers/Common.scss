@@ -2,10 +2,36 @@
   display: flex;
   justify-content: space-between;
   margin: 40px 0 0;
+
+  &Console {
+    margin: 24px 0 0;
+  }
+}
+
+.Console {
+  background: var(--color-blue-gray-900);
+  margin: 0 -24px;
+  font-family: monospace, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  height: 408px;
+  overflow-x: visible;
+  overflow-y: scroll;
+  padding: 24px;
 }
 
 .Container {
   max-width: 480px;
+
+  &Console {
+    max-height: calc(100% - 80px);
+    max-width: 720px;
+    overflow: hidden;
+  }
+}
+
+.Error {
+  color: var(--color-danger);
 }
 
 .Loading {
@@ -22,8 +48,44 @@
 }
 
 .Message {
-  color: var(--color-gray);
-  margin: 32px 0 0;
-  padding: 0 40px;
-  text-align: center;
+  &Date {
+    color: var(--color-gray);
+  }
+
+  &Pub {
+    color: var(--color-success);
+    margin: 16px 0 0;
+  }
+
+  &Text {
+    color: var(--color-white);
+
+    &Is {
+      &Failure {
+        color: var(--color-danger);
+      }
+
+      &Success {
+        color: var(--color-success);
+      }
+    }
+  }
+}
+
+.Progress {
+  color: var(--color-success);
+  margin: 0 8px 0 0;
+
+  // height: 20px;
+  // position: relative;
+  // width: 100%;
+
+  // &Bar {
+  //   background: var(--color-white);
+  //   height: 100%;
+  // }
+}
+
+.Retry {
+  color: var(--color-danger);
 }

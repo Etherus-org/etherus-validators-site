@@ -83,10 +83,10 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
           .on('error', reject)
           .on('transactionHash', (): void => {
             resolve();
-            dispatch({ type: CREATE_VALIDATOR_SUCCESS, hash, payload: {
+            dispatch({ type: CREATE_VALIDATOR_SUCCESS, hash: formattedHash.toLowerCase(), payload: {
               address: formattedAddress,
               deposit: convertDeposit(deposit),
-              hash: formattedHash,
+              hash: formattedHash.toLowerCase(),
               isFetching: true,
               node: formattedNode,
               pauseCause: 1,
@@ -163,7 +163,7 @@ export const fetchValidators = (): Function =>
 
         validators.forEach((hash: string, index: number) => {
           const validator: Object = parseCompactedValidator(get(res, `ValidatorsCompacted.${index}`));
-          data.push({ ...validator, hash });
+          data.push({ ...validator, hash: hash.toLowerCase() });
         });
 
         const normalizedData = normalize(data, [schema.validator]);
