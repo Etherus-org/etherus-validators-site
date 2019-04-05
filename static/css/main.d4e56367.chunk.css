@@ -516,6 +516,13 @@
   .Common_ActionsConsole__1GIL4 {
     margin: 24px 0 0; }
 
+.Common_Alert__1pTx6 {
+  background: var(--color-orange-200);
+  border: 1px solid var(--color-orange-400);
+  border-radius: 4px;
+  color: var(--color-orange);
+  padding: 16px; }
+
 .Common_Console__OJFTq {
   background: var(--color-blue-gray-900);
   margin: 0 -24px;
@@ -1036,4 +1043,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.c5463ce7.chunk.css.map*/
+/*# sourceMappingURL=main.d4e56367.chunk.css.map*/
