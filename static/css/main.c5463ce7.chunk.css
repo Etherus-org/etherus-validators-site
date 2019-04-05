@@ -530,6 +530,7 @@
 .Common_Container__qvWDW {
   max-width: 480px; }
   .Common_ContainerConsole__283Nd {
+    max-height: calc(100% - 80px);
     max-width: 720px;
     overflow: hidden; }
 
@@ -1035,4 +1036,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.f6be38cc.chunk.css.map*/
+/*# sourceMappingURL=main.c5463ce7.chunk.css.map*/
