@@ -340,7 +340,7 @@ console.error(error);dispatch({type:CREATE_VALIDATOR_FAILURE,error:Object(lodash
 // Entities
 var initialState={isFetching:false};/* harmony default export */ var ducks_reducer = (function(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:initialState;var action=arguments.length>1?arguments[1]:undefined;switch(action.type){case FETCH_VALIDATORS_REQUEST:return Object(objectSpread["a" /* default */])({},state,{isFetching:true});case FETCH_VALIDATORS_SUCCESS:case FETCH_VALIDATORS_FAILURE:return Object(objectSpread["a" /* default */])({},state,{error:action.error,isFetching:false});default:return state;}});
 // CONCATENATED MODULE: ./src/views/Validators/ducks/constants.js
-var VALIDATOR_CONFIRM_MODAL_ID='validatorConfirmModal';var VALIDATOR_CONFIRM_ACCOUNT_MODAL_ID='validatorConfirmModal';var VALIDATOR_CREATE_FORM_ID='validatorCreateForm';var VALIDATOR_CREATE_MODAL_ID='validatorCreateModal';var VALIDATOR_DEPOSIT_FORM_ID='validatorDepositForm';var VALIDATOR_DEPOSIT_MODAL_ID='validatorDepositModal';var VALIDATOR_GUIDE_MODAL_ID='validatorGuideModal';var VALIDATOR_NODE_FORM_ID='validatorNodeForm';var VALIDATOR_NODE_MODAL_ID='validatorNodeModal';var VALIDATOR_PAUSE_FORM_ID='validatorPauseForm';var VALIDATOR_PAUSE_MODAL_ID='validatorPauseModal';
+var VALIDATOR_CONFIRM_MODAL_ID='validatorConfirmModal';var VALIDATOR_CONFIRM_ACCOUNT_MODAL_ID='validatorConfirmAccountModal';var VALIDATOR_CREATE_FORM_ID='validatorCreateForm';var VALIDATOR_CREATE_MODAL_ID='validatorCreateModal';var VALIDATOR_DEPOSIT_FORM_ID='validatorDepositForm';var VALIDATOR_DEPOSIT_MODAL_ID='validatorDepositModal';var VALIDATOR_GUIDE_MODAL_ID='validatorGuideModal';var VALIDATOR_NODE_FORM_ID='validatorNodeForm';var VALIDATOR_NODE_MODAL_ID='validatorNodeModal';var VALIDATOR_PAUSE_FORM_ID='validatorPauseForm';var VALIDATOR_PAUSE_MODAL_ID='validatorPauseModal';
 // CONCATENATED MODULE: ./src/views/Validators/ducks/selector.js
 var selector_getValidatorsView=function getValidatorsView(state){return Object(lodash["get"])(state,'views.validators');};
 // CONCATENATED MODULE: ./src/views/Validators/ducks/index.js
@@ -730,4 +730,4 @@ module.exports = {"Container":"Guide_Container__3FIps","Frame":"Guide_Frame__2_1
 /***/ })
 
 },[[253,1,2]]]);
-//# sourceMappingURL=main.c48f083e.chunk.js.map
+//# sourceMappingURL=main.5e910edb.chunk.js.map
