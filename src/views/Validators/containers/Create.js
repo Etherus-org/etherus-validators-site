@@ -1,7 +1,8 @@
 // @flow
+import { get } from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
-import { compose, withHandlers } from 'recompose';
+import { compose, withHandlers, withState } from 'recompose';
 import { reduxForm } from 'redux-form';
 
 // API
@@ -15,6 +16,7 @@ import Modal from 'components/Modal';
 
 // Ducks
 import {
+  VALIDATOR_CONFIRM_ACCOUNT_MODAL_ID,
   VALIDATOR_CREATE_FORM_ID,
   VALIDATOR_CREATE_MODAL_ID,
 } from '../ducks';
@@ -23,7 +25,7 @@ import {
 import { createValidator } from 'entities/validators';
 
 // Services
-import { closeModal } from 'services/modals';
+import { closeModal, openModal } from 'services/modals';
 import { getAddress } from 'services/session';
 
 // Utils
@@ -68,13 +70,18 @@ const ValidatorsCreate = ({
   </Form>
 );
 
-const mapStateToProps = (state: Object, { vPub }): Object => ({
-  initialValues: {
-    address: getAddress(state),
-    hash: vPub,
-    node: getAddress(state),
-  },
-});
+const mapStateToProps = (state: Object, { deposit, vPub }): Object => {
+  const address =  getAddress(state);
+
+  return {
+    initialValues: {
+      address,
+      deposit,
+      hash: vPub,
+      node: address
+    },
+  };
+}
 
 const ComposedValidatorsCreate = compose(
   connect(mapStateToProps, { closeModal }),
@@ -91,6 +98,7 @@ const ComposedValidatorsCreate = compose(
       node: [required(), isHash(40)],
     }),
   }),
+  withState('isThirdParty', 'setThirdParty', false),
   withHandlers({
     handleCancel: ({ closeModal }): Function =>
       (event: Object): void =>
@@ -106,8 +114,9 @@ const ValidatorsCreateModal = ({
     id={VALIDATOR_CREATE_MODAL_ID}
     title="Создать валидатор"
   >
-    {({ vPub }) => (
+    {({ deposit, vPub }) => (
       <ComposedValidatorsCreate
+        deposit={deposit}
         onSubmit={handleSubmit}
         vPub={vPub}
       />
@@ -116,10 +125,30 @@ const ValidatorsCreateModal = ({
 );
 
 export default compose(
-  connect(null, { createValidator }),
+  connect((state) => ({ address: getAddress(state) }), { closeModal, createValidator, openModal }),
   withHandlers({
-    handleSubmit: ({ createValidator }): Function =>
-      (values: Object): void =>
-        createValidator(values),
+    handleSubmit: ({ address, createValidator, closeModal, openModal }): Function =>
+      // eslint-disable-next-line
+      (values: Object): Object => {
+        if (address.toLowerCase() !== get(values, 'node', '').toLowerCase()) {
+          closeModal(VALIDATOR_CREATE_MODAL_ID);
+          openModal(VALIDATOR_CONFIRM_ACCOUNT_MODAL_ID, {
+            onReject: () => {
+              closeModal(VALIDATOR_CONFIRM_ACCOUNT_MODAL_ID);
+              openModal(VALIDATOR_CREATE_MODAL_ID, {
+                deposit: get(values, 'deposit'),
+                vPub: get(values, 'hash'),
+              });
+            },
+            onResolve: () => {
+              closeModal(VALIDATOR_CONFIRM_ACCOUNT_MODAL_ID);
+              createValidator(values);
+            },
+          });
+        } else {
+          return createValidator(values);
+        }
+
+      },
   }),
 )(ValidatorsCreateModal);

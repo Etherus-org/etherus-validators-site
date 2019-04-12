@@ -1,8 +1,9 @@
 // @flow
 import classNames from 'classnames';
+import { get } from 'lodash';
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import { compose, lifecycle, withHandlers } from 'recompose';
+import { compose, lifecycle, withHandlers, withState } from 'recompose';
 
 // API
 import config from 'api/config';
@@ -14,6 +15,7 @@ import Table from './components/Table';
 
 // Containers
 import Confirm from './containers/Confirm';
+import ConfirmAccount from './containers/ConfirmAccount';
 import Create from './containers/Create';
 import Deposit from './containers/Deposit';
 import Guide from './containers/Guide';
@@ -63,6 +65,7 @@ type ValidatorsType = {
 const Validators: React.Element<'div'> = ({
   address,
   networkId,
+  stats,
   validators,
   // Handlers
   handleConnect,
@@ -158,7 +161,7 @@ const Validators: React.Element<'div'> = ({
 
       {validators && validators.length > 0 && (
         <div className={styles.List}>
-          <Table data={validators} />
+          <Table data={validators} stats={stats} />
         </div>
       )}
 
@@ -168,6 +171,7 @@ const Validators: React.Element<'div'> = ({
       {isConnected && (
         <Fragment>
           <Confirm />
+          <ConfirmAccount />
           <Create />
           <Deposit />
           <Pause />
@@ -199,6 +203,7 @@ export default compose(
     fetchValidators,
     openModal,
   }),
+  withState('stats', 'setStats', []),
   withHandlers({
     handleConnect: ({ connectMetamask }): Function =>
       (event: Object): void =>
@@ -226,7 +231,20 @@ export default compose(
   }),
   lifecycle({
     componentDidMount() {
-      this.props.fetchValidators();
+      const { fetchValidators, setStats } = this.props;
+      fetchValidators();
+      fetch('https://api.etherus.org/vl/stats')
+        .then((res: Object) => res.json())
+        .then((res: Object) => {
+          const stats = get(res, 'stats');
+          const normalizedData = {};
+
+          stats.forEach((item: Object) => {
+            normalizedData[`0x${get(item, 'vPub')}`] = item;
+          });
+
+          setStats(normalizedData);
+        });
     },
   }),
 )(Validators);

@@ -92,8 +92,9 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
               pauseCause: 1,
             }});
             dispatch(closeModal(VALIDATOR_CREATE_MODAL_ID));
+
             document
-              .getElementById('0xac85685277fba446c42272538fa64f3b28bd42a5a8b6f2295b7f2a22ee10bf35')
+              .getElementById(hash)
               .scrollIntoView();
           })
     })

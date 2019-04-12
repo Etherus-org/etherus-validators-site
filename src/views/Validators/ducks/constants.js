@@ -1,4 +1,5 @@
 export const VALIDATOR_CONFIRM_MODAL_ID = 'validatorConfirmModal';
+export const VALIDATOR_CONFIRM_ACCOUNT_MODAL_ID = 'validatorConfirmAccountModal';
 
 export const VALIDATOR_CREATE_FORM_ID = 'validatorCreateForm';
 export const VALIDATOR_CREATE_MODAL_ID = 'validatorCreateModal';

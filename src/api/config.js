@@ -3,7 +3,7 @@ import { get } from 'lodash';
 
 const config = {
   'development': {
-    CONTRACT_ADDRESS: '0xD019247742150fD1B55CA20010659976fe2b6a2f',
+    CONTRACT_ADDRESS: '0x93275283bf79d0f3a4521b006b6504768fc38d9a',
     MIN_DEPOSIT: 0.25,
     MIN_DEPOSIT_INCREMENT: 0.1,
     NETWORK_ID: '4',

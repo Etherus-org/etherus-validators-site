@@ -41,6 +41,40 @@
   margin: 0 8px 0 0;
 }
 
+.Health {
+  align-items: center;
+  display: flex;
+  height: 28px;
+  position: relative;
+  width: 192px;
+
+  &Bar {
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &Index {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    & > div {
+      background: rgba(0, 0, 0, .4);
+      padding: 0 2px; 
+    }
+  }
+}
+
 .Icon {
   color: var(--color-primary);
 }
@@ -51,4 +85,32 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.Word {
+  height: 28px;
+  overflow: hidden;
+  width: 12px;
+
+  &Variant {
+    &Green {
+      background: var(--color-success);
+    }
+
+    &Light {
+      background: var(--color-green-400);
+    }
+
+    &Orange {
+      background: var(--color-alert);
+    }
+
+    &Red {
+      background: var(--color-danger);
+    }
+
+    &Yellow {
+      background: var(--color-orange-400);
+    }
+  }
 }

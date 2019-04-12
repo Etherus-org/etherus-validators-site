@@ -9,6 +9,9 @@ export const getBlockNumber: Function = (state: Object): Function =>
 export const getSession: Function = (state: Object): Function =>
   get(state, 'services.session');
 
+export const isChanged: Function = (state: Object): Function =>
+  get(state, 'services.session.isChanged');
+
 export const isConnected: Function = (state: Object): Function =>
   get(state, 'services.session.isConnected');
 

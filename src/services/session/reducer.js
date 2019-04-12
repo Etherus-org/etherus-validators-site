@@ -35,6 +35,7 @@ export default (state: Object = initialState, action: Object): Object => {
       return {
         ...state,
         address: action.address,
+        isChanged: action.isChanged,
         isConnected: true,
         isConnecting: false,
       };

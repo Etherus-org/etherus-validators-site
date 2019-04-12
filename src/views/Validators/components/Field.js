@@ -1,5 +1,7 @@
+import { get } from 'lodash';
 import classNames from 'classnames';
 import React from 'react';
+import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
 
 // API
@@ -11,6 +13,9 @@ import Tooltip from 'components/Tooltip';
 
 // Entities
 import { PAUSE_NOT_PAUSED } from 'entities/validators';
+
+// Services
+import { getBlockNumber } from 'services/session';
 
 // Utils
 import {
@@ -33,12 +38,15 @@ const VARIANT = {
   DEFAULT: 'default',
   DEPOSIT: 'deposit',
   HASH: 'hash',
+  HEALTH: 'health',
   PAUSE: 'pause',
 };
 
 const ValidatorsField: React.Element<'div'> = ({
   children,
+  currentBlockNumber,
   isDisabled,
+  original,
   title,
   variant = VARIANT.DEFAULT,
   // Handlers
@@ -77,12 +85,45 @@ const ValidatorsField: React.Element<'div'> = ({
         {variant === VARIANT.PAUSE && parsePause(title)}
         {variant === VARIANT.HASH && (title || children)}
         {variant === VARIANT.DEFAULT && (title || children)}
+
+        {variant === VARIANT.HEALTH && (
+          <div className={styles.Health}>
+            <div className={styles.HealthBar}>
+              {(title || '').split('').map((word: string, index: number) => {
+                const wordClassName = classNames(styles.Word, {
+                  [styles.WordVariantRed]: word === 'R',
+                  [styles.WordVariantOrange]: word === 'O',
+                  [styles.WordVariantYellow]: word === 'Y',
+                  [styles.WordVariantLight]: word === 'L',
+                  [styles.WordVariantGreen]: word === 'G',
+                });
+               
+                return (
+                  <span className={wordClassName} key={index} />
+                );
+              })}
+            </div>
+
+            <div className={styles.HealthIndex}>
+              <div>
+                {get(original, 'responses64', 0) > 0
+                  ? `${Math.round(get(original, 'responses64', 0) * 100)}%`
+                  : `Не отвечает ${currentBlockNumber - get(original, 'blockLastVoted', 0)} блоков`}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </Typography>
   );
 }
 
+const mapStateToProps: Function = (state: Object) => ({
+  currentBlockNumber: getBlockNumber(state),
+});
+
 export default compose(
+  connect(mapStateToProps),
   withHandlers({
     handleCopy: ({ title }): Function =>
       (event: Object): void => {
