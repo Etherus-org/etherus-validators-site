@@ -17944,7 +17944,7 @@ if (false) { var throwOnDirectAccess, ReactIs; } else {
   } // Check for `exports` after `define` in case a build optimizer adds it.
   else {}
 }).call(this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(32)(module)))
 
 /***/ }),
 /* 3 */
@@ -18132,7 +18132,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(16);
 /* harmony import */ var fbjs_lib_shallowEqual__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(77);
 /* harmony import */ var fbjs_lib_shallowEqual__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(fbjs_lib_shallowEqual__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21);
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(22);
 /* harmony import */ var react_lifecycles_compat__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(52);
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(45);
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(235);
@@ -19225,7 +19225,7 @@ if (typeof Object.create === 'function') {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* eslint-disable node/no-deprecated-api */
-var buffer = __webpack_require__(12);
+var buffer = __webpack_require__(13);
 
 var Buffer = buffer.Buffer; // alternative to using Object.keys for old browsers
 
@@ -19321,6 +19321,772 @@ module.exports = _extends;
 /***/ }),
 /* 11 */,
 /* 12 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
+var inheritsLoose = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(1);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+
+// CONCATENATED MODULE: ./node_modules/react-redux/es/components/Context.js
+
+var ReactReduxContext = react_default.a.createContext(null);
+/* harmony default export */ var components_Context = (ReactReduxContext);
+// CONCATENATED MODULE: ./node_modules/react-redux/es/components/Provider.js
+
+
+
+
+
+var Provider_Provider =
+/*#__PURE__*/
+function (_Component) {
+  Object(inheritsLoose["a" /* default */])(Provider, _Component);
+
+  function Provider(props) {
+    var _this;
+
+    _this = _Component.call(this, props) || this;
+    var store = props.store;
+    _this.state = {
+      storeState: store.getState(),
+      store: store
+    };
+    return _this;
+  }
+
+  var _proto = Provider.prototype;
+
+  _proto.componentDidMount = function componentDidMount() {
+    this._isMounted = true;
+    this.subscribe();
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    if (this.unsubscribe) this.unsubscribe();
+    this._isMounted = false;
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    if (this.props.store !== prevProps.store) {
+      if (this.unsubscribe) this.unsubscribe();
+      this.subscribe();
+    }
+  };
+
+  _proto.subscribe = function subscribe() {
+    var _this2 = this;
+
+    var store = this.props.store;
+    this.unsubscribe = store.subscribe(function () {
+      var newStoreState = store.getState();
+
+      if (!_this2._isMounted) {
+        return;
+      }
+
+      _this2.setState(function (providerState) {
+        // If the value is the same, skip the unnecessary state update.
+        if (providerState.storeState === newStoreState) {
+          return null;
+        }
+
+        return {
+          storeState: newStoreState
+        };
+      });
+    }); // Actions might have been dispatched between render and mount - handle those
+
+    var postMountStoreState = store.getState();
+
+    if (postMountStoreState !== this.state.storeState) {
+      this.setState({
+        storeState: postMountStoreState
+      });
+    }
+  };
+
+  _proto.render = function render() {
+    var Context = this.props.context || ReactReduxContext;
+    return react_default.a.createElement(Context.Provider, {
+      value: this.state
+    }, this.props.children);
+  };
+
+  return Provider;
+}(react["Component"]);
+
+Provider_Provider.propTypes = {
+  store: prop_types_default.a.shape({
+    subscribe: prop_types_default.a.func.isRequired,
+    dispatch: prop_types_default.a.func.isRequired,
+    getState: prop_types_default.a.func.isRequired
+  }),
+  context: prop_types_default.a.object,
+  children: prop_types_default.a.any
+};
+/* harmony default export */ var components_Provider = (Provider_Provider);
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
+function _assertThisInitialized(self) {
+  if (self === void 0) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }
+
+  return self;
+}
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(16);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+var objectWithoutPropertiesLoose = __webpack_require__(45);
+
+// EXTERNAL MODULE: ./node_modules/react-redux/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
+var hoist_non_react_statics_cjs = __webpack_require__(141);
+var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
+
+// EXTERNAL MODULE: ./node_modules/invariant/browser.js
+var browser = __webpack_require__(21);
+var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
+
+// EXTERNAL MODULE: ./node_modules/react-is/index.js
+var react_is = __webpack_require__(59);
+
+// CONCATENATED MODULE: ./node_modules/react-redux/es/components/connectAdvanced.js
+
+
+
+
+
+
+
+
+
+
+var stringifyComponent = function stringifyComponent(Comp) {
+  try {
+    return JSON.stringify(Comp);
+  } catch (err) {
+    return String(Comp);
+  }
+};
+
+function connectAdvanced(
+/*
+  selectorFactory is a func that is responsible for returning the selector function used to
+  compute new props from state, props, and dispatch. For example:
+     export default connectAdvanced((dispatch, options) => (state, props) => ({
+      thing: state.things[props.thingId],
+      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
+    }))(YourComponent)
+   Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
+  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
+  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
+   Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
+  props. Do not use connectAdvanced directly without memoizing results between calls to your
+  selector, otherwise the Connect component will re-render on every state or props change.
+*/
+selectorFactory, // options object:
+_ref) {
+  if (_ref === void 0) {
+    _ref = {};
+  }
+
+  var _ref2 = _ref,
+      _ref2$getDisplayName = _ref2.getDisplayName,
+      getDisplayName = _ref2$getDisplayName === void 0 ? function (name) {
+    return "ConnectAdvanced(" + name + ")";
+  } : _ref2$getDisplayName,
+      _ref2$methodName = _ref2.methodName,
+      methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName,
+      _ref2$renderCountProp = _ref2.renderCountProp,
+      renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp,
+      _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges,
+      shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta,
+      _ref2$storeKey = _ref2.storeKey,
+      storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey,
+      _ref2$withRef = _ref2.withRef,
+      withRef = _ref2$withRef === void 0 ? false : _ref2$withRef,
+      _ref2$forwardRef = _ref2.forwardRef,
+      forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef,
+      _ref2$context = _ref2.context,
+      context = _ref2$context === void 0 ? ReactReduxContext : _ref2$context,
+      connectOptions = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref2, ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef", "forwardRef", "context"]);
+
+  browser_default()(renderCountProp === undefined, "renderCountProp is removed. render counting is built into the latest React dev tools profiling extension");
+  browser_default()(!withRef, 'withRef is removed. To access the wrapped instance, use a ref on the connected component');
+  var customStoreWarningMessage = 'To use a custom Redux store for specific components,  create a custom React context with ' + "React.createContext(), and pass the context object to React Redux's Provider and specific components" + ' like:  <Provider context={MyContext}><ConnectedComponent context={MyContext} /></Provider>. ' + 'You may also pass a {context : MyContext} option to connect';
+  browser_default()(storeKey === 'store', 'storeKey has been removed and does not do anything. ' + customStoreWarningMessage);
+  var Context = context;
+  return function wrapWithConnect(WrappedComponent) {
+    if (false) {}
+
+    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+    var displayName = getDisplayName(wrappedComponentName);
+
+    var selectorFactoryOptions = Object(esm_extends["a" /* default */])({}, connectOptions, {
+      getDisplayName: getDisplayName,
+      methodName: methodName,
+      renderCountProp: renderCountProp,
+      shouldHandleStateChanges: shouldHandleStateChanges,
+      storeKey: storeKey,
+      displayName: displayName,
+      wrappedComponentName: wrappedComponentName,
+      WrappedComponent: WrappedComponent
+    });
+
+    var pure = connectOptions.pure;
+    var OuterBaseComponent = react["Component"];
+
+    if (pure) {
+      OuterBaseComponent = react["PureComponent"];
+    }
+
+    function makeDerivedPropsSelector() {
+      var lastProps;
+      var lastState;
+      var lastDerivedProps;
+      var lastStore;
+      var lastSelectorFactoryOptions;
+      var sourceSelector;
+      return function selectDerivedProps(state, props, store, selectorFactoryOptions) {
+        if (pure && lastProps === props && lastState === state) {
+          return lastDerivedProps;
+        }
+
+        if (store !== lastStore || lastSelectorFactoryOptions !== selectorFactoryOptions) {
+          lastStore = store;
+          lastSelectorFactoryOptions = selectorFactoryOptions;
+          sourceSelector = selectorFactory(store.dispatch, selectorFactoryOptions);
+        }
+
+        lastProps = props;
+        lastState = state;
+        var nextProps = sourceSelector(state, props);
+        lastDerivedProps = nextProps;
+        return lastDerivedProps;
+      };
+    }
+
+    function makeChildElementSelector() {
+      var lastChildProps, lastForwardRef, lastChildElement, lastComponent;
+      return function selectChildElement(WrappedComponent, childProps, forwardRef) {
+        if (childProps !== lastChildProps || forwardRef !== lastForwardRef || lastComponent !== WrappedComponent) {
+          lastChildProps = childProps;
+          lastForwardRef = forwardRef;
+          lastComponent = WrappedComponent;
+          lastChildElement = react_default.a.createElement(WrappedComponent, Object(esm_extends["a" /* default */])({}, childProps, {
+            ref: forwardRef
+          }));
+        }
+
+        return lastChildElement;
+      };
+    }
+
+    var Connect =
+    /*#__PURE__*/
+    function (_OuterBaseComponent) {
+      Object(inheritsLoose["a" /* default */])(Connect, _OuterBaseComponent);
+
+      function Connect(props) {
+        var _this;
+
+        _this = _OuterBaseComponent.call(this, props) || this;
+        browser_default()(forwardRef ? !props.wrapperProps[storeKey] : !props[storeKey], 'Passing redux store in props has been removed and does not do anything. ' + customStoreWarningMessage);
+        _this.selectDerivedProps = makeDerivedPropsSelector();
+        _this.selectChildElement = makeChildElementSelector();
+        _this.indirectRenderWrappedComponent = _this.indirectRenderWrappedComponent.bind(_assertThisInitialized(_this));
+        return _this;
+      }
+
+      var _proto = Connect.prototype;
+
+      _proto.indirectRenderWrappedComponent = function indirectRenderWrappedComponent(value) {
+        // calling renderWrappedComponent on prototype from indirectRenderWrappedComponent bound to `this`
+        return this.renderWrappedComponent(value);
+      };
+
+      _proto.renderWrappedComponent = function renderWrappedComponent(value) {
+        browser_default()(value, "Could not find \"store\" in the context of " + ("\"" + displayName + "\". Either wrap the root component in a <Provider>, ") + "or pass a custom React context provider to <Provider> and the corresponding " + ("React context consumer to " + displayName + " in connect options."));
+        var storeState = value.storeState,
+            store = value.store;
+        var wrapperProps = this.props;
+        var forwardedRef;
+
+        if (forwardRef) {
+          wrapperProps = this.props.wrapperProps;
+          forwardedRef = this.props.forwardedRef;
+        }
+
+        var derivedProps = this.selectDerivedProps(storeState, wrapperProps, store, selectorFactoryOptions);
+        return this.selectChildElement(WrappedComponent, derivedProps, forwardedRef);
+      };
+
+      _proto.render = function render() {
+        var ContextToUse = this.props.context && this.props.context.Consumer && Object(react_is["isContextConsumer"])(react_default.a.createElement(this.props.context.Consumer, null)) ? this.props.context : Context;
+        return react_default.a.createElement(ContextToUse.Consumer, null, this.indirectRenderWrappedComponent);
+      };
+
+      return Connect;
+    }(OuterBaseComponent);
+
+    Connect.WrappedComponent = WrappedComponent;
+    Connect.displayName = displayName;
+
+    if (forwardRef) {
+      var forwarded = react_default.a.forwardRef(function forwardConnectRef(props, ref) {
+        return react_default.a.createElement(Connect, {
+          wrapperProps: props,
+          forwardedRef: ref
+        });
+      });
+      forwarded.displayName = displayName;
+      forwarded.WrappedComponent = WrappedComponent;
+      return hoist_non_react_statics_cjs_default()(forwarded, WrappedComponent);
+    }
+
+    return hoist_non_react_statics_cjs_default()(Connect, WrappedComponent);
+  };
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/shallowEqual.js
+var hasOwn = Object.prototype.hasOwnProperty;
+
+function is(x, y) {
+  if (x === y) {
+    return x !== 0 || y !== 0 || 1 / x === 1 / y;
+  } else {
+    return x !== x && y !== y;
+  }
+}
+
+function shallowEqual(objA, objB) {
+  if (is(objA, objB)) return true;
+
+  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+  if (keysA.length !== keysB.length) return false;
+
+  for (var i = 0; i < keysA.length; i++) {
+    if (!hasOwn.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+// EXTERNAL MODULE: ./node_modules/redux/es/redux.js
+var redux = __webpack_require__(15);
+
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/isPlainObject.js
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
+function isPlainObject(obj) {
+  if (typeof obj !== 'object' || obj === null) return false;
+  var proto = Object.getPrototypeOf(obj);
+  if (proto === null) return true;
+  var baseProto = proto;
+
+  while (Object.getPrototypeOf(baseProto) !== null) {
+    baseProto = Object.getPrototypeOf(baseProto);
+  }
+
+  return proto === baseProto;
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/warning.js
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
+function warning(message) {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+    console.error(message);
+  }
+  /* eslint-enable no-console */
+
+
+  try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
+    throw new Error(message);
+    /* eslint-disable no-empty */
+  } catch (e) {}
+  /* eslint-enable no-empty */
+
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/verifyPlainObject.js
+
+
+function verifyPlainObject(value, displayName, methodName) {
+  if (!isPlainObject(value)) {
+    warning(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
+  }
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/wrapMapToProps.js
+
+function wrapMapToPropsConstant(getConstant) {
+  return function initConstantSelector(dispatch, options) {
+    var constant = getConstant(dispatch, options);
+
+    function constantSelector() {
+      return constant;
+    }
+
+    constantSelector.dependsOnOwnProps = false;
+    return constantSelector;
+  };
+} // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
+// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
+// whether mapToProps needs to be invoked when props have changed.
+//
+// A length of one signals that mapToProps does not depend on props from the parent component.
+// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
+// therefore not reporting its length accurately..
+
+function getDependsOnOwnProps(mapToProps) {
+  return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
+} // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
+// this function wraps mapToProps in a proxy function which does several things:
+//
+//  * Detects whether the mapToProps function being called depends on props, which
+//    is used by selectorFactory to decide if it should reinvoke on props changes.
+//
+//  * On first call, handles mapToProps if returns another function, and treats that
+//    new function as the true mapToProps for subsequent calls.
+//
+//  * On first call, verifies the first result is a plain object, in order to warn
+//    the developer that their mapToProps function is not returning a valid result.
+//
+
+function wrapMapToPropsFunc(mapToProps, methodName) {
+  return function initProxySelector(dispatch, _ref) {
+    var displayName = _ref.displayName;
+
+    var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
+    }; // allow detectFactoryAndVerify to get ownProps
+
+
+    proxy.dependsOnOwnProps = true;
+
+    proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
+      proxy.mapToProps = mapToProps;
+      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
+      var props = proxy(stateOrDispatch, ownProps);
+
+      if (typeof props === 'function') {
+        proxy.mapToProps = props;
+        proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
+        props = proxy(stateOrDispatch, ownProps);
+      }
+
+      if (false) {}
+      return props;
+    };
+
+    return proxy;
+  };
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mapDispatchToProps.js
+
+
+function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
+  return typeof mapDispatchToProps === 'function' ? wrapMapToPropsFunc(mapDispatchToProps, 'mapDispatchToProps') : undefined;
+}
+function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
+  return !mapDispatchToProps ? wrapMapToPropsConstant(function (dispatch) {
+    return {
+      dispatch: dispatch
+    };
+  }) : undefined;
+}
+function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
+  return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? wrapMapToPropsConstant(function (dispatch) {
+    return Object(redux["b" /* bindActionCreators */])(mapDispatchToProps, dispatch);
+  }) : undefined;
+}
+/* harmony default export */ var connect_mapDispatchToProps = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mapStateToProps.js
+
+function whenMapStateToPropsIsFunction(mapStateToProps) {
+  return typeof mapStateToProps === 'function' ? wrapMapToPropsFunc(mapStateToProps, 'mapStateToProps') : undefined;
+}
+function whenMapStateToPropsIsMissing(mapStateToProps) {
+  return !mapStateToProps ? wrapMapToPropsConstant(function () {
+    return {};
+  }) : undefined;
+}
+/* harmony default export */ var connect_mapStateToProps = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mergeProps.js
+
+
+function defaultMergeProps(stateProps, dispatchProps, ownProps) {
+  return Object(esm_extends["a" /* default */])({}, ownProps, stateProps, dispatchProps);
+}
+function wrapMergePropsFunc(mergeProps) {
+  return function initMergePropsProxy(dispatch, _ref) {
+    var displayName = _ref.displayName,
+        pure = _ref.pure,
+        areMergedPropsEqual = _ref.areMergedPropsEqual;
+    var hasRunOnce = false;
+    var mergedProps;
+    return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
+      var nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+
+      if (hasRunOnce) {
+        if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
+      } else {
+        hasRunOnce = true;
+        mergedProps = nextMergedProps;
+        if (false) {}
+      }
+
+      return mergedProps;
+    };
+  };
+}
+function whenMergePropsIsFunction(mergeProps) {
+  return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
+}
+function whenMergePropsIsOmitted(mergeProps) {
+  return !mergeProps ? function () {
+    return defaultMergeProps;
+  } : undefined;
+}
+/* harmony default export */ var connect_mergeProps = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/verifySubselectors.js
+
+
+function verify(selector, methodName, displayName) {
+  if (!selector) {
+    throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
+  } else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
+    if (!selector.hasOwnProperty('dependsOnOwnProps')) {
+      warning("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
+    }
+  }
+}
+
+function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
+  verify(mapStateToProps, 'mapStateToProps', displayName);
+  verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
+  verify(mergeProps, 'mergeProps', displayName);
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/selectorFactory.js
+
+
+function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
+  return function impureFinalPropsSelector(state, ownProps) {
+    return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
+  };
+}
+function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
+  var areStatesEqual = _ref.areStatesEqual,
+      areOwnPropsEqual = _ref.areOwnPropsEqual,
+      areStatePropsEqual = _ref.areStatePropsEqual;
+  var hasRunAtLeastOnce = false;
+  var state;
+  var ownProps;
+  var stateProps;
+  var dispatchProps;
+  var mergedProps;
+
+  function handleFirstCall(firstState, firstOwnProps) {
+    state = firstState;
+    ownProps = firstOwnProps;
+    stateProps = mapStateToProps(state, ownProps);
+    dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    hasRunAtLeastOnce = true;
+    return mergedProps;
+  }
+
+  function handleNewPropsAndNewState() {
+    stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewProps() {
+    if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
+    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleNewState() {
+    var nextStateProps = mapStateToProps(state, ownProps);
+    var statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
+    stateProps = nextStateProps;
+    if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+    return mergedProps;
+  }
+
+  function handleSubsequentCalls(nextState, nextOwnProps) {
+    var propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
+    var stateChanged = !areStatesEqual(nextState, state);
+    state = nextState;
+    ownProps = nextOwnProps;
+    if (propsChanged && stateChanged) return handleNewPropsAndNewState();
+    if (propsChanged) return handleNewProps();
+    if (stateChanged) return handleNewState();
+    return mergedProps;
+  }
+
+  return function pureFinalPropsSelector(nextState, nextOwnProps) {
+    return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
+  };
+} // TODO: Add more comments
+// If pure is true, the selector returned by selectorFactory will memoize its results,
+// allowing connectAdvanced's shouldComponentUpdate to return false if final
+// props have not changed. If false, the selector will always return a new
+// object and shouldComponentUpdate will always return true.
+
+function finalPropsSelectorFactory(dispatch, _ref2) {
+  var initMapStateToProps = _ref2.initMapStateToProps,
+      initMapDispatchToProps = _ref2.initMapDispatchToProps,
+      initMergeProps = _ref2.initMergeProps,
+      options = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref2, ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"]);
+
+  var mapStateToProps = initMapStateToProps(dispatch, options);
+  var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
+  var mergeProps = initMergeProps(dispatch, options);
+
+  if (false) {}
+
+  var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
+  return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
+}
+// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/connect.js
+
+
+
+
+
+
+
+
+/*
+  connect is a facade over connectAdvanced. It turns its args into a compatible
+  selectorFactory, which has the signature:
+
+    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
+  
+  connect passes its args to connectAdvanced as options, which will in turn pass them to
+  selectorFactory each time a Connect component instance is instantiated or hot reloaded.
+
+  selectorFactory returns a final props selector from its mapStateToProps,
+  mapStateToPropsFactories, mapDispatchToProps, mapDispatchToPropsFactories, mergeProps,
+  mergePropsFactories, and pure args.
+
+  The resulting final props selector is called by the Connect component instance whenever
+  it receives new props or store state.
+ */
+
+function match(arg, factories, name) {
+  for (var i = factories.length - 1; i >= 0; i--) {
+    var result = factories[i](arg);
+    if (result) return result;
+  }
+
+  return function (dispatch, options) {
+    throw new Error("Invalid value of type " + typeof arg + " for " + name + " argument when connecting component " + options.wrappedComponentName + ".");
+  };
+}
+
+function strictEqual(a, b) {
+  return a === b;
+} // createConnect with default args builds the 'official' connect behavior. Calling it with
+// different options opens up some testing and extensibility scenarios
+
+
+function createConnect(_temp) {
+  var _ref = _temp === void 0 ? {} : _temp,
+      _ref$connectHOC = _ref.connectHOC,
+      connectHOC = _ref$connectHOC === void 0 ? connectAdvanced : _ref$connectHOC,
+      _ref$mapStateToPropsF = _ref.mapStateToPropsFactories,
+      mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? connect_mapStateToProps : _ref$mapStateToPropsF,
+      _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories,
+      mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? connect_mapDispatchToProps : _ref$mapDispatchToPro,
+      _ref$mergePropsFactor = _ref.mergePropsFactories,
+      mergePropsFactories = _ref$mergePropsFactor === void 0 ? connect_mergeProps : _ref$mergePropsFactor,
+      _ref$selectorFactory = _ref.selectorFactory,
+      selectorFactory = _ref$selectorFactory === void 0 ? finalPropsSelectorFactory : _ref$selectorFactory;
+
+  return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
+    if (_ref2 === void 0) {
+      _ref2 = {};
+    }
+
+    var _ref3 = _ref2,
+        _ref3$pure = _ref3.pure,
+        pure = _ref3$pure === void 0 ? true : _ref3$pure,
+        _ref3$areStatesEqual = _ref3.areStatesEqual,
+        areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual,
+        _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual,
+        areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? shallowEqual : _ref3$areOwnPropsEqua,
+        _ref3$areStatePropsEq = _ref3.areStatePropsEqual,
+        areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? shallowEqual : _ref3$areStatePropsEq,
+        _ref3$areMergedPropsE = _ref3.areMergedPropsEqual,
+        areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? shallowEqual : _ref3$areMergedPropsE,
+        extraOptions = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref3, ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"]);
+
+    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
+    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
+    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
+    return connectHOC(selectorFactory, Object(esm_extends["a" /* default */])({
+      // used in error messages
+      methodName: 'connect',
+      // used to compute Connect's displayName from the wrapped component's displayName.
+      getDisplayName: function getDisplayName(name) {
+        return "Connect(" + name + ")";
+      },
+      // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
+      shouldHandleStateChanges: Boolean(mapStateToProps),
+      // passed through to selectorFactory
+      initMapStateToProps: initMapStateToProps,
+      initMapDispatchToProps: initMapDispatchToProps,
+      initMergeProps: initMergeProps,
+      pure: pure,
+      areStatesEqual: areStatesEqual,
+      areOwnPropsEqual: areOwnPropsEqual,
+      areStatePropsEqual: areStatePropsEqual,
+      areMergedPropsEqual: areMergedPropsEqual
+    }, extraOptions));
+  };
+}
+/* harmony default export */ var connect_connect = (createConnect());
+// CONCATENATED MODULE: ./node_modules/react-redux/es/index.js
+/* concated harmony reexport Provider */__webpack_require__.d(__webpack_exports__, "a", function() { return components_Provider; });
+/* unused concated harmony import connectAdvanced */
+/* unused concated harmony import ReactReduxContext */
+/* concated harmony reexport connect */__webpack_require__.d(__webpack_exports__, "b", function() { return connect_connect; });
+
+
+
+
+
+
+/***/ }),
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21178,772 +21944,6 @@ function isnan(val) {
   return val !== val; // eslint-disable-line no-self-compare
 }
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17)))
-
-/***/ }),
-/* 13 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
-var inheritsLoose = __webpack_require__(21);
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(0);
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./node_modules/prop-types/index.js
-var prop_types = __webpack_require__(1);
-var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
-
-// CONCATENATED MODULE: ./node_modules/react-redux/es/components/Context.js
-
-var ReactReduxContext = react_default.a.createContext(null);
-/* harmony default export */ var components_Context = (ReactReduxContext);
-// CONCATENATED MODULE: ./node_modules/react-redux/es/components/Provider.js
-
-
-
-
-
-var Provider_Provider =
-/*#__PURE__*/
-function (_Component) {
-  Object(inheritsLoose["a" /* default */])(Provider, _Component);
-
-  function Provider(props) {
-    var _this;
-
-    _this = _Component.call(this, props) || this;
-    var store = props.store;
-    _this.state = {
-      storeState: store.getState(),
-      store: store
-    };
-    return _this;
-  }
-
-  var _proto = Provider.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    this._isMounted = true;
-    this.subscribe();
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    if (this.unsubscribe) this.unsubscribe();
-    this._isMounted = false;
-  };
-
-  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
-    if (this.props.store !== prevProps.store) {
-      if (this.unsubscribe) this.unsubscribe();
-      this.subscribe();
-    }
-  };
-
-  _proto.subscribe = function subscribe() {
-    var _this2 = this;
-
-    var store = this.props.store;
-    this.unsubscribe = store.subscribe(function () {
-      var newStoreState = store.getState();
-
-      if (!_this2._isMounted) {
-        return;
-      }
-
-      _this2.setState(function (providerState) {
-        // If the value is the same, skip the unnecessary state update.
-        if (providerState.storeState === newStoreState) {
-          return null;
-        }
-
-        return {
-          storeState: newStoreState
-        };
-      });
-    }); // Actions might have been dispatched between render and mount - handle those
-
-    var postMountStoreState = store.getState();
-
-    if (postMountStoreState !== this.state.storeState) {
-      this.setState({
-        storeState: postMountStoreState
-      });
-    }
-  };
-
-  _proto.render = function render() {
-    var Context = this.props.context || ReactReduxContext;
-    return react_default.a.createElement(Context.Provider, {
-      value: this.state
-    }, this.props.children);
-  };
-
-  return Provider;
-}(react["Component"]);
-
-Provider_Provider.propTypes = {
-  store: prop_types_default.a.shape({
-    subscribe: prop_types_default.a.func.isRequired,
-    dispatch: prop_types_default.a.func.isRequired,
-    getState: prop_types_default.a.func.isRequired
-  }),
-  context: prop_types_default.a.object,
-  children: prop_types_default.a.any
-};
-/* harmony default export */ var components_Provider = (Provider_Provider);
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
-var esm_extends = __webpack_require__(16);
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(45);
-
-// EXTERNAL MODULE: ./node_modules/react-redux/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js
-var hoist_non_react_statics_cjs = __webpack_require__(141);
-var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
-
-// EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(20);
-var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
-
-// EXTERNAL MODULE: ./node_modules/react-is/index.js
-var react_is = __webpack_require__(59);
-
-// CONCATENATED MODULE: ./node_modules/react-redux/es/components/connectAdvanced.js
-
-
-
-
-
-
-
-
-
-
-var stringifyComponent = function stringifyComponent(Comp) {
-  try {
-    return JSON.stringify(Comp);
-  } catch (err) {
-    return String(Comp);
-  }
-};
-
-function connectAdvanced(
-/*
-  selectorFactory is a func that is responsible for returning the selector function used to
-  compute new props from state, props, and dispatch. For example:
-     export default connectAdvanced((dispatch, options) => (state, props) => ({
-      thing: state.things[props.thingId],
-      saveThing: fields => dispatch(actionCreators.saveThing(props.thingId, fields)),
-    }))(YourComponent)
-   Access to dispatch is provided to the factory so selectorFactories can bind actionCreators
-  outside of their selector as an optimization. Options passed to connectAdvanced are passed to
-  the selectorFactory, along with displayName and WrappedComponent, as the second argument.
-   Note that selectorFactory is responsible for all caching/memoization of inbound and outbound
-  props. Do not use connectAdvanced directly without memoizing results between calls to your
-  selector, otherwise the Connect component will re-render on every state or props change.
-*/
-selectorFactory, // options object:
-_ref) {
-  if (_ref === void 0) {
-    _ref = {};
-  }
-
-  var _ref2 = _ref,
-      _ref2$getDisplayName = _ref2.getDisplayName,
-      getDisplayName = _ref2$getDisplayName === void 0 ? function (name) {
-    return "ConnectAdvanced(" + name + ")";
-  } : _ref2$getDisplayName,
-      _ref2$methodName = _ref2.methodName,
-      methodName = _ref2$methodName === void 0 ? 'connectAdvanced' : _ref2$methodName,
-      _ref2$renderCountProp = _ref2.renderCountProp,
-      renderCountProp = _ref2$renderCountProp === void 0 ? undefined : _ref2$renderCountProp,
-      _ref2$shouldHandleSta = _ref2.shouldHandleStateChanges,
-      shouldHandleStateChanges = _ref2$shouldHandleSta === void 0 ? true : _ref2$shouldHandleSta,
-      _ref2$storeKey = _ref2.storeKey,
-      storeKey = _ref2$storeKey === void 0 ? 'store' : _ref2$storeKey,
-      _ref2$withRef = _ref2.withRef,
-      withRef = _ref2$withRef === void 0 ? false : _ref2$withRef,
-      _ref2$forwardRef = _ref2.forwardRef,
-      forwardRef = _ref2$forwardRef === void 0 ? false : _ref2$forwardRef,
-      _ref2$context = _ref2.context,
-      context = _ref2$context === void 0 ? ReactReduxContext : _ref2$context,
-      connectOptions = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref2, ["getDisplayName", "methodName", "renderCountProp", "shouldHandleStateChanges", "storeKey", "withRef", "forwardRef", "context"]);
-
-  browser_default()(renderCountProp === undefined, "renderCountProp is removed. render counting is built into the latest React dev tools profiling extension");
-  browser_default()(!withRef, 'withRef is removed. To access the wrapped instance, use a ref on the connected component');
-  var customStoreWarningMessage = 'To use a custom Redux store for specific components,  create a custom React context with ' + "React.createContext(), and pass the context object to React Redux's Provider and specific components" + ' like:  <Provider context={MyContext}><ConnectedComponent context={MyContext} /></Provider>. ' + 'You may also pass a {context : MyContext} option to connect';
-  browser_default()(storeKey === 'store', 'storeKey has been removed and does not do anything. ' + customStoreWarningMessage);
-  var Context = context;
-  return function wrapWithConnect(WrappedComponent) {
-    if (false) {}
-
-    var wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || 'Component';
-    var displayName = getDisplayName(wrappedComponentName);
-
-    var selectorFactoryOptions = Object(esm_extends["a" /* default */])({}, connectOptions, {
-      getDisplayName: getDisplayName,
-      methodName: methodName,
-      renderCountProp: renderCountProp,
-      shouldHandleStateChanges: shouldHandleStateChanges,
-      storeKey: storeKey,
-      displayName: displayName,
-      wrappedComponentName: wrappedComponentName,
-      WrappedComponent: WrappedComponent
-    });
-
-    var pure = connectOptions.pure;
-    var OuterBaseComponent = react["Component"];
-
-    if (pure) {
-      OuterBaseComponent = react["PureComponent"];
-    }
-
-    function makeDerivedPropsSelector() {
-      var lastProps;
-      var lastState;
-      var lastDerivedProps;
-      var lastStore;
-      var lastSelectorFactoryOptions;
-      var sourceSelector;
-      return function selectDerivedProps(state, props, store, selectorFactoryOptions) {
-        if (pure && lastProps === props && lastState === state) {
-          return lastDerivedProps;
-        }
-
-        if (store !== lastStore || lastSelectorFactoryOptions !== selectorFactoryOptions) {
-          lastStore = store;
-          lastSelectorFactoryOptions = selectorFactoryOptions;
-          sourceSelector = selectorFactory(store.dispatch, selectorFactoryOptions);
-        }
-
-        lastProps = props;
-        lastState = state;
-        var nextProps = sourceSelector(state, props);
-        lastDerivedProps = nextProps;
-        return lastDerivedProps;
-      };
-    }
-
-    function makeChildElementSelector() {
-      var lastChildProps, lastForwardRef, lastChildElement, lastComponent;
-      return function selectChildElement(WrappedComponent, childProps, forwardRef) {
-        if (childProps !== lastChildProps || forwardRef !== lastForwardRef || lastComponent !== WrappedComponent) {
-          lastChildProps = childProps;
-          lastForwardRef = forwardRef;
-          lastComponent = WrappedComponent;
-          lastChildElement = react_default.a.createElement(WrappedComponent, Object(esm_extends["a" /* default */])({}, childProps, {
-            ref: forwardRef
-          }));
-        }
-
-        return lastChildElement;
-      };
-    }
-
-    var Connect =
-    /*#__PURE__*/
-    function (_OuterBaseComponent) {
-      Object(inheritsLoose["a" /* default */])(Connect, _OuterBaseComponent);
-
-      function Connect(props) {
-        var _this;
-
-        _this = _OuterBaseComponent.call(this, props) || this;
-        browser_default()(forwardRef ? !props.wrapperProps[storeKey] : !props[storeKey], 'Passing redux store in props has been removed and does not do anything. ' + customStoreWarningMessage);
-        _this.selectDerivedProps = makeDerivedPropsSelector();
-        _this.selectChildElement = makeChildElementSelector();
-        _this.indirectRenderWrappedComponent = _this.indirectRenderWrappedComponent.bind(_assertThisInitialized(_this));
-        return _this;
-      }
-
-      var _proto = Connect.prototype;
-
-      _proto.indirectRenderWrappedComponent = function indirectRenderWrappedComponent(value) {
-        // calling renderWrappedComponent on prototype from indirectRenderWrappedComponent bound to `this`
-        return this.renderWrappedComponent(value);
-      };
-
-      _proto.renderWrappedComponent = function renderWrappedComponent(value) {
-        browser_default()(value, "Could not find \"store\" in the context of " + ("\"" + displayName + "\". Either wrap the root component in a <Provider>, ") + "or pass a custom React context provider to <Provider> and the corresponding " + ("React context consumer to " + displayName + " in connect options."));
-        var storeState = value.storeState,
-            store = value.store;
-        var wrapperProps = this.props;
-        var forwardedRef;
-
-        if (forwardRef) {
-          wrapperProps = this.props.wrapperProps;
-          forwardedRef = this.props.forwardedRef;
-        }
-
-        var derivedProps = this.selectDerivedProps(storeState, wrapperProps, store, selectorFactoryOptions);
-        return this.selectChildElement(WrappedComponent, derivedProps, forwardedRef);
-      };
-
-      _proto.render = function render() {
-        var ContextToUse = this.props.context && this.props.context.Consumer && Object(react_is["isContextConsumer"])(react_default.a.createElement(this.props.context.Consumer, null)) ? this.props.context : Context;
-        return react_default.a.createElement(ContextToUse.Consumer, null, this.indirectRenderWrappedComponent);
-      };
-
-      return Connect;
-    }(OuterBaseComponent);
-
-    Connect.WrappedComponent = WrappedComponent;
-    Connect.displayName = displayName;
-
-    if (forwardRef) {
-      var forwarded = react_default.a.forwardRef(function forwardConnectRef(props, ref) {
-        return react_default.a.createElement(Connect, {
-          wrapperProps: props,
-          forwardedRef: ref
-        });
-      });
-      forwarded.displayName = displayName;
-      forwarded.WrappedComponent = WrappedComponent;
-      return hoist_non_react_statics_cjs_default()(forwarded, WrappedComponent);
-    }
-
-    return hoist_non_react_statics_cjs_default()(Connect, WrappedComponent);
-  };
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/shallowEqual.js
-var hasOwn = Object.prototype.hasOwnProperty;
-
-function is(x, y) {
-  if (x === y) {
-    return x !== 0 || y !== 0 || 1 / x === 1 / y;
-  } else {
-    return x !== x && y !== y;
-  }
-}
-
-function shallowEqual(objA, objB) {
-  if (is(objA, objB)) return true;
-
-  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
-    return false;
-  }
-
-  var keysA = Object.keys(objA);
-  var keysB = Object.keys(objB);
-  if (keysA.length !== keysB.length) return false;
-
-  for (var i = 0; i < keysA.length; i++) {
-    if (!hasOwn.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {
-      return false;
-    }
-  }
-
-  return true;
-}
-// EXTERNAL MODULE: ./node_modules/redux/es/redux.js
-var redux = __webpack_require__(15);
-
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/isPlainObject.js
-/**
- * @param {any} obj The object to inspect.
- * @returns {boolean} True if the argument appears to be a plain object.
- */
-function isPlainObject(obj) {
-  if (typeof obj !== 'object' || obj === null) return false;
-  var proto = Object.getPrototypeOf(obj);
-  if (proto === null) return true;
-  var baseProto = proto;
-
-  while (Object.getPrototypeOf(baseProto) !== null) {
-    baseProto = Object.getPrototypeOf(baseProto);
-  }
-
-  return proto === baseProto;
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/warning.js
-/**
- * Prints a warning in the console if it exists.
- *
- * @param {String} message The warning message.
- * @returns {void}
- */
-function warning(message) {
-  /* eslint-disable no-console */
-  if (typeof console !== 'undefined' && typeof console.error === 'function') {
-    console.error(message);
-  }
-  /* eslint-enable no-console */
-
-
-  try {
-    // This error was thrown as a convenience so that if you enable
-    // "break on all exceptions" in your console,
-    // it would pause the execution at this line.
-    throw new Error(message);
-    /* eslint-disable no-empty */
-  } catch (e) {}
-  /* eslint-enable no-empty */
-
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/utils/verifyPlainObject.js
-
-
-function verifyPlainObject(value, displayName, methodName) {
-  if (!isPlainObject(value)) {
-    warning(methodName + "() in " + displayName + " must return a plain object. Instead received " + value + ".");
-  }
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/wrapMapToProps.js
-
-function wrapMapToPropsConstant(getConstant) {
-  return function initConstantSelector(dispatch, options) {
-    var constant = getConstant(dispatch, options);
-
-    function constantSelector() {
-      return constant;
-    }
-
-    constantSelector.dependsOnOwnProps = false;
-    return constantSelector;
-  };
-} // dependsOnOwnProps is used by createMapToPropsProxy to determine whether to pass props as args
-// to the mapToProps function being wrapped. It is also used by makePurePropsSelector to determine
-// whether mapToProps needs to be invoked when props have changed.
-//
-// A length of one signals that mapToProps does not depend on props from the parent component.
-// A length of zero is assumed to mean mapToProps is getting args via arguments or ...args and
-// therefore not reporting its length accurately..
-
-function getDependsOnOwnProps(mapToProps) {
-  return mapToProps.dependsOnOwnProps !== null && mapToProps.dependsOnOwnProps !== undefined ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
-} // Used by whenMapStateToPropsIsFunction and whenMapDispatchToPropsIsFunction,
-// this function wraps mapToProps in a proxy function which does several things:
-//
-//  * Detects whether the mapToProps function being called depends on props, which
-//    is used by selectorFactory to decide if it should reinvoke on props changes.
-//
-//  * On first call, handles mapToProps if returns another function, and treats that
-//    new function as the true mapToProps for subsequent calls.
-//
-//  * On first call, verifies the first result is a plain object, in order to warn
-//    the developer that their mapToProps function is not returning a valid result.
-//
-
-function wrapMapToPropsFunc(mapToProps, methodName) {
-  return function initProxySelector(dispatch, _ref) {
-    var displayName = _ref.displayName;
-
-    var proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
-      return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch);
-    }; // allow detectFactoryAndVerify to get ownProps
-
-
-    proxy.dependsOnOwnProps = true;
-
-    proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
-      proxy.mapToProps = mapToProps;
-      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
-      var props = proxy(stateOrDispatch, ownProps);
-
-      if (typeof props === 'function') {
-        proxy.mapToProps = props;
-        proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
-        props = proxy(stateOrDispatch, ownProps);
-      }
-
-      if (false) {}
-      return props;
-    };
-
-    return proxy;
-  };
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mapDispatchToProps.js
-
-
-function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
-  return typeof mapDispatchToProps === 'function' ? wrapMapToPropsFunc(mapDispatchToProps, 'mapDispatchToProps') : undefined;
-}
-function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
-  return !mapDispatchToProps ? wrapMapToPropsConstant(function (dispatch) {
-    return {
-      dispatch: dispatch
-    };
-  }) : undefined;
-}
-function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
-  return mapDispatchToProps && typeof mapDispatchToProps === 'object' ? wrapMapToPropsConstant(function (dispatch) {
-    return Object(redux["b" /* bindActionCreators */])(mapDispatchToProps, dispatch);
-  }) : undefined;
-}
-/* harmony default export */ var connect_mapDispatchToProps = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mapStateToProps.js
-
-function whenMapStateToPropsIsFunction(mapStateToProps) {
-  return typeof mapStateToProps === 'function' ? wrapMapToPropsFunc(mapStateToProps, 'mapStateToProps') : undefined;
-}
-function whenMapStateToPropsIsMissing(mapStateToProps) {
-  return !mapStateToProps ? wrapMapToPropsConstant(function () {
-    return {};
-  }) : undefined;
-}
-/* harmony default export */ var connect_mapStateToProps = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/mergeProps.js
-
-
-function defaultMergeProps(stateProps, dispatchProps, ownProps) {
-  return Object(esm_extends["a" /* default */])({}, ownProps, stateProps, dispatchProps);
-}
-function wrapMergePropsFunc(mergeProps) {
-  return function initMergePropsProxy(dispatch, _ref) {
-    var displayName = _ref.displayName,
-        pure = _ref.pure,
-        areMergedPropsEqual = _ref.areMergedPropsEqual;
-    var hasRunOnce = false;
-    var mergedProps;
-    return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
-      var nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-
-      if (hasRunOnce) {
-        if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
-      } else {
-        hasRunOnce = true;
-        mergedProps = nextMergedProps;
-        if (false) {}
-      }
-
-      return mergedProps;
-    };
-  };
-}
-function whenMergePropsIsFunction(mergeProps) {
-  return typeof mergeProps === 'function' ? wrapMergePropsFunc(mergeProps) : undefined;
-}
-function whenMergePropsIsOmitted(mergeProps) {
-  return !mergeProps ? function () {
-    return defaultMergeProps;
-  } : undefined;
-}
-/* harmony default export */ var connect_mergeProps = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/verifySubselectors.js
-
-
-function verify(selector, methodName, displayName) {
-  if (!selector) {
-    throw new Error("Unexpected value for " + methodName + " in " + displayName + ".");
-  } else if (methodName === 'mapStateToProps' || methodName === 'mapDispatchToProps') {
-    if (!selector.hasOwnProperty('dependsOnOwnProps')) {
-      warning("The selector for " + methodName + " of " + displayName + " did not specify a value for dependsOnOwnProps.");
-    }
-  }
-}
-
-function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, displayName) {
-  verify(mapStateToProps, 'mapStateToProps', displayName);
-  verify(mapDispatchToProps, 'mapDispatchToProps', displayName);
-  verify(mergeProps, 'mergeProps', displayName);
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/selectorFactory.js
-
-
-function impureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch) {
-  return function impureFinalPropsSelector(state, ownProps) {
-    return mergeProps(mapStateToProps(state, ownProps), mapDispatchToProps(dispatch, ownProps), ownProps);
-  };
-}
-function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, _ref) {
-  var areStatesEqual = _ref.areStatesEqual,
-      areOwnPropsEqual = _ref.areOwnPropsEqual,
-      areStatePropsEqual = _ref.areStatePropsEqual;
-  var hasRunAtLeastOnce = false;
-  var state;
-  var ownProps;
-  var stateProps;
-  var dispatchProps;
-  var mergedProps;
-
-  function handleFirstCall(firstState, firstOwnProps) {
-    state = firstState;
-    ownProps = firstOwnProps;
-    stateProps = mapStateToProps(state, ownProps);
-    dispatchProps = mapDispatchToProps(dispatch, ownProps);
-    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-    hasRunAtLeastOnce = true;
-    return mergedProps;
-  }
-
-  function handleNewPropsAndNewState() {
-    stateProps = mapStateToProps(state, ownProps);
-    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
-    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-    return mergedProps;
-  }
-
-  function handleNewProps() {
-    if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
-    if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
-    mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-    return mergedProps;
-  }
-
-  function handleNewState() {
-    var nextStateProps = mapStateToProps(state, ownProps);
-    var statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
-    stateProps = nextStateProps;
-    if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-    return mergedProps;
-  }
-
-  function handleSubsequentCalls(nextState, nextOwnProps) {
-    var propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
-    var stateChanged = !areStatesEqual(nextState, state);
-    state = nextState;
-    ownProps = nextOwnProps;
-    if (propsChanged && stateChanged) return handleNewPropsAndNewState();
-    if (propsChanged) return handleNewProps();
-    if (stateChanged) return handleNewState();
-    return mergedProps;
-  }
-
-  return function pureFinalPropsSelector(nextState, nextOwnProps) {
-    return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
-  };
-} // TODO: Add more comments
-// If pure is true, the selector returned by selectorFactory will memoize its results,
-// allowing connectAdvanced's shouldComponentUpdate to return false if final
-// props have not changed. If false, the selector will always return a new
-// object and shouldComponentUpdate will always return true.
-
-function finalPropsSelectorFactory(dispatch, _ref2) {
-  var initMapStateToProps = _ref2.initMapStateToProps,
-      initMapDispatchToProps = _ref2.initMapDispatchToProps,
-      initMergeProps = _ref2.initMergeProps,
-      options = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref2, ["initMapStateToProps", "initMapDispatchToProps", "initMergeProps"]);
-
-  var mapStateToProps = initMapStateToProps(dispatch, options);
-  var mapDispatchToProps = initMapDispatchToProps(dispatch, options);
-  var mergeProps = initMergeProps(dispatch, options);
-
-  if (false) {}
-
-  var selectorFactory = options.pure ? pureFinalPropsSelectorFactory : impureFinalPropsSelectorFactory;
-  return selectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
-}
-// CONCATENATED MODULE: ./node_modules/react-redux/es/connect/connect.js
-
-
-
-
-
-
-
-
-/*
-  connect is a facade over connectAdvanced. It turns its args into a compatible
-  selectorFactory, which has the signature:
-
-    (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
-  
-  connect passes its args to connectAdvanced as options, which will in turn pass them to
-  selectorFactory each time a Connect component instance is instantiated or hot reloaded.
-
-  selectorFactory returns a final props selector from its mapStateToProps,
-  mapStateToPropsFactories, mapDispatchToProps, mapDispatchToPropsFactories, mergeProps,
-  mergePropsFactories, and pure args.
-
-  The resulting final props selector is called by the Connect component instance whenever
-  it receives new props or store state.
- */
-
-function match(arg, factories, name) {
-  for (var i = factories.length - 1; i >= 0; i--) {
-    var result = factories[i](arg);
-    if (result) return result;
-  }
-
-  return function (dispatch, options) {
-    throw new Error("Invalid value of type " + typeof arg + " for " + name + " argument when connecting component " + options.wrappedComponentName + ".");
-  };
-}
-
-function strictEqual(a, b) {
-  return a === b;
-} // createConnect with default args builds the 'official' connect behavior. Calling it with
-// different options opens up some testing and extensibility scenarios
-
-
-function createConnect(_temp) {
-  var _ref = _temp === void 0 ? {} : _temp,
-      _ref$connectHOC = _ref.connectHOC,
-      connectHOC = _ref$connectHOC === void 0 ? connectAdvanced : _ref$connectHOC,
-      _ref$mapStateToPropsF = _ref.mapStateToPropsFactories,
-      mapStateToPropsFactories = _ref$mapStateToPropsF === void 0 ? connect_mapStateToProps : _ref$mapStateToPropsF,
-      _ref$mapDispatchToPro = _ref.mapDispatchToPropsFactories,
-      mapDispatchToPropsFactories = _ref$mapDispatchToPro === void 0 ? connect_mapDispatchToProps : _ref$mapDispatchToPro,
-      _ref$mergePropsFactor = _ref.mergePropsFactories,
-      mergePropsFactories = _ref$mergePropsFactor === void 0 ? connect_mergeProps : _ref$mergePropsFactor,
-      _ref$selectorFactory = _ref.selectorFactory,
-      selectorFactory = _ref$selectorFactory === void 0 ? finalPropsSelectorFactory : _ref$selectorFactory;
-
-  return function connect(mapStateToProps, mapDispatchToProps, mergeProps, _ref2) {
-    if (_ref2 === void 0) {
-      _ref2 = {};
-    }
-
-    var _ref3 = _ref2,
-        _ref3$pure = _ref3.pure,
-        pure = _ref3$pure === void 0 ? true : _ref3$pure,
-        _ref3$areStatesEqual = _ref3.areStatesEqual,
-        areStatesEqual = _ref3$areStatesEqual === void 0 ? strictEqual : _ref3$areStatesEqual,
-        _ref3$areOwnPropsEqua = _ref3.areOwnPropsEqual,
-        areOwnPropsEqual = _ref3$areOwnPropsEqua === void 0 ? shallowEqual : _ref3$areOwnPropsEqua,
-        _ref3$areStatePropsEq = _ref3.areStatePropsEqual,
-        areStatePropsEqual = _ref3$areStatePropsEq === void 0 ? shallowEqual : _ref3$areStatePropsEq,
-        _ref3$areMergedPropsE = _ref3.areMergedPropsEqual,
-        areMergedPropsEqual = _ref3$areMergedPropsE === void 0 ? shallowEqual : _ref3$areMergedPropsE,
-        extraOptions = Object(objectWithoutPropertiesLoose["a" /* default */])(_ref3, ["pure", "areStatesEqual", "areOwnPropsEqual", "areStatePropsEqual", "areMergedPropsEqual"]);
-
-    var initMapStateToProps = match(mapStateToProps, mapStateToPropsFactories, 'mapStateToProps');
-    var initMapDispatchToProps = match(mapDispatchToProps, mapDispatchToPropsFactories, 'mapDispatchToProps');
-    var initMergeProps = match(mergeProps, mergePropsFactories, 'mergeProps');
-    return connectHOC(selectorFactory, Object(esm_extends["a" /* default */])({
-      // used in error messages
-      methodName: 'connect',
-      // used to compute Connect's displayName from the wrapped component's displayName.
-      getDisplayName: function getDisplayName(name) {
-        return "Connect(" + name + ")";
-      },
-      // if mapStateToProps is falsy, the Connect component doesn't subscribe to store state changes
-      shouldHandleStateChanges: Boolean(mapStateToProps),
-      // passed through to selectorFactory
-      initMapStateToProps: initMapStateToProps,
-      initMapDispatchToProps: initMapDispatchToProps,
-      initMergeProps: initMergeProps,
-      pure: pure,
-      areStatesEqual: areStatesEqual,
-      areOwnPropsEqual: areOwnPropsEqual,
-      areStatePropsEqual: areStatePropsEqual,
-      areMergedPropsEqual: areMergedPropsEqual
-    }, extraOptions));
-  };
-}
-/* harmony default export */ var connect_connect = (createConnect());
-// CONCATENATED MODULE: ./node_modules/react-redux/es/index.js
-/* concated harmony reexport Provider */__webpack_require__.d(__webpack_exports__, "a", function() { return components_Provider; });
-/* unused concated harmony import connectAdvanced */
-/* unused concated harmony import ReactReduxContext */
-/* concated harmony reexport connect */__webpack_require__.d(__webpack_exports__, "b", function() { return connect_connect; });
-
-
-
-
-
 
 /***/ }),
 /* 14 */
@@ -26386,10 +26386,11 @@ module.exports = g;
     return res._forceRed(this);
   };
 })( false || module, this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module)))
 
 /***/ }),
-/* 19 */
+/* 19 */,
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
@@ -28079,7 +28080,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscor
 }).call(this);
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28127,7 +28128,7 @@ var invariant = function invariant(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28139,7 +28140,7 @@ function _inheritsLoose(subClass, superClass) {
 }
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28182,7 +28183,7 @@ function _objectWithoutProperties(source, excluded) {
 }
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -28203,8 +28204,8 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 module.exports = _objectWithoutPropertiesLoose;
 
 /***/ }),
-/* 24 */,
-/* 25 */
+/* 25 */,
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28221,7 +28222,7 @@ elliptic.ec = __webpack_require__(491);
 elliptic.eddsa = __webpack_require__(495);
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28259,9 +28260,9 @@ module.exports = {
 };
 
 /***/ }),
-/* 27 */,
 /* 28 */,
-/* 29 */
+/* 29 */,
+/* 30 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -28474,7 +28475,7 @@ process.umask = function () {
 };
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 module.exports = assert;
@@ -28488,7 +28489,7 @@ assert.equal = function assertEqual(l, r, msg) {
 };
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports) {
 
 module.exports = function (module) {
@@ -28517,7 +28518,7 @@ module.exports = function (module) {
 };
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -28543,7 +28544,7 @@ module.exports = function (module) {
  * @author Fabian Vogelsteller <fabian@ethereum.org>
  * @date 2017
  */
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
 var ethjsUnit = __webpack_require__(375);
 
@@ -28878,7 +28879,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports) {
 
 function _inheritsLoose(subClass, superClass) {
@@ -28890,7 +28891,7 @@ function _inheritsLoose(subClass, superClass) {
 module.exports = _inheritsLoose;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28959,10 +28960,10 @@ if (__DEV__) {
 module.exports = warning;
 
 /***/ }),
-/* 35 */,
 /* 36 */,
 /* 37 */,
-/* 38 */
+/* 38 */,
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var freeGlobal = __webpack_require__(152);
@@ -28976,7 +28977,7 @@ var root = freeGlobal || freeSelf || Function('return this')();
 module.exports = root;
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports) {
 
 /**
@@ -29006,13 +29007,13 @@ var isArray = Array.isArray;
 module.exports = isArray;
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 var inherits = __webpack_require__(8);
 
@@ -29303,7 +29304,7 @@ function shr64_lo(ah, al, num) {
 exports.shr64_lo = shr64_lo;
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29335,7 +29336,6 @@ if (true) {
 } else {}
 
 /***/ }),
-/* 42 */,
 /* 43 */
 /***/ (function(module, exports) {
 
@@ -29518,7 +29518,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 
 var arrayMap = __webpack_require__(153),
     copyArray = __webpack_require__(154),
-    isArray = __webpack_require__(39),
+    isArray = __webpack_require__(40),
     isSymbol = __webpack_require__(85),
     stringToPath = __webpack_require__(155),
     toKey = __webpack_require__(67),
@@ -29860,13 +29860,13 @@ Duplex.prototype._destroy = function (err, cb) {
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
-var errors = __webpack_require__(26).errors;
+var errors = __webpack_require__(27).errors;
 
-var formatters = __webpack_require__(26).formatters;
+var formatters = __webpack_require__(27).formatters;
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var promiEvent = __webpack_require__(93);
 
@@ -31045,7 +31045,7 @@ function randomBytes(size, cb) {
 
   return bytes;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(30)))
 
 /***/ }),
 /* 58 */
@@ -32104,7 +32104,7 @@ exports.isBuffer = Buffer.isBuffer;
 function objectToString(o) {
   return Object.prototype.toString.call(o);
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 71 */
@@ -32159,7 +32159,7 @@ module.exports = function createHash(alg) {
 
   return buffer;
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 73 */
@@ -32168,9 +32168,9 @@ module.exports = function createHash(alg) {
 "use strict";
 
 
-var utils = __webpack_require__(40);
+var utils = __webpack_require__(41);
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 function BlockHash() {
   this.pending = null;
@@ -32452,9 +32452,9 @@ module.exports = isEqualWith;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return withReduxForm; });
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
 /* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(24);
 /* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(34);
 /* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
@@ -40503,7 +40503,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(38);
+var root = __webpack_require__(39);
 /** Built-in value references. */
 
 
@@ -40769,7 +40769,7 @@ function nextTick(fn, arg1, arg2, arg3) {
       });
   }
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(30)))
 
 /***/ }),
 /* 93 */
@@ -40962,7 +40962,7 @@ var core = __webpack_require__(49);
 
 var Method = __webpack_require__(51);
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var Net = function Net() {
   var _this = this; // sets _requestmanager
@@ -42463,7 +42463,7 @@ module.exports = MapCache;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(48),
-    root = __webpack_require__(38);
+    root = __webpack_require__(39);
 /* Built-in method references that are verified to be native. */
 
 
@@ -42627,7 +42627,7 @@ module.exports = isArguments;
 /* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(38),
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(39),
     stubFalse = __webpack_require__(310);
 /** Detect free variable `exports`. */
 
@@ -42665,7 +42665,7 @@ var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
 
 var isBuffer = nativeIsBuffer || stubFalse;
 module.exports = isBuffer;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module)))
 
 /***/ }),
 /* 117 */
@@ -42816,7 +42816,7 @@ module.exports = identity;
 /* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(39),
+var isArray = __webpack_require__(40),
     isSymbol = __webpack_require__(85);
 /** Used to match property names within property paths. */
 
@@ -44017,7 +44017,7 @@ Writable.prototype._destroy = function (err, cb) {
   this.end();
   cb(err);
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(29), __webpack_require__(405).setImmediate, __webpack_require__(17)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(30), __webpack_require__(405).setImmediate, __webpack_require__(17)))
 
 /***/ }),
 /* 126 */
@@ -44934,7 +44934,7 @@ Stream.prototype.pipe = function (dest, options) {
 "use strict";
 
 
-var Buffer = __webpack_require__(12).Buffer;
+var Buffer = __webpack_require__(13).Buffer;
 
 var inherits = __webpack_require__(8);
 
@@ -45209,14 +45209,14 @@ function getr(priv) {
 
   return r;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var hash = exports;
-hash.utils = __webpack_require__(40);
+hash.utils = __webpack_require__(41);
 hash.common = __webpack_require__(73);
 hash.sha = __webpack_require__(484);
 hash.ripemd = __webpack_require__(488);
@@ -45752,7 +45752,7 @@ var Shh = __webpack_require__(523);
 
 var Bzz = __webpack_require__(524);
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var Web3 = function Web3() {
   var _this = this; // sets _requestmanager etc
@@ -46042,7 +46042,7 @@ module.exports = equalArrays;
 /* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(38);
+var root = __webpack_require__(39);
 /** Built-in value references. */
 
 
@@ -46055,7 +46055,7 @@ module.exports = Uint8Array;
 
 var baseTimes = __webpack_require__(308),
     isArguments = __webpack_require__(115),
-    isArray = __webpack_require__(39),
+    isArray = __webpack_require__(40),
     isBuffer = __webpack_require__(116),
     isIndex = __webpack_require__(117),
     isTypedArray = __webpack_require__(118);
@@ -46332,7 +46332,7 @@ module.exports = baseGet;
 /* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(39),
+var isArray = __webpack_require__(40),
     isKey = __webpack_require__(122),
     stringToPath = __webpack_require__(155),
     toString = __webpack_require__(109);
@@ -46438,7 +46438,7 @@ module.exports = function numberToBN(arg) {
  * @author Fabian Vogelsteller <fabian@ethereum.org>
  * @date 2017
  */
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
 var BN = __webpack_require__(174);
 
@@ -46947,7 +46947,7 @@ module.exports = {
   var Buffer;
 
   try {
-    Buffer = __webpack_require__(12).Buffer;
+    Buffer = __webpack_require__(13).Buffer;
   } catch (e) {}
 
   BN.isBN = function isBN(num) {
@@ -50351,7 +50351,7 @@ module.exports = {
     return res._forceRed(this);
   };
 })( false || module, this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module)))
 
 /***/ }),
 /* 175 */
@@ -50740,7 +50740,7 @@ module.exports = {
  */
 
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var BigNumber = __webpack_require__(387);
 
@@ -51633,7 +51633,7 @@ module.exports = Jsonrpc;
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   } else {}
 })(this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module), __webpack_require__(17)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module), __webpack_require__(17)))
 
 /***/ }),
 /* 179 */
@@ -51956,7 +51956,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
     self.push(null);
   }
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(29), __webpack_require__(17), __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(30), __webpack_require__(17), __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 181 */
@@ -53003,7 +53003,7 @@ function indexOf(xs, x) {
 
   return -1;
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(30)))
 
 /***/ }),
 /* 182 */
@@ -53673,19 +53673,19 @@ module.exports = __webpack_require__(419)().Promise;
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
 var core = __webpack_require__(49);
 
 var Method = __webpack_require__(51);
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var Subscription = __webpack_require__(94).subscription;
 
-var formatters = __webpack_require__(26).formatters;
+var formatters = __webpack_require__(27).formatters;
 
-var errors = __webpack_require__(26).errors;
+var errors = __webpack_require__(27).errors;
 
 var promiEvent = __webpack_require__(93);
 
@@ -54493,9 +54493,9 @@ module.exports = Contract;
  * @author Fabian Vogelsteller <fabian@frozeman.de>
  * @date 2018
  */
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var EthersAbi = __webpack_require__(427).AbiCoder;
 
@@ -55317,7 +55317,7 @@ module.exports = coder;
     }
   }
 })();
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(29), __webpack_require__(17)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(30), __webpack_require__(17)))
 
 /***/ }),
 /* 192 */
@@ -55431,7 +55431,7 @@ function normalize(name) {
 
 exports.hash = namehash;
 exports.normalize = normalize;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 194 */
@@ -55466,11 +55466,11 @@ var core = __webpack_require__(49);
 
 var Method = __webpack_require__(51);
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var Net = __webpack_require__(95);
 
-var formatters = __webpack_require__(26).formatters;
+var formatters = __webpack_require__(27).formatters;
 
 var Personal = function Personal() {
   var _this = this; // sets _requestmanager
@@ -56142,7 +56142,7 @@ module.exports = function (password, salt, iterations, keylen) {
     throw new TypeError('Bad key length');
   }
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 202 */
@@ -56159,7 +56159,7 @@ if (process.browser) {
 }
 
 module.exports = defaultEncoding;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(30)))
 
 /***/ }),
 /* 203 */
@@ -56876,7 +56876,7 @@ utils.encode = function encode(arr, enc) {
 "use strict";
 
 
-var utils = __webpack_require__(40);
+var utils = __webpack_require__(41);
 
 var rotr32 = utils.rotr32;
 
@@ -56937,13 +56937,13 @@ exports.g1_256 = g1_256;
 "use strict";
 
 
-var utils = __webpack_require__(40);
+var utils = __webpack_require__(41);
 
 var common = __webpack_require__(73);
 
 var shaCommon = __webpack_require__(213);
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 var sum32 = utils.sum32;
 var sum32_4 = utils.sum32_4;
@@ -57027,11 +57027,11 @@ SHA256.prototype._digest = function digest(enc) {
 "use strict";
 
 
-var utils = __webpack_require__(40);
+var utils = __webpack_require__(41);
 
 var common = __webpack_require__(73);
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 var rotr64_hi = utils.rotr64_hi;
 var rotr64_lo = utils.rotr64_lo;
@@ -57272,7 +57272,7 @@ var inherits = __webpack_require__(8);
 
 var Reporter = __webpack_require__(75).Reporter;
 
-var Buffer = __webpack_require__(12).Buffer;
+var Buffer = __webpack_require__(13).Buffer;
 
 function DecoderBuffer(base, options) {
   Reporter.call(this, options);
@@ -57675,7 +57675,7 @@ function derDecodeLen(buf, primitive, fail) {
 
 var inherits = __webpack_require__(8);
 
-var Buffer = __webpack_require__(12).Buffer;
+var Buffer = __webpack_require__(13).Buffer;
 
 var asn1 = __webpack_require__(74);
 
@@ -64145,7 +64145,7 @@ function _possibleConstructorReturn(self, call) {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inheritsLoose.js
-var inheritsLoose = __webpack_require__(33);
+var inheritsLoose = __webpack_require__(34);
 var inheritsLoose_default = /*#__PURE__*/__webpack_require__.n(inheritsLoose);
 
 // CONCATENATED MODULE: ./node_modules/es6-error/es6/index.js
@@ -71858,7 +71858,7 @@ exports.isSuspense = function (a) {
 
 var Symbol = __webpack_require__(84),
     arrayMap = __webpack_require__(153),
-    isArray = __webpack_require__(39),
+    isArray = __webpack_require__(40),
     isSymbol = __webpack_require__(85);
 /** Used as references for various `Number` constants. */
 
@@ -72259,7 +72259,7 @@ module.exports = isMasked;
 /* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(38);
+var root = __webpack_require__(39);
 /** Used to detect overreaching core-js shims. */
 
 
@@ -72665,7 +72665,7 @@ var Stack = __webpack_require__(113),
     equalByTag = __webpack_require__(298),
     equalObjects = __webpack_require__(301),
     getTag = __webpack_require__(316),
-    isArray = __webpack_require__(39),
+    isArray = __webpack_require__(40),
     isBuffer = __webpack_require__(116),
     isTypedArray = __webpack_require__(118);
 /** Used to compose bitmasks for value comparisons. */
@@ -73281,7 +73281,7 @@ module.exports = getAllKeys;
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(304),
-    isArray = __webpack_require__(39);
+    isArray = __webpack_require__(40);
 /**
  * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
  * `keysFunc` and `symbolsFunc` to get the enumerable property names and
@@ -73604,7 +73604,7 @@ var nodeUtil = function () {
 }();
 
 module.exports = nodeUtil;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module)))
 
 /***/ }),
 /* 314 */
@@ -73729,7 +73729,7 @@ module.exports = getTag;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(48),
-    root = __webpack_require__(38);
+    root = __webpack_require__(39);
 /* Built-in method references that are verified to be native. */
 
 
@@ -73741,7 +73741,7 @@ module.exports = DataView;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(48),
-    root = __webpack_require__(38);
+    root = __webpack_require__(39);
 /* Built-in method references that are verified to be native. */
 
 
@@ -73753,7 +73753,7 @@ module.exports = Promise;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(48),
-    root = __webpack_require__(38);
+    root = __webpack_require__(39);
 /* Built-in method references that are verified to be native. */
 
 
@@ -73765,7 +73765,7 @@ module.exports = Set;
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(48),
-    root = __webpack_require__(38);
+    root = __webpack_require__(39);
 /* Built-in method references that are verified to be native. */
 
 
@@ -74315,7 +74315,7 @@ var assignMergeValue = __webpack_require__(161),
     copyArray = __webpack_require__(154),
     initCloneObject = __webpack_require__(335),
     isArguments = __webpack_require__(115),
-    isArray = __webpack_require__(39),
+    isArray = __webpack_require__(40),
     isArrayLikeObject = __webpack_require__(337),
     isBuffer = __webpack_require__(116),
     isFunction = __webpack_require__(76),
@@ -74403,7 +74403,7 @@ module.exports = baseMergeDeep;
 /* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(38);
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(39);
 /** Detect free variable `exports`. */
 
 
@@ -74439,7 +74439,7 @@ function cloneBuffer(buffer, isDeep) {
 }
 
 module.exports = cloneBuffer;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module)))
 
 /***/ }),
 /* 333 */
@@ -75169,7 +75169,7 @@ module.exports = baseForOwn;
 var baseMatches = __webpack_require__(355),
     baseMatchesProperty = __webpack_require__(358),
     identity = __webpack_require__(121),
-    isArray = __webpack_require__(39),
+    isArray = __webpack_require__(40),
     property = __webpack_require__(363);
 /**
  * The base implementation of `_.iteratee`.
@@ -75470,7 +75470,7 @@ module.exports = baseHasIn;
 
 var castPath = __webpack_require__(170),
     isArguments = __webpack_require__(115),
-    isArray = __webpack_require__(39),
+    isArray = __webpack_require__(40),
     isIndex = __webpack_require__(117),
     isLength = __webpack_require__(119),
     toKey = __webpack_require__(67);
@@ -76403,9 +76403,9 @@ module.exports = {"name":"web3","namespace":"ethereum","version":"1.0.0-beta.37"
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
-var errors = __webpack_require__(26).errors;
+var errors = __webpack_require__(27).errors;
 
 var Jsonrpc = __webpack_require__(177);
 
@@ -76689,9 +76689,9 @@ module.exports = {
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var Iban = __webpack_require__(176);
 /**
@@ -77343,7 +77343,7 @@ module.exports = {
   var Buffer;
 
   try {
-    Buffer = __webpack_require__(12).Buffer;
+    Buffer = __webpack_require__(13).Buffer;
   } catch (e) {}
 
   BN.isBN = function isBN(num) {
@@ -80747,7 +80747,7 @@ module.exports = {
     return res._forceRed(this);
   };
 })( false || module, this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module)))
 
 /***/ }),
 /* 377 */
@@ -81022,7 +81022,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
   var Buffer;
 
   try {
-    Buffer = __webpack_require__(12).Buffer;
+    Buffer = __webpack_require__(13).Buffer;
   } catch (e) {}
 
   BN.isBN = function isBN(num) {
@@ -84426,7 +84426,7 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
     return res._forceRed(this);
   };
 })( false || module, this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module)))
 
 /***/ }),
 /* 380 */
@@ -84713,7 +84713,7 @@ module.exports = function isHexPrefixed(str) {
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   } else { var key, hasOwnProperty, object; }
 })(this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module), __webpack_require__(17)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module), __webpack_require__(17)))
 
 /***/ }),
 /* 383 */
@@ -84741,7 +84741,7 @@ module.exports = function isHexPrefixed(str) {
  * @author Fabian Vogelsteller <fabian@ethereum.org>
  * @date 2017
  */
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
 var BN = __webpack_require__(174);
 
@@ -85089,7 +85089,7 @@ module.exports = window.crypto;
   var Buffer;
 
   try {
-    Buffer = __webpack_require__(12).Buffer;
+    Buffer = __webpack_require__(13).Buffer;
   } catch (e) {}
 
   BN.isBN = function isBN(num) {
@@ -88493,7 +88493,7 @@ module.exports = window.crypto;
     return res._forceRed(this);
   };
 })( false || module, this);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(31)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(32)(module)))
 
 /***/ }),
 /* 388 */
@@ -88526,7 +88526,7 @@ module.exports = window.crypto;
 
 var Jsonrpc = __webpack_require__(177);
 
-var errors = __webpack_require__(26).errors;
+var errors = __webpack_require__(27).errors;
 
 var Batch = function Batch(requestManager) {
   this.requestManager = requestManager;
@@ -88695,9 +88695,9 @@ module.exports = givenProvider;
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
-var errors = __webpack_require__(26).errors;
+var errors = __webpack_require__(27).errors;
 
 var Ws = null;
 var _btoa = null;
@@ -89057,7 +89057,7 @@ WebsocketProvider.prototype.disconnect = function () {
 };
 
 module.exports = WebsocketProvider;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 391 */
@@ -89371,7 +89371,7 @@ var objectKeys = Object.keys || function (obj) {
  *   Fabian Vogelsteller <fabian@ethereum.org>
  * @date 2015
  */
-var errors = __webpack_require__(26).errors;
+var errors = __webpack_require__(27).errors;
 
 var XHR2 = __webpack_require__(399).XMLHttpRequest; // jshint ignore: line
 
@@ -90135,7 +90135,7 @@ exports.XMLHttpRequest = XMLHttpRequest;
 XMLHttpRequest.prototype.nodejsHttpAgent = http.globalAgent;
 XMLHttpRequest.prototype.nodejsHttpsAgent = https.globalAgent;
 XMLHttpRequest.prototype.nodejsBaseUrl = null;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(29), __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(30), __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 401 */
@@ -90440,7 +90440,7 @@ ClientRequest.prototype.setSocketKeepAlive = function () {}; // Taken from http:
 
 
 var unsafeHeaders = ['accept-charset', 'accept-encoding', 'access-control-request-headers', 'access-control-request-method', 'connection', 'content-length', 'cookie', 'cookie2', 'date', 'dnt', 'expect', 'host', 'keep-alive', 'origin', 'referer', 'te', 'trailer', 'transfer-encoding', 'upgrade', 'via'];
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer, __webpack_require__(17), __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer, __webpack_require__(17), __webpack_require__(30)))
 
 /***/ }),
 /* 402 */,
@@ -90816,7 +90816,7 @@ exports.clearImmediate = typeof self !== "undefined" && self.clearImmediate || t
   attachTo.setImmediate = setImmediate;
   attachTo.clearImmediate = clearImmediate;
 })(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(30)))
 
 /***/ }),
 /* 407 */
@@ -90948,7 +90948,7 @@ PassThrough.prototype._transform = function (chunk, encoding, cb) {
 /* 409 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Buffer = __webpack_require__(12).Buffer;
+var Buffer = __webpack_require__(13).Buffer;
 
 module.exports = function (buf) {
   // If the buffer is backed by a Uint8Array, a faster version will work
@@ -91347,7 +91347,7 @@ function (_super) {
 }(xml_http_request_event_target_1.XMLHttpRequestEventTarget);
 
 exports.XMLHttpRequestUpload = XMLHttpRequestUpload;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 415 */
@@ -91711,9 +91711,9 @@ exports.XMLHttpRequestUpload = XMLHttpRequestUpload;
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
-var errors = __webpack_require__(26).errors;
+var errors = __webpack_require__(27).errors;
 
 var oboe = __webpack_require__(417);
 
@@ -94349,11 +94349,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// This file is 
  */
 
 
-var formatters = __webpack_require__(26).formatters;
+var formatters = __webpack_require__(27).formatters;
 
 var Method = __webpack_require__(51);
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var extend = function extend(pckg) {
   /* jshint maxcomplexity:5 */
@@ -94525,9 +94525,9 @@ module.exports = function (root, loadImplementation) {
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
-var errors = __webpack_require__(26).errors;
+var errors = __webpack_require__(27).errors;
 
 var EventEmitter = __webpack_require__(187);
 
@@ -94830,17 +94830,17 @@ module.exports = Subscription;
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
 var core = __webpack_require__(49);
 
-var helpers = __webpack_require__(26);
+var helpers = __webpack_require__(27);
 
 var Subscriptions = __webpack_require__(94).subscriptions;
 
 var Method = __webpack_require__(51);
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
 var Net = __webpack_require__(95);
 
@@ -95522,7 +95522,7 @@ module.exports = config;
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
 var Contract = __webpack_require__(189);
 
@@ -98296,7 +98296,7 @@ var PromiEvent = __webpack_require__(93);
 
 var namehash = __webpack_require__(193);
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 /**
  * @param {Registry} registry
  * @constructor
@@ -98485,7 +98485,7 @@ module.exports = ResolverMethodHandler;
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
 var core = __webpack_require__(49);
 
@@ -98509,9 +98509,9 @@ var scryptsy = __webpack_require__(518);
 
 var uuid = __webpack_require__(520);
 
-var utils = __webpack_require__(32);
+var utils = __webpack_require__(33);
 
-var helpers = __webpack_require__(26);
+var helpers = __webpack_require__(27);
 
 var isNot = function isNot(value) {
   return _.isUndefined(value) || _.isNull(value);
@@ -98970,7 +98970,7 @@ if (typeof localStorage === 'undefined') {
 }
 
 module.exports = Accounts;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 441 */
@@ -99018,7 +99018,7 @@ var Bytes = __webpack_require__(128);
 
 var Nat = __webpack_require__(224);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var rlp = __webpack_require__(225);
 
@@ -99107,7 +99107,7 @@ module.exports = {
   encodeSignature: encodeSignature,
   decodeSignature: decodeSignature
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 442 */
@@ -99675,7 +99675,7 @@ module.exports = function (password, salt, iterations, keylen, digest, callback)
     return sync(password, salt, iterations, keylen, digest);
   }), callback);
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(30)))
 
 /***/ }),
 /* 454 */
@@ -100059,7 +100059,7 @@ exports.padSplit = function padSplit(num, size, group) {
 "use strict";
 
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 function Cipher(options) {
   this.options = options;
@@ -100193,7 +100193,7 @@ Cipher.prototype._finalDecrypt = function _finalDecrypt() {
 "use strict";
 
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 var inherits = __webpack_require__(8);
 
@@ -100326,7 +100326,7 @@ DES.prototype._decrypt = function _decrypt(state, lStart, rStart, out, off) {
 "use strict";
 
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 var inherits = __webpack_require__(8);
 
@@ -100405,7 +100405,7 @@ proto._update = function _update(inp, inOff, out, outOff) {
 "use strict";
 
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 var inherits = __webpack_require__(8);
 
@@ -100767,7 +100767,7 @@ exports.encrypt = function (self, chunk) {
   self._cache = self._cache.slice(chunk.length);
   return xor(chunk, pad);
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 468 */
@@ -101081,7 +101081,7 @@ function createDiffieHellman(prime, enc, generator, genc) {
 
 exports.DiffieHellmanGroup = exports.createDiffieHellmanGroup = exports.getDiffieHellman = getDiffieHellman;
 exports.createDiffieHellman = exports.DiffieHellman = createDiffieHellman;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 472 */,
@@ -101287,7 +101287,7 @@ function formatReturnValue(bn, enc) {
     return buf.toString(enc);
   }
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 475 */
@@ -101393,7 +101393,7 @@ module.exports = {
   createSign: createSign,
   createVerify: createVerify
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 476 */
@@ -101404,7 +101404,7 @@ var createHmac = __webpack_require__(198);
 
 var crt = __webpack_require__(137);
 
-var EC = __webpack_require__(25).ec;
+var EC = __webpack_require__(26).ec;
 
 var BN = __webpack_require__(18);
 
@@ -101564,7 +101564,7 @@ function makeR(g, k, p, q) {
 module.exports = sign;
 module.exports.getKey = getKey;
 module.exports.makeKey = makeKey;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 477 */
@@ -101583,7 +101583,7 @@ var utils = exports;
 
 var BN = __webpack_require__(18);
 
-var minAssert = __webpack_require__(30);
+var minAssert = __webpack_require__(31);
 
 var minUtils = __webpack_require__(212);
 
@@ -101701,7 +101701,7 @@ utils.intFromLE = intFromLE;
 
 var BN = __webpack_require__(18);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var utils = elliptic.utils;
 var getNAF = utils.getNAF;
@@ -102067,7 +102067,7 @@ BasePoint.prototype.dblp = function dblp(k) {
 
 var curve = __webpack_require__(100);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var BN = __webpack_require__(18);
 
@@ -102916,7 +102916,7 @@ var inherits = __webpack_require__(8);
 
 var Base = curve.base;
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var utils = elliptic.utils;
 
@@ -103097,7 +103097,7 @@ Point.prototype.getX = function getX() {
 
 var curve = __webpack_require__(100);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var BN = __webpack_require__(18);
 
@@ -103481,7 +103481,7 @@ var curves = exports;
 
 var hash = __webpack_require__(138);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var assert = elliptic.utils.assert;
 
@@ -103643,7 +103643,7 @@ exports.sha512 = __webpack_require__(215);
 "use strict";
 
 
-var utils = __webpack_require__(40);
+var utils = __webpack_require__(41);
 
 var common = __webpack_require__(73);
 
@@ -103715,7 +103715,7 @@ SHA1.prototype._digest = function digest(enc) {
 "use strict";
 
 
-var utils = __webpack_require__(40);
+var utils = __webpack_require__(41);
 
 var SHA256 = __webpack_require__(214);
 
@@ -103744,7 +103744,7 @@ SHA224.prototype._digest = function digest(enc) {
 "use strict";
 
 
-var utils = __webpack_require__(40);
+var utils = __webpack_require__(41);
 
 var SHA512 = __webpack_require__(215);
 
@@ -103772,7 +103772,7 @@ SHA384.prototype._digest = function digest(enc) {
 "use strict";
 
 
-var utils = __webpack_require__(40);
+var utils = __webpack_require__(41);
 
 var common = __webpack_require__(73);
 
@@ -103859,9 +103859,9 @@ var sh = [8, 9, 9, 11, 13, 15, 15, 5, 7, 7, 8, 11, 14, 14, 12, 6, 9, 13, 15, 7, 
 "use strict";
 
 
-var utils = __webpack_require__(40);
+var utils = __webpack_require__(41);
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 function Hmac(hash, key, enc) {
   if (!(this instanceof Hmac)) return new Hmac(hash, key, enc);
@@ -103934,7 +103934,7 @@ var BN = __webpack_require__(18);
 
 var HmacDRBG = __webpack_require__(492);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var utils = elliptic.utils;
 var assert = utils.assert;
@@ -104141,7 +104141,7 @@ var hash = __webpack_require__(138);
 
 var utils = __webpack_require__(212);
 
-var assert = __webpack_require__(30);
+var assert = __webpack_require__(31);
 
 function HmacDRBG(options) {
   if (!(this instanceof HmacDRBG)) return new HmacDRBG(options);
@@ -104251,7 +104251,7 @@ HmacDRBG.prototype.generate = function generate(len, enc, add, addEnc) {
 
 var BN = __webpack_require__(18);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var utils = elliptic.utils;
 var assert = utils.assert;
@@ -104371,7 +104371,7 @@ KeyPair.prototype.inspect = function inspect() {
 
 var BN = __webpack_require__(18);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var utils = elliptic.utils;
 var assert = utils.assert;
@@ -104524,7 +104524,7 @@ Signature.prototype.toDER = function toDER(enc) {
 
 var hash = __webpack_require__(138);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var utils = elliptic.utils;
 var assert = utils.assert;
@@ -104651,7 +104651,7 @@ EDDSA.prototype.isPoint = function isPoint(val) {
 "use strict";
 
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var utils = elliptic.utils;
 var assert = utils.assert;
@@ -104747,7 +104747,7 @@ module.exports = KeyPair;
 
 var BN = __webpack_require__(18);
 
-var elliptic = __webpack_require__(25);
+var elliptic = __webpack_require__(26);
 
 var utils = elliptic.utils;
 var assert = utils.assert;
@@ -105205,7 +105205,7 @@ var EncoderBuffer = __webpack_require__(75).EncoderBuffer;
 
 var DecoderBuffer = __webpack_require__(75).DecoderBuffer;
 
-var assert = __webpack_require__(30); // Supported tags
+var assert = __webpack_require__(31); // Supported tags
 
 
 var tags = ['seq', 'seqof', 'set', 'setof', 'objid', 'bool', 'gentime', 'utctime', 'null_', 'enum', 'int', 'objDesc', 'bitstr', 'bmpstr', 'charstr', 'genstr', 'graphstr', 'ia5str', 'iso646str', 'numstr', 'octstr', 'printstr', 't61str', 'unistr', 'utf8str', 'videostr']; // Public methods list
@@ -105735,7 +105735,7 @@ decoders.pem = __webpack_require__(506);
 
 var inherits = __webpack_require__(8);
 
-var Buffer = __webpack_require__(12).Buffer;
+var Buffer = __webpack_require__(13).Buffer;
 
 var DERDecoder = __webpack_require__(218);
 
@@ -105922,7 +105922,7 @@ module.exports = function (okey, password) {
 /* WEBPACK VAR INJECTION */(function(Buffer) {// much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
 var BN = __webpack_require__(18);
 
-var EC = __webpack_require__(25).ec;
+var EC = __webpack_require__(26).ec;
 
 var parseKeys = __webpack_require__(101);
 
@@ -106006,13 +106006,13 @@ function checkValue(b, q) {
 }
 
 module.exports = verify;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 513 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer) {var elliptic = __webpack_require__(25);
+/* WEBPACK VAR INJECTION */(function(Buffer) {var elliptic = __webpack_require__(26);
 
 var BN = __webpack_require__(18);
 
@@ -106153,7 +106153,7 @@ function formatReturnValue(bn, enc, len) {
     return buf.toString(enc);
   }
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 514 */
@@ -106554,7 +106554,7 @@ function randomFillSync(buf, offset, size) {
   assertSize(size, offset, buf.length);
   return actualFill(buf, offset, size);
 }
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(29)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(17), __webpack_require__(30)))
 
 /***/ }),
 /* 518 */
@@ -106737,7 +106737,7 @@ function arraycopy(src, srcPos, dest, destPos, length) {
 }
 
 module.exports = scrypt;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(12).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(13).Buffer))
 
 /***/ }),
 /* 520 */
@@ -106969,7 +106969,7 @@ module.exports = rng;
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
 var getNetworkType = function getNetworkType(callback) {
   var _this = this,
@@ -107211,7 +107211,7 @@ module.exports = Shh;
  */
 
 
-var _ = __webpack_require__(19);
+var _ = __webpack_require__(20);
 
 var swarm = __webpack_require__(525);
 
@@ -109812,7 +109812,7 @@ var createClass = __webpack_require__(103);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inheritsLoose.js
-var inheritsLoose = __webpack_require__(33);
+var inheritsLoose = __webpack_require__(34);
 var inheritsLoose_default = /*#__PURE__*/__webpack_require__.n(inheritsLoose);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/extends.js
@@ -109820,7 +109820,7 @@ var helpers_extends = __webpack_require__(10);
 var extends_default = /*#__PURE__*/__webpack_require__.n(helpers_extends);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(23);
+var objectWithoutPropertiesLoose = __webpack_require__(24);
 var objectWithoutPropertiesLoose_default = /*#__PURE__*/__webpack_require__.n(objectWithoutPropertiesLoose);
 
 // EXTERNAL MODULE: ./node_modules/lodash/merge.js
@@ -109839,7 +109839,7 @@ var hoist_non_react_statics_cjs = __webpack_require__(147);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(20);
+var browser = __webpack_require__(21);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/is-promise/index.js
@@ -109855,7 +109855,7 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 15 modules
-var es = __webpack_require__(13);
+var es = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/redux/es/redux.js
 var redux = __webpack_require__(15);
@@ -111710,7 +111710,7 @@ var createClass = __webpack_require__(103);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inheritsLoose.js
-var inheritsLoose = __webpack_require__(33);
+var inheritsLoose = __webpack_require__(34);
 var inheritsLoose_default = /*#__PURE__*/__webpack_require__.n(inheritsLoose);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -111725,15 +111725,15 @@ var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(20);
+var browser = __webpack_require__(21);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(23);
+var objectWithoutPropertiesLoose = __webpack_require__(24);
 var objectWithoutPropertiesLoose_default = /*#__PURE__*/__webpack_require__.n(objectWithoutPropertiesLoose);
 
 // EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 15 modules
-var es = __webpack_require__(13);
+var es = __webpack_require__(12);
 
 // CONCATENATED MODULE: ./node_modules/redux-form/es/createFieldProps.js
 
@@ -112501,7 +112501,7 @@ var createField_createField = function createField(structure) {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(41);
+var react_dom = __webpack_require__(42);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -112748,7 +112748,7 @@ if (react_dom_default.a.createPortal) {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(23);
+var objectWithoutPropertiesLoose = __webpack_require__(24);
 var objectWithoutPropertiesLoose_default = /*#__PURE__*/__webpack_require__.n(objectWithoutPropertiesLoose);
 
 // EXTERNAL MODULE: ./node_modules/lodash/isFunction.js
@@ -113548,11 +113548,11 @@ function createReducer(structure) {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/warning/warning.js
-var warning = __webpack_require__(34);
+var warning = __webpack_require__(35);
 var warning_default = /*#__PURE__*/__webpack_require__.n(warning);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(20);
+var browser = __webpack_require__(21);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -113718,11 +113718,11 @@ var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: ./node_modules/warning/warning.js
-var warning = __webpack_require__(34);
+var warning = __webpack_require__(35);
 var warning_default = /*#__PURE__*/__webpack_require__.n(warning);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(20);
+var browser = __webpack_require__(21);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/react-router/es/matchPath.js
@@ -113841,11 +113841,11 @@ Switch_Switch.propTypes = {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/warning/warning.js
-var warning = __webpack_require__(34);
+var warning = __webpack_require__(35);
 var warning_default = /*#__PURE__*/__webpack_require__.n(warning);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(20);
+var browser = __webpack_require__(21);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -114037,4 +114037,4 @@ Route_Route.childContextTypes = {
 
 /***/ })
 ]]);
-//# sourceMappingURL=2.2b71dc06.chunk.js.map
+//# sourceMappingURL=2.e8094a2e.chunk.js.map

@@ -417,6 +417,39 @@
 .Field_Copy__2P4So {
   margin: 0 8px 0 0; }
 
+.Field_Health__2oWTf {
+  -webkit-align-items: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  height: 28px;
+  position: relative;
+  width: 192px; }
+  .Field_HealthBar__UbQTT {
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 1; }
+  .Field_HealthIndex__ybrS9 {
+    -webkit-align-items: center;
+            align-items: center;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    -webkit-justify-content: center;
+            justify-content: center;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 2; }
+    .Field_HealthIndex__ybrS9 > div {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 0 2px; }
+
 .Field_Icon__3Bt6K {
   color: var(--color-primary); }
 
@@ -427,6 +460,21 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
+
+.Field_Word__lQuHD {
+  height: 28px;
+  overflow: hidden;
+  width: 12px; }
+  .Field_WordVariantGreen__3A1ak {
+    background: var(--color-success); }
+  .Field_WordVariantLight__kVASF {
+    background: var(--color-green-400); }
+  .Field_WordVariantOrange__3cvTv {
+    background: var(--color-alert); }
+  .Field_WordVariantRed__1CsYh {
+    background: var(--color-danger); }
+  .Field_WordVariantYellow__NtGl3 {
+    background: var(--color-orange-400); }
 
 .Table_Root__1s8Ss {
   border-bottom: 1px solid var(--background-dark) !important; }
@@ -1038,9 +1086,9 @@ button {
   min-height: 100vh; }
 
 .App_Wrapper__VY8Wp {
-  max-width: 960px;
+  max-width: 1200px;
   padding: 120px 0;
   width: 100%; }
 
 
-/*# sourceMappingURL=main.d4e56367.chunk.css.map*/
+/*# sourceMappingURL=main.2e6d70a7.chunk.css.map*/
