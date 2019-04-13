@@ -278,6 +278,8 @@
 
 .Table_Root__1Dcze .ReactTable {
   border: 0; }
+  .Table_Root__1Dcze .ReactTable .rt-expander {
+    margin: 0 0 0 -4px; }
   .Table_Root__1Dcze .ReactTable .rt-table {
     overflow: visible; }
   .Table_Root__1Dcze .ReactTable .rt-tbody {
@@ -333,12 +335,13 @@
         box-shadow: none;
         color: var(--color-blue-gray); }
   .Table_Root__1Dcze .ReactTable .rt-tr {
+    min-height: 48px;
     padding: 0 8px; }
   .Table_Root__1Dcze .ReactTable .rt-tr-group {
-    height: 48px;
     font-size: 14px;
     letter-spacing: .3px;
-    line-height: 20px; }
+    line-height: 20px;
+    min-height: 48px; }
     .Table_Root__1Dcze .ReactTable .rt-tr-group:hover {
       background: var(--background-lighter); }
 
@@ -475,6 +478,33 @@
     background: var(--color-danger); }
   .Field_WordVariantYellow__NtGl3 {
     background: var(--color-orange-400); }
+
+.Stat_Root__15gql {
+  border-top: 1px solid var(--background-dark);
+  padding: 24px 0 24px 48px;
+  width: 100%; }
+
+.Stat_Label__uc_VL {
+  color: var(--color-gray); }
+
+.Stat_List__YRpkl {
+  display: -webkit-flex;
+  display: flex;
+  margin: 20px 0 0; }
+  .Stat_List__YRpkl > *:not(:first-child) {
+    margin: 0 0 0 64px; }
+
+.Stat_ValueColorAlert__3wtqO {
+  color: var(--color-alert); }
+
+.Stat_ValueColorDanger__mKuYu {
+  color: var(--color-danger); }
+
+.Stat_ValueColorPrimary__3JBI0 {
+  color: var(--color-primary); }
+
+.Stat_ValueColorSuccess__3m4Ja {
+  color: var(--color-success); }
 
 .Table_Root__1s8Ss {
   border-bottom: 1px solid var(--background-dark) !important; }
@@ -1091,4 +1121,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.2e6d70a7.chunk.css.map*/
+/*# sourceMappingURL=main.b2edb267.chunk.css.map*/
