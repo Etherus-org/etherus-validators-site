@@ -652,6 +652,14 @@
   .Common_MessageTextIsSuccess__1vnpD {
     color: var(--color-success); }
 
+.Common_NodeGroup__2PFDq {
+  display: -webkit-flex;
+  display: flex; }
+  .Common_NodeGroup__2PFDq > *:first-child {
+    margin: 0 24px 0 0; }
+  .Common_NodeGroup__2PFDq > *:last-child {
+    margin: 0 0 0 24px; }
+
 .Common_Progress__2a3PJ {
   color: var(--color-success);
   margin: 0 8px 0 0; }
@@ -1121,4 +1129,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.b2edb267.chunk.css.map*/
+/*# sourceMappingURL=main.463cd41a.chunk.css.map*/

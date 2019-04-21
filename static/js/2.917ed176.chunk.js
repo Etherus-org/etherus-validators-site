@@ -18085,27 +18085,6 @@ var UPDATE_SYNC_WARNINGS = prefix + "UPDATE_SYNC_WARNINGS";
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _defineProperty; });
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-/***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* unused harmony export mapProps */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return withProps; });
 /* unused harmony export withPropsOnChange */
@@ -18153,7 +18132,7 @@ function _defineProperty(obj, key, value) {
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(16);
 /* harmony import */ var fbjs_lib_shallowEqual__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(78);
 /* harmony import */ var fbjs_lib_shallowEqual__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(fbjs_lib_shallowEqual__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
 /* harmony import */ var react_lifecycles_compat__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(53);
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(46);
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(236);
@@ -19164,12 +19143,33 @@ var createEventHandler = createEventHandlerWithConfig(config); // Higher-order c
 
 
 /***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _defineProperty; });
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+/***/ }),
 /* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread; });
-/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var _defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 
 function _objectSpread(target) {
   for (var i = 1; i < arguments.length; i++) {
@@ -19325,7 +19325,7 @@ module.exports = _extends;
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js
-var inheritsLoose = __webpack_require__(23);
+var inheritsLoose = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
@@ -19452,7 +19452,7 @@ var hoist_non_react_statics_cjs = __webpack_require__(142);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(22);
+var browser = __webpack_require__(23);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/react-is/index.js
@@ -26390,8 +26390,51 @@ module.exports = g;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(33)(module)))
 
 /***/ }),
-/* 20 */,
-/* 21 */
+/* 20 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// CONCATENATED MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+// CONCATENATED MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+/***/ }),
+/* 21 */,
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscore.js 1.8.3
@@ -28081,7 +28124,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscor
 }).call(this);
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28129,7 +28172,7 @@ var invariant = function invariant(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28138,49 +28181,6 @@ function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
   subClass.prototype.constructor = subClass;
   subClass.__proto__ = superClass;
-}
-
-/***/ }),
-/* 24 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-
-// CONCATENATED MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-// CONCATENATED MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectWithoutProperties; });
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = _objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
 }
 
 /***/ }),
@@ -28545,7 +28545,7 @@ module.exports = function (module) {
  * @author Fabian Vogelsteller <fabian@ethereum.org>
  * @date 2017
  */
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var ethjsUnit = __webpack_require__(376);
 
@@ -29861,7 +29861,7 @@ Duplex.prototype._destroy = function (err, cb) {
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var errors = __webpack_require__(28).errors;
 
@@ -46439,7 +46439,7 @@ module.exports = function numberToBN(arg) {
  * @author Fabian Vogelsteller <fabian@ethereum.org>
  * @date 2017
  */
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var BN = __webpack_require__(175);
 
@@ -53674,7 +53674,7 @@ module.exports = __webpack_require__(420)().Promise;
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var core = __webpack_require__(50);
 
@@ -54494,7 +54494,7 @@ module.exports = Contract;
  * @author Fabian Vogelsteller <fabian@frozeman.de>
  * @date 2018
  */
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var utils = __webpack_require__(34);
 
@@ -76404,7 +76404,7 @@ module.exports = {"name":"web3","namespace":"ethereum","version":"1.0.0-beta.37"
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var errors = __webpack_require__(28).errors;
 
@@ -76690,7 +76690,7 @@ module.exports = {
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var utils = __webpack_require__(34);
 
@@ -84742,7 +84742,7 @@ module.exports = function isHexPrefixed(str) {
  * @author Fabian Vogelsteller <fabian@ethereum.org>
  * @date 2017
  */
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var BN = __webpack_require__(175);
 
@@ -88696,7 +88696,7 @@ module.exports = givenProvider;
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var errors = __webpack_require__(28).errors;
 
@@ -91712,7 +91712,7 @@ exports.XMLHttpRequestUpload = XMLHttpRequestUpload;
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var errors = __webpack_require__(28).errors;
 
@@ -94526,7 +94526,7 @@ module.exports = function (root, loadImplementation) {
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var errors = __webpack_require__(28).errors;
 
@@ -94831,7 +94831,7 @@ module.exports = Subscription;
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var core = __webpack_require__(50);
 
@@ -95523,7 +95523,7 @@ module.exports = config;
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var Contract = __webpack_require__(190);
 
@@ -98297,7 +98297,7 @@ var PromiEvent = __webpack_require__(94);
 
 var namehash = __webpack_require__(194);
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 /**
  * @param {Registry} registry
  * @constructor
@@ -98486,7 +98486,7 @@ module.exports = ResolverMethodHandler;
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var core = __webpack_require__(50);
 
@@ -106970,7 +106970,7 @@ module.exports = rng;
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var getNetworkType = function getNetworkType(callback) {
   var _this = this,
@@ -107212,7 +107212,7 @@ module.exports = Shh;
  */
 
 
-var _ = __webpack_require__(21);
+var _ = __webpack_require__(22);
 
 var swarm = __webpack_require__(526);
 
@@ -109840,7 +109840,7 @@ var hoist_non_react_statics_cjs = __webpack_require__(148);
 var hoist_non_react_statics_cjs_default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics_cjs);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(22);
+var browser = __webpack_require__(23);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/is-promise/index.js
@@ -111726,7 +111726,7 @@ var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(22);
+var browser = __webpack_require__(23);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js
@@ -113553,7 +113553,7 @@ var warning = __webpack_require__(36);
 var warning_default = /*#__PURE__*/__webpack_require__.n(warning);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(22);
+var browser = __webpack_require__(23);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -113723,7 +113723,7 @@ var warning = __webpack_require__(36);
 var warning_default = /*#__PURE__*/__webpack_require__.n(warning);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(22);
+var browser = __webpack_require__(23);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/react-router/es/matchPath.js
@@ -113846,7 +113846,7 @@ var warning = __webpack_require__(36);
 var warning_default = /*#__PURE__*/__webpack_require__.n(warning);
 
 // EXTERNAL MODULE: ./node_modules/invariant/browser.js
-var browser = __webpack_require__(22);
+var browser = __webpack_require__(23);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
@@ -114038,4 +114038,4 @@ Route_Route.childContextTypes = {
 
 /***/ })
 ]]);
-//# sourceMappingURL=2.4b2ea012.chunk.js.map
+//# sourceMappingURL=2.917ed176.chunk.js.map
