@@ -263,7 +263,7 @@ var lodash = __webpack_require__(2);
 var Recompose_esm = __webpack_require__(4);
 
 // CONCATENATED MODULE: ./src/api/config.js
-var config={'development':{CONTRACT_ADDRESS:'0x93275283bf79d0f3a4521b006b6504768fc38d9a',MIN_DEPOSIT:0.25,MIN_DEPOSIT_INCREMENT:0.1,NETWORK_ID:'4',SYMBOL:'ETH',URL:'https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337'},'production':{CONTRACT_ADDRESS:'0x0000000000000000000000000000000000000fff',MIN_DEPOSIT:2500,MIN_DEPOSIT_INCREMENT:10,NETWORK_ID:'32019',SYMBOL:'ETR',URL:'wss://rpc.etherus.org'}};var config_getConfig=function getConfig(){return Object(lodash["get"])(config,'development');};// process.env.NODE_ENV);
+var config={'development':{CONTRACT_ADDRESS:'0x93275283bf79d0f3a4521b006b6504768fc38d9a',MIN_DEPOSIT:0.25,MIN_DEPOSIT_INCREMENT:0.1,NETWORK_ID:'4',SYMBOL:'ETH',URL:'https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337'},'production':{CONTRACT_ADDRESS:'0x0000000000000000000000000000000000000fff',MIN_DEPOSIT:2500,MIN_DEPOSIT_INCREMENT:10,NETWORK_ID:'32019',SYMBOL:'ETR',URL:'wss://rpc.etherus.org'}};var config_getConfig=function getConfig(){return Object(lodash["get"])(config,'production');};// process.env.NODE_ENV);
 var config_getContractAddress=function getContractAddress(){return Object(lodash["get"])(config,"".concat("production",".CONTRACT_ADDRESS"));};var config_getNetworkId=function getNetworkId(){return Object(lodash["get"])(config,"".concat("production",".NETWORK_ID"));};var config_getUrl=function getUrl(){return Object(lodash["get"])(config,"".concat("production",".URL"));};/* harmony default export */ var api_config = (config_getConfig());
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js + 1 modules
 var objectWithoutProperties = __webpack_require__(21);
@@ -779,4 +779,4 @@ module.exports = {"Container":"Guide_Container__3FIps","Frame":"Guide_Frame__2_1
 /***/ })
 
 },[[255,1,2]]]);
-//# sourceMappingURL=main.11ecaaba.chunk.js.map
+//# sourceMappingURL=main.de104671.chunk.js.map
