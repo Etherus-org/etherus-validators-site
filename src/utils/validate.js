@@ -1,4 +1,4 @@
-import { isEmpty } from 'lodash';
+import { get, has, isEmpty } from 'lodash';
 
 export const isHash = (length: number = 40, message: string = 'Must be like a hex (32 Bytes)'): Function =>
   (value: string = ''): Object => ({
@@ -20,6 +20,30 @@ export const isNumber = (message: string = 'Must be a number!'): Function =>
     message,
     isValid: /^[0-9.]*$/.test(value),
   });
+
+export const isPrivateKey = (message: string = 'Incorrect private key') => (value: string): Object => {
+  let isValid = false;
+
+  try {
+    const json = JSON.parse(value);
+
+    if (
+      has(json, 'address') &&
+      has(json, 'pub_key') &&
+      has(json, 'priv_key') &&
+      Buffer.from(get(json, 'pub_key.value'), 'base64').length === 32 &&
+      Buffer.from(get(json, 'priv_key.value'), 'base64').length === 64
+    ) {
+      isValid = true;
+    }
+  } catch(e) {
+    console.error(e);
+  }
+
+  return {
+    isValid, message,
+  };
+}
 
 export const isUint = (bytes: number = 8, message: string = 'Must be like a uint'): Function =>
   (value: string = ''): Object => ({

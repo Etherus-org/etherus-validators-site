@@ -58,7 +58,7 @@ import { convertDeposit } from 'utils/convert';
 import { parseCompactedValidator } from 'utils/parse';
 
 export const createValidator: Function = ({ address, deposit, hash, node }): Function =>
-  (dispatch: Function, getState: Function, { account, web3 }): Promise => {
+  (dispatch: Function, getState: Function, { account, privateWeb3, web3 }): Promise => {
     dispatch({ type: CREATE_VALIDATOR_REQUEST });
 
     return new Promise((resolve: Function, reject: Function) => {
@@ -78,11 +78,10 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
           value,
           from: window.ethereum.selectedAddress,
         })
-          .on('receipt', () =>
-            dispatch(updateValidator(hash, { isFetching: false })))
           .on('error', reject)
-          .on('transactionHash', (): void => {
+          .on('transactionHash', (txHash): void => {
             resolve();
+
             dispatch({ type: CREATE_VALIDATOR_SUCCESS, hash: formattedHash.toLowerCase(), payload: {
               address: formattedAddress,
               deposit: convertDeposit(deposit),
@@ -91,7 +90,14 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
               node: formattedNode,
               pauseCause: 1,
             }});
+
             dispatch(closeModal(VALIDATOR_CREATE_MODAL_ID));
+
+            account.events.ValidatorUpdated({}, (opt, { transactionHash }) => {
+              if (txHash === transactionHash) {
+                dispatch(updateValidator(hash, { isFetching: false }));
+              }
+            });
 
             document
               .getElementById(hash)
@@ -122,13 +128,18 @@ export const depositValidator = ({ hash, deposit }): Function =>
           value,
           from: window.ethereum.selectedAddress,
         })
-          .on('receipt', () =>
-            dispatch({
-              type: DEPOSIT_VALIDATOR_SUCCESS, hash,
-              deposit: currentDeposit + newDeposit,
-            }))
-          .on('transactionHash', (): void =>
-            dispatch(closeModal(VALIDATOR_DEPOSIT_MODAL_ID)))
+          .on('transactionHash', (txHash): void => {
+            dispatch(closeModal(VALIDATOR_DEPOSIT_MODAL_ID));
+
+            account.events.ValidatorUpdated({}, (opt, { transactionHash }) => {
+              if (txHash === transactionHash) {
+                dispatch({
+                  type: DEPOSIT_VALIDATOR_SUCCESS, hash,
+                  deposit: currentDeposit + newDeposit,
+                });
+              }
+            });
+          })
           .on('error', reject)
     })
      .catch((error: Object) =>
@@ -176,17 +187,22 @@ export const fetchValidators = (): Function =>
   }
 
 export const pauseValidator: Function = ({ address, hash, pauseCause, punishValue }): Promise =>
-  (dispatch: Function, getState: Function, { account, web3 }): void => {
+  (dispatch: Function, getState: Function, { account, web3 }): Promise => {
     dispatch({ type: PAUSE_VALIDATOR_REQUEST, hash });
 
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
         .pauseValidation(hash, address || hash, pauseCause || 1, punishValue || 0)
         .send({ from: window.ethereum.selectedAddress })
-          .on('receipt', (): void =>
-            dispatch({ type: PAUSE_VALIDATOR_SUCCESS, hash }))
-          .on('transactionHash', (): void =>
-            dispatch(closeModal(VALIDATOR_PAUSE_MODAL_ID)))
+          .on('transactionHash', (txHash): void => {
+            dispatch(closeModal(VALIDATOR_PAUSE_MODAL_ID));
+
+            account.events.ValidatorUpdated({}, (opt, { transactionHash }) => {
+              if (txHash === transactionHash) {
+                dispatch({ type: PAUSE_VALIDATOR_SUCCESS, hash });
+              }
+            });
+          })
           .on('error', reject)
     })
       .catch((error: Object) =>
@@ -194,15 +210,20 @@ export const pauseValidator: Function = ({ address, hash, pauseCause, punishValu
   }
 
 export const startValidator: Function = (hash: string): Promise =>
-  (dispatch: Function, getState: Function, { account, web3 }): void => {
+  (dispatch: Function, getState: Function, { account, web3 }): Promise => {
     dispatch({ type: START_VALIDATOR_REQUEST, hash });
 
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
         .resumeValidation(hash)
         .send({ from: window.ethereum.selectedAddress })
-          .on('receipt', () =>
-            dispatch({ type: START_VALIDATOR_SUCCESS, hash }))
+          .on('transactionHash', (txHash): void => {
+            account.events.ValidatorUpdated({}, (opt, { transactionHash }) => {
+              if (txHash === transactionHash) {
+                dispatch({ type: START_VALIDATOR_SUCCESS, hash });
+              }
+            });
+          })
           .on('error', reject)
     })
       .catch((error: Object) =>

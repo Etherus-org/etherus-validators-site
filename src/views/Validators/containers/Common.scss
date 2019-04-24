@@ -80,6 +80,22 @@
   }
 }
 
+.Node {
+  &Group {
+    display: flex;
+
+    & > * {
+      &:first-child {
+        margin: 0 24px 0 0;
+      }
+
+      &:last-child {
+        margin: 0 0 0 24px;
+      }
+    }
+  }
+}
+
 .Progress {
   color: var(--color-success);
   margin: 0 8px 0 0;

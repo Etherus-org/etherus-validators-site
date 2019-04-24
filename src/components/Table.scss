@@ -2,6 +2,10 @@
   :global .ReactTable {
     border: 0;
 
+    .rt-expander {
+      margin: 0 0 0 -4px;
+    }
+
     .rt-table {
       overflow: visible;
     }
@@ -72,14 +76,15 @@
     }
 
     .rt-tr {
+      min-height: 48px;
       padding: 0 8px;
     }
 
     .rt-tr-group {
-      height: 48px;
       font-size: 14px;
       letter-spacing: .3px;
       line-height: 20px;
+      min-height: 48px;
       // padding: 0 8px;
 
       &:hover {

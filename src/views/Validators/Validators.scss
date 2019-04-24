@@ -23,6 +23,16 @@
   }
 }
 
+.Actions {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+
+  & > *:not(:first-child) {
+    margin: 12px 0 0;
+  }
+}
+
 .Connecting {
   align-items: center;
   display: flex;
@@ -32,15 +42,11 @@
 
 .Header {
   display: flex;
-  height: 64px;
   justify-content: space-between;
+  min-height: 64px;
 
   &Right {
     display: flex;
-
-    & > *:not(:first-child) {
-      margin: 0 0 0 8px;
-    }
   }
 }
 
@@ -60,6 +66,14 @@
 
 .List {
   margin: 0 -24px;
+}
+
+.NodeActions {
+  display: flex;
+
+  & > *:not(:first-child) {
+    margin: 0 0 0 8px;
+  }
 }
 
 .Progress {

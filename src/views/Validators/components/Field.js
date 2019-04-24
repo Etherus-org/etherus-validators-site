@@ -11,6 +11,9 @@ import CONFIG from 'api/config';
 import Button from 'components/Button';
 import Tooltip from 'components/Tooltip';
 
+// Ducks
+import { getStatById } from '../ducks';
+
 // Entities
 import { PAUSE_NOT_PAUSED } from 'entities/validators';
 
@@ -47,6 +50,7 @@ const ValidatorsField: React.Element<'div'> = ({
   currentBlockNumber,
   isDisabled,
   original,
+  stat,
   title,
   variant = VARIANT.DEFAULT,
   // Handlers
@@ -86,10 +90,10 @@ const ValidatorsField: React.Element<'div'> = ({
         {variant === VARIANT.HASH && (title || children)}
         {variant === VARIANT.DEFAULT && (title || children)}
 
-        {variant === VARIANT.HEALTH && (
+        {(!isDisabled && variant === VARIANT.HEALTH) && (
           <div className={styles.Health}>
             <div className={styles.HealthBar}>
-              {(title || '').split('').map((word: string, index: number) => {
+              {get(stat, 'voted64', '').split('').map((word: string, index: number) => {
                 const wordClassName = classNames(styles.Word, {
                   [styles.WordVariantRed]: word === 'R',
                   [styles.WordVariantOrange]: word === 'O',
@@ -97,7 +101,7 @@ const ValidatorsField: React.Element<'div'> = ({
                   [styles.WordVariantLight]: word === 'L',
                   [styles.WordVariantGreen]: word === 'G',
                 });
-               
+
                 return (
                   <span className={wordClassName} key={index} />
                 );
@@ -105,11 +109,13 @@ const ValidatorsField: React.Element<'div'> = ({
             </div>
 
             <div className={styles.HealthIndex}>
-              <div>
-                {get(original, 'responses64', 0) > 0
-                  ? `${Math.round(get(original, 'responses64', 0) * 100)}%`
-                  : `Не отвечает ${currentBlockNumber - get(original, 'blockLastVoted', 0)} блоков`}
-              </div>
+              {stat ? (
+                <div>
+                  {get(stat, 'responses64', 0) > 0
+                    ? `${Math.round(get(stat, 'responses64', 0) * 100)}%`
+                    : `Не отвечает ${currentBlockNumber - get(stat, 'blockLastVoted', 0)} блоков`}
+                </div>
+              ) : <div>Статистика не загружена</div>}
             </div>
           </div>
         )}
@@ -118,8 +124,9 @@ const ValidatorsField: React.Element<'div'> = ({
   );
 }
 
-const mapStateToProps: Function = (state: Object) => ({
+const mapStateToProps: Function = (state: Object, { original }) => ({
   currentBlockNumber: getBlockNumber(state),
+  stat: getStatById(state, get(original, 'hash')),
 });
 
 export default compose(

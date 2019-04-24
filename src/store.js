@@ -52,11 +52,11 @@ export default (history: Object): Object => {
     isSupported = true;
     privateWeb3 = new Web3(window.ethereum)
   }
-  console.log(window.ethereum);
+
   const store = createStore(reducer, composeEnhancers(
     applyMiddleware(
       thunkMiddleware.withExtraArgument({
-        history, schema, web3,
+        history, schema, privateWeb3, web3,
         account: privateWeb3 && new privateWeb3.eth.Contract(
           contractInterface,
           config.CONTRACT_ADDRESS,
@@ -86,6 +86,15 @@ export default (history: Object): Object => {
       store.dispatch({ type: SET_HAS_ACCOUNT });
 
       store.dispatch({ type: SET_CURRENT_BLOCK_NUMBER, blockNumber });
+
+      web3.eth.subscribe('newBlockHeaders', (error, result) => {
+        if (!error) {
+          store.dispatch({
+            type: SET_CURRENT_BLOCK_NUMBER,
+            blockNumber: get(result, 'number')
+          });
+        }
+      });
     });
 
   return store;

@@ -1,0 +1,38 @@
+.Root {
+  border-top: 1px solid var(--background-dark);
+  padding: 24px 0 24px 48px;
+  width: 100%;
+}
+
+.Label {
+  color: var(--color-gray);
+}
+
+.List {
+  display: flex;
+  margin: 20px 0 0;
+
+  & > *:not(:first-child) {
+    margin: 0 0 0 64px;
+  }
+}
+
+.Value {
+  &Color {
+    &Alert {
+      color: var(--color-alert);
+    }
+
+    &Danger {
+      color: var(--color-danger);
+    }
+
+    &Primary {
+      color: var(--color-primary);
+    }
+
+    &Success {
+      color: var(--color-success);
+    }
+  }
+}

@@ -11,13 +11,14 @@ import { reduxForm, SubmissionError } from 'redux-form';
 // Components
 import Button from 'components/Button';
 import Form, { Input } from 'components/Form';
+import NodeForm from '../components/Form';
 import Modal from 'components/Modal';
 
 // Ducks
 import {
   VALIDATOR_CREATE_MODAL_ID,
-  VALIDATOR_NODE_FORM_ID,
   VALIDATOR_NODE_MODAL_ID,
+  VALIDATOR_NODE_FROM_MODAL_ID,
 } from '../ducks';
 
 // Services
@@ -28,22 +29,22 @@ import { COLOR, GRADIENT } from 'styles';
 import styles from './Common.scss';
 
 // Utils
-import validate, { isHost, isNumber, max, min, required } from 'utils/validate';
+import validate, { isPrivateKey, required } from 'utils/validate';
 
-const ValidatorsNodeForm: React.Element<Form> = ({
+const ValidatorsNodeFormPrivate = ({
   error,
+  handleClose,
   handleSubmit,
   onCancel,
-  submittin,
+  onTrigger,
 }) => (
   <Form
     error={error}
     onSubmit={handleSubmit}
   >
-    <Input label="Хост" name="host" placeholder="localhost" />
-    <Input label="Порт" name="port" placeholder="22" />
-    <Input label="Имя пользователь" name="username" placeholder="root" />
-    <Input label="Пароль" name="password" type="password" />
+    <Fragment>
+      <Input label="Приватный ключ" name="privateKey" />
+    </Fragment>
 
     <div className={styles.Actions}>
       <Button
@@ -53,32 +54,88 @@ const ValidatorsNodeForm: React.Element<Form> = ({
         Отменить
       </Button>
 
+      <Button color={COLOR.DANGER} onClick={onTrigger}>
+        Использовать форму
+      </Button>
+
       <Button
-        color={GRADIENT.PURPLE}
+        color={GRADIENT.GREEN}
         type="submit"
       >
-        Развернуть
+        Далее
       </Button>
     </div>
   </Form>
 );
 
-const ComposedValidatorsNodeForm = compose(
+const ComposedValidatorsNodeFormPrivate= compose(
   reduxForm({
-    form: VALIDATOR_NODE_FORM_ID,
+    form: 'privateForm',
     validate: validate({
-      host: [isHost()],
-      port: [isNumber(), max(65535), min(0)],
-      password: [required()],
-    }),
+      privateKey: [required(), isPrivateKey()],
+    })
   }),
-)(ValidatorsNodeForm);
+)(ValidatorsNodeFormPrivate);
+
+const ValidatorsNodeFrom = ({
+  handleCancel,
+  handleSubmit,
+  handleTrigger,
+  isPrivate,
+}) => (
+  <Modal
+    classNames={{
+      container: styles.Container
+    }}
+    id={VALIDATOR_NODE_FROM_MODAL_ID}
+    title="Откуда нужно перенести ноду?"
+  >
+    {({ from, privateKey }) => isPrivate ? (
+      <ComposedValidatorsNodeFormPrivate
+        initialValues={{ privateKey }}
+        onCancel={handleCancel}
+        onSubmit={handleSubmit}
+        onTrigger={handleTrigger}
+      />
+    ) : (
+      <NodeForm
+        initialValues={{ from }}
+        isFrom
+        onCancel={handleCancel}
+        onSubmit={handleSubmit}
+        onTrigger={handleTrigger}
+      />
+    )}
+  </Modal>
+);
+
+export const NodeFrom = compose(
+  connect(null, { closeModal, openModal }),
+  withState('isPrivate', 'setPrivate', false),
+  withHandlers({
+    handleCancel: ({ closeModal, handleReset }): Function =>
+      (event: Object): void => {
+        closeModal(VALIDATOR_NODE_FROM_MODAL_ID);
+      },
+    handleSubmit: ({ closeModal, openModal, isPrivate }): Function => (values) => {
+      closeModal(VALIDATOR_NODE_FROM_MODAL_ID);
+      openModal(VALIDATOR_NODE_MODAL_ID, isPrivate ? { privateKey: get(values, 'privateKey') } : { from: {
+        host: get(values, 'host', 'localhost'),
+        port: get(values, 'port', 22),
+        username: get(values, 'username', 'root'),
+        password: get(values, 'password'),
+      }});
+    },
+    handleTrigger: ({ isPrivate, setPrivate }) => () => setPrivate(!isPrivate),
+  }),
+)(ValidatorsNodeFrom)
 
 const ValidatorsNode: React.Element<Modal> = ({
   error,
   messages,
   progress,
   retry,
+  token,
   vPub,
   // Handlers
   handleCancel,
@@ -97,9 +154,9 @@ const ValidatorsNode: React.Element<Modal> = ({
       }),
     }}
     id={VALIDATOR_NODE_MODAL_ID}
-    title={isSuccess ? 'Узел развёрнут!' : isProcessing ? 'Узел разворачивается' : 'Развернуть узел'}
+    title={isSuccess ? `Узел развёрнут! ${token}` : isProcessing ? `Узел разворачивается: ${token}` : null}
   >
-    {isProcessing ? (
+    {({ from, isRestart, privateKey }) => isProcessing ? (
       <Fragment>
         <div className={styles.Console} id="console">
           <div id="wrapper">
@@ -175,7 +232,7 @@ const ValidatorsNode: React.Element<Modal> = ({
             ) : (
               <Button
                 color={GRADIENT.PURPLE}
-                onClick={handleReset}
+                onClick={handleReset({ from, privateKey })}
               >
                 Попробовать ещё раз
               </Button>
@@ -184,9 +241,11 @@ const ValidatorsNode: React.Element<Modal> = ({
         )}
       </Fragment>
     ) : (
-      <ComposedValidatorsNodeForm
+      <NodeForm
+        initialValues={{ isRestart }}
+        isRestart={isRestart}
         onCancel={handleCancel}
-        onSubmit={handleSubmit}
+        onSubmit={(values) => handleSubmit({ ...values, from, privateKey })}
       />
     )}
   </Modal>
@@ -201,9 +260,10 @@ export default compose(
   withState('messages', 'setMessages', []),
   withState('progress', 'setProgress', null),
   withState('retry', 'setRetry', null),
+  withState('token', 'setToken', null),
   withState('vPub', 'setVPub', null),
   withHandlers({
-    handleReset: ({ setError, setLoad, setMessages, setProcess, setProgress, setRetry, setSuccess, setVPub }): Function =>
+    handleReset: ({ closeModal, openModal, setError, setLoad, setMessages, setProcess, setProgress, setRetry, setSuccess, setVPub }): Function => ({ from, privateKey } = {}) =>
       (event: Object): void => {
         setError(false);
         setLoad(false);
@@ -213,6 +273,11 @@ export default compose(
         setRetry(null);
         setSuccess(false);
         setVPub(null);
+
+        if (from || privateKey) {
+          closeModal(VALIDATOR_NODE_MODAL_ID);
+          openModal(VALIDATOR_NODE_FROM_MODAL_ID, { from, privateKey });
+        }
       },
   }),
   withHandlers({
@@ -227,8 +292,8 @@ export default compose(
         openModal(VALIDATOR_CREATE_MODAL_ID, { vPub });
         handleReset();
       },
-    handleSubmit: ({ setError, setLoad, setMessages, setProcess, setProgress, setRetry, setSuccess, setVPub }): Function =>
-      (values: Function): Promise =>
+    handleSubmit: ({ setError, setLoad, setMessages, setProcess, setProgress, setRetry, setSuccess, setToken, setVPub }): Function =>
+      ({ from, isRestart, privateKey, ...values }): Promise =>
         new Promise((resolve: Function, reject: Function) => {
           setProcess(true);
 
@@ -245,6 +310,10 @@ export default compose(
             try {
               const { data, msg, result } = JSON.parse(get(event, 'data'));
 
+              if (has(data, 'execution.token')) {
+                setToken(get(data, 'execution.token'));
+              }
+
               if (result) {
                 setLoad(false);
                 socket.close();
@@ -255,7 +324,9 @@ export default compose(
                   setSuccess(true);
                   setVPub(get(data, 'vPub'));
                 } else {
-                  setError(get(data, 'err'));
+                  const error = get(data, 'err');
+
+                  setError(typeof error === 'string' ? error : 'Unknown error!');
                   reject(msg);
                 }
               } else {
@@ -290,20 +361,24 @@ export default compose(
             const $console = document.getElementById('console');
             const $wrapper = document.getElementById('wrapper');
 
-            $console.scrollTop = $wrapper.clientHeight;
+            if ($console && $wrapper) {
+              $console.scrollTop = $wrapper.clientHeight;
+            }
           }
 
           socket.onopen = (): void => {
             setLoad(true);
 
+            const to = {
+              host: get(values, 'host', 'localhost'),
+              port: get(values, 'port', 22),
+              username: get(values, 'username', 'root'),
+              password: get(values, 'password'),
+            }
+
             socket.send(JSON.stringify({
-              command: 'install',
-              data: {
-                host: get(values, 'host', 'localhost'),
-                port: get(values, 'port', 22),
-                username: get(values, 'username', 'root'),
-                password: get(values, 'password'),
-              }
+              command: isRestart ? 'reset' : (from || privateKey) ? 'migrate' : 'install',
+              data: (from || privateKey) ? { from, key: privateKey, to } : to,
             }));
           }
         })

@@ -5,8 +5,12 @@ import {
   FETCH_VALIDATORS_FAILURE,
 } from 'entities/validators';
 
+// Types
+import { SET_STATS } from './types';
+
 const initialState = {
   isFetching: false,
+  stats: {},
 };
 
 export default (state: Object = initialState, action: Object): Object => {
@@ -16,6 +20,8 @@ export default (state: Object = initialState, action: Object): Object => {
     case FETCH_VALIDATORS_SUCCESS:
     case FETCH_VALIDATORS_FAILURE:
       return { ...state, error: action.error, isFetching: false };
+    case SET_STATS:
+      return { ...state, stats: action.payload };
     default:
       return state;
   }

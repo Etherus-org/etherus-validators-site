@@ -2,12 +2,13 @@ import classNames from 'classnames';
 import { get } from 'lodash';
 import React from 'react';
 import { connect } from 'react-redux';
-import { compose, withProps } from 'recompose';
+import { compose } from 'recompose';
 
 // Components
 import Table from 'components/Table';
 import Actions from './Actions';
 import Field, { VARIANT } from './Field';
+import Stat from './Stat';
 
 // Services
 import { getAddress } from 'services/session';
@@ -63,7 +64,7 @@ const COLUMNS = [
     accessor: 'voted64',
     Cell: ({ index, original, value }) => (
       <Field
-        isDisabled={index >= MAX_ROWS}
+        isDisabled={index >= MAX_ROWS || get(original, 'pauseCause') !== 0}
         original={original}
         title={value}
         variant={VARIANT.HEALTH}
@@ -113,13 +114,14 @@ const COLUMNS = [
 ];
 
 const ValidatorsTable: React.Element<'div'> = ({
-  formattedData,
+  data,
   ownerAddress,
 }: ValidatorsTableType) => (
   <Table
     columns={ownerAddress ? COLUMNS : [...COLUMNS].slice(0, -1)}
-    data={formattedData}
+    data={data}
     defaultPageSize={100000}
+    freezeWhenExpanded
     getTrGroupProps={(state: Object, { index, original }): Object => ({
       className: classNames(styles.Root, {
         [styles.RootIsFavorite]: get(original, 'address') === ownerAddress,
@@ -130,6 +132,7 @@ const ValidatorsTable: React.Element<'div'> = ({
     minRows={0}
     resizable={false}
     showPagination={false}
+    SubComponent={(props: Object) => <Stat {...props} />}
   />
 );
 
@@ -139,10 +142,4 @@ const mapStateToProps: Function = (state: Object): Object => ({
 
 export default compose(
   connect(mapStateToProps),
-  withProps(({ data, stats = {} }) => ({
-    formattedData: data.map((item: Object) => ({
-      ...item,
-      ...get(stats, get(item, 'hash')),
-    })),
-  })),
 )(ValidatorsTable);

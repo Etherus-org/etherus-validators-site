@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { get } from 'lodash';
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import { compose, lifecycle, withHandlers, withState } from 'recompose';
+import { compose, lifecycle, withHandlers } from 'recompose';
 
 // API
 import config from 'api/config';
@@ -19,15 +19,17 @@ import ConfirmAccount from './containers/ConfirmAccount';
 import Create from './containers/Create';
 import Deposit from './containers/Deposit';
 import Guide from './containers/Guide';
-import Node from './containers/Node';
+import Node, { NodeFrom } from './containers/Node';
 import Pause from './containers/Pause';
 
 // Ducks
 import {
+  setStats,
   getValidatorsView,
   VALIDATOR_CREATE_MODAL_ID,
   VALIDATOR_GUIDE_MODAL_ID,
   VALIDATOR_NODE_MODAL_ID,
+  VALIDATOR_NODE_FROM_MODAL_ID,
 } from './ducks';
 
 // Entities
@@ -72,6 +74,8 @@ const Validators: React.Element<'div'> = ({
   handleCreate,
   handleGuide,
   handleInstall,
+  handleMove,
+  handleRestart,
   // State
   isConnected,
   isConnecting,
@@ -132,22 +136,39 @@ const Validators: React.Element<'div'> = ({
                 </Button>
               )
             ) : (
-              <Fragment>
-                <Button
-                  color={GRADIENT.PURPLE}
-                  onClick={handleInstall}
-                >
-                  Развернуть узел
-                </Button>
+              <div className={styles.Actions}>
+                <div>
+                  <Button
+                    color={COLOR.PRIMARY}
+                    onClick={handleCreate}
+                  >
+                    Зарегистрировать валидатор
+                  </Button>
+                </div>
 
+                <div className={styles.NodeActions}>
+                  <Button
+                    color={GRADIENT.RED}
+                    onClick={handleRestart}
+                  >
+                    Перезагрузить узел
+                  </Button>
 
-                <Button
-                  color={COLOR.PRIMARY}
-                  onClick={handleCreate}
-                >
-                  Зарегистрировать валидатор
-                </Button>
-              </Fragment>
+                  <Button
+                    color={GRADIENT.GREEN}
+                    onClick={handleMove}
+                  >
+                    Перенести узел
+                  </Button>
+
+                  <Button
+                    color={GRADIENT.PURPLE}
+                    onClick={handleInstall}
+                  >
+                    Развернуть узел
+                  </Button>
+                </div>
+              </div>
             )
           )}
         </div>
@@ -167,6 +188,7 @@ const Validators: React.Element<'div'> = ({
 
       <Guide />
       <Node />
+      <NodeFrom />
 
       {isConnected && (
         <Fragment>
@@ -202,9 +224,24 @@ export default compose(
     connectMetamask,
     fetchValidators,
     openModal,
+    setStats,
   }),
-  withState('stats', 'setStats', []),
   withHandlers({
+    // Fetch
+    fetchStats: ({ setStats }): Function => () =>
+      fetch('https://api.etherus.org/vl/stats')
+          .then((res: Object) => res.json())
+          .then((res: Object) => {
+            const stats = get(res, 'stats');
+            const normalizedData = {};
+
+            stats.forEach((item: Object) => {
+              normalizedData[`0x${get(item, 'vPub')}`] = item;
+            });
+
+            setStats(normalizedData);
+        }),
+    // handlers
     handleConnect: ({ connectMetamask }): Function =>
       (event: Object): void =>
         connectMetamask(),
@@ -227,24 +264,22 @@ export default compose(
         }),
     handleInstall: ({ openModal }): Function =>
       (event: Object): void =>
-        openModal(VALIDATOR_NODE_MODAL_ID),
+        openModal(VALIDATOR_NODE_MODAL_ID, { title: 'Развернуть ноду' }),
+    handleMove: ({ openModal }): Function =>
+      (event: Object): void =>
+        openModal(VALIDATOR_NODE_FROM_MODAL_ID),
+    handleRestart: ({ openModal }): Function =>
+      (event: Object): void =>
+        openModal(VALIDATOR_NODE_MODAL_ID, { isRestart: true, title: 'Перезагрузить ноду' }),
   }),
   lifecycle({
     componentDidMount() {
-      const { fetchValidators, setStats } = this.props;
+      const { fetchStats, fetchValidators } = this.props;
+
+      fetchStats();
       fetchValidators();
-      fetch('https://api.etherus.org/vl/stats')
-        .then((res: Object) => res.json())
-        .then((res: Object) => {
-          const stats = get(res, 'stats');
-          const normalizedData = {};
 
-          stats.forEach((item: Object) => {
-            normalizedData[`0x${get(item, 'vPub')}`] = item;
-          });
-
-          setStats(normalizedData);
-        });
+      setInterval(fetchStats, 15000);
     },
   }),
 )(Validators);
