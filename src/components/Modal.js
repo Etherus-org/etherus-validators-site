@@ -67,12 +67,13 @@ Modal.propTypes = {
   isOpened: PropTypes.bool,
 };
 
-const mapStateToProps = ({ services }, { id, isOpened }) => {
+const mapStateToProps = ({ services }, { id, isOpened, title }) => {
   const modal = get(services, `modals.${id}`);
 
   return {
     ...modal,
     isOpened: isOpened || !!modal,
+    title: title || get(modal, 'title'),
   };
 };
 

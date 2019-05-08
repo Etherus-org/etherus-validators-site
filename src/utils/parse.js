@@ -14,6 +14,7 @@ export const parseCompactedValidator: Function = (hash: string = ''): Object => 
     address: `0x${formattedHash.substr(24, 64)}`,
     deposit: parseInt(formattedHash.substr(8, 16), 16),
     pauseCause: parseInt(formattedHash.substr(6, 2), 16),
+    test: formattedHash.substr(0, 6),
   };
 }
 
@@ -29,7 +30,7 @@ export const parsePause: Function = (id: number): string => {
     case PAUSE_CAUSE_UNTIL_FINE:
       return 'Оштрафован';
     case PAUSE_CAUSE_PUNISHMENT:
-      return 'Наказание';
+      return 'Изъят';
     case PAUSE_NOT_PAUSED:
     default:
       return 'Включен';

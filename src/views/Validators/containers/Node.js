@@ -223,12 +223,16 @@ const ValidatorsNode: React.Element<Modal> = ({
             </Button>
 
             {isSuccess ? (
-              <Button
-                color={COLOR.PRIMARY}
-                onClick={handleCreateValidator}
-              >
-                Зарегистрировать валидатор
-              </Button>
+              <Fragment>
+                {!from && !privateKey && !isRestart && (
+                  <Button
+                    color={COLOR.PRIMARY}
+                    onClick={handleCreateValidator}
+                  >
+                    Зарегистрировать валидатор
+                  </Button>
+                )}
+              </Fragment>
             ) : (
               <Button
                 color={GRADIENT.PURPLE}

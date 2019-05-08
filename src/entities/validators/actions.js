@@ -172,9 +172,10 @@ export const fetchValidators = (): Function =>
       } else {
         const data: Array<Object> = [];
         const validators: Array<string> = get(res, 'ValidatorsPubKeys', []);
-
+ 
         validators.forEach((hash: string, index: number) => {
           const validator: Object = parseCompactedValidator(get(res, `ValidatorsCompacted.${index}`));
+          console.log(validator);
           data.push({ ...validator, hash: hash.toLowerCase() });
         });
 
