@@ -4,7 +4,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Tooltip_Root__2mKQv","Tooltip":"Tooltip_Tooltip__3I5eR"};
+module.exports = {"Root":"Tooltip_Root__293J7","Tooltip":"Tooltip_Tooltip__1mxq-"};
 
 /***/ }),
 
@@ -12,7 +12,7 @@ module.exports = {"Root":"Tooltip_Root__2mKQv","Tooltip":"Tooltip_Tooltip__3I5eR
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Table_Root__1s8Ss","RootIsDisabled":"Table_RootIsDisabled__14x15","RootIsFavorite":"Table_RootIsFavorite__2WNWH"};
+module.exports = {"Root":"Table_Root__2hh79","RootIsDisabled":"Table_RootIsDisabled__296ZQ","RootIsFavorite":"Table_RootIsFavorite__bGHwf"};
 
 /***/ }),
 
@@ -41,7 +41,7 @@ var isHash=function isHash(){var length=arguments.length>0&&arguments[0]!==undef
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Actions":"Common_Actions__2KkrQ","ActionsConsole":"Common_ActionsConsole__1GIL4","Alert":"Common_Alert__1pTx6","Console":"Common_Console__OJFTq","Container":"Common_Container__qvWDW","ContainerConsole":"Common_ContainerConsole__283Nd","Error":"Common_Error__3qHWz","Loading":"Common_Loading__1S17p","MessageDate":"Common_MessageDate__3DVVg","MessagePub":"Common_MessagePub__2JLbi","MessageText":"Common_MessageText__3Ls9V","MessageTextIsFailure":"Common_MessageTextIsFailure__1W_5Y","MessageTextIsSuccess":"Common_MessageTextIsSuccess__1vnpD","NodeGroup":"Common_NodeGroup__2PFDq","Progress":"Common_Progress__2a3PJ","Retry":"Common_Retry__1ERiA"};
+module.exports = {"Actions":"Common_Actions__mbWvk","ActionsConsole":"Common_ActionsConsole__3CaTa","Alert":"Common_Alert__2tySw","Console":"Common_Console__Kh5no","Container":"Common_Container__2Q9lT","ContainerConsole":"Common_ContainerConsole__3rqMt","Error":"Common_Error__3le_b","Loading":"Common_Loading__3sBnv","MessageDate":"Common_MessageDate__3IWJG","MessagePub":"Common_MessagePub__3J7ZI","MessageText":"Common_MessageText__2ISDo","MessageTextIsFailure":"Common_MessageTextIsFailure__2KBof","MessageTextIsSuccess":"Common_MessageTextIsSuccess__3197r","NodeGroup":"Common_NodeGroup__3AqNY","Progress":"Common_Progress__-kSCq","Retry":"Common_Retry__N0L0B"};
 
 /***/ }),
 
@@ -49,7 +49,7 @@ module.exports = {"Actions":"Common_Actions__2KkrQ","ActionsConsole":"Common_Act
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Error":"Form_Error__FAKdL"};
+module.exports = {"Error":"Form_Error__3ms-b"};
 
 /***/ }),
 
@@ -57,7 +57,7 @@ module.exports = {"Error":"Form_Error__FAKdL"};
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"App_Root__3UUPN","Wrapper":"App_Wrapper__VY8Wp"};
+module.exports = {"Root":"App_Root__3T8Bz","Wrapper":"App_Wrapper__217sn"};
 
 /***/ }),
 
@@ -72,7 +72,7 @@ module.exports = [{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Stat_Root__15gql","Label":"Stat_Label__uc_VL","List":"Stat_List__YRpkl","ValueColorAlert":"Stat_ValueColorAlert__3wtqO","ValueColorDanger":"Stat_ValueColorDanger__mKuYu","ValueColorPrimary":"Stat_ValueColorPrimary__3JBI0","ValueColorSuccess":"Stat_ValueColorSuccess__3m4Ja"};
+module.exports = {"Root":"Stat_Root__2XHrv","Label":"Stat_Label__2Npae","List":"Stat_List__1fWd_","ValueColorAlert":"Stat_ValueColorAlert__2h-2X","ValueColorDanger":"Stat_ValueColorDanger__5VlFk","ValueColorPrimary":"Stat_ValueColorPrimary__3jDgF","ValueColorSuccess":"Stat_ValueColorSuccess__2I16Z"};
 
 /***/ }),
 
@@ -80,7 +80,7 @@ module.exports = {"Root":"Stat_Root__15gql","Label":"Stat_Label__uc_VL","List":"
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Field_Root__3biek","RootColorError":"Field_RootColorError__kzNqp","Text":"Field_Text__1LKbQ","RootColorSuccess":"Field_RootColorSuccess__2zARH","RootIsDisabled":"Field_RootIsDisabled__1_lJL","RootVariantHash":"Field_RootVariantHash__2j6A0","Copy":"Field_Copy__2P4So","Health":"Field_Health__2oWTf","HealthBar":"Field_HealthBar__UbQTT","HealthIndex":"Field_HealthIndex__ybrS9","Icon":"Field_Icon__3Bt6K","Word":"Field_Word__lQuHD","WordVariantGreen":"Field_WordVariantGreen__3A1ak","WordVariantLight":"Field_WordVariantLight__kVASF","WordVariantOrange":"Field_WordVariantOrange__3cvTv","WordVariantRed":"Field_WordVariantRed__1CsYh","WordVariantYellow":"Field_WordVariantYellow__NtGl3"};
+module.exports = {"Root":"Field_Root__3Xpzp","RootColorError":"Field_RootColorError__1SyqK","Text":"Field_Text__3aBAD","RootColorSuccess":"Field_RootColorSuccess__iZhww","RootIsDisabled":"Field_RootIsDisabled__34qwr","RootVariantHash":"Field_RootVariantHash__3vHZT","Copy":"Field_Copy__1MVY8","Health":"Field_Health__2p1Oe","HealthBar":"Field_HealthBar__t2k3T","HealthIndex":"Field_HealthIndex__3us2u","Icon":"Field_Icon__3e_0q","Word":"Field_Word__CS7mn","WordVariantGreen":"Field_WordVariantGreen__2QH5P","WordVariantLight":"Field_WordVariantLight__1Mn5m","WordVariantOrange":"Field_WordVariantOrange__AZCdW","WordVariantRed":"Field_WordVariantRed__1FEv8","WordVariantYellow":"Field_WordVariantYellow__2Xbuj"};
 
 /***/ }),
 
@@ -88,7 +88,7 @@ module.exports = {"Root":"Field_Root__3biek","RootColorError":"Field_RootColorEr
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Table_Root__1Dcze"};
+module.exports = {"Root":"Table_Root__3CqIU"};
 
 /***/ }),
 
@@ -96,7 +96,7 @@ module.exports = {"Root":"Table_Root__1Dcze"};
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Item_Root__3bpiM"};
+module.exports = {"Root":"Item_Root__1Vtiv"};
 
 /***/ }),
 
@@ -118,7 +118,7 @@ module.exports = __webpack_require__.p + "static/media/step-2.a2a7d29d.png";
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Actions":"Form_Actions__2P7Vw","ActionsConsole":"Form_ActionsConsole__3HEyF"};
+module.exports = {"Actions":"Form_Actions__1guva","ActionsConsole":"Form_ActionsConsole__1u_nC"};
 
 /***/ }),
 
@@ -134,7 +134,7 @@ module.exports = __webpack_require__(560);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Button_Root__3UoPz","RootColorDanger":"Button_RootColorDanger__2CsmL","Content":"Button_Content__b0cux","RootColorPrimary":"Button_RootColorPrimary__N7WI4","RootColorSecondary":"Button_RootColorSecondary__21qxs","RootColorSuccess":"Button_RootColorSuccess__1-3FA","RootGradientGreen":"Button_RootGradientGreen__2cMLf","Icon":"Button_Icon__1PUvK","RootGradientOrange":"Button_RootGradientOrange__Yt9-J","RootGradientPurple":"Button_RootGradientPurple__2Oh2l","RootGradientRed":"Button_RootGradientRed__2Qilw","RootVariantFilled":"Button_RootVariantFilled__eYVK0","RootVariantFull":"Button_RootVariantFull__29XyY","RootVariantFullWidth":"Button_RootVariantFullWidth__3sPDP","RootVariantIcon":"Button_RootVariantIcon__1JnfL"};
+module.exports = {"Root":"Button_Root__125Uj","RootColorDanger":"Button_RootColorDanger__1K9U9","Content":"Button_Content__tGwup","RootColorPrimary":"Button_RootColorPrimary__2KBES","RootColorSecondary":"Button_RootColorSecondary__2J9Qy","RootColorSuccess":"Button_RootColorSuccess__3wc-r","RootGradientGreen":"Button_RootGradientGreen__3_MiC","Icon":"Button_Icon__i_Kng","RootGradientOrange":"Button_RootGradientOrange__8ksmc","RootGradientPurple":"Button_RootGradientPurple__W4LIl","RootGradientRed":"Button_RootGradientRed__1UoUX","RootVariantFilled":"Button_RootVariantFilled__3JGLK","RootVariantFull":"Button_RootVariantFull__1mjeU","RootVariantFullWidth":"Button_RootVariantFullWidth__-WeCb","RootVariantIcon":"Button_RootVariantIcon__30qib"};
 
 /***/ }),
 
@@ -142,7 +142,7 @@ module.exports = {"Root":"Button_Root__3UoPz","RootColorDanger":"Button_RootColo
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Actions_Root__1JP0c","ButtonVariantDeposit":"Actions_ButtonVariantDeposit__mcHhb","Icon":"Actions_Icon__3JKX5","ButtonVariantPause":"Actions_ButtonVariantPause__185ha","ButtonVariantPlay":"Actions_ButtonVariantPlay__1Armj","ButtonVariantWithdraw":"Actions_ButtonVariantWithdraw__OZKsj"};
+module.exports = {"Root":"Actions_Root__1ncCJ","ButtonVariantDeposit":"Actions_ButtonVariantDeposit__2f69Y","Icon":"Actions_Icon__UjZlP","ButtonVariantPause":"Actions_ButtonVariantPause__1zt3X","ButtonVariantPlay":"Actions_ButtonVariantPlay__1KleK","ButtonVariantWithdraw":"Actions_ButtonVariantWithdraw__3u3T2"};
 
 /***/ }),
 
@@ -150,7 +150,7 @@ module.exports = {"Root":"Actions_Root__1JP0c","ButtonVariantDeposit":"Actions_B
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Select_Root__1wWeX","RootIsEmpty":"Select_RootIsEmpty__2_Dnc","Icon":"Select_Icon__2qACB","RootIsFocused":"Select_RootIsFocused__1Wotl","Container":"Select_Container__16YRY","RootIsMultiple":"Select_RootIsMultiple__2-6YR","Input":"Select_Input__1ld2F","Control":"Select_Control__2tUnw","Dropdown":"Select_Dropdown__3ADiy","List":"Select_List__3aZ5N","Option":"Select_Option__2qcmX","OptionDelete":"Select_OptionDelete__1tjHC","OptionIcon":"Select_OptionIcon__1bYAY"};
+module.exports = {"Root":"Select_Root__z3eM3","RootIsEmpty":"Select_RootIsEmpty__3vDGV","Icon":"Select_Icon__2GSfP","RootIsFocused":"Select_RootIsFocused__3LQDw","Container":"Select_Container__1EukS","RootIsMultiple":"Select_RootIsMultiple__2ZvAJ","Input":"Select_Input__1pvrG","Control":"Select_Control__1U3LJ","Dropdown":"Select_Dropdown__qjCrM","List":"Select_List__2-iCv","Option":"Select_Option__1nFSC","OptionDelete":"Select_OptionDelete__1cAIG","OptionIcon":"Select_OptionIcon__3FJ1Y"};
 
 /***/ }),
 
@@ -158,7 +158,7 @@ module.exports = {"Root":"Select_Root__1wWeX","RootIsEmpty":"Select_RootIsEmpty_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Validators_Root__1lOjo","RootIsConnected":"Validators_RootIsConnected__3c3eM","Status":"Validators_Status__3iCm1","RootIsOwner":"Validators_RootIsOwner__2jlQm","Actions":"Validators_Actions__PkyxE","Connecting":"Validators_Connecting__3CWO0","Header":"Validators_Header__1-yDr","HeaderRight":"Validators_HeaderRight__1LqmW","Hint":"Validators_Hint__Hf5lS","List":"Validators_List__b5LW9","NodeActions":"Validators_NodeActions__3vcol","Progress":"Validators_Progress__HXOP_"};
+module.exports = {"Root":"Validators_Root__2fHeH","RootIsConnected":"Validators_RootIsConnected__3NUcg","Status":"Validators_Status__2__-l","RootIsOwner":"Validators_RootIsOwner__1YG2P","Actions":"Validators_Actions__2yGMx","Connecting":"Validators_Connecting__2Z6T8","Header":"Validators_Header__6QWaq","HeaderRight":"Validators_HeaderRight__2lkvW","Hint":"Validators_Hint__3v6Uz","List":"Validators_List__3Ofdk","NodeActions":"Validators_NodeActions__1whvb","Progress":"Validators_Progress__3kw-W"};
 
 /***/ }),
 
@@ -166,7 +166,7 @@ module.exports = {"Root":"Validators_Root__1lOjo","RootIsConnected":"Validators_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Typography_Root__1eH5O","RootColorAlert":"Typography_RootColorAlert__3hwLc","RootColorDanger":"Typography_RootColorDanger__1-dWT","RootColorDark":"Typography_RootColorDark__1k3L-","RootColorLight":"Typography_RootColorLight__1whT1","RootColorLighter":"Typography_RootColorLighter__1OKC1","RootColorMedium":"Typography_RootColorMedium__1tsxb","RootColorPrimary":"Typography_RootColorPrimary__3Al8c","RootColorSuccess":"Typography_RootColorSuccess__2hQZu","RootNowrap":"Typography_RootNowrap__1niL7","RootVariantH1":"Typography_RootVariantH1__3nKmJ","RootVariantH2":"Typography_RootVariantH2__3TTGW","RootVariantH3":"Typography_RootVariantH3__Ncurq","RootVariantH4":"Typography_RootVariantH4__a1vXQ","RootVariantH5":"Typography_RootVariantH5__5PMd5","RootVariantH6":"Typography_RootVariantH6__Afx3U","RootVariantBody1":"Typography_RootVariantBody1__2EEBU","RootVariantBody2":"Typography_RootVariantBody2__1LH3A","RootVariantButton":"Typography_RootVariantButton__2tMs_","RootVariantCaption":"Typography_RootVariantCaption__2SAZe","RootVariantOverline":"Typography_RootVariantOverline__1-kGP","RootVariantSubtitle1":"Typography_RootVariantSubtitle1__2WGE3","RootVariantSubtitle2":"Typography_RootVariantSubtitle2__3M96g"};
+module.exports = {"Root":"Typography_Root__3WVP0","RootColorAlert":"Typography_RootColorAlert__3q0zB","RootColorDanger":"Typography_RootColorDanger__253SG","RootColorDark":"Typography_RootColorDark__30iIE","RootColorLight":"Typography_RootColorLight__1AdZ0","RootColorLighter":"Typography_RootColorLighter__--f8x","RootColorMedium":"Typography_RootColorMedium__25wgh","RootColorPrimary":"Typography_RootColorPrimary__3KfYA","RootColorSuccess":"Typography_RootColorSuccess__3xP0Q","RootNowrap":"Typography_RootNowrap__555jF","RootVariantH1":"Typography_RootVariantH1__3xax0","RootVariantH2":"Typography_RootVariantH2__2jC4w","RootVariantH3":"Typography_RootVariantH3__1MHUz","RootVariantH4":"Typography_RootVariantH4__1DmD5","RootVariantH5":"Typography_RootVariantH5__2YZpc","RootVariantH6":"Typography_RootVariantH6__sttTv","RootVariantBody1":"Typography_RootVariantBody1__AEkhB","RootVariantBody2":"Typography_RootVariantBody2__1k7KZ","RootVariantButton":"Typography_RootVariantButton__2W1Qp","RootVariantCaption":"Typography_RootVariantCaption__2w6TK","RootVariantOverline":"Typography_RootVariantOverline__UPEam","RootVariantSubtitle1":"Typography_RootVariantSubtitle1__i0rsb","RootVariantSubtitle2":"Typography_RootVariantSubtitle2__1EkOH"};
 
 /***/ }),
 
@@ -174,7 +174,7 @@ module.exports = {"Root":"Typography_Root__1eH5O","RootColorAlert":"Typography_R
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Progress_Root__1k5De","RootColorPrimary":"Progress_RootColorPrimary__2SH6-","Circle":"Progress_Circle__jf9fY","Line":"Progress_Line__aESni","RootColorSuccess":"Progress_RootColorSuccess__3N0OK","RootVariantLinear":"Progress_RootVariantLinear__Wtix5","Progress":"Progress_Progress__3mzis","RootVariantIndeterminate":"Progress_RootVariantIndeterminate__1EpjN","progressCircularDash":"Progress_progressCircularDash__3kNHE","RootVariantCircle":"Progress_RootVariantCircle__3jb_0","progressCircularRotate":"Progress_progressCircularRotate__RT2rm","progressLinear":"Progress_progressLinear__2IBfa"};
+module.exports = {"Root":"Progress_Root__1Vj99","RootColorPrimary":"Progress_RootColorPrimary__1vXQl","Circle":"Progress_Circle__sxvZS","Line":"Progress_Line__2WZ1S","RootColorSuccess":"Progress_RootColorSuccess__3JGRv","RootVariantLinear":"Progress_RootVariantLinear__lmRs3","Progress":"Progress_Progress__3YEOf","RootVariantIndeterminate":"Progress_RootVariantIndeterminate__2HTGG","progressCircularDash":"Progress_progressCircularDash__3rbrN","RootVariantCircle":"Progress_RootVariantCircle__2qdt8","progressCircularRotate":"Progress_progressCircularRotate__2hFvr","progressLinear":"Progress_progressLinear__2PFGl"};
 
 /***/ }),
 
@@ -246,13 +246,13 @@ var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 var es = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Router.js + 1 modules
-var Router = __webpack_require__(567);
+var Router = __webpack_require__(569);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Route.js + 1 modules
-var Route = __webpack_require__(569);
+var Route = __webpack_require__(568);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Switch.js + 1 modules
-var Switch = __webpack_require__(568);
+var Switch = __webpack_require__(567);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread.js
 var objectSpread = __webpack_require__(7);
@@ -369,7 +369,7 @@ var parseCompactedValidator=function parseCompactedValidator(){var hash=argument
 // Views
 // Utils
 var actions_createValidator=function createValidator(_ref){var address=_ref.address,deposit=_ref.deposit,hash=_ref.hash,node=_ref.node;return function(dispatch,getState,_ref2){var account=_ref2.account,privateWeb3=_ref2.privateWeb3,web3=_ref2.web3;dispatch({type:CREATE_VALIDATOR_REQUEST});return new Promise(function(resolve,reject){var value=web3.utils.toWei(deposit,'ether');var formattedHash="0x".concat(hash.replace(/^(0[xX]{1})?/,''));var formattedNode="0x".concat(node.replace(/^(0[xX]{1})?/,''));var formattedAddress="0x".concat(address.replace(/^(0[xX]{1})?/,''));account.methods.addInitialDeposit(formattedHash,formattedNode,formattedAddress).send({value:value,from:window.ethereum.selectedAddress}).on('error',reject).on('transactionHash',function(txHash){resolve();dispatch({type:CREATE_VALIDATOR_SUCCESS,hash:formattedHash.toLowerCase(),payload:{address:formattedAddress,deposit:convertDeposit(deposit),hash:formattedHash.toLowerCase(),isFetching:true,node:formattedNode,pauseCause:1}});dispatch(actions_closeModal(VALIDATOR_CREATE_MODAL_ID));account.events.ValidatorUpdated({},function(opt,_ref3){var transactionHash=_ref3.transactionHash;if(txHash===transactionHash){dispatch(actions_updateValidator(hash,{isFetching:false}));}});document.getElementById(hash).scrollIntoView();});}).catch(function(error){// eslint-disable-next-line
-console.error(error);dispatch({type:CREATE_VALIDATOR_FAILURE,error:Object(lodash["get"])(error,'message')});throw new SubmissionError["a" /* default */]({_error:Object(lodash["get"])(error,'message')});});};};var actions_depositValidator=function depositValidator(_ref4){var hash=_ref4.hash,deposit=_ref4.deposit;return function(dispatch,getState,_ref5){var account=_ref5.account,web3=_ref5.web3;dispatch({type:DEPOSIT_VALIDATOR_REQUEST,hash:hash});var state=getState();var value=web3.utils.toWei(deposit,'ether');var currentDeposit=selector_getValidatorDeposit(state,hash);var newDeposit=value/Math.pow(2,32);return new Promise(function(resolve,reject){account.methods.addDeposit(hash).send({value:value,from:window.ethereum.selectedAddress}).on('transactionHash',function(txHash){dispatch(actions_closeModal(VALIDATOR_DEPOSIT_MODAL_ID));account.events.ValidatorUpdated({},function(opt,_ref6){var transactionHash=_ref6.transactionHash;if(txHash===transactionHash){dispatch({type:DEPOSIT_VALIDATOR_SUCCESS,hash:hash,deposit:currentDeposit+newDeposit});}});}).on('error',reject);}).catch(function(error){return dispatch({type:DEPOSIT_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});});};};var actions_fetchValidator=function fetchValidator(hash){return function(dispatch,getState,_ref7){var contract=_ref7.contract;dispatch({type:FETCH_VALIDATOR_REQUEST,hash:hash});return contract.methods.getValidator(hash).call(null,function(error,res){if(error){dispatch({type:FETCH_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});}else{dispatch({type:FETCH_VALIDATOR_SUCCESS,hash:hash,payload:{pauseBlockNumber:Object(lodash["get"])(res,'pauseBlockNumber')}});}});};};var actions_fetchValidators=function fetchValidators(){return function(dispatch,getState,_ref8){var contract=_ref8.contract,schema=_ref8.schema,web3=_ref8.web3;dispatch({type:FETCH_VALIDATORS_REQUEST});return contract.methods.getCompactedValidators().call(null,function(error,res){if(error){dispatch({type:FETCH_VALIDATORS_FAILURE,error:Object(lodash["get"])(error,'message')});}else{var data=[];var validators=Object(lodash["get"])(res,'ValidatorsPubKeys',[]);validators.forEach(function(hash,index){var validator=parseCompactedValidator(Object(lodash["get"])(res,"ValidatorsCompacted.".concat(index)));console.log(validator);data.push(Object(objectSpread["a" /* default */])({},validator,{hash:hash.toLowerCase()}));});var normalizedData=Object(normalizr_es["a" /* normalize */])(data,[schema.validator]);dispatch({type:UPDATE_ENTITIES,data:normalizedData,force:true});dispatch({type:FETCH_VALIDATORS_SUCCESS});}});};};var actions_pauseValidator=function pauseValidator(_ref9){var address=_ref9.address,hash=_ref9.hash,pauseCause=_ref9.pauseCause,punishValue=_ref9.punishValue;return function(dispatch,getState,_ref10){var account=_ref10.account,web3=_ref10.web3;dispatch({type:PAUSE_VALIDATOR_REQUEST,hash:hash});return new Promise(function(resolve,reject){account.methods.pauseValidation(hash,address||hash,pauseCause||1,punishValue||0).send({from:window.ethereum.selectedAddress}).on('transactionHash',function(txHash){dispatch(actions_closeModal(VALIDATOR_PAUSE_MODAL_ID));account.events.ValidatorUpdated({},function(opt,_ref11){var transactionHash=_ref11.transactionHash;if(txHash===transactionHash){dispatch({type:PAUSE_VALIDATOR_SUCCESS,hash:hash});}});}).on('error',reject);}).catch(function(error){return dispatch({type:PAUSE_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});});};};var actions_startValidator=function startValidator(hash){return function(dispatch,getState,_ref12){var account=_ref12.account,web3=_ref12.web3;dispatch({type:START_VALIDATOR_REQUEST,hash:hash});return new Promise(function(resolve,reject){account.methods.resumeValidation(hash).send({from:window.ethereum.selectedAddress}).on('transactionHash',function(txHash){account.events.ValidatorUpdated({},function(opt,_ref13){var transactionHash=_ref13.transactionHash;if(txHash===transactionHash){dispatch({type:START_VALIDATOR_SUCCESS,hash:hash});}});}).on('error',reject);}).catch(function(error){return dispatch({type:START_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});});};};var actions_updateValidator=function updateValidator(hash,payload){return{type:UPDATE_VALIDATOR,hash:hash,payload:payload};};var actions_withdrawValidator=function withdrawValidator(hash){return function(dispatch,getState,_ref14){var account=_ref14.account,contract=_ref14.contract,web3=_ref14.web3;dispatch({type:WITHDRAW_VALIDATOR_REQUEST,hash:hash});return new Promise(function(resolve,reject){account.methods.withdraw(hash).send({from:window.ethereum.selectedAddress}).on('receipt',function(){return dispatch({type:WITHDRAW_VALIDATOR_SUCCESS,hash:hash});}).on('error',reject);}).catch(function(error){return dispatch({type:WITHDRAW_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});});};};
+console.error(error);dispatch({type:CREATE_VALIDATOR_FAILURE,error:Object(lodash["get"])(error,'message')});throw new SubmissionError["a" /* default */]({_error:Object(lodash["get"])(error,'message')});});};};var actions_depositValidator=function depositValidator(_ref4){var hash=_ref4.hash,deposit=_ref4.deposit;return function(dispatch,getState,_ref5){var account=_ref5.account,web3=_ref5.web3;dispatch({type:DEPOSIT_VALIDATOR_REQUEST,hash:hash});var state=getState();var value=web3.utils.toWei(deposit,'ether');var currentDeposit=selector_getValidatorDeposit(state,hash);var newDeposit=value/Math.pow(2,32);return new Promise(function(resolve,reject){account.methods.addDeposit(hash).send({value:value,from:window.ethereum.selectedAddress}).on('transactionHash',function(txHash){dispatch(actions_closeModal(VALIDATOR_DEPOSIT_MODAL_ID));account.events.ValidatorUpdated({},function(opt,_ref6){var transactionHash=_ref6.transactionHash;if(txHash===transactionHash){dispatch({type:DEPOSIT_VALIDATOR_SUCCESS,hash:hash,deposit:currentDeposit+newDeposit});}});}).on('error',reject);}).catch(function(error){return dispatch({type:DEPOSIT_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});});};};var actions_fetchValidator=function fetchValidator(hash){return function(dispatch,getState,_ref7){var contract=_ref7.contract;dispatch({type:FETCH_VALIDATOR_REQUEST,hash:hash});return contract.methods.getValidator(hash).call(null,function(error,res){if(error){dispatch({type:FETCH_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});}else{dispatch({type:FETCH_VALIDATOR_SUCCESS,hash:hash,payload:{pauseBlockNumber:Object(lodash["get"])(res,'pauseBlockNumber')}});}});};};var actions_fetchValidators=function fetchValidators(){return function(dispatch,getState,_ref8){var contract=_ref8.contract,schema=_ref8.schema,web3=_ref8.web3;dispatch({type:FETCH_VALIDATORS_REQUEST});return contract.methods.getCompactedValidators().call(null,function(error,res){if(error){dispatch({type:FETCH_VALIDATORS_FAILURE,error:Object(lodash["get"])(error,'message')});}else{var data=[];var validators=Object(lodash["get"])(res,'ValidatorsPubKeys',[]);validators.forEach(function(hash,index){var validator=parseCompactedValidator(Object(lodash["get"])(res,"ValidatorsCompacted.".concat(index)));console.log(validator);data.push(Object(objectSpread["a" /* default */])({},validator,{hash:hash.toLowerCase()}));});var normalizedData=Object(normalizr_es["a" /* normalize */])(data,[schema.validator]);dispatch({type:UPDATE_ENTITIES,data:normalizedData,force:true});dispatch({type:FETCH_VALIDATORS_SUCCESS});}});};};var actions_pauseValidator=function pauseValidator(_ref9){var from=_ref9.from,hash=_ref9.hash,pauseCause=_ref9.pauseCause,punishValue=_ref9.punishValue;return function(dispatch,getState,_ref10){var account=_ref10.account,web3=_ref10.web3;dispatch({type:PAUSE_VALIDATOR_REQUEST,hash:hash});return new Promise(function(resolve,reject){account.methods.pauseValidation(hash,from||hash,pauseCause||1,punishValue||0).send({from:window.ethereum.selectedAddress}).on('transactionHash',function(txHash){dispatch(actions_closeModal(VALIDATOR_PAUSE_MODAL_ID));account.events.ValidatorUpdated({},function(opt,_ref11){var transactionHash=_ref11.transactionHash;if(txHash===transactionHash){dispatch({type:PAUSE_VALIDATOR_SUCCESS,hash:hash});}});}).on('error',reject);}).catch(function(error){return dispatch({type:PAUSE_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});});};};var actions_startValidator=function startValidator(hash){return function(dispatch,getState,_ref12){var account=_ref12.account,web3=_ref12.web3;dispatch({type:START_VALIDATOR_REQUEST,hash:hash});return new Promise(function(resolve,reject){account.methods.resumeValidation(hash).send({from:window.ethereum.selectedAddress}).on('transactionHash',function(txHash){account.events.ValidatorUpdated({},function(opt,_ref13){var transactionHash=_ref13.transactionHash;if(txHash===transactionHash){dispatch({type:START_VALIDATOR_SUCCESS,hash:hash});}});}).on('error',reject);}).catch(function(error){return dispatch({type:START_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});});};};var actions_updateValidator=function updateValidator(hash,payload){return{type:UPDATE_VALIDATOR,hash:hash,payload:payload};};var actions_withdrawValidator=function withdrawValidator(hash){return function(dispatch,getState,_ref14){var account=_ref14.account,contract=_ref14.contract,web3=_ref14.web3;dispatch({type:WITHDRAW_VALIDATOR_REQUEST,hash:hash});return new Promise(function(resolve,reject){account.methods.withdraw(hash).send({from:window.ethereum.selectedAddress}).on('receipt',function(){return dispatch({type:WITHDRAW_VALIDATOR_SUCCESS,hash:hash});}).on('error',reject);}).catch(function(error){return dispatch({type:WITHDRAW_VALIDATOR_FAILURE,hash:hash,error:Object(lodash["get"])(error,'message')});});};};
 // CONCATENATED MODULE: ./src/entities/validators/index.js
 
 // CONCATENATED MODULE: ./src/views/Validators/ducks/types.js
@@ -480,7 +480,7 @@ var Form_default = /*#__PURE__*/__webpack_require__.n(Form_Form);
 
 // CONCATENATED MODULE: ./src/components/Form/Form.js
 // Styles
-var Form_Form_Form=function Form(_ref){var children=_ref.children,className=_ref.className,error=_ref.error,onSubmit=_ref.onSubmit;return react_default.a.createElement("form",{className:className,onSubmit:onSubmit},error&&react_default.a.createElement(components_Typography_Typography,{className:Form_default.a.Error},error),react_default.a.createElement("div",{className:Form_default.a.Container},children));};/* harmony default export */ var components_Form_Form = (Form_Form_Form);
+var Form_Form_Form=function Form(_ref){var children=_ref.children,className=_ref.className,error=_ref.error,onSubmit=_ref.onSubmit;return react_default.a.createElement("form",{autoComplete:"off",className:className,onSubmit:onSubmit},error&&react_default.a.createElement(components_Typography_Typography,{className:Form_default.a.Error},error),react_default.a.createElement("div",{className:Form_default.a.Container},children));};/* harmony default export */ var components_Form_Form = (Form_Form_Form);
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js
 var classCallCheck = __webpack_require__(239);
 
@@ -528,7 +528,7 @@ var Select_default = /*#__PURE__*/__webpack_require__.n(Select);
 // CONCATENATED MODULE: ./src/components/Form/components/Select/Select.js
 // Components
 // Styles
-var Select_FormSelect=function FormSelect(_ref){var _classNames;var children=_ref.children,id=_ref.id,name=_ref.name,placeholder=_ref.placeholder,value=_ref.value,handleBlur=_ref.handleBlur,handleChange=_ref.handleChange,handleCreate=_ref.handleCreate,handleDelete=_ref.handleDelete,handleFocus=_ref.handleFocus,registerInput=_ref.registerInput,registerRoot=_ref.registerRoot,inputValue=_ref.inputValue,isFocused=_ref.isFocused,isMultiple=_ref.isMultiple;var rootClassNames=classnames_default()(Select_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Select_default.a.RootIsFocused,!!isFocused),Object(defineProperty["a" /* default */])(_classNames,Select_default.a.RootIsMultiple,!!isMultiple),Object(defineProperty["a" /* default */])(_classNames,Select_default.a.RootIsEmpty,!!Object(lodash["isEmpty"])(value)),_classNames));return react_default.a.createElement("div",{className:rootClassNames,onBlur:handleBlur,onFocus:handleFocus,ref:registerRoot,tabIndex:0},react_default.a.createElement("div",{className:Select_default.a.Container},react_default.a.createElement("div",{className:Select_default.a.Control},isMultiple&&value&&value.length>0&&value.map(function(_ref2){var label=_ref2.label,value=_ref2.value;return react_default.a.createElement("div",{className:Select_default.a.Option,key:value},react_default.a.createElement(components_Typography_Typography,{className:Select_default.a.OptionLabel,variant:components_Typography_Typography.VARIANT.BODY2},label),react_default.a.createElement("button",{className:Select_default.a.OptionDelete,onClick:function onClick(){return handleDelete(value);},type:"button"},react_default.a.createElement("i",{className:classnames_default()(Select_default.a.OptionIcon,'fas fa-times-circle')})));}),react_default.a.createElement("input",{autoComplete:"new-password",className:Select_default.a.Input,id:id,name:name,onChange:handleChange,onFocus:handleFocus,placeholder:Object(lodash["isEmpty"])(value)?placeholder:'',ref:registerInput,size:(inputValue.length||6)+2,type:"text",value:isFocused?inputValue:!isMultiple?Object(lodash["get"])(value,'label',''):''}))),children&&isFocused&&react_default.a.createElement("div",{className:Select_default.a.Dropdown},react_default.a.createElement("div",{className:Select_default.a.List},typeof children==='function'?children({value:value,inputValue:inputValue.toLowerCase(),onClick:handleCreate}):react["Children"].map(children,function(child){return child&&Object(react["cloneElement"])(child,{onClick:handleCreate});}))));};var ComposedFormSelect=Object(Recompose_esm["a" /* compose */])(Object(Recompose_esm["e" /* withState */])('isFocused','setFocus',false),Object(Recompose_esm["e" /* withState */])('inputValue','setInputValue',''),Object(Recompose_esm["c" /* withHandlers */])(function(){var $input;var $root;return{// Handlers
+var Select_FormSelect=function FormSelect(_ref){var _classNames;var children=_ref.children,id=_ref.id,name=_ref.name,placeholder=_ref.placeholder,value=_ref.value,handleBlur=_ref.handleBlur,handleChange=_ref.handleChange,handleCreate=_ref.handleCreate,handleDelete=_ref.handleDelete,handleFocus=_ref.handleFocus,registerInput=_ref.registerInput,registerRoot=_ref.registerRoot,inputValue=_ref.inputValue,isFocused=_ref.isFocused,isMultiple=_ref.isMultiple;var rootClassNames=classnames_default()(Select_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Select_default.a.RootIsFocused,!!isFocused),Object(defineProperty["a" /* default */])(_classNames,Select_default.a.RootIsMultiple,!!isMultiple),Object(defineProperty["a" /* default */])(_classNames,Select_default.a.RootIsEmpty,!!Object(lodash["isEmpty"])(value)),_classNames));return react_default.a.createElement("div",{className:rootClassNames,onBlur:handleBlur,onFocus:handleFocus,ref:registerRoot,tabIndex:0},react_default.a.createElement("div",{className:Select_default.a.Container},react_default.a.createElement("div",{className:Select_default.a.Control},isMultiple&&value&&value.length>0&&value.map(function(_ref2){var label=_ref2.label,value=_ref2.value;return react_default.a.createElement("div",{className:Select_default.a.Option,key:value},react_default.a.createElement(components_Typography_Typography,{className:Select_default.a.OptionLabel,variant:components_Typography_Typography.VARIANT.BODY2},label),react_default.a.createElement("button",{className:Select_default.a.OptionDelete,onClick:function onClick(){return handleDelete(value);},type:"button"},react_default.a.createElement("i",{className:classnames_default()(Select_default.a.OptionIcon,'fas fa-times-circle')})));}),react_default.a.createElement("input",{autoComplete:"off",autoCorrect:"off",spellCheck:"off",className:Select_default.a.Input,id:"".concat(id,"-select-value"),name:name,onChange:handleChange,onFocus:handleFocus,placeholder:Object(lodash["isEmpty"])(value)?placeholder:'',ref:registerInput,size:(inputValue.length||6)+2,type:"text",value:isFocused?inputValue:!isMultiple?Object(lodash["get"])(value,'label',''):''}))),children&&isFocused&&react_default.a.createElement("div",{className:Select_default.a.Dropdown},react_default.a.createElement("div",{className:Select_default.a.List},typeof children==='function'?children({value:value,inputValue:inputValue.toLowerCase(),onClick:handleCreate}):react["Children"].map(children,function(child){return child&&Object(react["cloneElement"])(child,{onClick:handleCreate});}))));};var ComposedFormSelect=Object(Recompose_esm["a" /* compose */])(Object(Recompose_esm["e" /* withState */])('isFocused','setFocus',false),Object(Recompose_esm["e" /* withState */])('inputValue','setInputValue',''),Object(Recompose_esm["c" /* withHandlers */])(function(){var $input;var $root;return{// Handlers
 handleBlur:function handleBlur(_ref3){var setFocus=_ref3.setFocus,setInputValue=_ref3.setInputValue;return function(event){if(!$root.contains(event.relatedTarget)){$input.blur();setFocus(false);setInputValue('');}};},handleChange:function handleChange(_ref4){var setInputValue=_ref4.setInputValue;return function(event){return setInputValue(Object(lodash["get"])(event,'target.value',''));};},handleCreate:function handleCreate(_ref5){var isMultiple=_ref5.isMultiple,onChange=_ref5.onChange,setFocus=_ref5.setFocus,value=_ref5.value;return function(itemValue){if(!isMultiple){$input.blur();setFocus(false);}onChange&&onChange(isMultiple?[].concat(Object(toConsumableArray["a" /* default */])(value||[]),[itemValue]):itemValue);};},handleDelete:function handleDelete(_ref6){var onChange=_ref6.onChange,value=_ref6.value;return function(itemValue){return onChange&&onChange(value.filter(function(_ref7){var value=_ref7.value;return value!==itemValue;}));};},handleFocus:function handleFocus(_ref8){var setFocus=_ref8.setFocus;return function(){$input.focus();setFocus(true);};},// Registers
 registerRoot:function registerRoot(){return function(node){$root=node;};},registerInput:function registerInput(){return function(node){$input=node;};}};}))(Select_FormSelect);/* harmony default export */ var Select_Select = (function(_ref9){var children=_ref9.children,props=Object(objectWithoutProperties["a" /* default */])(_ref9,["children"]);return react_default.a.createElement(components_Form_components_Field,props,react_default.a.createElement(ComposedFormSelect,null,children));});
 // EXTERNAL MODULE: ./src/components/Form/components/Select/components/Item.scss
@@ -636,7 +636,7 @@ var From_ValidatorsFrom=function ValidatorsFrom(_ref){var label=_ref.label,name=
 // Services
 // Utils
 // Styles
-var Pause_ValidatorsPause=function ValidatorsPause(_ref){var handleCancel=_ref.handleCancel,handleSubmit=_ref.handleSubmit,submitting=_ref.submitting,isOwner=_ref.isOwner;return react_default.a.createElement(components_Form_Form,{onSubmit:handleSubmit},submitting&&react_default.a.createElement(src_components_Metamask,null),react_default.a.createElement(From,{label:"vFrom",name:"address"}),isOwner&&react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(Select_Select,{format:function format(id){return{label:parse_parsePause(id),value:id};},label:"\u0422\u0438\u043F \u043F\u0430\u0443\u0437\u044B",name:"pauseCause",parse:function parse(item){return Object(lodash["get"])(item,'value');}},[PAUSE_CAUSE_VOLUNTARILY,PAUSE_CAUSE_UNTIL_BLOCK,PAUSE_CAUSE_UNTIL_FINE,PAUSE_CAUSE_PUNISHMENT].map(function(id){return react_default.a.createElement(components_Item,{key:id,label:parse_parsePause(id),value:id});})),react_default.a.createElement(components_Input,{label:"PUNISH VALUE",name:"punishValue"})),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:handleCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,type:"submit"},"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C")));};var Pause_mapStateToProps=function mapStateToProps(state){return{isOwner:selector_isOwner(state)};};var ComposedValidatorsPause=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Pause_mapStateToProps,{closeModal:actions_closeModal}),Object(reduxForm["a" /* default */])({form:VALIDATOR_PAUSE_FORM_ID,validate:Object(validate["a" /* default */])({address:[Object(validate["i" /* required */])(),Object(validate["b" /* isHash */])()],pauseCause:[Object(validate["i" /* required */])(),Object(validate["d" /* isNumber */])(),Object(validate["f" /* isUint */])(8)],punishValue:[Object(validate["i" /* required */])(),Object(validate["d" /* isNumber */])(),Object(validate["f" /* isUint */])(96)]})}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref2){var closeModal=_ref2.closeModal;return function(event){return closeModal(VALIDATOR_PAUSE_MODAL_ID);};}}))(Pause_ValidatorsPause);var Pause_ValidatorsPauseModal=function ValidatorsPauseModal(_ref3){var handleSubmit=_ref3.handleSubmit;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_PAUSE_MODAL_ID,title:"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C"},function(_ref4){var hash=_ref4.hash;return react_default.a.createElement(ComposedValidatorsPause,{initialValues:{hash:hash,pauseCause:PAUSE_CAUSE_VOLUNTARILY,punishValue:0},onSubmit:handleSubmit});});};/* harmony default export */ var Pause = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{pauseValidator:actions_pauseValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleSubmit:function handleSubmit(_ref5){var pauseValidator=_ref5.pauseValidator;return function(values){return pauseValidator(values);};}}))(Pause_ValidatorsPauseModal));
+var Pause_ValidatorsPause=function ValidatorsPause(_ref){var handleCancel=_ref.handleCancel,handleSubmit=_ref.handleSubmit,submitting=_ref.submitting,isOwner=_ref.isOwner;return react_default.a.createElement(components_Form_Form,{onSubmit:handleSubmit},submitting&&react_default.a.createElement(src_components_Metamask,null),react_default.a.createElement(From,{label:"vFrom",name:"from"}),isOwner&&react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(Select_Select,{format:function format(id){return{label:parse_parsePause(id),value:id};},label:"\u0422\u0438\u043F \u043F\u0430\u0443\u0437\u044B",name:"pauseCause",parse:function parse(item){return Object(lodash["get"])(item,'value');}},[PAUSE_CAUSE_VOLUNTARILY,PAUSE_CAUSE_UNTIL_BLOCK,PAUSE_CAUSE_UNTIL_FINE,PAUSE_CAUSE_PUNISHMENT].map(function(id){return react_default.a.createElement(components_Item,{key:id,label:parse_parsePause(id),value:id});})),react_default.a.createElement(components_Input,{label:"PUNISH VALUE",name:"punishValue"})),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:handleCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,type:"submit"},"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C")));};var Pause_mapStateToProps=function mapStateToProps(state){return{isOwner:selector_isOwner(state)};};var ComposedValidatorsPause=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Pause_mapStateToProps,{closeModal:actions_closeModal}),Object(reduxForm["a" /* default */])({form:VALIDATOR_PAUSE_FORM_ID,validate:Object(validate["a" /* default */])({from:[Object(validate["i" /* required */])(),Object(validate["b" /* isHash */])(64)],pauseCause:[Object(validate["i" /* required */])(),Object(validate["d" /* isNumber */])(),Object(validate["f" /* isUint */])(8)],punishValue:[Object(validate["i" /* required */])(),Object(validate["d" /* isNumber */])(),Object(validate["f" /* isUint */])(96)]})}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref2){var closeModal=_ref2.closeModal;return function(event){return closeModal(VALIDATOR_PAUSE_MODAL_ID);};}}))(Pause_ValidatorsPause);var Pause_ValidatorsPauseModal=function ValidatorsPauseModal(_ref3){var handleSubmit=_ref3.handleSubmit;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_PAUSE_MODAL_ID,title:"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C"},function(_ref4){var hash=_ref4.hash;return react_default.a.createElement(ComposedValidatorsPause,{initialValues:{hash:hash,pauseCause:PAUSE_CAUSE_VOLUNTARILY,punishValue:0},onSubmit:handleSubmit});});};/* harmony default export */ var Pause = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{pauseValidator:actions_pauseValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleSubmit:function handleSubmit(_ref5){var pauseValidator=_ref5.pauseValidator;return function(values){return pauseValidator(values);};}}))(Pause_ValidatorsPauseModal));
 // EXTERNAL MODULE: ./src/views/Validators/Validators.scss
 var Validators_Validators = __webpack_require__(32);
 var Validators_default = /*#__PURE__*/__webpack_require__.n(Validators_Validators);
@@ -751,7 +751,7 @@ unregister();
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Modal_Root__3q3lT","Backdrop":"Modal_Backdrop__C2Mqp","Container":"Modal_Container__3Q55l","modalInit":"Modal_modalInit__3LUxY","Title":"Modal_Title__XbkfL"};
+module.exports = {"Root":"Modal_Root__6ttBO","Backdrop":"Modal_Backdrop__2_J7F","Container":"Modal_Container__LAyOq","modalInit":"Modal_modalInit__396Dd","Title":"Modal_Title__qjfKC"};
 
 /***/ }),
 
@@ -759,7 +759,7 @@ module.exports = {"Root":"Modal_Root__3q3lT","Backdrop":"Modal_Backdrop__C2Mqp",
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Field_Root__3MB3-","Error":"Field_Error__3CFo8","Header":"Field_Header__3Hfs5","Label":"Field_Label__1iFfw"};
+module.exports = {"Root":"Field_Root__2jPRN","Error":"Field_Error__2NOFW","Header":"Field_Header__3pVFO","Label":"Field_Label__3j_p7"};
 
 /***/ }),
 
@@ -767,7 +767,7 @@ module.exports = {"Root":"Field_Root__3MB3-","Error":"Field_Error__3CFo8","Heade
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Input_Root__3VpEi","RootIsErred":"Input_RootIsErred__3eeWg","RootIsFocused":"Input_RootIsFocused__2RQe7","RootIsReadOnly":"Input_RootIsReadOnly__1Myl8","Input":"Input_Input__3rMjF"};
+module.exports = {"Root":"Input_Root__3wawD","RootIsErred":"Input_RootIsErred__3j1UL","RootIsFocused":"Input_RootIsFocused__3qU5g","RootIsReadOnly":"Input_RootIsReadOnly__N7ZrM","Input":"Input_Input__1VsLQ"};
 
 /***/ }),
 
@@ -775,7 +775,7 @@ module.exports = {"Root":"Input_Root__3VpEi","RootIsErred":"Input_RootIsErred__3
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Metamask_Root__zrno2","Cover":"Metamask_Cover__I9E_H","Container":"Metamask_Container__1FZOa","Logo":"Metamask_Logo__Ray6S","Title":"Metamask_Title__2HArS"};
+module.exports = {"Root":"Metamask_Root__1xx5U","Cover":"Metamask_Cover__AkjQf","Container":"Metamask_Container__2bX8q","Logo":"Metamask_Logo__Rd9Y9","Title":"Metamask_Title__3UAnc"};
 
 /***/ }),
 
@@ -783,7 +783,7 @@ module.exports = {"Root":"Metamask_Root__zrno2","Cover":"Metamask_Cover__I9E_H",
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Determine_Root__3B6cr","RootIsSelected":"Determine_RootIsSelected__2zSNW","Content":"Determine_Content__jXH7T"};
+module.exports = {"Root":"Determine_Root__1ChsM","RootIsSelected":"Determine_RootIsSelected__3AFO_","Content":"Determine_Content__Sczc8"};
 
 /***/ }),
 
@@ -791,9 +791,9 @@ module.exports = {"Root":"Determine_Root__3B6cr","RootIsSelected":"Determine_Roo
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Container":"Guide_Container__3FIps","Frame":"Guide_Frame__2_1V0","Link":"Guide_Link__1rgrz","Steps":"Guide_Steps__YblhS"};
+module.exports = {"Container":"Guide_Container__2W6P8","Frame":"Guide_Frame__2p6WL","Link":"Guide_Link__1iVuC","Steps":"Guide_Steps__1NQEI"};
 
 /***/ })
 
 },[[256,1,2]]]);
-//# sourceMappingURL=main.80402afc.chunk.js.map
+//# sourceMappingURL=main.c53b86ae.chunk.js.map
