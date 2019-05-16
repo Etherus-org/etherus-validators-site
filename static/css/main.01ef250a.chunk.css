@@ -589,6 +589,8 @@
           justify-content: space-between;
   margin: 40px 0 0; }
   .Common_ActionsConsole__3CaTa {
+    -webkit-flex: 0 0 40px;
+            flex: 0 0 40px;
     margin: 24px 0 0; }
 
 .Common_Alert__2tySw {
@@ -601,10 +603,12 @@
 .Common_Console__Kh5no {
   background: var(--color-blue-gray-900);
   margin: 0 -24px;
+  -webkit-flex: 1 1 auto;
+          flex: 1 1 auto;
   font-family: monospace, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  height: 408px;
+  max-height: calc(100% - 40px);
   overflow-x: visible;
   overflow-y: scroll;
   padding: 24px; }
@@ -612,9 +616,19 @@
 .Common_Container__2Q9lT {
   max-width: 480px; }
   .Common_ContainerConsole__3rqMt {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+            flex-direction: column;
     max-height: calc(100% - 80px);
-    max-width: 720px;
-    overflow: hidden; }
+    max-width: 720px; }
+    .Common_ContainerConsole__3rqMt > div:nth-child(2) {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex: 1 1 auto;
+              flex: 1 1 auto;
+      -webkit-flex-direction: column;
+              flex-direction: column; }
 
 .Common_Error__3le_b {
   color: var(--color-danger); }
@@ -1149,4 +1163,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.18ba3cfd.chunk.css.map*/
+/*# sourceMappingURL=main.01ef250a.chunk.css.map*/
