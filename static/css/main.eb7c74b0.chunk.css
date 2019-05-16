@@ -405,6 +405,10 @@
   width: 100%; }
   .Field_RootColorError__1SyqK .Field_Text__3aBAD {
     color: var(--color-danger); }
+  .Field_RootColorDanger__2dSFX .Field_Text__3aBAD {
+    color: var(--color-orange-500); }
+  .Field_RootColorOrange__1FMsL .Field_Text__3aBAD {
+    color: var(--color-orange-900); }
   .Field_RootColorSuccess__iZhww .Field_Text__3aBAD {
     color: var(--color-success); }
   .Field_RootIsDisabled__34qwr {
@@ -413,6 +417,9 @@
       max-width: 100%; }
   .Field_RootVariantHash__3vHZT .Field_Text__3aBAD {
     max-width: calc(100% - 44px); }
+  .Field_RootVariantPing__3ynVT .Field_Text__3aBAD {
+    font-size: 18px;
+    text-align: center; }
 
 .Field_Copy__1MVY8 {
   margin: 0 8px 0 0; }
@@ -481,6 +488,10 @@
   padding: 24px 0 24px 48px;
   width: 100%; }
 
+.Stat_Description__62ReH {
+  color: var(--color-blue-600);
+  margin: 8px 0 0; }
+
 .Stat_Label__2Npae {
   color: var(--color-gray); }
 
@@ -491,11 +502,17 @@
   .Stat_List__1fWd_ > *:not(:first-child) {
     margin: 0 0 0 64px; }
 
+.Stat_Ping__2pawe {
+  margin: 20px 0 0; }
+
 .Stat_ValueColorAlert__2h-2X {
   color: var(--color-alert); }
 
 .Stat_ValueColorDanger__5VlFk {
   color: var(--color-danger); }
+
+.Stat_ValueColorOrange__pTVvu {
+  color: var(--color-orange-900); }
 
 .Stat_ValueColorPrimary__3jDgF {
   color: var(--color-primary); }
@@ -1163,4 +1180,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.01ef250a.chunk.css.map*/
+/*# sourceMappingURL=main.eb7c74b0.chunk.css.map*/
