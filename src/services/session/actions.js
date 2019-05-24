@@ -36,7 +36,7 @@ export const connectMetamask: Function = (): Function =>
     return window.ethereum.enable()
       .then((data: Array<string>): void => {
         getValidatorListByAddress(state, data[0])
-          .filter(({ address }): bool => address === data[0])
+          .filter(({ address, pauseCause }): bool => address === data[0])
           .forEach(({ address, hash }): void =>
             dispatch(fetchValidator(hash)));
 

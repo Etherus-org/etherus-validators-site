@@ -3,7 +3,7 @@ import { get } from 'lodash';
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { compose, withHandlers } from 'recompose';
-import { reduxForm } from 'redux-form';
+import { formValueSelector, reduxForm } from 'redux-form';
 
 // Components
 import Button from 'components/Button';
@@ -44,13 +44,14 @@ import styles from './Common.scss';
 const ValidatorsPause: React.Element<Form> = ({
   handleCancel,
   handleSubmit,
+  pauseCause,
   submitting,
   // State
   isOwner,
 }) => (
   <Form onSubmit={handleSubmit}>
     {submitting && <Metamask />}
-    <From label="vFrom" name="address" />
+    <From label="vFrom" name="from" />
 
     {isOwner && (
       <Fragment>
@@ -74,7 +75,9 @@ const ValidatorsPause: React.Element<Form> = ({
           ))}
         </Select>
 
-        <Input label="PUNISH VALUE" name="punishValue" />
+        {(pauseCause === PAUSE_CAUSE_UNTIL_BLOCK || pauseCause === PAUSE_CAUSE_UNTIL_FINE) && (
+          <Input label="PUNISH VALUE" name="punishValue" />
+        )}
       </Fragment>
     )}
 
@@ -96,8 +99,10 @@ const ValidatorsPause: React.Element<Form> = ({
   </Form>
 );
 
+const selector = formValueSelector(VALIDATOR_PAUSE_FORM_ID);
 const mapStateToProps: Function = (state: Object): Object => ({
   isOwner: isOwner(state),
+  pauseCause: selector(state, 'pauseCause'),
 });
 
 const ComposedValidatorsPause = compose(
@@ -105,9 +110,9 @@ const ComposedValidatorsPause = compose(
   reduxForm({
     form: VALIDATOR_PAUSE_FORM_ID,
     validate: validate({
-      address: [required(), isHash()],
+      from: [required(), isHash(64)],
       pauseCause: [required(), isNumber(), isUint(8)],
-      punishValue: [required(), isNumber(), isUint(96)]
+      punishValue: [isNumber()],
     }),
   }),
   withHandlers({

@@ -37,6 +37,7 @@ export const isPrivateKey = (message: string = 'Incorrect private key') => (valu
       isValid = true;
     }
   } catch(e) {
+    // eslint-disable-next-line
     console.error(e);
   }
 

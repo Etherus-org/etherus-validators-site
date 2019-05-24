@@ -1,6 +1,6 @@
 // @flow
 import classNames from 'classnames';
-import { get, values } from 'lodash';
+import { get } from 'lodash';
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { compose, lifecycle, withHandlers } from 'recompose';

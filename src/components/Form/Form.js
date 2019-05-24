@@ -12,6 +12,7 @@ const Form = ({
   onSubmit,
 }) => (
   <form
+    autoComplete="off"
     className={className}
     onSubmit={onSubmit}
   >

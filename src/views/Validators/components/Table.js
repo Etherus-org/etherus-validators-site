@@ -61,6 +61,20 @@ const COLUMNS = [
     sortable: false,
   },
   {
+    accessor: 'ping',
+    Cell: ({ index, original }) => (
+      <Field
+        isDisabled={index >= MAX_ROWS}
+        original={original}
+        variant={VARIANT.PING}
+      />
+    ),
+    Header: '',
+    sortable: false,
+    style: { textAlign: 'center' },
+    width: 72,
+  },
+  {
     accessor: 'voted64',
     Cell: ({ index, original, value }) => (
       <Field

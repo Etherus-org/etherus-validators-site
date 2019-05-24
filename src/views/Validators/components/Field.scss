@@ -11,6 +11,18 @@
       }
     }
 
+    &Danger {
+      .Text {
+        color: var(--color-orange-500);
+      }
+    }
+
+    &Orange {
+      .Text {
+        color: var(--color-orange-900);
+      }
+    }
+
     &Success {
       .Text {
         color: var(--color-success);
@@ -32,6 +44,13 @@
     &Hash {
       .Text {
         max-width: calc(100% - 44px);
+      }
+    }
+
+    &Ping {
+      .Text {
+        font-size: 18px;
+        text-align: center;
       }
     }
   }
@@ -70,7 +89,7 @@
 
     & > div {
       background: rgba(0, 0, 0, .4);
-      padding: 0 2px; 
+      padding: 0 2px;
     }
   }
 }

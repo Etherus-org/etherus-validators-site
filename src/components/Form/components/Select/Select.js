@@ -71,9 +71,11 @@ const FormSelect = ({
           ))}
 
           <input
-            autoComplete="new-password"
+            autoComplete="off"
+            autoCorrect="off"
+            spellCheck="off"
             className={styles.Input}
-            id={id}
+            id={`${id}-select-value`}
             name={name}
             onChange={handleChange}
             onFocus={handleFocus}

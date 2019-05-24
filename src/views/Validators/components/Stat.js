@@ -10,13 +10,21 @@ import CONFIG from 'api/config';
 // Ducks
 import { getStatById } from '../ducks';
 
+// Services
+import { getBlockNumber } from 'services/session';
+
 // Styles
 import { Typography } from 'styles';
 import styles from './Stat.scss';
 
 const ValidatorsStat = ({
+  currentBlockNumber,
+  original,
   stat,
 }): React.Element<'div'> => {
+  const isPunished = get(original, 'pauseCause', 0) > 1;
+  const isFine = get(original, 'pauseCause', 0) === 3;
+  const ping = get(stat, 'timediff', 0);
   const responses = Math.round(get(stat, 'responses', 0) * 100);
   const responses64 = Math.round(get(stat, 'responses64', 0) * 100);
 
@@ -31,10 +39,39 @@ const ValidatorsStat = ({
         </Typography>
 
         <Typography
-          className={classNames(styles.Value)}
+          className={styles.Value}
           variant={Typography.VARIANT.H5}
         >
           {`0x${get(stat, 'receiver', '').toLowerCase()}`}
+        </Typography>
+      </div>
+
+      <div className={styles.Ping}>
+        <Typography
+          className={styles.Label}
+          variant={Typography.VARIANT.SUBTITLE1}
+        >
+          Разница во времени:
+        </Typography>
+
+        <Typography
+          className={classNames(styles.Value, {
+            [styles.ValueColorDanger]: Math.abs(ping) > 2000,
+            [styles.ValueColorOrange]: Math.abs(ping) > 1000 && Math.abs(ping) <= 2000,
+            [styles.ValueColorAlert]: Math.abs(ping) > 500 && Math.abs(ping) <= 1000,
+            [styles.ValueColorSuccess]: Math.abs(ping) >= 0 && Math.abs(ping) <= 500,
+          })}
+          variant={Typography.VARIANT.H5}
+        >
+          {`${ping} ms`}
+        </Typography>
+
+        <Typography
+          className={styles.Description}
+          variant={Typography.VARIANT.CAPTION}
+        >
+          Если разница во времени с вашим узлом достигает более 1000 миллисекунд: <br />
+          вам необходимо настроить на сервере узла синхронизацию с мировым временем.
         </Typography>
       </div>
 
@@ -44,18 +81,18 @@ const ValidatorsStat = ({
             className={styles.Label}
             variant={Typography.VARIANT.SUBTITLE1}
           >
-            Кол-во ответов:
+            {isPunished ? 'Блок остановки ' : 'Кол-во ответов'}:
           </Typography>
 
           <Typography
             className={classNames(styles.Value, {
               [styles.ValueColorAlert]: responses > 40 && responses < 75,
-              [styles.ValueColorDanger]: responses <= 40,
+              [styles.ValueColorDanger]: responses <= 40 || isPunished,
               [styles.ValueColorSuccess]: responses >= 75,
             })}
             variant={Typography.VARIANT.H3}
           >
-            {`${responses}%`}
+            {isPunished ? `${get(original, 'pauseBlockNumber', 0)}` : `${responses}%`}
           </Typography>
         </div>
 
@@ -64,7 +101,7 @@ const ValidatorsStat = ({
             className={styles.Label}
             variant={Typography.VARIANT.SUBTITLE1}
           >
-            Кол-во ответов (за 64 блока):
+            {isPunished ? isFine ? 'Штраф' : 'Осталось блоков' : 'Кол-во ответов (за 64 блока)'}:
           </Typography>
 
           <Typography
@@ -75,7 +112,11 @@ const ValidatorsStat = ({
             })}
             variant={Typography.VARIANT.H3}
           >
-            {`${responses64}%`}
+            {isPunished
+              ? isFine
+                ? `${(get(original, 'punishValue', 0) / Math.pow(10, 18)).toFixed(2)} ${CONFIG.SYMBOL}`
+                : `${Math.max(0, (parseInt(get(original, 'pauseBlockNumber', 0), 10) + parseInt(get(original, 'punishValue', 0), 10)) - currentBlockNumber)}`
+              : `${responses64}%`}
           </Typography>
         </div>
 
@@ -107,7 +148,7 @@ const ValidatorsStat = ({
             className={styles.Value}
             variant={Typography.VARIANT.H3}
           >
-            {`${get(stat, 'earned', 0) / Math.pow(10, 18)} ${CONFIG.SYMBOL}`}
+            {`${(get(stat, 'earned', 0) / Math.pow(10, 18)).toFixed(2)} ${CONFIG.SYMBOL}`}
           </Typography>
         </div>
       </div>
@@ -116,6 +157,7 @@ const ValidatorsStat = ({
 }
 
 const mapStateToProps: Function = (state: Object, { original }) => ({
+  currentBlockNumber: getBlockNumber(state),
   stat: getStatById(state, get(original, 'hash')),
 });
 

@@ -43,6 +43,7 @@ const VARIANT = {
   HASH: 'hash',
   HEALTH: 'health',
   PAUSE: 'pause',
+  PING: 'ping',
 };
 
 const ValidatorsField: React.Element<'div'> = ({
@@ -56,6 +57,7 @@ const ValidatorsField: React.Element<'div'> = ({
   // Handlers
   handleCopy,
 }: ValidatorsFieldType) => {
+  const ping = get(stat, 'timediff', 0);
   const rootClassNames: string = classNames(styles.Root,
   !isDisabled && variant === VARIANT.PAUSE && {
     [styles.RootColorError]: !isDisabled && title !== PAUSE_NOT_PAUSED,
@@ -64,6 +66,12 @@ const ValidatorsField: React.Element<'div'> = ({
     [styles.RootIsDisabled]: isDisabled,
   }, {
     [styles.RootVariantHash]: variant === VARIANT.HASH,
+  }, variant === VARIANT.PING && {
+    [styles.RootVariantPing]: true,
+    [styles.RootColorError]: Math.abs(ping) > 2000,
+    [styles.RootColorOrange]: Math.abs(ping) > 1000 && Math.abs(ping) <= 2000,
+    [styles.RootColorDanger]: Math.abs(ping) > 500 && Math.abs(ping) <= 1000,
+    [styles.RootColorSuccess]: Math.abs(ping) >= 0 && Math.abs(ping) <= 500,
   });
 
   return (
@@ -89,6 +97,8 @@ const ValidatorsField: React.Element<'div'> = ({
         {variant === VARIANT.PAUSE && parsePause(title)}
         {variant === VARIANT.HASH && (title || children)}
         {variant === VARIANT.DEFAULT && (title || children)}
+
+        {variant === VARIANT.PING &&  <i className="fas fa-stopwatch" />}
 
         {(!isDisabled && variant === VARIANT.HEALTH) && (
           <div className={styles.Health}>

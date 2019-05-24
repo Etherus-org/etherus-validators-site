@@ -37,7 +37,7 @@ const ValidatorsForm: React.Element<Form> = ({
     <Fragment>
       <Input label="Хост" name="host" placeholder="localhost" />
       <Input label="Порт" name="port" placeholder="22" />
-      <Input label="Имя пользователь" name="username" placeholder="root" />
+      <Input label="Имя пользователя" name="username" placeholder="root" />
       <Input label="Пароль" name="password" type="password" />
     </Fragment>
 

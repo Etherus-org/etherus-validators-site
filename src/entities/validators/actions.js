@@ -3,6 +3,9 @@ import { get } from 'lodash';
 import { normalize } from 'normalizr';
 import { SubmissionError } from 'redux-form';
 
+// Constants
+import { PAUSE_CAUSE_UNTIL_FINE } from './constants';
+
 // Entities
 import { UPDATE_ENTITIES } from 'entities/types';
 
@@ -54,6 +57,7 @@ import {
 } from 'views/Validators';
 
 // Utils
+import { checkTransaction } from './utils';
 import { convertDeposit } from 'utils/convert';
 import { parseCompactedValidator } from 'utils/parse';
 
@@ -93,10 +97,12 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
 
             dispatch(closeModal(VALIDATOR_CREATE_MODAL_ID));
 
-            account.events.ValidatorUpdated({}, (opt, { transactionHash }) => {
-              if (txHash === transactionHash) {
+            // eslint-disable-next-line
+            checkTransaction({
+              reject, txHash, web3,
+              resolve: () => {
                 dispatch(updateValidator(hash, { isFetching: false }));
-              }
+              },
             });
 
             document
@@ -131,13 +137,15 @@ export const depositValidator = ({ hash, deposit }): Function =>
           .on('transactionHash', (txHash): void => {
             dispatch(closeModal(VALIDATOR_DEPOSIT_MODAL_ID));
 
-            account.events.ValidatorUpdated({}, (opt, { transactionHash }) => {
-              if (txHash === transactionHash) {
+            // eslint-disable-next-line
+            checkTransaction({
+              reject, txHash, web3,
+              resolve: () => {
                 dispatch({
                   type: DEPOSIT_VALIDATOR_SUCCESS, hash,
                   deposit: currentDeposit + newDeposit,
                 });
-              }
+              },
             });
           })
           .on('error', reject)
@@ -157,6 +165,7 @@ export const fetchValidator = (hash: string): Function =>
         } else {
           dispatch({ type: FETCH_VALIDATOR_SUCCESS, hash, payload: {
             pauseBlockNumber: get(res, 'pauseBlockNumber'),
+            punishValue: get(res, 'punishValue'),
           }});
         }
       });
@@ -171,37 +180,58 @@ export const fetchValidators = (): Function =>
         dispatch({ type: FETCH_VALIDATORS_FAILURE, error: get(error, 'message')})
       } else {
         const data: Array<Object> = [];
+        const punishedValidators = [];
         const validators: Array<string> = get(res, 'ValidatorsPubKeys', []);
- 
+
         validators.forEach((hash: string, index: number) => {
           const validator: Object = parseCompactedValidator(get(res, `ValidatorsCompacted.${index}`));
-          console.log(validator);
           data.push({ ...validator, hash: hash.toLowerCase() });
+
+          if (validator.pauseCause > 1) {
+            punishedValidators.push(hash.toLowerCase());
+          }
         });
 
         const normalizedData = normalize(data, [schema.validator]);
 
         dispatch({ type: UPDATE_ENTITIES, data: normalizedData, force: true });
         dispatch({ type: FETCH_VALIDATORS_SUCCESS });
+
+        punishedValidators.forEach((hash: string) => {
+          dispatch(fetchValidator(hash));
+        });
       }
     });
   }
 
-export const pauseValidator: Function = ({ address, hash, pauseCause, punishValue }): Promise =>
+export const pauseValidator: Function = ({ from, hash, pauseCause = 1, punishValue = 0 }): Promise =>
   (dispatch: Function, getState: Function, { account, web3 }): Promise => {
     dispatch({ type: PAUSE_VALIDATOR_REQUEST, hash });
 
+    const formattedPunishValue = pauseCause === PAUSE_CAUSE_UNTIL_FINE
+      ? web3.utils.toWei(punishValue, 'ether')
+      : punishValue;
+
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
-        .pauseValidation(hash, address || hash, pauseCause || 1, punishValue || 0)
+        .pauseValidation(hash, from || hash, pauseCause, formattedPunishValue)
         .send({ from: window.ethereum.selectedAddress })
           .on('transactionHash', (txHash): void => {
             dispatch(closeModal(VALIDATOR_PAUSE_MODAL_ID));
 
-            account.events.ValidatorUpdated({}, (opt, { transactionHash }) => {
-              if (txHash === transactionHash) {
-                dispatch({ type: PAUSE_VALIDATOR_SUCCESS, hash });
-              }
+            // eslint-disable-next-line
+            checkTransaction({
+              reject, txHash, web3,
+              resolve: () => {
+                dispatch({
+                  type: PAUSE_VALIDATOR_SUCCESS,
+                  hash,
+                  payload: {
+                    pauseCause,
+                    punishValue: formattedPunishValue
+                  }
+                });
+              },
             });
           })
           .on('error', reject)
@@ -219,10 +249,12 @@ export const startValidator: Function = (hash: string): Promise =>
         .resumeValidation(hash)
         .send({ from: window.ethereum.selectedAddress })
           .on('transactionHash', (txHash): void => {
-            account.events.ValidatorUpdated({}, (opt, { transactionHash }) => {
-              if (txHash === transactionHash) {
+            // eslint-disable-next-line
+            checkTransaction({
+              reject, txHash, web3,
+              resolve: () => {
                 dispatch({ type: START_VALIDATOR_SUCCESS, hash });
-              }
+              },
             });
           })
           .on('error', reject)
@@ -242,8 +274,15 @@ export const withdrawValidator: Function = (hash: string): Function =>
       account.methods
         .withdraw(hash)
         .send({ from: window.ethereum.selectedAddress })
-          .on('receipt', () =>
-            dispatch({ type: WITHDRAW_VALIDATOR_SUCCESS, hash }))
+          .on('transactionHash', (txHash): void => {
+            // eslint-disable-next-line
+            checkTransaction({
+              reject, txHash, web3,
+              resolve: () => {
+                dispatch({ type: WITHDRAW_VALIDATOR_SUCCESS, hash });
+              },
+            });
+          })
           .on('error', reject)
     })
       .catch((error: Object) =>
