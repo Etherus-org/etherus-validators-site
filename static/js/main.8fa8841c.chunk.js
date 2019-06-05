@@ -93,7 +93,7 @@ module.exports = {"Root":"Table_Root__3CqIU"};
 
 /***/ }),
 
-/***/ 242:
+/***/ 243:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -101,21 +101,21 @@ module.exports = {"Root":"Item_Root__1Vtiv"};
 
 /***/ }),
 
-/***/ 244:
+/***/ 245:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/media/step-1.acd03576.png";
 
 /***/ }),
 
-/***/ 245:
+/***/ 246:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/media/step-2.a2a7d29d.png";
 
 /***/ }),
 
-/***/ 247:
+/***/ 248:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -123,10 +123,10 @@ module.exports = {"Actions":"Form_Actions__1guva","ActionsConsole":"Form_Actions
 
 /***/ }),
 
-/***/ 256:
+/***/ 257:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(560);
+module.exports = __webpack_require__(561);
 
 
 /***/ }),
@@ -179,35 +179,35 @@ module.exports = {"Root":"Progress_Root__1Vj99","RootColorPrimary":"Progress_Roo
 
 /***/ }),
 
-/***/ 405:
+/***/ 406:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 407:
+/***/ 408:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 432:
+/***/ 433:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 475:
+/***/ 476:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 560:
+/***/ 561:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -233,7 +233,7 @@ __webpack_require__.r(schema_namespaceObject);
 __webpack_require__.d(schema_namespaceObject, "validator", function() { return schema_validator; });
 
 // EXTERNAL MODULE: ./node_modules/history/esm/history.js + 3 modules
-var esm_history = __webpack_require__(251);
+var esm_history = __webpack_require__(252);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
@@ -247,13 +247,13 @@ var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 var es = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Router.js + 1 modules
-var Router = __webpack_require__(569);
+var Router = __webpack_require__(570);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Route.js + 1 modules
-var Route = __webpack_require__(568);
+var Route = __webpack_require__(569);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Switch.js + 1 modules
-var Switch = __webpack_require__(567);
+var Switch = __webpack_require__(568);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread.js
 var objectSpread = __webpack_require__(7);
@@ -312,7 +312,7 @@ var Progress_default = /*#__PURE__*/__webpack_require__.n(components_Progress);
 // Styles
 var Progress_VARIANT={CIRCLE:'circle',LINEAR:'linear'};var Progress_Progress=function Progress(_ref){var _classNames;var className=_ref.className,_ref$classNames=_ref.classNames;_ref$classNames=_ref$classNames===void 0?{}:_ref$classNames;var rootClassName=_ref$classNames.root,circleClassName=_ref$classNames.circle,lineClassName=_ref$classNames.line,progressClassName=_ref$classNames.progress,_ref$color=_ref.color,color=_ref$color===void 0?color_namespaceObject.PRIMARY:_ref$color,_ref$size=_ref.size,size=_ref$size===void 0?40:_ref$size,value=_ref.value,_ref$variant=_ref.variant,variant=_ref$variant===void 0?Progress_VARIANT.CIRCLE:_ref$variant;var rootClassNames=classnames_default()(className,rootClassName,Progress_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootColorPrimary,color===color_namespaceObject.PRIMARY),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootColorSuccess,color===color_namespaceObject.SUCCESS),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantCircle,variant===Progress_VARIANT.CIRCLE),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantLinear,variant===Progress_VARIANT.LINEAR),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantIndeterminate,!value),_classNames));var circleClassNames=classnames_default()(circleClassName,Progress_default.a.Circle);var lineClassNames=classnames_default()(lineClassName,Progress_default.a.Line);var progressClassNames=classnames_default()(progressClassName,Progress_default.a.Progress);var displaySize=size+size/10;return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:progressClassNames,style:variant===Progress_VARIANT.CIRCLE?{height:displaySize,width:displaySize}:null},variant===Progress_VARIANT.CIRCLE&&react_default.a.createElement("svg",{className:Progress_default.a.Svg,viewBox:"".concat(displaySize/2," ").concat(displaySize/2," ").concat(displaySize," ").concat(displaySize)},react_default.a.createElement("circle",{className:circleClassNames,cx:displaySize,cy:displaySize,fill:"none",r:size/2,strokeWidth:size/10})),variant===Progress_VARIANT.LINEAR&&react_default.a.createElement("div",{className:lineClassNames,style:{width:"".concat(Math.max(0,Math.min(100,value)),"%")}})));};Progress_Progress.VARIANT=Progress_VARIANT;/* harmony default export */ var src_components_Progress = (Progress_Progress);
 // EXTERNAL MODULE: ./node_modules/react-table/es/index.js + 6 modules
-var react_table_es = __webpack_require__(250);
+var react_table_es = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./src/components/Table.scss
 var components_Table = __webpack_require__(238);
@@ -343,7 +343,7 @@ case UPDATE_VALIDATOR:return Object(objectSpread["a" /* default */])({},state,Ob
 var normalizr_es = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/SubmissionError.js + 1 modules
-var SubmissionError = __webpack_require__(253);
+var SubmissionError = __webpack_require__(254);
 
 // CONCATENATED MODULE: ./src/entities/types.js
 var UPDATE_ENTITIES='ENTITIES/UPDATE_ENTITIES';
@@ -422,7 +422,7 @@ var Actions_default = /*#__PURE__*/__webpack_require__.n(Actions);
 // Services
 // Utils
 // Styles
-var Actions_ValidatorsActions=function ValidatorsActions(_ref){var blockNumber=_ref.blockNumber,deposit=_ref.deposit,hash=_ref.hash,pauseBlockNumber=_ref.pauseBlockNumber,pauseCause=_ref.pauseCause,handleDeposit=_ref.handleDeposit,handlePause=_ref.handlePause,handleStart=_ref.handleStart,handleWithdraw=_ref.handleWithdraw,isConnected=_ref.isConnected,isFetching=_ref.isFetching,isDisabled=_ref.isDisabled,isOwner=_ref.isOwner,isValidatorOwner=_ref.isValidatorOwner,props=Object(objectWithoutProperties["a" /* default */])(_ref,["blockNumber","deposit","hash","pauseBlockNumber","pauseCause","handleDeposit","handlePause","handleStart","handleWithdraw","isConnected","isFetching","isDisabled","isOwner","isValidatorOwner"]);return isConnected&&(isOwner||isValidatorOwner)&&!isDisabled&&react_default.a.createElement(react["Fragment"],null,isFetching?react_default.a.createElement(src_components_Progress,{size:20}):react_default.a.createElement("div",{className:Actions_default.a.Root},pauseCause!==PAUSE_NOT_PAUSED?isValidatorOwner&&parseDeposit(deposit)>=api_config.MIN_DEPOSIT-2&&react_default.a.createElement(src_components_Tooltip,{title:"\u0417\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C"},react_default.a.createElement(src_components_Button,{classNames:{root:classnames_default()(Actions_default.a.Button,Actions_default.a.ButtonVariantPlay),icon:Actions_default.a.Icon},icon:"fas fa-play",onClick:handleStart})):react_default.a.createElement(src_components_Tooltip,{title:"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C"},react_default.a.createElement(src_components_Button,{classNames:{root:classnames_default()(Actions_default.a.Button,Actions_default.a.ButtonVariantPause),icon:Actions_default.a.Icon},icon:"fas fa-pause",onClick:handlePause})),isValidatorOwner&&react_default.a.createElement(src_components_Tooltip,{title:"\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C"},react_default.a.createElement(src_components_Button,{classNames:{root:classnames_default()(Actions_default.a.Button,Actions_default.a.ButtonVariantDeposit),icon:Actions_default.a.Icon},icon:"fas fa-usd-circle",onClick:handleDeposit})),isValidatorOwner&&pauseCause===PAUSE_CAUSE_VOLUNTARILY&&blockNumber-pauseBlockNumber>6000&&react_default.a.createElement(src_components_Tooltip,{title:"\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u043D\u044C\u0433\u0438"},react_default.a.createElement(src_components_Button,{classNames:{root:classnames_default()(Actions_default.a.Button,Actions_default.a.ButtonVariantWithdraw),icon:Actions_default.a.Icon},icon:"fas fa-hand-holding-usd",onClick:handleWithdraw}))));};var Actions_mapStateToProps=function mapStateToProps(state,_ref2){var address=_ref2.address;return{blockNumber:selector_getBlockNumber(state),isConnected:selector_isConnected(state),isOwner:selector_isOwner(state),isValidatorOwner:selector_isValidatorOwner(state,address)};};/* harmony default export */ var components_Actions = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Actions_mapStateToProps,{openModal:actions_openModal,pauseValidator:actions_pauseValidator,withdrawValidator:actions_withdrawValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleDeposit:function handleDeposit(_ref3){var hash=_ref3.hash,openModal=_ref3.openModal;return function(event){return openModal(VALIDATOR_DEPOSIT_MODAL_ID,{hash:hash});};},handlePause:function handlePause(_ref4){var hash=_ref4.hash,isValidatorOwner=_ref4.isValidatorOwner,openModal=_ref4.openModal,pauseValidator=_ref4.pauseValidator;return function(event){return isValidatorOwner?pauseValidator({hash:hash}):openModal(VALIDATOR_PAUSE_MODAL_ID,{hash:hash});};},handleStart:function handleStart(_ref5){var hash=_ref5.hash,openModal=_ref5.openModal;return function(event){return openModal(VALIDATOR_CONFIRM_MODAL_ID,{hash:hash});};},handleWithdraw:function handleWithdraw(_ref6){var hash=_ref6.hash,withdrawValidator=_ref6.withdrawValidator;return function(event){return withdrawValidator(hash);};}}))(Actions_ValidatorsActions));
+var Actions_ValidatorsActions=function ValidatorsActions(_ref){var blockNumber=_ref.blockNumber,deposit=_ref.deposit,hash=_ref.hash,pauseBlockNumber=_ref.pauseBlockNumber,pauseCause=_ref.pauseCause,handleDeposit=_ref.handleDeposit,handlePause=_ref.handlePause,handleStart=_ref.handleStart,handleWithdraw=_ref.handleWithdraw,isConnected=_ref.isConnected,isFetching=_ref.isFetching,isDisabled=_ref.isDisabled,isOwner=_ref.isOwner,isValidatorOwner=_ref.isValidatorOwner,props=Object(objectWithoutProperties["a" /* default */])(_ref,["blockNumber","deposit","hash","pauseBlockNumber","pauseCause","handleDeposit","handlePause","handleStart","handleWithdraw","isConnected","isFetching","isDisabled","isOwner","isValidatorOwner"]);return isConnected&&(isOwner||isValidatorOwner)&&react_default.a.createElement(react["Fragment"],null,isFetching?react_default.a.createElement(src_components_Progress,{size:20}):react_default.a.createElement("div",{className:Actions_default.a.Root},pauseCause!==PAUSE_NOT_PAUSED?isValidatorOwner&&parseDeposit(deposit)>=api_config.MIN_DEPOSIT-2&&react_default.a.createElement(src_components_Tooltip,{title:"\u0417\u0430\u043F\u0443\u0441\u0442\u0438\u0442\u044C"},react_default.a.createElement(src_components_Button,{classNames:{root:classnames_default()(Actions_default.a.Button,Actions_default.a.ButtonVariantPlay),icon:Actions_default.a.Icon},icon:"fas fa-play",onClick:handleStart})):react_default.a.createElement(src_components_Tooltip,{title:"\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C"},react_default.a.createElement(src_components_Button,{classNames:{root:classnames_default()(Actions_default.a.Button,Actions_default.a.ButtonVariantPause),icon:Actions_default.a.Icon},icon:"fas fa-pause",onClick:handlePause})),isValidatorOwner&&react_default.a.createElement(src_components_Tooltip,{title:"\u041F\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u044C"},react_default.a.createElement(src_components_Button,{classNames:{root:classnames_default()(Actions_default.a.Button,Actions_default.a.ButtonVariantDeposit),icon:Actions_default.a.Icon},icon:"fas fa-usd-circle",onClick:handleDeposit})),isValidatorOwner&&pauseCause===PAUSE_CAUSE_VOLUNTARILY&&blockNumber-pauseBlockNumber>6000&&react_default.a.createElement(src_components_Tooltip,{title:"\u0417\u0430\u0431\u0440\u0430\u0442\u044C \u0434\u0435\u043D\u044C\u0433\u0438"},react_default.a.createElement(src_components_Button,{classNames:{root:classnames_default()(Actions_default.a.Button,Actions_default.a.ButtonVariantWithdraw),icon:Actions_default.a.Icon},icon:"fas fa-hand-holding-usd",onClick:handleWithdraw}))));};var Actions_mapStateToProps=function mapStateToProps(state,_ref2){var address=_ref2.address;return{blockNumber:selector_getBlockNumber(state),isConnected:selector_isConnected(state),isOwner:selector_isOwner(state),isValidatorOwner:selector_isValidatorOwner(state,address)};};/* harmony default export */ var components_Actions = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Actions_mapStateToProps,{openModal:actions_openModal,pauseValidator:actions_pauseValidator,withdrawValidator:actions_withdrawValidator}),Object(Recompose_esm["c" /* withHandlers */])({handleDeposit:function handleDeposit(_ref3){var hash=_ref3.hash,openModal=_ref3.openModal;return function(event){return openModal(VALIDATOR_DEPOSIT_MODAL_ID,{hash:hash});};},handlePause:function handlePause(_ref4){var hash=_ref4.hash,isValidatorOwner=_ref4.isValidatorOwner,openModal=_ref4.openModal,pauseValidator=_ref4.pauseValidator;return function(event){return isValidatorOwner?pauseValidator({hash:hash}):openModal(VALIDATOR_PAUSE_MODAL_ID,{hash:hash});};},handleStart:function handleStart(_ref5){var hash=_ref5.hash,openModal=_ref5.openModal;return function(event){return openModal(VALIDATOR_CONFIRM_MODAL_ID,{hash:hash});};},handleWithdraw:function handleWithdraw(_ref6){var hash=_ref6.hash,withdrawValidator=_ref6.withdrawValidator;return function(event){return withdrawValidator(hash);};}}))(Actions_ValidatorsActions));
 // EXTERNAL MODULE: ./src/views/Validators/components/Field.scss
 var Field = __webpack_require__(21);
 var Field_default = /*#__PURE__*/__webpack_require__.n(Field);
@@ -456,7 +456,7 @@ var components_Table_default = /*#__PURE__*/__webpack_require__.n(Validators_com
 // Styles
 var MAX_ROWS=128;var COLUMNS=[{accessor:'index',Cell:function Cell(_ref){var index=_ref.index,original=_ref.original;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:Object(lodash["get"])(original,'pauseCause')===0?index+1:''});},Header:'#',sortable:false,width:64},{accessor:'hash',Cell:function Cell(_ref2){var index=_ref2.index,value=_ref2.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.HASH});},Header:'vPub',minWidth:160,sortable:false},{accessor:'address',Cell:function Cell(_ref3){var index=_ref3.index,value=_ref3.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.HASH});},Header:'Node Address',minWidth:160,sortable:false},{accessor:'ping',Cell:function Cell(_ref4){var index=_ref4.index,original=_ref4.original;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,original:original,variant:Field_VARIANT.PING});},Header:'',sortable:false,style:{textAlign:'center'},width:72},{accessor:'voted64',Cell:function Cell(_ref5){var index=_ref5.index,original=_ref5.original,value=_ref5.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS||Object(lodash["get"])(original,'pauseCause')!==0,original:original,title:value,variant:Field_VARIANT.HEALTH});},Header:'Здоровье',sortable:false,width:240},{accessor:'deposit',Cell:function Cell(_ref6){var index=_ref6.index,value=_ref6.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.DEPOSIT});},Header:'Депозит',sortable:false,width:160},{accessor:'pauseCause',Cell:function Cell(_ref7){var index=_ref7.index,value=_ref7.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.PAUSE});},Header:'Состояние',sortable:false,width:120},{accessor:'actions',Cell:function Cell(_ref8){var index=_ref8.index,original=_ref8.original;return react_default.a.createElement(components_Actions,Object.assign({},original,{isDisabled:index>=MAX_ROWS}));},Header:'Действия',sortable:false,width:160}];var Table_ValidatorsTable=function ValidatorsTable(_ref9){var data=_ref9.data,ownerAddress=_ref9.ownerAddress;return react_default.a.createElement(src_components_Table,{columns:ownerAddress?COLUMNS:[].concat(COLUMNS).slice(0,-1),data:data,defaultPageSize:100000,freezeWhenExpanded:true,getTrGroupProps:function getTrGroupProps(state,_ref10){var _classNames;var index=_ref10.index,original=_ref10.original;return{className:classnames_default()(components_Table_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,components_Table_default.a.RootIsFavorite,Object(lodash["get"])(original,'address')===ownerAddress),Object(defineProperty["a" /* default */])(_classNames,components_Table_default.a.RootIsDisabled,Object(lodash["get"])(original,'pauseCause')!==0||index>MAX_ROWS),_classNames)),id:Object(lodash["get"])(original,'hash')};},minRows:0,resizable:false,showPagination:false,SubComponent:function SubComponent(props){return react_default.a.createElement(components_Stat,props);}});};var Table_mapStateToProps=function mapStateToProps(state){return{ownerAddress:selector_getAddress(state)};};/* harmony default export */ var views_Validators_components_Table = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Table_mapStateToProps))(Table_ValidatorsTable));
 // EXTERNAL MODULE: ./node_modules/react-portal/es/PortalCompat.js + 3 modules
-var PortalCompat = __webpack_require__(565);
+var PortalCompat = __webpack_require__(566);
 
 // EXTERNAL MODULE: ./src/components/Modal.scss
 var components_Modal = __webpack_require__(64);
@@ -483,7 +483,7 @@ var Confirm_ValidatorsConfirm=function ValidatorsConfirm(_ref){var handleCancel=
 // Styles
 var ConfirmAccount_ValidatorsConfirmAccount=function ValidatorsConfirmAccount(){return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_CONFIRM_ACCOUNT_MODAL_ID,title:"\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435!"},function(_ref){var onReject=_ref.onReject,onResolve=_ref.onResolve;return react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(components_Typography_Typography,{className:Common_default.a.Alert,variant:components_Typography_Typography.VARIANT.BODY1},"\u0412\u044B \u0441\u043E\u0431\u0438\u0440\u0430\u0435\u0442\u0435\u0441\u044C \u0441\u043E\u0437\u0434\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440 \u043F\u0440\u0438\u043A\u0440\u0435\u043F\u043B\u0451\u043D\u043D\u044B\u0439 \u043A \u043A\u043E\u0448\u0435\u043B\u044C\u043A\u0443, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u043D\u0435 \u0441\u043E\u0432\u043F\u0430\u0434\u0430\u0435\u0442 \u0441 \u0432\u0430\u0448\u0438\u043C \u0442\u0435\u043A\u0443\u0449\u0438\u043C \u0430\u043A\u043A\u0430\u0443\u043D\u0442\u043E\u043C Metamask.",react_default.a.createElement("br",null),react_default.a.createElement("br",null),"\u0425\u043E\u0442\u0438\u0442\u0435 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C?"),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:onReject},"\u041E\u0442\u043C\u0435\u043D\u0430"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:onResolve},"\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044C")));});};/* harmony default export */ var ConfirmAccount = (ConfirmAccount_ValidatorsConfirmAccount);
 // EXTERNAL MODULE: ./node_modules/redux-form/es/reduxForm.js + 14 modules
-var reduxForm = __webpack_require__(563);
+var reduxForm = __webpack_require__(564);
 
 // EXTERNAL MODULE: ./src/components/Form/Form.scss
 var Form_Form = __webpack_require__(145);
@@ -499,20 +499,20 @@ var classCallCheck = __webpack_require__(239);
 var createClass = __webpack_require__(240);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js + 2 modules
-var possibleConstructorReturn = __webpack_require__(252);
+var possibleConstructorReturn = __webpack_require__(253);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__(241);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
-var inherits = __webpack_require__(254);
+var inherits = __webpack_require__(255);
 
 // EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
 var uniqueId = __webpack_require__(146);
 var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/Field.js + 10 modules
-var es_Field = __webpack_require__(564);
+var es_Field = __webpack_require__(565);
 
 // CONCATENATED MODULE: ./src/components/Form/utils/reduxFieldAdapter.js
 /* harmony default export */ var reduxFieldAdapter = (function(_ref){var children=_ref.children,input=_ref.input,_ref$meta=_ref.meta,error=_ref$meta.error,touched=_ref$meta.touched,props=Object(objectWithoutProperties["a" /* default */])(_ref,["children","input","meta"]);return children(Object(objectSpread["a" /* default */])({},input,props,{error:touched&&error}));});
@@ -543,7 +543,7 @@ var Select_FormSelect=function FormSelect(_ref){var _classNames;var children=_re
 handleBlur:function handleBlur(_ref3){var setFocus=_ref3.setFocus,setInputValue=_ref3.setInputValue;return function(event){if(!$root.contains(event.relatedTarget)){$input.blur();setFocus(false);setInputValue('');}};},handleChange:function handleChange(_ref4){var setInputValue=_ref4.setInputValue;return function(event){return setInputValue(Object(lodash["get"])(event,'target.value',''));};},handleCreate:function handleCreate(_ref5){var isMultiple=_ref5.isMultiple,onChange=_ref5.onChange,setFocus=_ref5.setFocus,value=_ref5.value;return function(itemValue){if(!isMultiple){$input.blur();setFocus(false);}onChange&&onChange(isMultiple?[].concat(Object(toConsumableArray["a" /* default */])(value||[]),[itemValue]):itemValue);};},handleDelete:function handleDelete(_ref6){var onChange=_ref6.onChange,value=_ref6.value;return function(itemValue){return onChange&&onChange(value.filter(function(_ref7){var value=_ref7.value;return value!==itemValue;}));};},handleFocus:function handleFocus(_ref8){var setFocus=_ref8.setFocus;return function(){$input.focus();setFocus(true);};},// Registers
 registerRoot:function registerRoot(){return function(node){$root=node;};},registerInput:function registerInput(){return function(node){$input=node;};}};}))(Select_FormSelect);/* harmony default export */ var Select_Select = (function(_ref9){var children=_ref9.children,props=Object(objectWithoutProperties["a" /* default */])(_ref9,["children"]);return react_default.a.createElement(components_Form_components_Field,props,react_default.a.createElement(ComposedFormSelect,null,children));});
 // EXTERNAL MODULE: ./src/components/Form/components/Select/components/Item.scss
-var Item = __webpack_require__(242);
+var Item = __webpack_require__(243);
 var Item_default = /*#__PURE__*/__webpack_require__.n(Item);
 
 // CONCATENATED MODULE: ./src/components/Form/components/Select/components/Item.js
@@ -555,7 +555,7 @@ var Item_FormSelectItem=function FormSelectItem(_ref){var handleClick=_ref.handl
 // Components
 
 // EXTERNAL MODULE: ./node_modules/metamask-logo/index.js
-var metamask_logo = __webpack_require__(243);
+var metamask_logo = __webpack_require__(244);
 var metamask_logo_default = /*#__PURE__*/__webpack_require__.n(metamask_logo);
 
 // EXTERNAL MODULE: ./src/components/Metamask.scss
@@ -595,11 +595,11 @@ var Determine_default = /*#__PURE__*/__webpack_require__.n(Determine);
 // Styles
 var Determine_ValidatorsDetermine=function ValidatorsDetermine(_ref){var children=_ref.children,isSelected=_ref.isSelected,title=_ref.title;var rootClassNames=classnames_default()(Determine_default.a.Root,Object(defineProperty["a" /* default */])({},Determine_default.a.RootIsSelected,!!isSelected));return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement(components_Typography_Typography,{className:Determine_default.a.Title,variant:components_Typography_Typography.VARIANT.H6},title),react_default.a.createElement(components_Typography_Typography,{className:Determine_default.a.Content,variant:components_Typography_Typography.VARIANT.BODY1},children));};/* harmony default export */ var components_Determine = (Determine_ValidatorsDetermine);
 // EXTERNAL MODULE: ./src/assets/guide/step-1.png
-var step_1 = __webpack_require__(244);
+var step_1 = __webpack_require__(245);
 var step_1_default = /*#__PURE__*/__webpack_require__.n(step_1);
 
 // EXTERNAL MODULE: ./src/assets/guide/step-2.png
-var step_2 = __webpack_require__(245);
+var step_2 = __webpack_require__(246);
 var step_2_default = /*#__PURE__*/__webpack_require__.n(step_2);
 
 // EXTERNAL MODULE: ./src/views/Validators/containers/Guide.scss
@@ -615,11 +615,11 @@ var Guide_ValidatorsGuide=function ValidatorsGuide(){return react_default.a.crea
 var luxon = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./node_modules/ansi-to-react/lib/index.js
-var lib = __webpack_require__(246);
+var lib = __webpack_require__(247);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 // EXTERNAL MODULE: ./src/views/Validators/components/Form.scss
-var components_Form = __webpack_require__(247);
+var components_Form = __webpack_require__(248);
 var components_Form_default = /*#__PURE__*/__webpack_require__.n(components_Form);
 
 // CONCATENATED MODULE: ./src/views/Validators/components/Form.js
@@ -636,7 +636,7 @@ var Form_ValidatorsForm=function ValidatorsForm(_ref){var error=_ref.error,handl
 // Utils
 var Node_ValidatorsNodeFormPrivate=function ValidatorsNodeFormPrivate(_ref){var error=_ref.error,handleClose=_ref.handleClose,handleSubmit=_ref.handleSubmit,onCancel=_ref.onCancel,onTrigger=_ref.onTrigger;return react_default.a.createElement(components_Form_Form,{error:error,onSubmit:handleSubmit},react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(components_Input,{label:"\u041F\u0440\u0438\u0432\u0430\u0442\u043D\u044B\u0439 \u043A\u043B\u044E\u0447",name:"privateKey"})),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:onCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:onTrigger},"\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u0444\u043E\u0440\u043C\u0443"),react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.GREEN,type:"submit"},"\u0414\u0430\u043B\u0435\u0435")));};var ComposedValidatorsNodeFormPrivate=Object(Recompose_esm["a" /* compose */])(Object(reduxForm["a" /* default */])({form:'privateForm',validate:Object(validate["a" /* default */])({privateKey:[Object(validate["i" /* required */])(),Object(validate["e" /* isPrivateKey */])()]})}))(Node_ValidatorsNodeFormPrivate);var Node_ValidatorsNodeFrom=function ValidatorsNodeFrom(_ref2){var handleCancel=_ref2.handleCancel,handleSubmit=_ref2.handleSubmit,handleTrigger=_ref2.handleTrigger,isPrivate=_ref2.isPrivate;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_NODE_FROM_MODAL_ID,title:"\u041E\u0442\u043A\u0443\u0434\u0430 \u043D\u0443\u0436\u043D\u043E \u043F\u0435\u0440\u0435\u043D\u0435\u0441\u0442\u0438 \u043D\u043E\u0434\u0443?"},function(_ref3){var from=_ref3.from,privateKey=_ref3.privateKey;return isPrivate?react_default.a.createElement(ComposedValidatorsNodeFormPrivate,{initialValues:{privateKey:privateKey},onCancel:handleCancel,onSubmit:handleSubmit,onTrigger:handleTrigger}):react_default.a.createElement(Validators_components_Form,{initialValues:{from:from},isFrom:true,onCancel:handleCancel,onSubmit:handleSubmit,onTrigger:handleTrigger});});};var NodeFrom=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal,openModal:actions_openModal}),Object(Recompose_esm["e" /* withState */])('isPrivate','setPrivate',false),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref4){var closeModal=_ref4.closeModal,handleReset=_ref4.handleReset;return function(event){closeModal(VALIDATOR_NODE_FROM_MODAL_ID);};},handleSubmit:function handleSubmit(_ref5){var closeModal=_ref5.closeModal,openModal=_ref5.openModal,isPrivate=_ref5.isPrivate;return function(values){closeModal(VALIDATOR_NODE_FROM_MODAL_ID);openModal(VALIDATOR_NODE_MODAL_ID,isPrivate?{privateKey:Object(lodash["get"])(values,'privateKey')}:{from:{host:Object(lodash["get"])(values,'host','localhost'),port:Object(lodash["get"])(values,'port',22),username:Object(lodash["get"])(values,'username','root'),password:Object(lodash["get"])(values,'password')}});};},handleTrigger:function handleTrigger(_ref6){var isPrivate=_ref6.isPrivate,setPrivate=_ref6.setPrivate;return function(){return setPrivate(!isPrivate);};}}))(Node_ValidatorsNodeFrom);var Node_ValidatorsNode=function ValidatorsNode(_ref7){var error=_ref7.error,messages=_ref7.messages,progress=_ref7.progress,retry=_ref7.retry,token=_ref7.token,vPub=_ref7.vPub,handleCancel=_ref7.handleCancel,handleCreateValidator=_ref7.handleCreateValidator,handleReset=_ref7.handleReset,handleSubmit=_ref7.handleSubmit,isLoading=_ref7.isLoading,isProcessing=_ref7.isProcessing,isSuccess=_ref7.isSuccess;return react_default.a.createElement(src_components_Modal,{classNames:{container:classnames_default()(Common_default.a.Container,Object(defineProperty["a" /* default */])({},Common_default.a.ContainerConsole,isProcessing))},id:VALIDATOR_NODE_MODAL_ID,title:isSuccess?"\u0423\u0437\u0435\u043B \u0440\u0430\u0437\u0432\u0451\u0440\u043D\u0443\u0442! ".concat(token):isProcessing?"\u0423\u0437\u0435\u043B \u0440\u0430\u0437\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F: ".concat(token):null},function(_ref8){var from=_ref8.from,isRestart=_ref8.isRestart,privateKey=_ref8.privateKey;return isProcessing?react_default.a.createElement(react["Fragment"],null,react_default.a.createElement("div",{className:Common_default.a.Console,id:"console"},react_default.a.createElement("div",{id:"wrapper"},messages.map(function(_ref9,index){var _classNames2;var date=_ref9.date,msg=_ref9.msg,result=_ref9.result;return react_default.a.createElement("div",{className:Common_default.a.Message,key:index},react_default.a.createElement("span",{className:Common_default.a.MessageDate},"[",date.toLocaleString({hour:'2-digit',minute:'2-digit',second:'2-digit'}),"]:\xA0"),index===messages.length-1&&retry?react_default.a.createElement(react["Fragment"],null,react_default.a.createElement("span",{className:Common_default.a.Retry},"[".concat(Object(lodash["get"])(retry,'1',0)-Object(lodash["get"])(retry,'0',0),"/").concat(Object(lodash["get"])(retry,'1',0),"]")),progress&&react_default.a.createElement("span",{className:Common_default.a.Progress},"[".concat(Object(lodash["get"])(progress,'0',0),"/").concat(Object(lodash["get"])(progress,'1',0),"]"))):null,react_default.a.createElement(lib_default.a,{className:classnames_default()(Common_default.a.MessageText,(_classNames2={},Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsFailure,result==='failure'),Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsSuccess,result==='success'),_classNames2))},msg));}),error&&react_default.a.createElement("div",{className:Common_default.a.Error},"[Error]: ",error),vPub&&react_default.a.createElement("div",{className:Common_default.a.MessagePub},"############################## vPub READY! ###############################",react_default.a.createElement("br",null),"### ",vPub," ###",react_default.a.createElement("br",null),"##########################################################################"))),!isLoading&&react_default.a.createElement("div",{className:classnames_default()(Common_default.a.Actions,Common_default.a.ActionsConsole)},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:handleCancel},"\u0417\u0430\u043A\u0440\u044B\u0442\u044C"),isSuccess?react_default.a.createElement(react["Fragment"],null,!from&&!privateKey&&!isRestart&&react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,onClick:handleCreateValidator},"\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440")):react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,onClick:handleReset({from:from,privateKey:privateKey})},"\u041F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C \u0435\u0449\u0451 \u0440\u0430\u0437"))):react_default.a.createElement(Validators_components_Form,{initialValues:{isRestart:isRestart},isRestart:isRestart,onCancel:handleCancel,onSubmit:function onSubmit(values){return handleSubmit(Object(objectSpread["a" /* default */])({},values,{from:from,privateKey:privateKey}));}});});};/* harmony default export */ var Node = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal,openModal:actions_openModal}),Object(Recompose_esm["e" /* withState */])('error','setError',false),Object(Recompose_esm["e" /* withState */])('isLoading','setLoad',false),Object(Recompose_esm["e" /* withState */])('isProcessing','setProcess',false),Object(Recompose_esm["e" /* withState */])('isSuccess','setSuccess',false),Object(Recompose_esm["e" /* withState */])('messages','setMessages',[]),Object(Recompose_esm["e" /* withState */])('progress','setProgress',null),Object(Recompose_esm["e" /* withState */])('retry','setRetry',null),Object(Recompose_esm["e" /* withState */])('token','setToken',null),Object(Recompose_esm["e" /* withState */])('vPub','setVPub',null),Object(Recompose_esm["c" /* withHandlers */])({handleReset:function handleReset(_ref10){var closeModal=_ref10.closeModal,openModal=_ref10.openModal,setError=_ref10.setError,setLoad=_ref10.setLoad,setMessages=_ref10.setMessages,setProcess=_ref10.setProcess,setProgress=_ref10.setProgress,setRetry=_ref10.setRetry,setSuccess=_ref10.setSuccess,setVPub=_ref10.setVPub;return function(){var _ref11=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{},from=_ref11.from,privateKey=_ref11.privateKey;return function(event){setError(false);setLoad(false);setMessages([]);setProcess(false);setProgress(null);setRetry(null);setSuccess(false);setVPub(null);if(from||privateKey){closeModal(VALIDATOR_NODE_MODAL_ID);openModal(VALIDATOR_NODE_FROM_MODAL_ID,{from:from,privateKey:privateKey});}};};}}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref12){var closeModal=_ref12.closeModal,handleReset=_ref12.handleReset;return function(event){closeModal(VALIDATOR_NODE_MODAL_ID);handleReset();};},handleCreateValidator:function handleCreateValidator(_ref13){var closeModal=_ref13.closeModal,handleReset=_ref13.handleReset,openModal=_ref13.openModal,vPub=_ref13.vPub;return function(event){closeModal(VALIDATOR_NODE_MODAL_ID);openModal(VALIDATOR_CREATE_MODAL_ID,{vPub:vPub});handleReset();};},handleSubmit:function handleSubmit(_ref14){var setError=_ref14.setError,setLoad=_ref14.setLoad,setMessages=_ref14.setMessages,setProcess=_ref14.setProcess,setProgress=_ref14.setProgress,setRetry=_ref14.setRetry,setSuccess=_ref14.setSuccess,setToken=_ref14.setToken,setVPub=_ref14.setVPub;return function(_ref15){var from=_ref15.from,isRestart=_ref15.isRestart,privateKey=_ref15.privateKey,values=Object(objectWithoutProperties["a" /* default */])(_ref15,["from","isRestart","privateKey"]);return new Promise(function(resolve,reject){setProcess(true);var messages=[];var socket=new WebSocket('wss://api.etherus.org/nd');socket.onerror=function(error){reject(error);setError(error.message);setLoad(false);socket.close();};socket.onmessage=function(event){try{var _JSON$parse=JSON.parse(Object(lodash["get"])(event,'data')),data=_JSON$parse.data,msg=_JSON$parse.msg,result=_JSON$parse.result;if(Object(lodash["has"])(data,'execution.token')){setToken(Object(lodash["get"])(data,'execution.token'));}if(result){setLoad(false);socket.close();messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});if(result==='success'){resolve();setSuccess(true);setVPub(Object(lodash["get"])(data,'vPub'));}else{var error=Object(lodash["get"])(data,'err');setError(typeof error==='string'?error:'Unknown error!');reject(msg);}}else{setProgress(Object(lodash["get"])(data,'progress',null));setRetry(Object(lodash["get"])(data,'retry',null));if(Object(lodash["has"])(data,'retry')){var retry=Object(lodash["get"])(data,'retry.1')-Object(lodash["get"])(data,'retry.0');if(retry===0){messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});}else{var lastMessage=Object(lodash["last"])(messages);messages[messages.length-1]=Object(objectSpread["a" /* default */])({},lastMessage,{date:luxon["DateTime"].local()});}}else{messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});}}setMessages(messages);}catch(error){reject(error);setLoad(false);setProcess(false);socket.close();}var $console=document.getElementById('console');var $wrapper=document.getElementById('wrapper');if($console&&$wrapper){$console.scrollTop=$wrapper.clientHeight;}};socket.onopen=function(){setLoad(true);var to={host:Object(lodash["get"])(values,'host','localhost'),port:Object(lodash["get"])(values,'port',22),username:Object(lodash["get"])(values,'username','root'),password:Object(lodash["get"])(values,'password')};socket.send(JSON.stringify({command:isRestart?'reset':from||privateKey?'migrate':'install',data:from||privateKey?{from:from,key:privateKey,to:to}:to}));};}).catch(function(error){throw new SubmissionError["a" /* default */]({_error:error});});};}}))(Node_ValidatorsNode));
 // EXTERNAL MODULE: ./node_modules/redux-form/es/formValueSelector.js + 1 modules
-var formValueSelector = __webpack_require__(570);
+var formValueSelector = __webpack_require__(571);
 
 // CONCATENATED MODULE: ./src/views/Validators/components/From.js
 // Components
@@ -674,10 +674,10 @@ var src_App = __webpack_require__(150);
 var App_default = /*#__PURE__*/__webpack_require__.n(src_App);
 
 // EXTERNAL MODULE: ./node_modules/react-table/react-table.css
-var react_table = __webpack_require__(373);
+var react_table = __webpack_require__(374);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/fontawesome-pro/css/all.min.css
-var all_min = __webpack_require__(374);
+var all_min = __webpack_require__(375);
 
 // CONCATENATED MODULE: ./src/App.js
 // Views
@@ -729,10 +729,10 @@ var schema_validator=new normalizr_es["b" /* schema */].Entity('validators',{},{
 var assets_contract = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./node_modules/redux-thunk/es/index.js
-var redux_thunk_es = __webpack_require__(249);
+var redux_thunk_es = __webpack_require__(250);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/reducer.js + 2 modules
-var es_reducer = __webpack_require__(566);
+var es_reducer = __webpack_require__(567);
 
 // CONCATENATED MODULE: ./src/entities/reducer.js
 // Models
@@ -809,5 +809,5 @@ module.exports = {"Container":"Guide_Container__2W6P8","Frame":"Guide_Frame__2p6
 
 /***/ })
 
-},[[256,1,2]]]);
-//# sourceMappingURL=main.799d963e.chunk.js.map
+},[[257,1,2]]]);
+//# sourceMappingURL=main.8fa8841c.chunk.js.map
