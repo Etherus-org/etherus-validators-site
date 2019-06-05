@@ -306,6 +306,7 @@ export default compose(
 
           socket.onerror = (error: Object): void => {
             reject(error);
+            setError(error.message);
             setLoad(false);
             socket.close();
           }
