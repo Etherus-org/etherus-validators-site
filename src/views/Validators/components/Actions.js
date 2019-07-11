@@ -65,7 +65,7 @@ const ValidatorsActions: React.Element<'div'> = ({
   isOwner,
   isValidatorOwner,
   ...props,
-}: ValidatorsActionsType) => isConnected && (isOwner || isValidatorOwner) && !isDisabled && (
+}: ValidatorsActionsType) => isConnected && (isOwner || isValidatorOwner) && (
   <Fragment>
     {isFetching ? <Progress size={20} /> : (
       <div className={styles.Root}>
