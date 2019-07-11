@@ -4,7 +4,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Tooltip_Root__293J7","Tooltip":"Tooltip_Tooltip__1mxq-"};
+module.exports = {"Root":"Tooltip_Root__2mKQv","Tooltip":"Tooltip_Tooltip__3I5eR"};
 
 /***/ }),
 
@@ -12,7 +12,7 @@ module.exports = {"Root":"Tooltip_Root__293J7","Tooltip":"Tooltip_Tooltip__1mxq-
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Table_Root__2hh79","RootIsDisabled":"Table_RootIsDisabled__296ZQ","RootIsFavorite":"Table_RootIsFavorite__bGHwf"};
+module.exports = {"Root":"Table_Root__1s8Ss","RootIsDisabled":"Table_RootIsDisabled__14x15","RootIsFavorite":"Table_RootIsFavorite__2WNWH"};
 
 /***/ }),
 
@@ -42,7 +42,7 @@ console.error(e);}return{isValid:isValid,message:message};};};var isUint=functio
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Actions":"Common_Actions__mbWvk","ActionsConsole":"Common_ActionsConsole__3CaTa","Alert":"Common_Alert__2tySw","Console":"Common_Console__Kh5no","Container":"Common_Container__2Q9lT","ContainerConsole":"Common_ContainerConsole__3rqMt","Error":"Common_Error__3le_b","Loading":"Common_Loading__3sBnv","MessageDate":"Common_MessageDate__3IWJG","MessagePub":"Common_MessagePub__3J7ZI","MessageText":"Common_MessageText__2ISDo","MessageTextIsFailure":"Common_MessageTextIsFailure__2KBof","MessageTextIsSuccess":"Common_MessageTextIsSuccess__3197r","NodeGroup":"Common_NodeGroup__3AqNY","Progress":"Common_Progress__-kSCq","Retry":"Common_Retry__N0L0B"};
+module.exports = {"Actions":"Common_Actions__2KkrQ","ActionsConsole":"Common_ActionsConsole__1GIL4","Alert":"Common_Alert__1pTx6","Console":"Common_Console__OJFTq","Container":"Common_Container__qvWDW","ContainerConsole":"Common_ContainerConsole__283Nd","Error":"Common_Error__3qHWz","Loading":"Common_Loading__1S17p","MessageDate":"Common_MessageDate__3DVVg","MessagePub":"Common_MessagePub__2JLbi","MessageText":"Common_MessageText__3Ls9V","MessageTextIsFailure":"Common_MessageTextIsFailure__1W_5Y","MessageTextIsSuccess":"Common_MessageTextIsSuccess__1vnpD","NodeGroup":"Common_NodeGroup__2PFDq","Progress":"Common_Progress__2a3PJ","Retry":"Common_Retry__1ERiA"};
 
 /***/ }),
 
@@ -50,7 +50,7 @@ module.exports = {"Actions":"Common_Actions__mbWvk","ActionsConsole":"Common_Act
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Error":"Form_Error__3ms-b"};
+module.exports = {"Error":"Form_Error__FAKdL"};
 
 /***/ }),
 
@@ -58,7 +58,7 @@ module.exports = {"Error":"Form_Error__3ms-b"};
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Stat_Root__2XHrv","Description":"Stat_Description__62ReH","Label":"Stat_Label__2Npae","List":"Stat_List__1fWd_","Ping":"Stat_Ping__2pawe","ValueColorAlert":"Stat_ValueColorAlert__2h-2X","ValueColorDanger":"Stat_ValueColorDanger__5VlFk","ValueColorOrange":"Stat_ValueColorOrange__pTVvu","ValueColorPrimary":"Stat_ValueColorPrimary__3jDgF","ValueColorSuccess":"Stat_ValueColorSuccess__2I16Z"};
+module.exports = {"Root":"Stat_Root__15gql","Description":"Stat_Description__2-4Ro","Label":"Stat_Label__uc_VL","List":"Stat_List__YRpkl","Ping":"Stat_Ping__dviGZ","ValueColorAlert":"Stat_ValueColorAlert__3wtqO","ValueColorDanger":"Stat_ValueColorDanger__mKuYu","ValueColorOrange":"Stat_ValueColorOrange__1JCw-","ValueColorPrimary":"Stat_ValueColorPrimary__3JBI0","ValueColorSuccess":"Stat_ValueColorSuccess__3m4Ja"};
 
 /***/ }),
 
@@ -66,7 +66,7 @@ module.exports = {"Root":"Stat_Root__2XHrv","Description":"Stat_Description__62R
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"App_Root__3T8Bz","Wrapper":"App_Wrapper__217sn"};
+module.exports = {"Root":"App_Root__3UUPN","Wrapper":"App_Wrapper__VY8Wp"};
 
 /***/ }),
 
@@ -81,7 +81,7 @@ module.exports = [{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Field_Root__3Xpzp","RootColorError":"Field_RootColorError__1SyqK","Text":"Field_Text__3aBAD","RootColorDanger":"Field_RootColorDanger__2dSFX","RootColorOrange":"Field_RootColorOrange__1FMsL","RootColorSuccess":"Field_RootColorSuccess__iZhww","RootIsDisabled":"Field_RootIsDisabled__34qwr","RootVariantHash":"Field_RootVariantHash__3vHZT","RootVariantPing":"Field_RootVariantPing__3ynVT","Copy":"Field_Copy__1MVY8","Health":"Field_Health__2p1Oe","HealthBar":"Field_HealthBar__t2k3T","HealthIndex":"Field_HealthIndex__3us2u","Icon":"Field_Icon__3e_0q","Word":"Field_Word__CS7mn","WordVariantGreen":"Field_WordVariantGreen__2QH5P","WordVariantLight":"Field_WordVariantLight__1Mn5m","WordVariantOrange":"Field_WordVariantOrange__AZCdW","WordVariantRed":"Field_WordVariantRed__1FEv8","WordVariantYellow":"Field_WordVariantYellow__2Xbuj"};
+module.exports = {"Root":"Field_Root__3biek","RootColorError":"Field_RootColorError__kzNqp","Text":"Field_Text__1LKbQ","RootColorDanger":"Field_RootColorDanger__OPk0L","RootColorOrange":"Field_RootColorOrange__1U-Hp","RootColorSuccess":"Field_RootColorSuccess__2zARH","RootIsDisabled":"Field_RootIsDisabled__1_lJL","RootVariantHash":"Field_RootVariantHash__2j6A0","RootVariantPing":"Field_RootVariantPing__2AEUf","Copy":"Field_Copy__2P4So","Health":"Field_Health__2oWTf","HealthBar":"Field_HealthBar__UbQTT","HealthIndex":"Field_HealthIndex__ybrS9","Icon":"Field_Icon__3Bt6K","Word":"Field_Word__lQuHD","WordVariantGreen":"Field_WordVariantGreen__3A1ak","WordVariantLight":"Field_WordVariantLight__kVASF","WordVariantOrange":"Field_WordVariantOrange__3cvTv","WordVariantRed":"Field_WordVariantRed__1CsYh","WordVariantYellow":"Field_WordVariantYellow__NtGl3"};
 
 /***/ }),
 
@@ -89,44 +89,44 @@ module.exports = {"Root":"Field_Root__3Xpzp","RootColorError":"Field_RootColorEr
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Table_Root__3CqIU"};
+module.exports = {"Root":"Table_Root__1Dcze"};
 
 /***/ }),
 
-/***/ 243:
+/***/ 242:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Item_Root__1Vtiv"};
+module.exports = {"Root":"Item_Root__3bpiM"};
 
 /***/ }),
 
-/***/ 245:
+/***/ 244:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/media/step-1.acd03576.png";
 
 /***/ }),
 
-/***/ 246:
+/***/ 245:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/media/step-2.a2a7d29d.png";
 
 /***/ }),
 
-/***/ 248:
+/***/ 247:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Actions":"Form_Actions__1guva","ActionsConsole":"Form_ActionsConsole__1u_nC"};
+module.exports = {"Actions":"Form_Actions__2P7Vw","ActionsConsole":"Form_ActionsConsole__3HEyF"};
 
 /***/ }),
 
-/***/ 257:
+/***/ 256:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(561);
+module.exports = __webpack_require__(560);
 
 
 /***/ }),
@@ -135,7 +135,7 @@ module.exports = __webpack_require__(561);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Button_Root__125Uj","RootColorDanger":"Button_RootColorDanger__1K9U9","Content":"Button_Content__tGwup","RootColorPrimary":"Button_RootColorPrimary__2KBES","RootColorSecondary":"Button_RootColorSecondary__2J9Qy","RootColorSuccess":"Button_RootColorSuccess__3wc-r","RootGradientGreen":"Button_RootGradientGreen__3_MiC","Icon":"Button_Icon__i_Kng","RootGradientOrange":"Button_RootGradientOrange__8ksmc","RootGradientPurple":"Button_RootGradientPurple__W4LIl","RootGradientRed":"Button_RootGradientRed__1UoUX","RootVariantFilled":"Button_RootVariantFilled__3JGLK","RootVariantFull":"Button_RootVariantFull__1mjeU","RootVariantFullWidth":"Button_RootVariantFullWidth__-WeCb","RootVariantIcon":"Button_RootVariantIcon__30qib"};
+module.exports = {"Root":"Button_Root__3UoPz","RootColorDanger":"Button_RootColorDanger__2CsmL","Content":"Button_Content__b0cux","RootColorPrimary":"Button_RootColorPrimary__N7WI4","RootColorSecondary":"Button_RootColorSecondary__21qxs","RootColorSuccess":"Button_RootColorSuccess__1-3FA","RootGradientGreen":"Button_RootGradientGreen__2cMLf","Icon":"Button_Icon__1PUvK","RootGradientOrange":"Button_RootGradientOrange__Yt9-J","RootGradientPurple":"Button_RootGradientPurple__2Oh2l","RootGradientRed":"Button_RootGradientRed__2Qilw","RootVariantFilled":"Button_RootVariantFilled__eYVK0","RootVariantFull":"Button_RootVariantFull__29XyY","RootVariantFullWidth":"Button_RootVariantFullWidth__3sPDP","RootVariantIcon":"Button_RootVariantIcon__1JnfL"};
 
 /***/ }),
 
@@ -143,7 +143,7 @@ module.exports = {"Root":"Button_Root__125Uj","RootColorDanger":"Button_RootColo
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Actions_Root__1ncCJ","ButtonVariantDeposit":"Actions_ButtonVariantDeposit__2f69Y","Icon":"Actions_Icon__UjZlP","ButtonVariantPause":"Actions_ButtonVariantPause__1zt3X","ButtonVariantPlay":"Actions_ButtonVariantPlay__1KleK","ButtonVariantWithdraw":"Actions_ButtonVariantWithdraw__3u3T2"};
+module.exports = {"Root":"Actions_Root__1JP0c","ButtonVariantDeposit":"Actions_ButtonVariantDeposit__mcHhb","Icon":"Actions_Icon__3JKX5","ButtonVariantPause":"Actions_ButtonVariantPause__185ha","ButtonVariantPlay":"Actions_ButtonVariantPlay__1Armj","ButtonVariantWithdraw":"Actions_ButtonVariantWithdraw__OZKsj"};
 
 /***/ }),
 
@@ -151,7 +151,7 @@ module.exports = {"Root":"Actions_Root__1ncCJ","ButtonVariantDeposit":"Actions_B
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Select_Root__z3eM3","RootIsEmpty":"Select_RootIsEmpty__3vDGV","Icon":"Select_Icon__2GSfP","RootIsFocused":"Select_RootIsFocused__3LQDw","Container":"Select_Container__1EukS","RootIsMultiple":"Select_RootIsMultiple__2ZvAJ","Input":"Select_Input__1pvrG","Control":"Select_Control__1U3LJ","Dropdown":"Select_Dropdown__qjCrM","List":"Select_List__2-iCv","Option":"Select_Option__1nFSC","OptionDelete":"Select_OptionDelete__1cAIG","OptionIcon":"Select_OptionIcon__3FJ1Y"};
+module.exports = {"Root":"Select_Root__1wWeX","RootIsEmpty":"Select_RootIsEmpty__2_Dnc","Icon":"Select_Icon__2qACB","RootIsFocused":"Select_RootIsFocused__1Wotl","Container":"Select_Container__16YRY","RootIsMultiple":"Select_RootIsMultiple__2-6YR","Input":"Select_Input__1ld2F","Control":"Select_Control__2tUnw","Dropdown":"Select_Dropdown__3ADiy","List":"Select_List__3aZ5N","Option":"Select_Option__2qcmX","OptionDelete":"Select_OptionDelete__1tjHC","OptionIcon":"Select_OptionIcon__1bYAY"};
 
 /***/ }),
 
@@ -159,7 +159,7 @@ module.exports = {"Root":"Select_Root__z3eM3","RootIsEmpty":"Select_RootIsEmpty_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Validators_Root__2fHeH","RootIsConnected":"Validators_RootIsConnected__3NUcg","Status":"Validators_Status__2__-l","RootIsOwner":"Validators_RootIsOwner__1YG2P","Actions":"Validators_Actions__2yGMx","Connecting":"Validators_Connecting__2Z6T8","Header":"Validators_Header__6QWaq","HeaderRight":"Validators_HeaderRight__2lkvW","Hint":"Validators_Hint__3v6Uz","List":"Validators_List__3Ofdk","NodeActions":"Validators_NodeActions__1whvb","Progress":"Validators_Progress__3kw-W"};
+module.exports = {"Root":"Validators_Root__1lOjo","RootIsConnected":"Validators_RootIsConnected__3c3eM","Status":"Validators_Status__3iCm1","RootIsOwner":"Validators_RootIsOwner__2jlQm","Actions":"Validators_Actions__PkyxE","Connecting":"Validators_Connecting__3CWO0","Header":"Validators_Header__1-yDr","HeaderRight":"Validators_HeaderRight__1LqmW","Hint":"Validators_Hint__Hf5lS","List":"Validators_List__b5LW9","NodeActions":"Validators_NodeActions__3vcol","Progress":"Validators_Progress__HXOP_"};
 
 /***/ }),
 
@@ -167,7 +167,7 @@ module.exports = {"Root":"Validators_Root__2fHeH","RootIsConnected":"Validators_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Typography_Root__3WVP0","RootColorAlert":"Typography_RootColorAlert__3q0zB","RootColorDanger":"Typography_RootColorDanger__253SG","RootColorDark":"Typography_RootColorDark__30iIE","RootColorLight":"Typography_RootColorLight__1AdZ0","RootColorLighter":"Typography_RootColorLighter__--f8x","RootColorMedium":"Typography_RootColorMedium__25wgh","RootColorPrimary":"Typography_RootColorPrimary__3KfYA","RootColorSuccess":"Typography_RootColorSuccess__3xP0Q","RootNowrap":"Typography_RootNowrap__555jF","RootVariantH1":"Typography_RootVariantH1__3xax0","RootVariantH2":"Typography_RootVariantH2__2jC4w","RootVariantH3":"Typography_RootVariantH3__1MHUz","RootVariantH4":"Typography_RootVariantH4__1DmD5","RootVariantH5":"Typography_RootVariantH5__2YZpc","RootVariantH6":"Typography_RootVariantH6__sttTv","RootVariantBody1":"Typography_RootVariantBody1__AEkhB","RootVariantBody2":"Typography_RootVariantBody2__1k7KZ","RootVariantButton":"Typography_RootVariantButton__2W1Qp","RootVariantCaption":"Typography_RootVariantCaption__2w6TK","RootVariantOverline":"Typography_RootVariantOverline__UPEam","RootVariantSubtitle1":"Typography_RootVariantSubtitle1__i0rsb","RootVariantSubtitle2":"Typography_RootVariantSubtitle2__1EkOH"};
+module.exports = {"Root":"Typography_Root__1eH5O","RootColorAlert":"Typography_RootColorAlert__3hwLc","RootColorDanger":"Typography_RootColorDanger__1-dWT","RootColorDark":"Typography_RootColorDark__1k3L-","RootColorLight":"Typography_RootColorLight__1whT1","RootColorLighter":"Typography_RootColorLighter__1OKC1","RootColorMedium":"Typography_RootColorMedium__1tsxb","RootColorPrimary":"Typography_RootColorPrimary__3Al8c","RootColorSuccess":"Typography_RootColorSuccess__2hQZu","RootNowrap":"Typography_RootNowrap__1niL7","RootVariantH1":"Typography_RootVariantH1__3nKmJ","RootVariantH2":"Typography_RootVariantH2__3TTGW","RootVariantH3":"Typography_RootVariantH3__Ncurq","RootVariantH4":"Typography_RootVariantH4__a1vXQ","RootVariantH5":"Typography_RootVariantH5__5PMd5","RootVariantH6":"Typography_RootVariantH6__Afx3U","RootVariantBody1":"Typography_RootVariantBody1__2EEBU","RootVariantBody2":"Typography_RootVariantBody2__1LH3A","RootVariantButton":"Typography_RootVariantButton__2tMs_","RootVariantCaption":"Typography_RootVariantCaption__2SAZe","RootVariantOverline":"Typography_RootVariantOverline__1-kGP","RootVariantSubtitle1":"Typography_RootVariantSubtitle1__2WGE3","RootVariantSubtitle2":"Typography_RootVariantSubtitle2__3M96g"};
 
 /***/ }),
 
@@ -175,39 +175,39 @@ module.exports = {"Root":"Typography_Root__3WVP0","RootColorAlert":"Typography_R
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Progress_Root__1Vj99","RootColorPrimary":"Progress_RootColorPrimary__1vXQl","Circle":"Progress_Circle__sxvZS","Line":"Progress_Line__2WZ1S","RootColorSuccess":"Progress_RootColorSuccess__3JGRv","RootVariantLinear":"Progress_RootVariantLinear__lmRs3","Progress":"Progress_Progress__3YEOf","RootVariantIndeterminate":"Progress_RootVariantIndeterminate__2HTGG","progressCircularDash":"Progress_progressCircularDash__3rbrN","RootVariantCircle":"Progress_RootVariantCircle__2qdt8","progressCircularRotate":"Progress_progressCircularRotate__2hFvr","progressLinear":"Progress_progressLinear__2PFGl"};
+module.exports = {"Root":"Progress_Root__1k5De","RootColorPrimary":"Progress_RootColorPrimary__2SH6-","Circle":"Progress_Circle__jf9fY","Line":"Progress_Line__aESni","RootColorSuccess":"Progress_RootColorSuccess__3N0OK","RootVariantLinear":"Progress_RootVariantLinear__Wtix5","Progress":"Progress_Progress__3mzis","RootVariantIndeterminate":"Progress_RootVariantIndeterminate__1EpjN","progressCircularDash":"Progress_progressCircularDash__3kNHE","RootVariantCircle":"Progress_RootVariantCircle__3jb_0","progressCircularRotate":"Progress_progressCircularRotate__RT2rm","progressLinear":"Progress_progressLinear__2IBfa"};
 
 /***/ }),
 
-/***/ 406:
+/***/ 405:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 408:
+/***/ 407:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 433:
+/***/ 432:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 476:
+/***/ 475:
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
 
-/***/ 561:
+/***/ 560:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -233,7 +233,7 @@ __webpack_require__.r(schema_namespaceObject);
 __webpack_require__.d(schema_namespaceObject, "validator", function() { return schema_validator; });
 
 // EXTERNAL MODULE: ./node_modules/history/esm/history.js + 3 modules
-var esm_history = __webpack_require__(252);
+var esm_history = __webpack_require__(251);
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
@@ -253,7 +253,7 @@ var Router = __webpack_require__(570);
 var Route = __webpack_require__(569);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/es/Switch.js + 1 modules
-var Switch = __webpack_require__(568);
+var Switch = __webpack_require__(567);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread.js
 var objectSpread = __webpack_require__(7);
@@ -312,7 +312,7 @@ var Progress_default = /*#__PURE__*/__webpack_require__.n(components_Progress);
 // Styles
 var Progress_VARIANT={CIRCLE:'circle',LINEAR:'linear'};var Progress_Progress=function Progress(_ref){var _classNames;var className=_ref.className,_ref$classNames=_ref.classNames;_ref$classNames=_ref$classNames===void 0?{}:_ref$classNames;var rootClassName=_ref$classNames.root,circleClassName=_ref$classNames.circle,lineClassName=_ref$classNames.line,progressClassName=_ref$classNames.progress,_ref$color=_ref.color,color=_ref$color===void 0?color_namespaceObject.PRIMARY:_ref$color,_ref$size=_ref.size,size=_ref$size===void 0?40:_ref$size,value=_ref.value,_ref$variant=_ref.variant,variant=_ref$variant===void 0?Progress_VARIANT.CIRCLE:_ref$variant;var rootClassNames=classnames_default()(className,rootClassName,Progress_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootColorPrimary,color===color_namespaceObject.PRIMARY),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootColorSuccess,color===color_namespaceObject.SUCCESS),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantCircle,variant===Progress_VARIANT.CIRCLE),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantLinear,variant===Progress_VARIANT.LINEAR),Object(defineProperty["a" /* default */])(_classNames,Progress_default.a.RootVariantIndeterminate,!value),_classNames));var circleClassNames=classnames_default()(circleClassName,Progress_default.a.Circle);var lineClassNames=classnames_default()(lineClassName,Progress_default.a.Line);var progressClassNames=classnames_default()(progressClassName,Progress_default.a.Progress);var displaySize=size+size/10;return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement("div",{className:progressClassNames,style:variant===Progress_VARIANT.CIRCLE?{height:displaySize,width:displaySize}:null},variant===Progress_VARIANT.CIRCLE&&react_default.a.createElement("svg",{className:Progress_default.a.Svg,viewBox:"".concat(displaySize/2," ").concat(displaySize/2," ").concat(displaySize," ").concat(displaySize)},react_default.a.createElement("circle",{className:circleClassNames,cx:displaySize,cy:displaySize,fill:"none",r:size/2,strokeWidth:size/10})),variant===Progress_VARIANT.LINEAR&&react_default.a.createElement("div",{className:lineClassNames,style:{width:"".concat(Math.max(0,Math.min(100,value)),"%")}})));};Progress_Progress.VARIANT=Progress_VARIANT;/* harmony default export */ var src_components_Progress = (Progress_Progress);
 // EXTERNAL MODULE: ./node_modules/react-table/es/index.js + 6 modules
-var react_table_es = __webpack_require__(251);
+var react_table_es = __webpack_require__(250);
 
 // EXTERNAL MODULE: ./src/components/Table.scss
 var components_Table = __webpack_require__(238);
@@ -343,7 +343,7 @@ case UPDATE_VALIDATOR:return Object(objectSpread["a" /* default */])({},state,Ob
 var normalizr_es = __webpack_require__(104);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/SubmissionError.js + 1 modules
-var SubmissionError = __webpack_require__(254);
+var SubmissionError = __webpack_require__(253);
 
 // CONCATENATED MODULE: ./src/entities/types.js
 var UPDATE_ENTITIES='ENTITIES/UPDATE_ENTITIES';
@@ -456,7 +456,7 @@ var components_Table_default = /*#__PURE__*/__webpack_require__.n(Validators_com
 // Styles
 var MAX_ROWS=128;var COLUMNS=[{accessor:'index',Cell:function Cell(_ref){var index=_ref.index,original=_ref.original;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:Object(lodash["get"])(original,'pauseCause')===0?index+1:''});},Header:'#',sortable:false,width:64},{accessor:'hash',Cell:function Cell(_ref2){var index=_ref2.index,value=_ref2.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.HASH});},Header:'vPub',minWidth:160,sortable:false},{accessor:'address',Cell:function Cell(_ref3){var index=_ref3.index,value=_ref3.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.HASH});},Header:'Node Address',minWidth:160,sortable:false},{accessor:'ping',Cell:function Cell(_ref4){var index=_ref4.index,original=_ref4.original;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,original:original,variant:Field_VARIANT.PING});},Header:'',sortable:false,style:{textAlign:'center'},width:72},{accessor:'voted64',Cell:function Cell(_ref5){var index=_ref5.index,original=_ref5.original,value=_ref5.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS||Object(lodash["get"])(original,'pauseCause')!==0,original:original,title:value,variant:Field_VARIANT.HEALTH});},Header:'Здоровье',sortable:false,width:240},{accessor:'deposit',Cell:function Cell(_ref6){var index=_ref6.index,value=_ref6.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.DEPOSIT});},Header:'Депозит',sortable:false,width:160},{accessor:'pauseCause',Cell:function Cell(_ref7){var index=_ref7.index,value=_ref7.value;return react_default.a.createElement(components_Field,{isDisabled:index>=MAX_ROWS,title:value,variant:Field_VARIANT.PAUSE});},Header:'Состояние',sortable:false,width:120},{accessor:'actions',Cell:function Cell(_ref8){var index=_ref8.index,original=_ref8.original;return react_default.a.createElement(components_Actions,Object.assign({},original,{isDisabled:index>=MAX_ROWS}));},Header:'Действия',sortable:false,width:160}];var Table_ValidatorsTable=function ValidatorsTable(_ref9){var data=_ref9.data,ownerAddress=_ref9.ownerAddress;return react_default.a.createElement(src_components_Table,{columns:ownerAddress?COLUMNS:[].concat(COLUMNS).slice(0,-1),data:data,defaultPageSize:100000,freezeWhenExpanded:true,getTrGroupProps:function getTrGroupProps(state,_ref10){var _classNames;var index=_ref10.index,original=_ref10.original;return{className:classnames_default()(components_Table_default.a.Root,(_classNames={},Object(defineProperty["a" /* default */])(_classNames,components_Table_default.a.RootIsFavorite,Object(lodash["get"])(original,'address')===ownerAddress),Object(defineProperty["a" /* default */])(_classNames,components_Table_default.a.RootIsDisabled,Object(lodash["get"])(original,'pauseCause')!==0||index>MAX_ROWS),_classNames)),id:Object(lodash["get"])(original,'hash')};},minRows:0,resizable:false,showPagination:false,SubComponent:function SubComponent(props){return react_default.a.createElement(components_Stat,props);}});};var Table_mapStateToProps=function mapStateToProps(state){return{ownerAddress:selector_getAddress(state)};};/* harmony default export */ var views_Validators_components_Table = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(Table_mapStateToProps))(Table_ValidatorsTable));
 // EXTERNAL MODULE: ./node_modules/react-portal/es/PortalCompat.js + 3 modules
-var PortalCompat = __webpack_require__(566);
+var PortalCompat = __webpack_require__(565);
 
 // EXTERNAL MODULE: ./src/components/Modal.scss
 var components_Modal = __webpack_require__(64);
@@ -483,7 +483,7 @@ var Confirm_ValidatorsConfirm=function ValidatorsConfirm(_ref){var handleCancel=
 // Styles
 var ConfirmAccount_ValidatorsConfirmAccount=function ValidatorsConfirmAccount(){return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_CONFIRM_ACCOUNT_MODAL_ID,title:"\u0412\u043D\u0438\u043C\u0430\u043D\u0438\u0435!"},function(_ref){var onReject=_ref.onReject,onResolve=_ref.onResolve;return react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(components_Typography_Typography,{className:Common_default.a.Alert,variant:components_Typography_Typography.VARIANT.BODY1},"\u0412\u044B \u0441\u043E\u0431\u0438\u0440\u0430\u0435\u0442\u0435\u0441\u044C \u0441\u043E\u0437\u0434\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440 \u043F\u0440\u0438\u043A\u0440\u0435\u043F\u043B\u0451\u043D\u043D\u044B\u0439 \u043A \u043A\u043E\u0448\u0435\u043B\u044C\u043A\u0443, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u043D\u0435 \u0441\u043E\u0432\u043F\u0430\u0434\u0430\u0435\u0442 \u0441 \u0432\u0430\u0448\u0438\u043C \u0442\u0435\u043A\u0443\u0449\u0438\u043C \u0430\u043A\u043A\u0430\u0443\u043D\u0442\u043E\u043C Metamask.",react_default.a.createElement("br",null),react_default.a.createElement("br",null),"\u0425\u043E\u0442\u0438\u0442\u0435 \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C?"),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:onReject},"\u041E\u0442\u043C\u0435\u043D\u0430"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:onResolve},"\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044C")));});};/* harmony default export */ var ConfirmAccount = (ConfirmAccount_ValidatorsConfirmAccount);
 // EXTERNAL MODULE: ./node_modules/redux-form/es/reduxForm.js + 14 modules
-var reduxForm = __webpack_require__(564);
+var reduxForm = __webpack_require__(563);
 
 // EXTERNAL MODULE: ./src/components/Form/Form.scss
 var Form_Form = __webpack_require__(145);
@@ -499,20 +499,20 @@ var classCallCheck = __webpack_require__(239);
 var createClass = __webpack_require__(240);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js + 2 modules
-var possibleConstructorReturn = __webpack_require__(253);
+var possibleConstructorReturn = __webpack_require__(252);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__(241);
 
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js + 1 modules
-var inherits = __webpack_require__(255);
+var inherits = __webpack_require__(254);
 
 // EXTERNAL MODULE: ./node_modules/lodash/uniqueId.js
 var uniqueId = __webpack_require__(146);
 var uniqueId_default = /*#__PURE__*/__webpack_require__.n(uniqueId);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/Field.js + 10 modules
-var es_Field = __webpack_require__(565);
+var es_Field = __webpack_require__(564);
 
 // CONCATENATED MODULE: ./src/components/Form/utils/reduxFieldAdapter.js
 /* harmony default export */ var reduxFieldAdapter = (function(_ref){var children=_ref.children,input=_ref.input,_ref$meta=_ref.meta,error=_ref$meta.error,touched=_ref$meta.touched,props=Object(objectWithoutProperties["a" /* default */])(_ref,["children","input","meta"]);return children(Object(objectSpread["a" /* default */])({},input,props,{error:touched&&error}));});
@@ -543,7 +543,7 @@ var Select_FormSelect=function FormSelect(_ref){var _classNames;var children=_re
 handleBlur:function handleBlur(_ref3){var setFocus=_ref3.setFocus,setInputValue=_ref3.setInputValue;return function(event){if(!$root.contains(event.relatedTarget)){$input.blur();setFocus(false);setInputValue('');}};},handleChange:function handleChange(_ref4){var setInputValue=_ref4.setInputValue;return function(event){return setInputValue(Object(lodash["get"])(event,'target.value',''));};},handleCreate:function handleCreate(_ref5){var isMultiple=_ref5.isMultiple,onChange=_ref5.onChange,setFocus=_ref5.setFocus,value=_ref5.value;return function(itemValue){if(!isMultiple){$input.blur();setFocus(false);}onChange&&onChange(isMultiple?[].concat(Object(toConsumableArray["a" /* default */])(value||[]),[itemValue]):itemValue);};},handleDelete:function handleDelete(_ref6){var onChange=_ref6.onChange,value=_ref6.value;return function(itemValue){return onChange&&onChange(value.filter(function(_ref7){var value=_ref7.value;return value!==itemValue;}));};},handleFocus:function handleFocus(_ref8){var setFocus=_ref8.setFocus;return function(){$input.focus();setFocus(true);};},// Registers
 registerRoot:function registerRoot(){return function(node){$root=node;};},registerInput:function registerInput(){return function(node){$input=node;};}};}))(Select_FormSelect);/* harmony default export */ var Select_Select = (function(_ref9){var children=_ref9.children,props=Object(objectWithoutProperties["a" /* default */])(_ref9,["children"]);return react_default.a.createElement(components_Form_components_Field,props,react_default.a.createElement(ComposedFormSelect,null,children));});
 // EXTERNAL MODULE: ./src/components/Form/components/Select/components/Item.scss
-var Item = __webpack_require__(243);
+var Item = __webpack_require__(242);
 var Item_default = /*#__PURE__*/__webpack_require__.n(Item);
 
 // CONCATENATED MODULE: ./src/components/Form/components/Select/components/Item.js
@@ -555,7 +555,7 @@ var Item_FormSelectItem=function FormSelectItem(_ref){var handleClick=_ref.handl
 // Components
 
 // EXTERNAL MODULE: ./node_modules/metamask-logo/index.js
-var metamask_logo = __webpack_require__(244);
+var metamask_logo = __webpack_require__(243);
 var metamask_logo_default = /*#__PURE__*/__webpack_require__.n(metamask_logo);
 
 // EXTERNAL MODULE: ./src/components/Metamask.scss
@@ -595,11 +595,11 @@ var Determine_default = /*#__PURE__*/__webpack_require__.n(Determine);
 // Styles
 var Determine_ValidatorsDetermine=function ValidatorsDetermine(_ref){var children=_ref.children,isSelected=_ref.isSelected,title=_ref.title;var rootClassNames=classnames_default()(Determine_default.a.Root,Object(defineProperty["a" /* default */])({},Determine_default.a.RootIsSelected,!!isSelected));return react_default.a.createElement("div",{className:rootClassNames},react_default.a.createElement(components_Typography_Typography,{className:Determine_default.a.Title,variant:components_Typography_Typography.VARIANT.H6},title),react_default.a.createElement(components_Typography_Typography,{className:Determine_default.a.Content,variant:components_Typography_Typography.VARIANT.BODY1},children));};/* harmony default export */ var components_Determine = (Determine_ValidatorsDetermine);
 // EXTERNAL MODULE: ./src/assets/guide/step-1.png
-var step_1 = __webpack_require__(245);
+var step_1 = __webpack_require__(244);
 var step_1_default = /*#__PURE__*/__webpack_require__.n(step_1);
 
 // EXTERNAL MODULE: ./src/assets/guide/step-2.png
-var step_2 = __webpack_require__(246);
+var step_2 = __webpack_require__(245);
 var step_2_default = /*#__PURE__*/__webpack_require__.n(step_2);
 
 // EXTERNAL MODULE: ./src/views/Validators/containers/Guide.scss
@@ -615,11 +615,11 @@ var Guide_ValidatorsGuide=function ValidatorsGuide(){return react_default.a.crea
 var luxon = __webpack_require__(84);
 
 // EXTERNAL MODULE: ./node_modules/ansi-to-react/lib/index.js
-var lib = __webpack_require__(247);
+var lib = __webpack_require__(246);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 // EXTERNAL MODULE: ./src/views/Validators/components/Form.scss
-var components_Form = __webpack_require__(248);
+var components_Form = __webpack_require__(247);
 var components_Form_default = /*#__PURE__*/__webpack_require__.n(components_Form);
 
 // CONCATENATED MODULE: ./src/views/Validators/components/Form.js
@@ -634,9 +634,9 @@ var Form_ValidatorsForm=function ValidatorsForm(_ref){var error=_ref.error,handl
 // Services
 // Styles
 // Utils
-var Node_ValidatorsNodeFormPrivate=function ValidatorsNodeFormPrivate(_ref){var error=_ref.error,handleClose=_ref.handleClose,handleSubmit=_ref.handleSubmit,onCancel=_ref.onCancel,onTrigger=_ref.onTrigger;return react_default.a.createElement(components_Form_Form,{error:error,onSubmit:handleSubmit},react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(components_Input,{label:"\u041F\u0440\u0438\u0432\u0430\u0442\u043D\u044B\u0439 \u043A\u043B\u044E\u0447",name:"privateKey"})),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:onCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:onTrigger},"\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u0444\u043E\u0440\u043C\u0443"),react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.GREEN,type:"submit"},"\u0414\u0430\u043B\u0435\u0435")));};var ComposedValidatorsNodeFormPrivate=Object(Recompose_esm["a" /* compose */])(Object(reduxForm["a" /* default */])({form:'privateForm',validate:Object(validate["a" /* default */])({privateKey:[Object(validate["i" /* required */])(),Object(validate["e" /* isPrivateKey */])()]})}))(Node_ValidatorsNodeFormPrivate);var Node_ValidatorsNodeFrom=function ValidatorsNodeFrom(_ref2){var handleCancel=_ref2.handleCancel,handleSubmit=_ref2.handleSubmit,handleTrigger=_ref2.handleTrigger,isPrivate=_ref2.isPrivate;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_NODE_FROM_MODAL_ID,title:"\u041E\u0442\u043A\u0443\u0434\u0430 \u043D\u0443\u0436\u043D\u043E \u043F\u0435\u0440\u0435\u043D\u0435\u0441\u0442\u0438 \u043D\u043E\u0434\u0443?"},function(_ref3){var from=_ref3.from,privateKey=_ref3.privateKey;return isPrivate?react_default.a.createElement(ComposedValidatorsNodeFormPrivate,{initialValues:{privateKey:privateKey},onCancel:handleCancel,onSubmit:handleSubmit,onTrigger:handleTrigger}):react_default.a.createElement(Validators_components_Form,{initialValues:{from:from},isFrom:true,onCancel:handleCancel,onSubmit:handleSubmit,onTrigger:handleTrigger});});};var NodeFrom=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal,openModal:actions_openModal}),Object(Recompose_esm["e" /* withState */])('isPrivate','setPrivate',false),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref4){var closeModal=_ref4.closeModal,handleReset=_ref4.handleReset;return function(event){closeModal(VALIDATOR_NODE_FROM_MODAL_ID);};},handleSubmit:function handleSubmit(_ref5){var closeModal=_ref5.closeModal,openModal=_ref5.openModal,isPrivate=_ref5.isPrivate;return function(values){closeModal(VALIDATOR_NODE_FROM_MODAL_ID);openModal(VALIDATOR_NODE_MODAL_ID,isPrivate?{privateKey:Object(lodash["get"])(values,'privateKey')}:{from:{host:Object(lodash["get"])(values,'host','localhost'),port:Object(lodash["get"])(values,'port',22),username:Object(lodash["get"])(values,'username','root'),password:Object(lodash["get"])(values,'password')}});};},handleTrigger:function handleTrigger(_ref6){var isPrivate=_ref6.isPrivate,setPrivate=_ref6.setPrivate;return function(){return setPrivate(!isPrivate);};}}))(Node_ValidatorsNodeFrom);var Node_ValidatorsNode=function ValidatorsNode(_ref7){var error=_ref7.error,messages=_ref7.messages,progress=_ref7.progress,retry=_ref7.retry,token=_ref7.token,vPub=_ref7.vPub,handleCancel=_ref7.handleCancel,handleCreateValidator=_ref7.handleCreateValidator,handleReset=_ref7.handleReset,handleSubmit=_ref7.handleSubmit,isLoading=_ref7.isLoading,isProcessing=_ref7.isProcessing,isSuccess=_ref7.isSuccess;return react_default.a.createElement(src_components_Modal,{classNames:{container:classnames_default()(Common_default.a.Container,Object(defineProperty["a" /* default */])({},Common_default.a.ContainerConsole,isProcessing))},id:VALIDATOR_NODE_MODAL_ID,title:isSuccess?"\u0423\u0437\u0435\u043B \u0440\u0430\u0437\u0432\u0451\u0440\u043D\u0443\u0442! ".concat(token):isProcessing?"\u0423\u0437\u0435\u043B \u0440\u0430\u0437\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F: ".concat(token):null},function(_ref8){var from=_ref8.from,isRestart=_ref8.isRestart,privateKey=_ref8.privateKey;return isProcessing?react_default.a.createElement(react["Fragment"],null,react_default.a.createElement("div",{className:Common_default.a.Console,id:"console"},react_default.a.createElement("div",{id:"wrapper"},messages.map(function(_ref9,index){var _classNames2;var date=_ref9.date,msg=_ref9.msg,result=_ref9.result;return react_default.a.createElement("div",{className:Common_default.a.Message,key:index},react_default.a.createElement("span",{className:Common_default.a.MessageDate},"[",date.toLocaleString({hour:'2-digit',minute:'2-digit',second:'2-digit'}),"]:\xA0"),index===messages.length-1&&retry?react_default.a.createElement(react["Fragment"],null,react_default.a.createElement("span",{className:Common_default.a.Retry},"[".concat(Object(lodash["get"])(retry,'1',0)-Object(lodash["get"])(retry,'0',0),"/").concat(Object(lodash["get"])(retry,'1',0),"]")),progress&&react_default.a.createElement("span",{className:Common_default.a.Progress},"[".concat(Object(lodash["get"])(progress,'0',0),"/").concat(Object(lodash["get"])(progress,'1',0),"]"))):null,react_default.a.createElement(lib_default.a,{className:classnames_default()(Common_default.a.MessageText,(_classNames2={},Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsFailure,result==='failure'),Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsSuccess,result==='success'),_classNames2))},msg));}),error&&react_default.a.createElement("div",{className:Common_default.a.Error},"[Error]: ",error),vPub&&react_default.a.createElement("div",{className:Common_default.a.MessagePub},"############################## vPub READY! ###############################",react_default.a.createElement("br",null),"### ",vPub," ###",react_default.a.createElement("br",null),"##########################################################################"))),!isLoading&&react_default.a.createElement("div",{className:classnames_default()(Common_default.a.Actions,Common_default.a.ActionsConsole)},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:handleCancel},"\u0417\u0430\u043A\u0440\u044B\u0442\u044C"),isSuccess?react_default.a.createElement(react["Fragment"],null,!from&&!privateKey&&!isRestart&&react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,onClick:handleCreateValidator},"\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440")):react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,onClick:handleReset({from:from,privateKey:privateKey})},"\u041F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C \u0435\u0449\u0451 \u0440\u0430\u0437"))):react_default.a.createElement(Validators_components_Form,{initialValues:{isRestart:isRestart},isRestart:isRestart,onCancel:handleCancel,onSubmit:function onSubmit(values){return handleSubmit(Object(objectSpread["a" /* default */])({},values,{from:from,privateKey:privateKey}));}});});};/* harmony default export */ var Node = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal,openModal:actions_openModal}),Object(Recompose_esm["e" /* withState */])('error','setError',false),Object(Recompose_esm["e" /* withState */])('isLoading','setLoad',false),Object(Recompose_esm["e" /* withState */])('isProcessing','setProcess',false),Object(Recompose_esm["e" /* withState */])('isSuccess','setSuccess',false),Object(Recompose_esm["e" /* withState */])('messages','setMessages',[]),Object(Recompose_esm["e" /* withState */])('progress','setProgress',null),Object(Recompose_esm["e" /* withState */])('retry','setRetry',null),Object(Recompose_esm["e" /* withState */])('token','setToken',null),Object(Recompose_esm["e" /* withState */])('vPub','setVPub',null),Object(Recompose_esm["c" /* withHandlers */])({handleReset:function handleReset(_ref10){var closeModal=_ref10.closeModal,openModal=_ref10.openModal,setError=_ref10.setError,setLoad=_ref10.setLoad,setMessages=_ref10.setMessages,setProcess=_ref10.setProcess,setProgress=_ref10.setProgress,setRetry=_ref10.setRetry,setSuccess=_ref10.setSuccess,setVPub=_ref10.setVPub;return function(){var _ref11=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{},from=_ref11.from,privateKey=_ref11.privateKey;return function(event){setError(false);setLoad(false);setMessages([]);setProcess(false);setProgress(null);setRetry(null);setSuccess(false);setVPub(null);if(from||privateKey){closeModal(VALIDATOR_NODE_MODAL_ID);openModal(VALIDATOR_NODE_FROM_MODAL_ID,{from:from,privateKey:privateKey});}};};}}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref12){var closeModal=_ref12.closeModal,handleReset=_ref12.handleReset;return function(event){closeModal(VALIDATOR_NODE_MODAL_ID);handleReset();};},handleCreateValidator:function handleCreateValidator(_ref13){var closeModal=_ref13.closeModal,handleReset=_ref13.handleReset,openModal=_ref13.openModal,vPub=_ref13.vPub;return function(event){closeModal(VALIDATOR_NODE_MODAL_ID);openModal(VALIDATOR_CREATE_MODAL_ID,{vPub:vPub});handleReset();};},handleSubmit:function handleSubmit(_ref14){var setError=_ref14.setError,setLoad=_ref14.setLoad,setMessages=_ref14.setMessages,setProcess=_ref14.setProcess,setProgress=_ref14.setProgress,setRetry=_ref14.setRetry,setSuccess=_ref14.setSuccess,setToken=_ref14.setToken,setVPub=_ref14.setVPub;return function(_ref15){var from=_ref15.from,isRestart=_ref15.isRestart,privateKey=_ref15.privateKey,values=Object(objectWithoutProperties["a" /* default */])(_ref15,["from","isRestart","privateKey"]);return new Promise(function(resolve,reject){setProcess(true);var messages=[];var socket=new WebSocket('wss://api.etherus.org/nd');socket.onerror=function(error){reject(error);setError(error.message);setLoad(false);socket.close();};socket.onmessage=function(event){try{var _JSON$parse=JSON.parse(Object(lodash["get"])(event,'data')),data=_JSON$parse.data,msg=_JSON$parse.msg,result=_JSON$parse.result;if(Object(lodash["has"])(data,'execution.token')){setToken(Object(lodash["get"])(data,'execution.token'));}if(result){setLoad(false);socket.close();messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});if(result==='success'){resolve();setSuccess(true);setVPub(Object(lodash["get"])(data,'vPub'));}else{var error=Object(lodash["get"])(data,'err');setError(typeof error==='string'?error:'Unknown error!');reject(msg);}}else{setProgress(Object(lodash["get"])(data,'progress',null));setRetry(Object(lodash["get"])(data,'retry',null));if(Object(lodash["has"])(data,'retry')){var retry=Object(lodash["get"])(data,'retry.1')-Object(lodash["get"])(data,'retry.0');if(retry===0){messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});}else{var lastMessage=Object(lodash["last"])(messages);messages[messages.length-1]=Object(objectSpread["a" /* default */])({},lastMessage,{date:luxon["DateTime"].local()});}}else{messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});}}setMessages(messages);}catch(error){reject(error);setLoad(false);setProcess(false);socket.close();}var $console=document.getElementById('console');var $wrapper=document.getElementById('wrapper');if($console&&$wrapper){$console.scrollTop=$wrapper.clientHeight;}};socket.onopen=function(){setLoad(true);var to={host:Object(lodash["get"])(values,'host','localhost'),port:Object(lodash["get"])(values,'port',22),username:Object(lodash["get"])(values,'username','root'),password:Object(lodash["get"])(values,'password')};socket.send(JSON.stringify({command:isRestart?'reset':from||privateKey?'migrate':'install',data:from||privateKey?{from:from,key:privateKey,to:to}:to}));};}).catch(function(error){throw new SubmissionError["a" /* default */]({_error:error});});};}}))(Node_ValidatorsNode));
+var Node_ValidatorsNodeFormPrivate=function ValidatorsNodeFormPrivate(_ref){var error=_ref.error,handleClose=_ref.handleClose,handleSubmit=_ref.handleSubmit,onCancel=_ref.onCancel,onTrigger=_ref.onTrigger;return react_default.a.createElement(components_Form_Form,{error:error,onSubmit:handleSubmit},react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(components_Input,{label:"\u041F\u0440\u0438\u0432\u0430\u0442\u043D\u044B\u0439 \u043A\u043B\u044E\u0447",name:"privateKey"})),react_default.a.createElement("div",{className:Common_default.a.Actions},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.SECONDARY,onClick:onCancel},"\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C"),react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:onTrigger},"\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u0444\u043E\u0440\u043C\u0443"),react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.GREEN,type:"submit"},"\u0414\u0430\u043B\u0435\u0435")));};var ComposedValidatorsNodeFormPrivate=Object(Recompose_esm["a" /* compose */])(Object(reduxForm["a" /* default */])({form:'privateForm',validate:Object(validate["a" /* default */])({privateKey:[Object(validate["i" /* required */])(),Object(validate["e" /* isPrivateKey */])()]})}))(Node_ValidatorsNodeFormPrivate);var Node_ValidatorsNodeFrom=function ValidatorsNodeFrom(_ref2){var handleCancel=_ref2.handleCancel,handleSubmit=_ref2.handleSubmit,handleTrigger=_ref2.handleTrigger,isPrivate=_ref2.isPrivate;return react_default.a.createElement(src_components_Modal,{classNames:{container:Common_default.a.Container},id:VALIDATOR_NODE_FROM_MODAL_ID,title:"\u041E\u0442\u043A\u0443\u0434\u0430 \u043D\u0443\u0436\u043D\u043E \u043F\u0435\u0440\u0435\u043D\u0435\u0441\u0442\u0438 \u043D\u043E\u0434\u0443?"},function(_ref3){var from=_ref3.from,privateKey=_ref3.privateKey;return isPrivate?react_default.a.createElement(ComposedValidatorsNodeFormPrivate,{initialValues:{privateKey:privateKey},onCancel:handleCancel,onSubmit:handleSubmit,onTrigger:handleTrigger}):react_default.a.createElement(Validators_components_Form,{initialValues:{from:from},isFrom:true,onCancel:handleCancel,onSubmit:handleSubmit,onTrigger:handleTrigger});});};var NodeFrom=Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal,openModal:actions_openModal}),Object(Recompose_esm["e" /* withState */])('isPrivate','setPrivate',false),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref4){var closeModal=_ref4.closeModal,handleReset=_ref4.handleReset;return function(event){closeModal(VALIDATOR_NODE_FROM_MODAL_ID);};},handleSubmit:function handleSubmit(_ref5){var closeModal=_ref5.closeModal,openModal=_ref5.openModal,isPrivate=_ref5.isPrivate;return function(values){closeModal(VALIDATOR_NODE_FROM_MODAL_ID);openModal(VALIDATOR_NODE_MODAL_ID,isPrivate?{privateKey:Object(lodash["get"])(values,'privateKey')}:{from:{host:Object(lodash["get"])(values,'host','localhost'),port:Object(lodash["get"])(values,'port',22),username:Object(lodash["get"])(values,'username','root'),password:Object(lodash["get"])(values,'password')}});};},handleTrigger:function handleTrigger(_ref6){var isPrivate=_ref6.isPrivate,setPrivate=_ref6.setPrivate;return function(){return setPrivate(!isPrivate);};}}))(Node_ValidatorsNodeFrom);var Node_ValidatorsNode=function ValidatorsNode(_ref7){var error=_ref7.error,messages=_ref7.messages,progress=_ref7.progress,retry=_ref7.retry,token=_ref7.token,vPub=_ref7.vPub,handleCancel=_ref7.handleCancel,handleCreateValidator=_ref7.handleCreateValidator,handleReset=_ref7.handleReset,handleSubmit=_ref7.handleSubmit,isLoading=_ref7.isLoading,isProcessing=_ref7.isProcessing,isSuccess=_ref7.isSuccess;return react_default.a.createElement(src_components_Modal,{classNames:{container:classnames_default()(Common_default.a.Container,Object(defineProperty["a" /* default */])({},Common_default.a.ContainerConsole,isProcessing))},id:VALIDATOR_NODE_MODAL_ID,title:isSuccess?"\u0423\u0437\u0435\u043B \u0440\u0430\u0437\u0432\u0451\u0440\u043D\u0443\u0442! ".concat(token):isProcessing?"\u0423\u0437\u0435\u043B \u0440\u0430\u0437\u0432\u043E\u0440\u0430\u0447\u0438\u0432\u0430\u0435\u0442\u0441\u044F: ".concat(token):null},function(_ref8){var from=_ref8.from,isRestart=_ref8.isRestart,privateKey=_ref8.privateKey;return isProcessing?react_default.a.createElement(react["Fragment"],null,react_default.a.createElement("div",{className:Common_default.a.Console,id:"console"},react_default.a.createElement("div",{id:"wrapper"},messages.map(function(_ref9,index){var _classNames2;var date=_ref9.date,msg=_ref9.msg,result=_ref9.result;return react_default.a.createElement("div",{className:Common_default.a.Message,key:index},react_default.a.createElement("span",{className:Common_default.a.MessageDate},"[",date.toLocaleString({hour:'2-digit',minute:'2-digit',second:'2-digit'}),"]:\xA0"),index===messages.length-1&&retry?react_default.a.createElement(react["Fragment"],null,react_default.a.createElement("span",{className:Common_default.a.Retry},"[".concat(Object(lodash["get"])(retry,'1',0)-Object(lodash["get"])(retry,'0',0),"/").concat(Object(lodash["get"])(retry,'1',0),"]")),progress&&react_default.a.createElement("span",{className:Common_default.a.Progress},"[".concat(Object(lodash["get"])(progress,'0',0),"/").concat(Object(lodash["get"])(progress,'1',0),"]"))):null,react_default.a.createElement(lib_default.a,{className:classnames_default()(Common_default.a.MessageText,(_classNames2={},Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsFailure,result==='failure'),Object(defineProperty["a" /* default */])(_classNames2,Common_default.a.MessageTextIsSuccess,result==='success'),_classNames2))},msg));}),console.log(error),error&&react_default.a.createElement("div",{className:Common_default.a.Error},"[Error]: ",error),vPub&&react_default.a.createElement("div",{className:Common_default.a.MessagePub},"############################## vPub READY! ###############################",react_default.a.createElement("br",null),"### ",vPub," ###",react_default.a.createElement("br",null),"##########################################################################"))),!isLoading&&react_default.a.createElement("div",{className:classnames_default()(Common_default.a.Actions,Common_default.a.ActionsConsole)},react_default.a.createElement(src_components_Button,{color:color_namespaceObject.DANGER,onClick:handleCancel},"\u0417\u0430\u043A\u0440\u044B\u0442\u044C"),isSuccess?react_default.a.createElement(react["Fragment"],null,!from&&!privateKey&&!isRestart&&react_default.a.createElement(src_components_Button,{color:color_namespaceObject.PRIMARY,onClick:handleCreateValidator},"\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0432\u0430\u043B\u0438\u0434\u0430\u0442\u043E\u0440")):react_default.a.createElement(src_components_Button,{color:gradient_namespaceObject.PURPLE,onClick:handleReset({from:from,privateKey:privateKey})},"\u041F\u043E\u043F\u0440\u043E\u0431\u043E\u0432\u0430\u0442\u044C \u0435\u0449\u0451 \u0440\u0430\u0437"))):react_default.a.createElement(Validators_components_Form,{initialValues:{isRestart:isRestart},isRestart:isRestart,onCancel:handleCancel,onSubmit:function onSubmit(values){return handleSubmit(Object(objectSpread["a" /* default */])({},values,{from:from,privateKey:privateKey}));}});});};/* harmony default export */ var Node = (Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(null,{closeModal:actions_closeModal,openModal:actions_openModal}),Object(Recompose_esm["e" /* withState */])('error','setError',false),Object(Recompose_esm["e" /* withState */])('isLoading','setLoad',false),Object(Recompose_esm["e" /* withState */])('isProcessing','setProcess',false),Object(Recompose_esm["e" /* withState */])('isSuccess','setSuccess',false),Object(Recompose_esm["e" /* withState */])('messages','setMessages',[]),Object(Recompose_esm["e" /* withState */])('progress','setProgress',null),Object(Recompose_esm["e" /* withState */])('retry','setRetry',null),Object(Recompose_esm["e" /* withState */])('token','setToken',null),Object(Recompose_esm["e" /* withState */])('vPub','setVPub',null),Object(Recompose_esm["c" /* withHandlers */])({handleReset:function handleReset(_ref10){var closeModal=_ref10.closeModal,openModal=_ref10.openModal,setError=_ref10.setError,setLoad=_ref10.setLoad,setMessages=_ref10.setMessages,setProcess=_ref10.setProcess,setProgress=_ref10.setProgress,setRetry=_ref10.setRetry,setSuccess=_ref10.setSuccess,setVPub=_ref10.setVPub;return function(){var _ref11=arguments.length>0&&arguments[0]!==undefined?arguments[0]:{},from=_ref11.from,privateKey=_ref11.privateKey;return function(event){setError(false);setLoad(false);setMessages([]);setProcess(false);setProgress(null);setRetry(null);setSuccess(false);setVPub(null);if(from||privateKey){closeModal(VALIDATOR_NODE_MODAL_ID);openModal(VALIDATOR_NODE_FROM_MODAL_ID,{from:from,privateKey:privateKey});}};};}}),Object(Recompose_esm["c" /* withHandlers */])({handleCancel:function handleCancel(_ref12){var closeModal=_ref12.closeModal,handleReset=_ref12.handleReset;return function(event){closeModal(VALIDATOR_NODE_MODAL_ID);handleReset();};},handleCreateValidator:function handleCreateValidator(_ref13){var closeModal=_ref13.closeModal,handleReset=_ref13.handleReset,openModal=_ref13.openModal,vPub=_ref13.vPub;return function(event){closeModal(VALIDATOR_NODE_MODAL_ID);openModal(VALIDATOR_CREATE_MODAL_ID,{vPub:vPub});handleReset();};},handleSubmit:function handleSubmit(_ref14){var error=_ref14.error,setError=_ref14.setError,setLoad=_ref14.setLoad,setMessages=_ref14.setMessages,setProcess=_ref14.setProcess,setProgress=_ref14.setProgress,setRetry=_ref14.setRetry,setSuccess=_ref14.setSuccess,setToken=_ref14.setToken,setVPub=_ref14.setVPub;return function(_ref15){var from=_ref15.from,isRestart=_ref15.isRestart,privateKey=_ref15.privateKey,values=Object(objectWithoutProperties["a" /* default */])(_ref15,["from","isRestart","privateKey"]);return new Promise(function(resolve,reject){setProcess(true);var messages=[];var socket=new WebSocket('wss://api.etherus.org/nd');socket.onerror=function(error){reject(error);!error&&setError(error.message);setLoad(false);socket.close();};socket.onmessage=function(event){try{var _JSON$parse=JSON.parse(Object(lodash["get"])(event,'data')),data=_JSON$parse.data,msg=_JSON$parse.msg,result=_JSON$parse.result;if(Object(lodash["has"])(data,'execution.token')){setToken(Object(lodash["get"])(data,'execution.token'));}if(result){setLoad(false);socket.close();messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});if(result==='success'){resolve();setSuccess(true);setVPub(Object(lodash["get"])(data,'vPub'));}else{var _error=Object(lodash["get"])(data,'err');setError(typeof _error==='string'?_error:'Unknown error!');reject(msg);}}else{setProgress(Object(lodash["get"])(data,'progress',null));setRetry(Object(lodash["get"])(data,'retry',null));if(Object(lodash["has"])(data,'retry')){var retry=Object(lodash["get"])(data,'retry.1')-Object(lodash["get"])(data,'retry.0');if(retry===0){messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});}else{var lastMessage=Object(lodash["last"])(messages);messages[messages.length-1]=Object(objectSpread["a" /* default */])({},lastMessage,{date:luxon["DateTime"].local()});}}else{messages.push({msg:msg,date:luxon["DateTime"].local(),result:result});}}setMessages(messages);}catch(error){reject(error);setLoad(false);setProcess(false);socket.close();}var $console=document.getElementById('console');var $wrapper=document.getElementById('wrapper');if($console&&$wrapper){$console.scrollTop=$wrapper.clientHeight;}};socket.onopen=function(){setLoad(true);var to={host:Object(lodash["get"])(values,'host','localhost'),port:Object(lodash["get"])(values,'port',22),username:Object(lodash["get"])(values,'username','root'),password:Object(lodash["get"])(values,'password')};socket.send(JSON.stringify({command:isRestart?'reset':from||privateKey?'migrate':'install',data:from||privateKey?{from:from,key:privateKey,to:to}:to}));};}).catch(function(error){throw new SubmissionError["a" /* default */]({_error:error});});};}}))(Node_ValidatorsNode));
 // EXTERNAL MODULE: ./node_modules/redux-form/es/formValueSelector.js + 1 modules
-var formValueSelector = __webpack_require__(571);
+var formValueSelector = __webpack_require__(568);
 
 // CONCATENATED MODULE: ./src/views/Validators/components/From.js
 // Components
@@ -674,10 +674,10 @@ var src_App = __webpack_require__(150);
 var App_default = /*#__PURE__*/__webpack_require__.n(src_App);
 
 // EXTERNAL MODULE: ./node_modules/react-table/react-table.css
-var react_table = __webpack_require__(374);
+var react_table = __webpack_require__(373);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/fontawesome-pro/css/all.min.css
-var all_min = __webpack_require__(375);
+var all_min = __webpack_require__(374);
 
 // CONCATENATED MODULE: ./src/App.js
 // Views
@@ -729,10 +729,10 @@ var schema_validator=new normalizr_es["b" /* schema */].Entity('validators',{},{
 var assets_contract = __webpack_require__(152);
 
 // EXTERNAL MODULE: ./node_modules/redux-thunk/es/index.js
-var redux_thunk_es = __webpack_require__(250);
+var redux_thunk_es = __webpack_require__(249);
 
 // EXTERNAL MODULE: ./node_modules/redux-form/es/reducer.js + 2 modules
-var es_reducer = __webpack_require__(567);
+var es_reducer = __webpack_require__(566);
 
 // CONCATENATED MODULE: ./src/entities/reducer.js
 // Models
@@ -765,7 +765,7 @@ unregister();
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Modal_Root__6ttBO","Backdrop":"Modal_Backdrop__2_J7F","Container":"Modal_Container__LAyOq","modalInit":"Modal_modalInit__396Dd","Title":"Modal_Title__qjfKC"};
+module.exports = {"Root":"Modal_Root__3q3lT","Backdrop":"Modal_Backdrop__C2Mqp","Container":"Modal_Container__3Q55l","modalInit":"Modal_modalInit__3LUxY","Title":"Modal_Title__XbkfL"};
 
 /***/ }),
 
@@ -773,7 +773,7 @@ module.exports = {"Root":"Modal_Root__6ttBO","Backdrop":"Modal_Backdrop__2_J7F",
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Field_Root__2jPRN","Error":"Field_Error__2NOFW","Header":"Field_Header__3pVFO","Label":"Field_Label__3j_p7"};
+module.exports = {"Root":"Field_Root__3MB3-","Error":"Field_Error__3CFo8","Header":"Field_Header__3Hfs5","Label":"Field_Label__1iFfw"};
 
 /***/ }),
 
@@ -781,7 +781,7 @@ module.exports = {"Root":"Field_Root__2jPRN","Error":"Field_Error__2NOFW","Heade
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Input_Root__3wawD","RootIsErred":"Input_RootIsErred__3j1UL","RootIsFocused":"Input_RootIsFocused__3qU5g","RootIsReadOnly":"Input_RootIsReadOnly__N7ZrM","Input":"Input_Input__1VsLQ"};
+module.exports = {"Root":"Input_Root__3VpEi","RootIsErred":"Input_RootIsErred__3eeWg","RootIsFocused":"Input_RootIsFocused__2RQe7","RootIsReadOnly":"Input_RootIsReadOnly__1Myl8","Input":"Input_Input__3rMjF"};
 
 /***/ }),
 
@@ -789,7 +789,7 @@ module.exports = {"Root":"Input_Root__3wawD","RootIsErred":"Input_RootIsErred__3
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Metamask_Root__1xx5U","Cover":"Metamask_Cover__AkjQf","Container":"Metamask_Container__2bX8q","Logo":"Metamask_Logo__Rd9Y9","Title":"Metamask_Title__3UAnc"};
+module.exports = {"Root":"Metamask_Root__zrno2","Cover":"Metamask_Cover__I9E_H","Container":"Metamask_Container__1FZOa","Logo":"Metamask_Logo__Ray6S","Title":"Metamask_Title__2HArS"};
 
 /***/ }),
 
@@ -797,7 +797,7 @@ module.exports = {"Root":"Metamask_Root__1xx5U","Cover":"Metamask_Cover__AkjQf",
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Determine_Root__1ChsM","RootIsSelected":"Determine_RootIsSelected__3AFO_","Content":"Determine_Content__Sczc8"};
+module.exports = {"Root":"Determine_Root__3B6cr","RootIsSelected":"Determine_RootIsSelected__2zSNW","Content":"Determine_Content__jXH7T"};
 
 /***/ }),
 
@@ -805,9 +805,9 @@ module.exports = {"Root":"Determine_Root__1ChsM","RootIsSelected":"Determine_Roo
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Container":"Guide_Container__2W6P8","Frame":"Guide_Frame__2p6WL","Link":"Guide_Link__1iVuC","Steps":"Guide_Steps__1NQEI"};
+module.exports = {"Container":"Guide_Container__3FIps","Frame":"Guide_Frame__2_1V0","Link":"Guide_Link__1rgrz","Steps":"Guide_Steps__YblhS"};
 
 /***/ })
 
-},[[257,1,2]]]);
-//# sourceMappingURL=main.8fa8841c.chunk.js.map
+},[[256,1,2]]]);
+//# sourceMappingURL=main.ae1866ed.chunk.js.map
