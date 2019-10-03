@@ -627,7 +627,7 @@
   line-height: 20px;
   max-height: calc(100% - 40px);
   overflow-x: visible;
-  overflow-y: scroll;
+  overflow-y: hidden;
   padding: 24px; }
 
 .Common_Container__2xlbZ {
@@ -1180,4 +1180,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.961bd19e.chunk.css.map*/
+/*# sourceMappingURL=main.1b1471d9.chunk.css.map*/
