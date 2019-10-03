@@ -135,6 +135,7 @@ const ValidatorsNode: React.Element<Modal> = ({
   messages,
   progress,
   retry,
+  strdata,
   token,
   vPub,
   // Handlers
@@ -182,6 +183,15 @@ const ValidatorsNode: React.Element<Modal> = ({
                         {`[${get(progress, '0', 0)}/${get(progress, '1', 0)}]`}
                       </span>
                     )}
+                  </Fragment>
+
+                ) : null}
+
+                {index === messages.length - 1 && strdata ? (
+                  <Fragment>
+                    <span className={styles.Progress}>
+                      {strdata}
+                    </span>
                   </Fragment>
 
                 ) : null}
@@ -264,10 +274,11 @@ export default compose(
   withState('messages', 'setMessages', []),
   withState('progress', 'setProgress', null),
   withState('retry', 'setRetry', null),
+  withState('strdata', 'setStrdata', null),
   withState('token', 'setToken', null),
   withState('vPub', 'setVPub', null),
   withHandlers({
-    handleReset: ({ closeModal, openModal, setError, setLoad, setMessages, setProcess, setProgress, setRetry, setSuccess, setVPub }): Function => ({ from, privateKey } = {}) =>
+    handleReset: ({ closeModal, openModal, setError, setLoad, setMessages, setProcess, setProgress, setRetry, setStrdata, setSuccess, setVPub }): Function => ({ from, privateKey } = {}) =>
       (event: Object): void => {
         setError(false);
         setLoad(false);
@@ -275,6 +286,7 @@ export default compose(
         setProcess(false);
         setProgress(null);
         setRetry(null);
+        setStrdata(null);
         setSuccess(false);
         setVPub(null);
 
@@ -296,7 +308,7 @@ export default compose(
         openModal(VALIDATOR_CREATE_MODAL_ID, { vPub });
         handleReset();
       },
-    handleSubmit: ({ setError, setLoad, setMessages, setProcess, setProgress, setRetry, setSuccess, setToken, setVPub }): Function =>
+    handleSubmit: ({ setError, setLoad, setMessages, setProcess, setProgress, setRetry, setStrdata, setSuccess, setToken, setVPub }): Function =>
       ({ from, isRestart, privateKey, ...values }): Promise =>
         new Promise((resolve: Function, reject: Function) => {
           setProcess(true);
@@ -337,6 +349,7 @@ export default compose(
               } else {
                 setProgress(get(data, 'progress', null));
                 setRetry(get(data, 'retry', null));
+                setStrdata(get(data, 'str', null));
 
                 if (has(data, 'retry')) {
                   const retry = get(data, 'retry.1') - get(data, 'retry.0');
@@ -349,6 +362,16 @@ export default compose(
                       ...lastMessage,
                       date: DateTime.local(),
                     };
+                  }
+                } else if (has(data, 'str')) {
+                  const lastMessage = last(messages);
+                  if (msg && lastMessage && lastMessage.msg && lastMessage.msg === msg) {
+                    messages[messages.length - 1] = {
+                      ...lastMessage,
+                      date: DateTime.local(),
+                    };
+                  } else {
+                    messages.push({ msg, date: DateTime.local(), result });
                   }
                 } else {
                   messages.push({ msg, date: DateTime.local(), result });
