@@ -318,7 +318,7 @@ export default compose(
 
           socket.onerror = (error: Object): void => {
             reject(error);
-            setError(error.message);
+            error.message && setError(error.message);
             setLoad(false);
             socket.close();
           }
@@ -342,7 +342,6 @@ export default compose(
                   setVPub(get(data, 'vPub'));
                 } else {
                   const error = get(data, 'err');
-
                   setError(typeof error === 'string' ? error : 'Unknown error!');
                   reject(msg);
                 }
