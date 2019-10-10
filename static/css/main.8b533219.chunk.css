@@ -570,7 +570,6 @@
   max-height: calc(100% - 160px);
   max-width: 960px;
   overflow-x: visible;
-  overflow-y: scroll;
   padding: 24px;
   position: relative;
   z-index: 2;
@@ -626,8 +625,8 @@
   font-size: 14px;
   line-height: 20px;
   max-height: calc(100% - 40px);
-  overflow-x: visible;
-  overflow-y: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   padding: 24px; }
 
 .Common_Container__2xlbZ {
@@ -637,7 +636,7 @@
     display: flex;
     -webkit-flex-direction: column;
             flex-direction: column;
-    max-height: calc(100% - 80px);
+    height: calc(100% - 80px);
     max-width: 720px; }
     .Common_ContainerConsole__31b0h > div:nth-child(2) {
       display: -webkit-flex;
@@ -645,7 +644,8 @@
       -webkit-flex: 1 1 auto;
               flex: 1 1 auto;
       -webkit-flex-direction: column;
-              flex-direction: column; }
+              flex-direction: column;
+      height: calc(100% - 80px); }
 
 .Common_Error__1m0IR {
   color: var(--color-danger); }
@@ -1180,4 +1180,4 @@ button {
   width: 100%; }
 
 
-/*# sourceMappingURL=main.1b1471d9.chunk.css.map*/
+/*# sourceMappingURL=main.8b533219.chunk.css.map*/
