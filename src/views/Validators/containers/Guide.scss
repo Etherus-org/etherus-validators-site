@@ -1,5 +1,7 @@
 .Container {
   max-width: 680px;
+  overflow-x: visible;
+  overflow-y: scroll;
 }
 
 .Frame {
