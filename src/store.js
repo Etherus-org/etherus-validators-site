@@ -79,7 +79,7 @@ export default (history: Object): Object => {
       has(window, 'ethereum.networkVersion') &&
       store.dispatch({
         type: SET_NETWORK_ID,
-        networkId: get(window, 'ethereum.networkVersion'),
+        networkId: get(window, 'ethereum.chainId'),
       });
 
       has(window, 'ethereum.selectedAddress') &&

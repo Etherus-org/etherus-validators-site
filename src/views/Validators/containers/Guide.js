@@ -81,7 +81,7 @@ const ValidatorsGuide: React.Element<Modal> = () => (
 
         <Determine title="Данные для подключения">
           <strong>RPC URL</strong>: https://rpc.etherus.org; <br/>
-          <strong>ChainID</strong>: 32019; <br/>
+          <strong>ChainID</strong>: 0x7d13; <br/>
           <strong>Symbol</strong>: ETR; <br/>
           <strong>Nickname</strong>: Etherus Mainnet.
         </Determine>
