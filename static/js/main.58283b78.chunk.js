@@ -4,7 +4,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Tooltip_Root__1Ybnv","Tooltip":"Tooltip_Tooltip__1GAQQ"};
+module.exports = {"Root":"Tooltip_Root__1PclO","Tooltip":"Tooltip_Tooltip__qqqjF"};
 
 /***/ }),
 
@@ -12,7 +12,7 @@ module.exports = {"Root":"Tooltip_Root__1Ybnv","Tooltip":"Tooltip_Tooltip__1GAQQ
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Table_Root__u77pD","RootIsDisabled":"Table_RootIsDisabled__1ppp5","RootIsFavorite":"Table_RootIsFavorite__10dsG"};
+module.exports = {"Root":"Table_Root__1Axk7","RootIsDisabled":"Table_RootIsDisabled__1ewfv","RootIsFavorite":"Table_RootIsFavorite___wuOB"};
 
 /***/ }),
 
@@ -42,7 +42,7 @@ console.error(e);}return{isValid:isValid,message:message};};};var isUint=functio
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Actions":"Common_Actions__3VM7a","ActionsConsole":"Common_ActionsConsole__1vWVH","Alert":"Common_Alert__20324","Console":"Common_Console__ht_wH","Container":"Common_Container__2hcv9","ContainerConsole":"Common_ContainerConsole__zTFx7","Error":"Common_Error__1jOrw","Loading":"Common_Loading__3_GjC","MessageDate":"Common_MessageDate__1EeMH","MessagePub":"Common_MessagePub__F77bX","MessageText":"Common_MessageText__37Itn","MessageTextIsFailure":"Common_MessageTextIsFailure__3Y_tu","MessageTextIsSuccess":"Common_MessageTextIsSuccess__3VUIf","NodeGroup":"Common_NodeGroup__1n3_K","Progress":"Common_Progress__3IUHc","Retry":"Common_Retry__1kSUT"};
+module.exports = {"Actions":"Common_Actions__3rtrY","ActionsConsole":"Common_ActionsConsole__2rF1y","Alert":"Common_Alert__qmJD7","Console":"Common_Console__2F_pG","Container":"Common_Container__d_2OV","ContainerConsole":"Common_ContainerConsole__1OjQT","Error":"Common_Error__7PtaP","Loading":"Common_Loading__26MrR","MessageDate":"Common_MessageDate__3jpL2","MessagePub":"Common_MessagePub__3vE1X","MessageText":"Common_MessageText__LO3W6","MessageTextIsFailure":"Common_MessageTextIsFailure__3Hgmo","MessageTextIsSuccess":"Common_MessageTextIsSuccess__21_Kf","NodeGroup":"Common_NodeGroup__3U3CV","Progress":"Common_Progress__2t8rW","Retry":"Common_Retry__2X5To"};
 
 /***/ }),
 
@@ -50,7 +50,7 @@ module.exports = {"Actions":"Common_Actions__3VM7a","ActionsConsole":"Common_Act
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Error":"Form_Error__29lzg"};
+module.exports = {"Error":"Form_Error__1kG1d"};
 
 /***/ }),
 
@@ -58,7 +58,7 @@ module.exports = {"Error":"Form_Error__29lzg"};
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Stat_Root__2gNfo","Description":"Stat_Description__3vz8f","Label":"Stat_Label__10TC6","List":"Stat_List__2P_Yi","Ping":"Stat_Ping__11RiU","ValueColorAlert":"Stat_ValueColorAlert__3tOmV","ValueColorDanger":"Stat_ValueColorDanger__3PTDN","ValueColorOrange":"Stat_ValueColorOrange__148zl","ValueColorPrimary":"Stat_ValueColorPrimary__AbV8e","ValueColorSuccess":"Stat_ValueColorSuccess__108BU"};
+module.exports = {"Root":"Stat_Root__2JlY5","Description":"Stat_Description__3mJOu","Label":"Stat_Label__1UHij","List":"Stat_List__3H4GF","Ping":"Stat_Ping__2JBE6","ValueColorAlert":"Stat_ValueColorAlert__1lp19","ValueColorDanger":"Stat_ValueColorDanger__9U0ib","ValueColorOrange":"Stat_ValueColorOrange__xAaHn","ValueColorPrimary":"Stat_ValueColorPrimary__2g0CB","ValueColorSuccess":"Stat_ValueColorSuccess__2niQ4"};
 
 /***/ }),
 
@@ -66,7 +66,7 @@ module.exports = {"Root":"Stat_Root__2gNfo","Description":"Stat_Description__3vz
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"App_Root__yVl69","Wrapper":"App_Wrapper__29pi6"};
+module.exports = {"Root":"App_Root__LApV_","Wrapper":"App_Wrapper__MWhNo"};
 
 /***/ }),
 
@@ -81,7 +81,7 @@ module.exports = [{"constant":true,"inputs":[{"name":"vPub","type":"bytes32"}],"
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Field_Root__2c5lf","RootColorError":"Field_RootColorError__H4lUh","Text":"Field_Text__1XFn1","RootColorDanger":"Field_RootColorDanger__2alta","RootColorOrange":"Field_RootColorOrange__GGlyG","RootColorSuccess":"Field_RootColorSuccess__3q_lR","RootIsDisabled":"Field_RootIsDisabled__M79Ey","RootVariantHash":"Field_RootVariantHash__2ytO3","RootVariantPing":"Field_RootVariantPing__jqFuB","Copy":"Field_Copy__1xoMg","Health":"Field_Health__1VKHa","HealthBar":"Field_HealthBar__1INxc","HealthIndex":"Field_HealthIndex__3Qahi","Icon":"Field_Icon__3FZvO","Word":"Field_Word__1XJIh","WordVariantGreen":"Field_WordVariantGreen__2EDYs","WordVariantLight":"Field_WordVariantLight__3pSgC","WordVariantOrange":"Field_WordVariantOrange__1Sy5W","WordVariantRed":"Field_WordVariantRed__3RCIc","WordVariantYellow":"Field_WordVariantYellow__13Gcu"};
+module.exports = {"Root":"Field_Root__1HwKq","RootColorError":"Field_RootColorError__3aM65","Text":"Field_Text__3lu6q","RootColorDanger":"Field_RootColorDanger__14jwX","RootColorOrange":"Field_RootColorOrange__1DSyi","RootColorSuccess":"Field_RootColorSuccess__3QW88","RootIsDisabled":"Field_RootIsDisabled__2P1e2","RootVariantHash":"Field_RootVariantHash__FMeGt","RootVariantPing":"Field_RootVariantPing__FwCxI","Copy":"Field_Copy__ErTt3","Health":"Field_Health__23ckN","HealthBar":"Field_HealthBar__1GyQV","HealthIndex":"Field_HealthIndex__3kW9i","Icon":"Field_Icon__3hWwO","Word":"Field_Word__1kAAE","WordVariantGreen":"Field_WordVariantGreen__2eQWi","WordVariantLight":"Field_WordVariantLight__2yIxr","WordVariantOrange":"Field_WordVariantOrange__Sw288","WordVariantRed":"Field_WordVariantRed__Fz_QK","WordVariantYellow":"Field_WordVariantYellow__Jw5pK"};
 
 /***/ }),
 
@@ -89,7 +89,7 @@ module.exports = {"Root":"Field_Root__2c5lf","RootColorError":"Field_RootColorEr
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Table_Root__1H6OL"};
+module.exports = {"Root":"Table_Root__9CCra"};
 
 /***/ }),
 
@@ -97,7 +97,7 @@ module.exports = {"Root":"Table_Root__1H6OL"};
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Item_Root__2KG2_"};
+module.exports = {"Root":"Item_Root__kbCxD"};
 
 /***/ }),
 
@@ -111,7 +111,7 @@ module.exports = __webpack_require__.p + "static/media/step-1.acd03576.png";
 /***/ 245:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "static/media/step-2.a2a7d29d.png";
+module.exports = __webpack_require__.p + "static/media/step-2.4d1fe0f5.png";
 
 /***/ }),
 
@@ -119,7 +119,7 @@ module.exports = __webpack_require__.p + "static/media/step-2.a2a7d29d.png";
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Actions":"Form_Actions__3Enci","ActionsConsole":"Form_ActionsConsole__3KeuT"};
+module.exports = {"Actions":"Form_Actions__ZGP4U","ActionsConsole":"Form_ActionsConsole__2mjrc"};
 
 /***/ }),
 
@@ -135,7 +135,7 @@ module.exports = __webpack_require__(560);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Button_Root__1TkYv","RootColorDanger":"Button_RootColorDanger__R38mT","Content":"Button_Content__3Vhgm","RootColorPrimary":"Button_RootColorPrimary__7Ye9Q","RootColorSecondary":"Button_RootColorSecondary__3-zc7","RootColorSuccess":"Button_RootColorSuccess__3prRr","RootGradientGreen":"Button_RootGradientGreen__3MlTc","Icon":"Button_Icon__BjpdF","RootGradientOrange":"Button_RootGradientOrange__37qRR","RootGradientPurple":"Button_RootGradientPurple__2cbmW","RootGradientRed":"Button_RootGradientRed__Ewkl3","RootVariantFilled":"Button_RootVariantFilled__z_PZ_","RootVariantFull":"Button_RootVariantFull__b2AvG","RootVariantFullWidth":"Button_RootVariantFullWidth__x7hiU","RootVariantIcon":"Button_RootVariantIcon__3bCYK"};
+module.exports = {"Root":"Button_Root__2H_Xz","RootColorDanger":"Button_RootColorDanger__1tQKr","Content":"Button_Content__HG9Up","RootColorPrimary":"Button_RootColorPrimary__k2gT6","RootColorSecondary":"Button_RootColorSecondary__2gKZU","RootColorSuccess":"Button_RootColorSuccess__M-V7A","RootGradientGreen":"Button_RootGradientGreen__ic1Er","Icon":"Button_Icon__9LsSZ","RootGradientOrange":"Button_RootGradientOrange__3BgRZ","RootGradientPurple":"Button_RootGradientPurple__1H8jD","RootGradientRed":"Button_RootGradientRed__3ja_r","RootVariantFilled":"Button_RootVariantFilled__3eIHk","RootVariantFull":"Button_RootVariantFull__17GqH","RootVariantFullWidth":"Button_RootVariantFullWidth__3lZxT","RootVariantIcon":"Button_RootVariantIcon__1Ef1V"};
 
 /***/ }),
 
@@ -143,7 +143,7 @@ module.exports = {"Root":"Button_Root__1TkYv","RootColorDanger":"Button_RootColo
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Actions_Root__2nt1Z","ButtonVariantDeposit":"Actions_ButtonVariantDeposit__3o66p","Icon":"Actions_Icon__1cxwv","ButtonVariantPause":"Actions_ButtonVariantPause__3EwE4","ButtonVariantPlay":"Actions_ButtonVariantPlay__27wee","ButtonVariantWithdraw":"Actions_ButtonVariantWithdraw__zGKnY"};
+module.exports = {"Root":"Actions_Root__2VB7o","ButtonVariantDeposit":"Actions_ButtonVariantDeposit__pUUFT","Icon":"Actions_Icon__2kD82","ButtonVariantPause":"Actions_ButtonVariantPause__2CgEl","ButtonVariantPlay":"Actions_ButtonVariantPlay__3GGU_","ButtonVariantWithdraw":"Actions_ButtonVariantWithdraw__3AH-A"};
 
 /***/ }),
 
@@ -151,7 +151,7 @@ module.exports = {"Root":"Actions_Root__2nt1Z","ButtonVariantDeposit":"Actions_B
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Select_Root__1ZHdd","RootIsEmpty":"Select_RootIsEmpty__BcRUR","Icon":"Select_Icon__2Wi5m","RootIsFocused":"Select_RootIsFocused___s1ra","Container":"Select_Container__1H3P6","RootIsMultiple":"Select_RootIsMultiple__gf_eK","Input":"Select_Input__1e994","Control":"Select_Control__JzlLk","Dropdown":"Select_Dropdown__1Hk2a","List":"Select_List__3RoNb","Option":"Select_Option__3ja3H","OptionDelete":"Select_OptionDelete__2aoDK","OptionIcon":"Select_OptionIcon__34Ayy"};
+module.exports = {"Root":"Select_Root__3k1kL","RootIsEmpty":"Select_RootIsEmpty__mA5KR","Icon":"Select_Icon__30glS","RootIsFocused":"Select_RootIsFocused__2d0Hb","Container":"Select_Container__43ckM","RootIsMultiple":"Select_RootIsMultiple__12oYa","Input":"Select_Input__2nu4m","Control":"Select_Control__3HDHy","Dropdown":"Select_Dropdown__2WJq9","List":"Select_List__23uX1","Option":"Select_Option__18kvG","OptionDelete":"Select_OptionDelete__1xJx9","OptionIcon":"Select_OptionIcon__3hNg9"};
 
 /***/ }),
 
@@ -159,7 +159,7 @@ module.exports = {"Root":"Select_Root__1ZHdd","RootIsEmpty":"Select_RootIsEmpty_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Validators_Root__Wtar_","RootIsConnected":"Validators_RootIsConnected__3X0Ei","Status":"Validators_Status__3-RFg","RootIsOwner":"Validators_RootIsOwner__2GXjn","Actions":"Validators_Actions__2aFDi","Connecting":"Validators_Connecting__1oJJv","Header":"Validators_Header__3kO5W","HeaderRight":"Validators_HeaderRight__fraec","Hint":"Validators_Hint__1C8ve","List":"Validators_List__3sxqw","NodeActions":"Validators_NodeActions__1pWy8","Progress":"Validators_Progress__5X0Sl"};
+module.exports = {"Root":"Validators_Root__3BpNr","RootIsConnected":"Validators_RootIsConnected__3GNVn","Status":"Validators_Status__2Uopb","RootIsOwner":"Validators_RootIsOwner__CExWY","Actions":"Validators_Actions__2RQuk","Connecting":"Validators_Connecting__1i52w","Header":"Validators_Header__2lGin","HeaderRight":"Validators_HeaderRight__3O3C8","Hint":"Validators_Hint__XIp1Y","List":"Validators_List__ueXY_","NodeActions":"Validators_NodeActions__1ZKrn","Progress":"Validators_Progress__5SCmc"};
 
 /***/ }),
 
@@ -167,7 +167,7 @@ module.exports = {"Root":"Validators_Root__Wtar_","RootIsConnected":"Validators_
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Typography_Root__1jrlC","RootColorAlert":"Typography_RootColorAlert__1pMJw","RootColorDanger":"Typography_RootColorDanger__2Lh3O","RootColorDark":"Typography_RootColorDark__2mLeu","RootColorLight":"Typography_RootColorLight__qUzCy","RootColorLighter":"Typography_RootColorLighter__20Pn8","RootColorMedium":"Typography_RootColorMedium__ETEfx","RootColorPrimary":"Typography_RootColorPrimary__2lBhy","RootColorSuccess":"Typography_RootColorSuccess__3L7O7","RootNowrap":"Typography_RootNowrap__2FhFs","RootVariantH1":"Typography_RootVariantH1__1149n","RootVariantH2":"Typography_RootVariantH2__1XUt6","RootVariantH3":"Typography_RootVariantH3__3SR68","RootVariantH4":"Typography_RootVariantH4__2wmjo","RootVariantH5":"Typography_RootVariantH5__3yNGX","RootVariantH6":"Typography_RootVariantH6__4DsB-","RootVariantBody1":"Typography_RootVariantBody1__1ZDz7","RootVariantBody2":"Typography_RootVariantBody2__34AqP","RootVariantButton":"Typography_RootVariantButton__pNFfY","RootVariantCaption":"Typography_RootVariantCaption__h75B0","RootVariantOverline":"Typography_RootVariantOverline__3dCyk","RootVariantSubtitle1":"Typography_RootVariantSubtitle1__30Ekp","RootVariantSubtitle2":"Typography_RootVariantSubtitle2__xqNxj"};
+module.exports = {"Root":"Typography_Root__2ffPP","RootColorAlert":"Typography_RootColorAlert__19xhs","RootColorDanger":"Typography_RootColorDanger__1C5LV","RootColorDark":"Typography_RootColorDark__1potC","RootColorLight":"Typography_RootColorLight__3ECSv","RootColorLighter":"Typography_RootColorLighter__3kkRe","RootColorMedium":"Typography_RootColorMedium__1-tMf","RootColorPrimary":"Typography_RootColorPrimary__QcKwC","RootColorSuccess":"Typography_RootColorSuccess__aieMd","RootNowrap":"Typography_RootNowrap__20aM4","RootVariantH1":"Typography_RootVariantH1__1ptRy","RootVariantH2":"Typography_RootVariantH2__1DbW8","RootVariantH3":"Typography_RootVariantH3__6HuLL","RootVariantH4":"Typography_RootVariantH4__2S6rH","RootVariantH5":"Typography_RootVariantH5__3_RXg","RootVariantH6":"Typography_RootVariantH6__3-BYS","RootVariantBody1":"Typography_RootVariantBody1__q9zat","RootVariantBody2":"Typography_RootVariantBody2__1twlM","RootVariantButton":"Typography_RootVariantButton__FV2M6","RootVariantCaption":"Typography_RootVariantCaption__24ZQ5","RootVariantOverline":"Typography_RootVariantOverline__2M0ax","RootVariantSubtitle1":"Typography_RootVariantSubtitle1__Uw8sz","RootVariantSubtitle2":"Typography_RootVariantSubtitle2__1i0h6"};
 
 /***/ }),
 
@@ -175,7 +175,7 @@ module.exports = {"Root":"Typography_Root__1jrlC","RootColorAlert":"Typography_R
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Progress_Root__2tJjM","RootColorPrimary":"Progress_RootColorPrimary__3W7Gm","Circle":"Progress_Circle__1clFL","Line":"Progress_Line__-NgK1","RootColorSuccess":"Progress_RootColorSuccess__mKeZa","RootVariantLinear":"Progress_RootVariantLinear__2sozK","Progress":"Progress_Progress__2rykv","RootVariantIndeterminate":"Progress_RootVariantIndeterminate__2RRFC","progressCircularDash":"Progress_progressCircularDash__2vDwI","RootVariantCircle":"Progress_RootVariantCircle__32IDL","progressCircularRotate":"Progress_progressCircularRotate__263Dm","progressLinear":"Progress_progressLinear__2xPkR"};
+module.exports = {"Root":"Progress_Root__2U62a","RootColorPrimary":"Progress_RootColorPrimary__29rA5","Circle":"Progress_Circle__35EVi","Line":"Progress_Line__2Fkk5","RootColorSuccess":"Progress_RootColorSuccess__tNBXp","RootVariantLinear":"Progress_RootVariantLinear__3HmDX","Progress":"Progress_Progress___QfQe","RootVariantIndeterminate":"Progress_RootVariantIndeterminate__1m_xi","progressCircularDash":"Progress_progressCircularDash__3h7Rd","RootVariantCircle":"Progress_RootVariantCircle__2wIoB","progressCircularRotate":"Progress_progressCircularRotate__2Jhjm","progressLinear":"Progress_progressLinear__23Hko"};
 
 /***/ }),
 
@@ -272,7 +272,7 @@ var lodash = __webpack_require__(2);
 var Recompose_esm = __webpack_require__(5);
 
 // CONCATENATED MODULE: ./src/api/config.js
-var config={'development':{CONTRACT_ADDRESS:'0x93275283bf79d0f3a4521b006b6504768fc38d9a',MIN_DEPOSIT:0.25,MIN_DEPOSIT_INCREMENT:0.1,NETWORK_ID:'4',SYMBOL:'ETH',URL:'https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337'},'production':{CONTRACT_ADDRESS:'0x0000000000000000000000000000000000000fff',MIN_DEPOSIT:2500,MIN_DEPOSIT_INCREMENT:10,NETWORK_ID:'32019',SYMBOL:'ETR',URL:'wss://rpc.etherus.org'}};var config_getConfig=function getConfig(){return Object(lodash["get"])(config,"production");};var config_getContractAddress=function getContractAddress(){return Object(lodash["get"])(config,"".concat("production",".CONTRACT_ADDRESS"));};var config_getNetworkId=function getNetworkId(){return Object(lodash["get"])(config,"".concat("production",".NETWORK_ID"));};var config_getUrl=function getUrl(){return Object(lodash["get"])(config,"".concat("production",".URL"));};/* harmony default export */ var api_config = (config_getConfig());
+var config={'development':{CONTRACT_ADDRESS:'0x93275283bf79d0f3a4521b006b6504768fc38d9a',MIN_DEPOSIT:0.25,MIN_DEPOSIT_INCREMENT:0.1,NETWORK_ID:'0x1',SYMBOL:'ETH',URL:'https://rinkeby.infura.io/v3/5915e2ed5f234c2aba3dfcb23b8f4337'},'production':{CONTRACT_ADDRESS:'0x0000000000000000000000000000000000000fff',MIN_DEPOSIT:2500,MIN_DEPOSIT_INCREMENT:10,NETWORK_ID:'0x7d13',SYMBOL:'ETR',URL:'wss://rpc.etherus.org'}};var config_getConfig=function getConfig(){return Object(lodash["get"])(config,"production");};var config_getContractAddress=function getContractAddress(){return Object(lodash["get"])(config,"".concat("production",".CONTRACT_ADDRESS"));};var config_getNetworkId=function getNetworkId(){return Object(lodash["get"])(config,"".concat("production",".NETWORK_ID"));};var config_getUrl=function getUrl(){return Object(lodash["get"])(config,"".concat("production",".URL"));};/* harmony default export */ var api_config = (config_getConfig());
 // EXTERNAL MODULE: ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js + 1 modules
 var objectWithoutProperties = __webpack_require__(23);
 
@@ -610,7 +610,7 @@ var Guide_default = /*#__PURE__*/__webpack_require__.n(Guide);
 // Components
 // Ducks
 // Styles
-var Guide_ValidatorsGuide=function ValidatorsGuide(){return react_default.a.createElement(src_components_Modal,{classNames:{container:Guide_default.a.Container},id:VALIDATOR_GUIDE_MODAL_ID,title:"\u0418\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F \u043F\u043E \u0440\u0430\u0431\u043E\u0442\u0435 \u0441 Metamask"},function(_ref){var sectionId=_ref.sectionId;return react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(components_Determine,{isSelected:sectionId===1,title:"1. \u0423\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430 Metamask"},"\u0414\u043B\u044F \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438 \u0432 \u0441\u0435\u0442\u0438 Etherus \u0432\u0430\u043C \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C Metamask. \u042D\u0442\u043E \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u0435 \u0434\u043B\u044F \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430 \u0438 \u0441\u043A\u0430\u0447\u0430\u0442\u044C \u0435\u0433\u043E \u043C\u043E\u0436\u043D\u043E \u043F\u043E \u0430\u0434\u0440\u0435\u0441\u0443:\xA0",react_default.a.createElement("a",{className:Guide_default.a.Link,href:"https://metamask.io",rel:"noopener noreferrer",target:"_blank"},"https://metamask.io")),react_default.a.createElement(components_Determine,{isSelected:sectionId===2,title:"2. \u0421\u043E\u0437\u0434\u0430\u0439\u0442\u0435/\u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0432\u0430\u0448 \u043A\u043E\u0448\u0435\u043B\u0451\u043A"},"\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044F \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441 Metamask \u0441\u043E\u0437\u0434\u0430\u0439\u0442\u0435 \u043D\u043E\u0432\u044B\u0439 \u0438\u043B\u0438 \u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u043A\u043E\u0448\u0435\u043B\u0451\u043A. \u0411\u043E\u043B\u0435\u0435 \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0443\u044E \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C, \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0432 \u043E\u0431\u0443\u0447\u0430\u044E\u0449\u0438\u0439 \u0440\u043E\u043B\u0438\u043A:",react_default.a.createElement("div",{className:Guide_default.a.Frame},react_default.a.createElement("iframe",{allow:"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",allowFullScreen:true,frameBorder:"0",height:"340",src:"https://www.youtube.com/embed/ZIGUC9JAAw8",title:"Tutorial video",width:"632"}))),react_default.a.createElement(components_Determine,{isSelected:sectionId===3,title:"3. \u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u0435 Metamask \u043A \u0441\u0435\u0442\u0438 Etherus"},"\u041E\u0442\u043A\u0440\u044B\u0432 Metamask, \u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u0432\u043A\u043B\u0430\u0434\u043A\u0443 \u0441 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u043C\u0438 \u0441\u0435\u0442\u044F\u043C\u0438 \u0438 \u0432\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \xAB\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 RPC\xBB. \u041F\u043E\u0441\u043B\u0435 \u0447\u0435\u0433\u043E \u0432 \u0440\u0430\u0437\u0434\u0435\u043B\u0435 New Network \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0430\u043D\u043D\u044B\u0435 \u0434\u043B\u044F \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F:",react_default.a.createElement("div",{className:Guide_default.a.Steps},react_default.a.createElement("img",{alt:"\u0428\u0430\u0433 \u21161",src:step_1_default.a}),react_default.a.createElement("img",{alt:"\u0428\u0430\u0433 \u21162",src:step_2_default.a}))),react_default.a.createElement(components_Determine,{title:"\u0414\u0430\u043D\u043D\u044B\u0435 \u0434\u043B\u044F \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F"},react_default.a.createElement("strong",null,"RPC URL"),": https://rpc.etherus.org; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"ChainID"),": 32019; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"Symbol"),": ETR; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"Nickname"),": Etherus Mainnet."));});};/* harmony default export */ var containers_Guide = (Guide_ValidatorsGuide);
+var Guide_ValidatorsGuide=function ValidatorsGuide(){return react_default.a.createElement(src_components_Modal,{classNames:{container:Guide_default.a.Container},id:VALIDATOR_GUIDE_MODAL_ID,title:"\u0418\u043D\u0441\u0442\u0440\u0443\u043A\u0446\u0438\u044F \u043F\u043E \u0440\u0430\u0431\u043E\u0442\u0435 \u0441 Metamask"},function(_ref){var sectionId=_ref.sectionId;return react_default.a.createElement(react["Fragment"],null,react_default.a.createElement(components_Determine,{isSelected:sectionId===1,title:"1. \u0423\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430 Metamask"},"\u0414\u043B\u044F \u0430\u0432\u0442\u043E\u0440\u0438\u0437\u0430\u0446\u0438\u0438 \u0432 \u0441\u0435\u0442\u0438 Etherus \u0432\u0430\u043C \u043D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C Metamask. \u042D\u0442\u043E \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u0435 \u0434\u043B\u044F \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430 \u0438 \u0441\u043A\u0430\u0447\u0430\u0442\u044C \u0435\u0433\u043E \u043C\u043E\u0436\u043D\u043E \u043F\u043E \u0430\u0434\u0440\u0435\u0441\u0443:\xA0",react_default.a.createElement("a",{className:Guide_default.a.Link,href:"https://metamask.io",rel:"noopener noreferrer",target:"_blank"},"https://metamask.io")),react_default.a.createElement(components_Determine,{isSelected:sectionId===2,title:"2. \u0421\u043E\u0437\u0434\u0430\u0439\u0442\u0435/\u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0432\u0430\u0448 \u043A\u043E\u0448\u0435\u043B\u0451\u043A"},"\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044F \u0438\u043D\u0442\u0435\u0440\u0444\u0435\u0439\u0441 Metamask \u0441\u043E\u0437\u0434\u0430\u0439\u0442\u0435 \u043D\u043E\u0432\u044B\u0439 \u0438\u043B\u0438 \u0438\u043C\u043F\u043E\u0440\u0442\u0438\u0440\u0443\u0439\u0442\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u043A\u043E\u0448\u0435\u043B\u0451\u043A. \u0411\u043E\u043B\u0435\u0435 \u043F\u043E\u0434\u0440\u043E\u0431\u043D\u0443\u044E \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E \u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u044C, \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0432 \u043E\u0431\u0443\u0447\u0430\u044E\u0449\u0438\u0439 \u0440\u043E\u043B\u0438\u043A:",react_default.a.createElement("div",{className:Guide_default.a.Frame},react_default.a.createElement("iframe",{allow:"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",allowFullScreen:true,frameBorder:"0",height:"340",src:"https://www.youtube.com/embed/ZIGUC9JAAw8",title:"Tutorial video",width:"632"}))),react_default.a.createElement(components_Determine,{isSelected:sectionId===3,title:"3. \u041F\u043E\u0434\u043A\u043B\u044E\u0447\u0438\u0442\u0435 Metamask \u043A \u0441\u0435\u0442\u0438 Etherus"},"\u041E\u0442\u043A\u0440\u044B\u0432 Metamask, \u043D\u0430\u0436\u043C\u0438\u0442\u0435 \u043D\u0430 \u0432\u043A\u043B\u0430\u0434\u043A\u0443 \u0441 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u043C\u0438 \u0441\u0435\u0442\u044F\u043C\u0438 \u0438 \u0432\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \xAB\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 RPC\xBB. \u041F\u043E\u0441\u043B\u0435 \u0447\u0435\u0433\u043E \u0432 \u0440\u0430\u0437\u0434\u0435\u043B\u0435 New Network \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0434\u0430\u043D\u043D\u044B\u0435 \u0434\u043B\u044F \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F:",react_default.a.createElement("div",{className:Guide_default.a.Steps},react_default.a.createElement("img",{alt:"\u0428\u0430\u0433 \u21161",src:step_1_default.a}),react_default.a.createElement("img",{alt:"\u0428\u0430\u0433 \u21162",src:step_2_default.a}))),react_default.a.createElement(components_Determine,{title:"\u0414\u0430\u043D\u043D\u044B\u0435 \u0434\u043B\u044F \u043F\u043E\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u0438\u044F"},react_default.a.createElement("strong",null,"RPC URL"),": https://rpc.etherus.org; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"ChainID"),": 0x7d13; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"Symbol"),": ETR; ",react_default.a.createElement("br",null),react_default.a.createElement("strong",null,"Nickname"),": Etherus Mainnet."));});};/* harmony default export */ var containers_Guide = (Guide_ValidatorsGuide);
 // EXTERNAL MODULE: ./node_modules/luxon/build/cjs-browser/luxon.js
 var luxon = __webpack_require__(57);
 
@@ -750,7 +750,7 @@ var viewsReducer=Object(redux["c" /* combineReducers */])({validators:ducks_redu
 // Middleware
 // Reducers
 // Services
-var store_reducer=Object(redux["c" /* combineReducers */])({entities:entities_reducer,form:es_reducer["a" /* default */],services:services_reducer,views:views_reducer});var composeEnhancers=typeof window==='object'&&window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}):redux["d" /* compose */];/* harmony default export */ var src_store = (function(history){var isSupported=false;var privateWeb3;var web3=new src_default.a(api_config.URL);if(window.ethereum||window.web3){isSupported=true;privateWeb3=new src_default.a(window.ethereum);}var store=Object(redux["e" /* createStore */])(store_reducer,composeEnhancers(Object(redux["a" /* applyMiddleware */])(redux_thunk_es["a" /* default */].withExtraArgument({history:history,schema:schema_namespaceObject,privateWeb3:privateWeb3,web3:web3,account:privateWeb3&&new privateWeb3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS,{from:window.ethereum.selectedAddress}),contract:new web3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS)}))));if(isSupported){store.dispatch({type:SET_SUPPORT,isSupported:true});}web3.eth.getBlockNumber().then(function(blockNumber){Object(lodash["has"])(window,'ethereum.networkVersion')&&store.dispatch({type:SET_NETWORK_ID,networkId:Object(lodash["get"])(window,'ethereum.networkVersion')});Object(lodash["has"])(window,'ethereum.selectedAddress')&&store.dispatch({type:SET_HAS_ACCOUNT});store.dispatch({type:SET_CURRENT_BLOCK_NUMBER,blockNumber:blockNumber});web3.eth.subscribe('newBlockHeaders',function(error,result){if(!error){store.dispatch({type:SET_CURRENT_BLOCK_NUMBER,blockNumber:Object(lodash["get"])(result,'number')});}});});return store;});
+var store_reducer=Object(redux["c" /* combineReducers */])({entities:entities_reducer,form:es_reducer["a" /* default */],services:services_reducer,views:views_reducer});var composeEnhancers=typeof window==='object'&&window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__?window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({}):redux["d" /* compose */];/* harmony default export */ var src_store = (function(history){var isSupported=false;var privateWeb3;var web3=new src_default.a(api_config.URL);if(window.ethereum||window.web3){isSupported=true;privateWeb3=new src_default.a(window.ethereum);}var store=Object(redux["e" /* createStore */])(store_reducer,composeEnhancers(Object(redux["a" /* applyMiddleware */])(redux_thunk_es["a" /* default */].withExtraArgument({history:history,schema:schema_namespaceObject,privateWeb3:privateWeb3,web3:web3,account:privateWeb3&&new privateWeb3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS,{from:window.ethereum.selectedAddress}),contract:new web3.eth.Contract(assets_contract,api_config.CONTRACT_ADDRESS)}))));if(isSupported){store.dispatch({type:SET_SUPPORT,isSupported:true});}web3.eth.getBlockNumber().then(function(blockNumber){Object(lodash["has"])(window,'ethereum.networkVersion')&&store.dispatch({type:SET_NETWORK_ID,networkId:Object(lodash["get"])(window,'ethereum.chainId')});Object(lodash["has"])(window,'ethereum.selectedAddress')&&store.dispatch({type:SET_HAS_ACCOUNT});store.dispatch({type:SET_CURRENT_BLOCK_NUMBER,blockNumber:blockNumber});web3.eth.subscribe('newBlockHeaders',function(error,result){if(!error){store.dispatch({type:SET_CURRENT_BLOCK_NUMBER,blockNumber:Object(lodash["get"])(result,'number')});}});});return store;});
 // CONCATENATED MODULE: ./src/index.js
 // App
 // Utils
@@ -765,7 +765,7 @@ unregister();
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Modal_Root__21etl","Backdrop":"Modal_Backdrop__1E3xq","Container":"Modal_Container__2pWia","modalInit":"Modal_modalInit__3evqM","Title":"Modal_Title__i5gwc"};
+module.exports = {"Root":"Modal_Root__39wbT","Backdrop":"Modal_Backdrop__2SFrj","Container":"Modal_Container__2_fy7","modalInit":"Modal_modalInit__24nV6","Title":"Modal_Title__J1Gdk"};
 
 /***/ }),
 
@@ -773,7 +773,7 @@ module.exports = {"Root":"Modal_Root__21etl","Backdrop":"Modal_Backdrop__1E3xq",
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Field_Root__1ybQn","Error":"Field_Error__2U12h","Header":"Field_Header__3ywv2","Label":"Field_Label__3zgvS"};
+module.exports = {"Root":"Field_Root__2-MJK","Error":"Field_Error__1sIJO","Header":"Field_Header__CoqZT","Label":"Field_Label__1U8tI"};
 
 /***/ }),
 
@@ -781,7 +781,7 @@ module.exports = {"Root":"Field_Root__1ybQn","Error":"Field_Error__2U12h","Heade
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Input_Root__11TAT","RootIsErred":"Input_RootIsErred__3DS0B","RootIsFocused":"Input_RootIsFocused__22lpb","RootIsReadOnly":"Input_RootIsReadOnly__3gNnZ","Input":"Input_Input__1PBiq"};
+module.exports = {"Root":"Input_Root__1fTdz","RootIsErred":"Input_RootIsErred__2FkMf","RootIsFocused":"Input_RootIsFocused__3AczB","RootIsReadOnly":"Input_RootIsReadOnly__phxC-","Input":"Input_Input__3gO-M"};
 
 /***/ }),
 
@@ -789,7 +789,7 @@ module.exports = {"Root":"Input_Root__11TAT","RootIsErred":"Input_RootIsErred__3
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Metamask_Root__1dK5i","Cover":"Metamask_Cover__3Fsbd","Container":"Metamask_Container__UPMeO","Logo":"Metamask_Logo__1dJI7","Title":"Metamask_Title__zIzmB"};
+module.exports = {"Root":"Metamask_Root__2lUfn","Cover":"Metamask_Cover__1QJ3y","Container":"Metamask_Container__1k5K8","Logo":"Metamask_Logo__28DJW","Title":"Metamask_Title__3K-_0"};
 
 /***/ }),
 
@@ -797,7 +797,7 @@ module.exports = {"Root":"Metamask_Root__1dK5i","Cover":"Metamask_Cover__3Fsbd",
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Root":"Determine_Root__3ABP9","RootIsSelected":"Determine_RootIsSelected__1t6u4","Content":"Determine_Content__3kIN1"};
+module.exports = {"Root":"Determine_Root__6WFbF","RootIsSelected":"Determine_RootIsSelected__YzmuZ","Content":"Determine_Content__3zx-8"};
 
 /***/ }),
 
@@ -805,9 +805,9 @@ module.exports = {"Root":"Determine_Root__3ABP9","RootIsSelected":"Determine_Roo
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"Container":"Guide_Container__3oN7_","Frame":"Guide_Frame__2_Gkf","Link":"Guide_Link__cAKbG","Steps":"Guide_Steps__1uj5P"};
+module.exports = {"Container":"Guide_Container__48FTK","Frame":"Guide_Frame__Cdldg","Link":"Guide_Link__1CYze","Steps":"Guide_Steps__1JdwK"};
 
 /***/ })
 
 },[[256,1,2]]]);
-//# sourceMappingURL=main.f9d5f753.chunk.js.map
+//# sourceMappingURL=main.58283b78.chunk.js.map
