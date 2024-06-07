@@ -28,6 +28,7 @@ const initialState = {
 };
 
 export default (state: Object = initialState, action: Object): Object => {
+  console.log('store dispatch', state, action)
   switch (action.type) {
     case CONNECT_REQUEST:
       return { ...state, isConnecting: true };

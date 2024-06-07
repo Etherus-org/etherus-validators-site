@@ -42,15 +42,45 @@ const composeEnhancers =
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})
     : compose;
 
+
+function handleChainChanged(chainId) {
+  // We recommend reloading the page, unless you must do otherwise.
+  window.location.reload();
+}
+
 export default (history: Object): Object => {
   let isSupported = false;
   let privateWeb3;
 
   const web3 = new Web3(config.URL);
 
-  if (window.ethereum || window.web3) {
+  if (window.ethereum && window.ethereum.isMetaMask) {
     isSupported = true;
-    privateWeb3 = new Web3(window.ethereum)
+
+    window.addEventListener("eip6963:announceProvider",
+      async (event: EIP6963AnnounceProviderEvent) => {
+        console.log("announceProvider", event.detail);
+        let provider = event.detail.provider;
+        const chainId = await provider.request({ method: "eth_chainId" });
+        console.log('chainID', chainId);
+        provider.on("chainChanged", handleChainChanged);
+
+        if(chainId === '0x7d13') {
+          privateWeb3 = provider;
+          try {
+            const accounts = await provider
+              .request({method: "eth_requestAccounts"});
+            console.log('accounts', accounts);
+          } catch (error) {
+            console.error("Failed to connect to provider:", error)
+          }
+        }
+
+      }
+    );
+    // Notify event listeners and other parts of the dapp that a provider is requested.
+    window.dispatchEvent(new Event("eip6963:requestProvider"))
+
   }
 
   const store = createStore(reducer, composeEnhancers(
@@ -75,7 +105,7 @@ export default (history: Object): Object => {
   }
 
   web3.eth.getBlockNumber()
-    .then((blockNumber: number): void => {
+    .then(async (blockNumber: number): void => {
       has(window, 'ethereum.networkVersion') &&
       store.dispatch({
         type: SET_NETWORK_ID,
