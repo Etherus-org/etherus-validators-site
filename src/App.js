@@ -8,7 +8,7 @@ import Validators from 'views/Validators';
 // Styles
 import styles from './App.scss';
 import 'react-table/react-table.css';
-import '@fortawesome/fontawesome-pro/css/all.min.css';
+import '@fortawesome/fontawesome-pro/css/all.css';
 
 type AppType = {
   match: Object

@@ -23,7 +23,7 @@ const Modal = ({
   handleClose,
   isOpened,
   title,
-  ...props,
+  ...props
 }) => {
   const rootClassNames = classNames(className || rootClassName, styles.Root);
   const containerClassNames = classNames(containerClassName, styles.Container);
