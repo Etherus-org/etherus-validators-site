@@ -118,7 +118,7 @@ const Validators: React.Element<'div'> = ({
             </div>
           ) : (
             !isConnected ? (
-              isSupported && networkId === config.NETWORK_ID && hasAccount ? (
+              isSupported && networkId === config.NETWORK_ID ? (
                 <Button
                   color={GRADIENT.GREEN}
                   onClick={handleConnect}

@@ -23,9 +23,11 @@ import views from './views/reducer';
 
 // Services
 import {
+  getSession,
+  SET_ACCOUNT,
   SET_CURRENT_BLOCK_NUMBER,
   SET_HAS_ACCOUNT,
-  SET_NETWORK_ID,
+  SET_NETWORK_ID, SET_PRIVATE_PROVIDER,
   SET_SUPPORT,
 } from 'services/session';
 
@@ -49,13 +51,26 @@ function handleChainChanged(chainId) {
 }
 
 export default (history: Object): Object => {
-  let isSupported = false;
   let privateWeb3;
 
   const web3 = new Web3(config.URL);
 
+  const store = createStore(reducer, composeEnhancers(
+    applyMiddleware(
+      thunkMiddleware.withExtraArgument({
+        history, schema, web3,
+        contract: new web3.eth.Contract(
+          contractInterface,
+          config.CONTRACT_ADDRESS,
+        ),
+      }),
+    ),
+  ));
+
   if (window.ethereum && window.ethereum.isMetaMask) {
-    isSupported = true;
+    store.dispatch({ type: SET_SUPPORT, isSupported: true });
+
+    window.ethereum.on("chainChanged", handleChainChanged);
 
     window.addEventListener("eip6963:announceProvider",
       async (event: EIP6963AnnounceProviderEvent) => {
@@ -63,17 +78,15 @@ export default (history: Object): Object => {
         let provider = event.detail.provider;
         const chainId = await provider.request({ method: "eth_chainId" });
         console.log('chainID', chainId);
-        provider.on("chainChanged", handleChainChanged);
 
         if(chainId === '0x7d13') {
-          privateWeb3 = provider;
-          try {
-            const accounts = await provider
-              .request({method: "eth_requestAccounts"});
-            console.log('accounts', accounts);
-          } catch (error) {
-            console.error("Failed to connect to provider:", error)
-          }
+          privateWeb3 = new Web3(provider);
+//          provider.on("accountsChanged", (data) => console.log("Accounts changed", data))
+          store.dispatch({
+            type: SET_NETWORK_ID,
+            networkId: chainId,
+          });
+          store.dispatch({ type: SET_PRIVATE_PROVIDER, privateProvider: provider });
         }
 
       }
@@ -83,37 +96,8 @@ export default (history: Object): Object => {
 
   }
 
-  const store = createStore(reducer, composeEnhancers(
-    applyMiddleware(
-      thunkMiddleware.withExtraArgument({
-        history, schema, privateWeb3, web3,
-        account: privateWeb3 && new privateWeb3.eth.Contract(
-          contractInterface,
-          config.CONTRACT_ADDRESS,
-          { from: window.ethereum.selectedAddress }
-        ),
-        contract: new web3.eth.Contract(
-          contractInterface,
-          config.CONTRACT_ADDRESS,
-        ),
-      }),
-    ),
-  ));
-
-  if (isSupported) {
-    store.dispatch({ type: SET_SUPPORT, isSupported: true });
-  }
-
   web3.eth.getBlockNumber()
     .then(async (blockNumber: number): void => {
-      has(window, 'ethereum.networkVersion') &&
-      store.dispatch({
-        type: SET_NETWORK_ID,
-        networkId: get(window, 'ethereum.chainId'),
-      });
-
-      has(window, 'ethereum.selectedAddress') &&
-      store.dispatch({ type: SET_HAS_ACCOUNT });
 
       store.dispatch({ type: SET_CURRENT_BLOCK_NUMBER, blockNumber });
 

@@ -12,7 +12,7 @@ import {
   SET_CURRENT_BLOCK_NUMBER,
   SET_HAS_ACCOUNT,
   SET_NETWORK_ID,
-  SET_SUPPORT,
+  SET_SUPPORT, SET_ACCOUNT, SET_PRIVATE_PROVIDER,
 } from './types';
 
 const initialState = {
@@ -25,10 +25,11 @@ const initialState = {
   isSupported: false,
   hasAccount: false,
   networkId: 0,
+  privateWeb3: null,
+  account: null // Metamask contract
 };
 
 export default (state: Object = initialState, action: Object): Object => {
-  console.log('store dispatch', state, action)
   switch (action.type) {
     case CONNECT_REQUEST:
       return { ...state, isConnecting: true };
@@ -66,6 +67,16 @@ export default (state: Object = initialState, action: Object): Object => {
       return {
         ...state,
         hasAccount: true,
+      };
+    case SET_ACCOUNT:
+      return {
+        ...state,
+        account: action.account,
+      };
+    case SET_PRIVATE_PROVIDER:
+      return {
+        ...state,
+        privateProvider: action.privateProvider,
       };
     case SET_NETWORK_ID:
       return {

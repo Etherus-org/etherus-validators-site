@@ -14,8 +14,12 @@ import {
   // IS OWNER
   IS_OWNER_REQUEST,
   IS_OWNER_SUCCESS,
-  IS_OWNER_FAILURE,
+  IS_OWNER_FAILURE, SET_HAS_ACCOUNT, SET_ACCOUNT,
 } from './types';
+import contractInterface from "../../assets/contract.json";
+import config from "../../api/config";
+import Web3 from "web3";
+import {getPrivateProvider} from "./selector";
 
 export const checkOwnership: Function = (address: string): Function =>
   (dispatch: Function, getState: Function, { contract }): Promise => {
@@ -29,25 +33,53 @@ export const checkOwnership: Function = (address: string): Function =>
   }
 
 export const connectMetamask: Function = (): Function =>
-  (dispatch: Function, getState: Function): Object<Promise> => {
+  async (dispatch: Function, getState: Function): Object<Promise> => {
     const state = getState();
     dispatch({ type: CONNECT_REQUEST });
 
-    return window.ethereum.enable()
-      .then((data: Array<string>): void => {
-        getValidatorListByAddress(state, data[0])
-          .filter(({ address, pauseCause }): bool => address === data[0])
-          .forEach(({ address, hash }): void =>
-            dispatch(fetchValidator(hash)));
+    try {
+      const privateProvider = getPrivateProvider(state);
+      // console.log(privateWeb3);
+      const accounts = await privateProvider
+        .request({method: "eth_requestAccounts"});
+      const privateWeb3 = new Web3(privateProvider);
 
-        dispatch({ type: CONNECT_SUCCESS, address: data[0] });
+      privateProvider.on("accountsChanged", (data: Array<string>) => {
+        console.log('accounts changed', data)
+        const account = new privateWeb3.eth.Contract(
+          contractInterface,
+          config.CONTRACT_ADDRESS,
+          { from: data[0] }
+        );
+        dispatch({ type: SET_ACCOUNT, account });
+
+        dispatch({ type: CONNECT_SUCCESS, address: data[0], isChanged: true });
         dispatch(checkOwnership(data[0]));
+      });
 
-        window.ethereum.on('accountsChanged', (data: Array<string>) => {
-          dispatch({ type: CONNECT_SUCCESS, address: data[0], isChanged: true });
-          dispatch(checkOwnership(data[0]));
-        });
-      })
-      .catch((error: Object): void =>
-        dispatch({ type: CONNECT_FAILURE, error: get(error, 'message')}));
+      const currentAddress = accounts[0];
+
+      const account = new privateWeb3.eth.Contract(
+        contractInterface,
+        config.CONTRACT_ADDRESS,
+        { from: currentAddress }
+      );
+
+      dispatch({ type: SET_HAS_ACCOUNT });
+      dispatch({ type: SET_ACCOUNT, account });
+
+      dispatch({ type: CONNECT_SUCCESS, address: currentAddress });
+      dispatch(checkOwnership(currentAddress));
+
+      getValidatorListByAddress(state, currentAddress)
+        .filter(({ address, pauseCause }): bool => address === currentAddress)
+        .forEach(({ address, hash }): void =>
+          dispatch(fetchValidator(hash)));
+
+      console.log('accounts', accounts);
+    } catch (error) {
+      console.error(error);
+      dispatch({ type: CONNECT_FAILURE, error: get(error, 'message')});
+    }
+
   }

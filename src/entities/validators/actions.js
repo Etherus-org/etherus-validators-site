@@ -60,13 +60,17 @@ import {
 import { checkTransaction } from './utils';
 import { convertDeposit } from 'utils/convert';
 import { parseCompactedValidator } from 'utils/parse';
+import {getAccount, getAddress} from "../../services/session";
 
 export const createValidator: Function = ({ address, deposit, hash, node }): Function =>
-  (dispatch: Function, getState: Function, { account, privateWeb3, web3 }): Promise => {
+  (dispatch: Function, getState: Function, { web3 }): Promise => {
     dispatch({ type: CREATE_VALIDATOR_REQUEST });
 
     return new Promise((resolve: Function, reject: Function) => {
       const value = web3.utils.toWei(deposit, 'ether');
+      const state = getState();
+      const account = getAccount(state);
+      const selectedAddress = getAddress(state);
 
       const formattedHash = `0x${hash.replace(/^(0[xX]{1})?/, '')}`;
       const formattedNode = `0x${node.replace(/^(0[xX]{1})?/, '')}`;
@@ -80,7 +84,7 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
         )
         .send({
           value,
-          from: window.ethereum.selectedAddress,
+          from: selectedAddress,
         })
           .on('error', reject)
           .on('transactionHash', (txHash): void => {
@@ -119,10 +123,12 @@ export const createValidator: Function = ({ address, deposit, hash, node }): Fun
   }
 
 export const depositValidator = ({ hash, deposit }): Function =>
-  (dispatch: Function, getState: Function, { account, web3 }): Promise => {
+  (dispatch: Function, getState: Function, { web3 }): Promise => {
     dispatch({ type: DEPOSIT_VALIDATOR_REQUEST, hash });
     const state = getState();
     const value = web3.utils.toWei(deposit, 'ether');
+    const account = getAccount(state);
+    const selectedAddress = getAddress(state);
 
     const currentDeposit = getValidatorDeposit(state, hash);
     const newDeposit = value / Math.pow(2, 32);
@@ -132,7 +138,7 @@ export const depositValidator = ({ hash, deposit }): Function =>
         .addDeposit(hash)
         .send({
           value,
-          from: window.ethereum.selectedAddress,
+          from: selectedAddress,
         })
           .on('transactionHash', (txHash): void => {
             dispatch(closeModal(VALIDATOR_DEPOSIT_MODAL_ID));
@@ -205,17 +211,21 @@ export const fetchValidators = (): Function =>
   }
 
 export const pauseValidator: Function = ({ from, hash, pauseCause = 1, punishValue = 0 }): Promise =>
-  (dispatch: Function, getState: Function, { account, web3 }): Promise => {
+  (dispatch: Function, getState: Function, { web3 }): Promise => {
     dispatch({ type: PAUSE_VALIDATOR_REQUEST, hash });
 
     const formattedPunishValue = pauseCause === PAUSE_CAUSE_UNTIL_FINE
       ? web3.utils.toWei(punishValue, 'ether')
       : punishValue;
 
+    const state = getState();
+    const account = getAccount(state);
+    const selectedAddress = getAddress(state);
+
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
         .pauseValidation(hash, from || hash, pauseCause, formattedPunishValue)
-        .send({ from: window.ethereum.selectedAddress })
+        .send({ from: selectedAddress })
           .on('transactionHash', (txHash): void => {
             dispatch(closeModal(VALIDATOR_PAUSE_MODAL_ID));
 
@@ -241,13 +251,17 @@ export const pauseValidator: Function = ({ from, hash, pauseCause = 1, punishVal
   }
 
 export const startValidator: Function = (hash: string): Promise =>
-  (dispatch: Function, getState: Function, { account, web3 }): Promise => {
+  (dispatch: Function, getState: Function, { web3 }): Promise => {
     dispatch({ type: START_VALIDATOR_REQUEST, hash });
+
+    const state = getState();
+    const account = getAccount(state);
+    const selectedAddress = getAddress(state);
 
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
         .resumeValidation(hash)
-        .send({ from: window.ethereum.selectedAddress })
+        .send({ from: selectedAddress })
           .on('transactionHash', (txHash): void => {
             // eslint-disable-next-line
             checkTransaction({
@@ -267,13 +281,17 @@ export const updateValidator: Function = (hash: string, payload: Object): Object
   ({ type: UPDATE_VALIDATOR, hash, payload });
 
 export const withdrawValidator: Function = (hash: string): Function =>
-  (dispatch: Function, getState: Function, { account, contract, web3 }): void => {
+  (dispatch: Function, getState: Function, { contract, web3 }): void => {
     dispatch({ type: WITHDRAW_VALIDATOR_REQUEST, hash });
+
+    const state = getState();
+    const account = getAccount(state);
+    const selectedAddress = getAddress(state);
 
     return new Promise((resolve: Function, reject: Function) => {
       account.methods
         .withdraw(hash)
-        .send({ from: window.ethereum.selectedAddress })
+        .send({ from: selectedAddress })
           .on('transactionHash', (txHash): void => {
             // eslint-disable-next-line
             checkTransaction({
